@@ -5,9 +5,9 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "posts"
+  - label: "Posts"
+    name: "posts"
+    folder: "content/posts"
     editor:
       preview: false
     create: true
@@ -17,3 +17,42 @@ collections:
       - {label: "Excerpt", name: "excerpt", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - label: "Pages"
+    name: "pages"
+    editor:
+      preview: false
+    files:
+      - label: "Landing Page"
+        name: "landing"
+        file: "content/landing.md"
+        fields:
+          - {label: "Header Media", name: "header_media", widget: "file"}
+          - {label: "Zitat", name: "cite", widget: "string"}
+          - label: "Portraits"
+            name: "portraits"
+            widget: "list"
+            fields: 
+              - {label: "Photo", name: "photo", widget: "image"}
+          - {label: "Intro", name: "intro", widget: "text"}
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Kurzbeschreibung", name: "description", widget: "text"}
+          - label: "Clients"
+            name: "clients"
+            widget: "list"
+            fields:
+              - {label: "Logo", name: "logo", widget: "image"}
+          - label: "Referenzen"
+            name: "references"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Unternehmen", name: "company", widget: "string"}
+              - {label: "Referenztext", name: "reference_text", widget: "text"}
+          - {label: "Agentur Header", name: "about_header", widget: "string"}
+          - {label: "Agentur Beschreibung", name: "about_description", widget: "text"}
+          - {label: "Beschreibung Kontaktanfrage", name: "contact_description", widget: "text"}

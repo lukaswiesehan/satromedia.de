@@ -1,0 +1,48 @@
+---
+header_media: /uploads/showreel_screenshot.png
+cite: Große Ideen brauchen große Meinungen
+portraits:
+  - photo: /uploads/portrait_2.jpeg
+  - photo: /uploads/portrait_1.jpeg
+intro: Wir haben es uns zur Aufgabe gemacht, eine authentische und nachhaltige
+  Verbindung zwischen Marke und Produkt zu kreieren, welche durch authentische
+  Meinungsführer der Social-Media-Generation vertreten werden.
+services:
+  - title: Influencer Management
+    description: "Wir bringen zusammen: authentische Influencer und passende Marken."
+  - title: Digitale Konzepte
+    description: Ihre Botschaft in einer digitalen Kampagne. Wir zeigen Ihnen wann,
+      wo und vor allem wie.
+  - title: Online Marketing
+    description: Zielgruppenorientiertes Streuen Ihrer individuellen Botschaft.
+  - title: Media Consulting
+    description: Nutzen Sie ein Team aus digital Natives für einen modernen und
+      zielorientierten Auftritt!
+  - title: Webdesign
+    description: Ansprechende Grafiken und benutzerfreundliche Oberfläche - die
+      ersten Sekunden sind entscheidend.
+  - title: Content Production
+    description: Egal ob Imagefilm, Produktfotos oder Unterhaltung - wir setzen in Szene!
+references:
+  - name: John Doe
+    company: Acme Inc.
+    reference_text: I'm baby polaroid godard VHS before they sold out gentrify
+      pour-over food truck selfies artisan raw denim freegan.
+  - name: Jane Doe
+    company: Acme Company
+    reference_text: Whatever authentic semiotics, fam mixtape tbh try-hard bespoke.
+  - name: John & Jane Doe
+    company: Acme GmbH
+    reference_text: Sriracha organic snackwave, beard street art tilde meditation
+      chartreuse craft beer poutine literally meggings coloring book pour-over.
+about_header: Digital Natives der Generation Z
+about_description: >-
+  Gemeinsam sind wir stetig auf der Suche nach innovativen und nachhaltigen
+  Veränderungen.
+
+
+  Unser Anspruch ist es, anders zu sein, aufzufallen, und trotzdem zu überzeugen. Dafür besteht unser Team aus jungen Creatorn und Designern, mit denen wir Ihre Kommunikation in der digitalen Welt einzigartig gestalten und verändern.
+contact_description: Lassen Sie uns Ihrer Marke mit einem ausgefeilten Konzept
+  zu einem starken Image verhelfen, welches durch hervorragendes Marketing und
+  professionelle Influencer an Ihre Zielgruppe herangetragen wird!
+---

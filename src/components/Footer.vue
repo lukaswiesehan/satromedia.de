@@ -1,11 +1,11 @@
 <template>
-  <footer class="container mx-auto pt-32 pb-16">
+  <footer class="container mx-auto mt-40 mb-16">
     <div class="text-center font-body font-bold text-sm text-dark-100 uppercase tracking-widest">
       <a href="#" class="hover:text-dark-500"><i class="fas fa-chevron-up"></i> Zum Seitenanfang <i class="fas fa-chevron-up"></i></a>
     </div>
     <div class="flex items-stretch mt-10 text-sm text-black-500 leading-8">
       <div class="flex-1 text-left">
-        <p><i class="fas fa-copyright"></i> Satro Media {{footerYear}}</p>
+        <p><i class="far fa-copyright"></i> Satro Media {{footerYear}}</p>
         <p class="text-2xl text-dark-100">
           <a href="#" class="hover:text-dark-500"><i class="fab fa-instagram mr-2 "></i></a>
           <a href="#" class="hover:text-dark-500"><i class="fab fa-linkedin"></i></a>

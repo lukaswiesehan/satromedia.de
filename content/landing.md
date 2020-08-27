@@ -2,8 +2,8 @@
 header_media: /uploads/showreel_screenshot.png
 cite: Große Ideen brauchen große Meinungen
 portraits:
-  - photo: /uploads/portrait_2.jpeg
-  - photo: /uploads/portrait_1.jpeg
+  - photo: /uploads/portrait_2.png
+  - photo: /uploads/portrait_1.png
 intro: Wir haben es uns zur Aufgabe gemacht, eine authentische und nachhaltige
   Verbindung zwischen Marke und Produkt zu kreieren, welche durch authentische
   Meinungsführer der Social-Media-Generation vertreten werden.

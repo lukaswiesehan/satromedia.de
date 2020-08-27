@@ -23,6 +23,11 @@ services:
       ersten Sekunden sind entscheidend.
   - title: Content Production
     description: Egal ob Imagefilm, Produktfotos oder Unterhaltung - wir setzen in Szene!
+clients:
+  - logo: /uploads/client_1.png
+  - logo: /uploads/client_2.png
+  - logo: /uploads/client_3.png
+  - logo: /uploads/client_4.png
 references:
   - name: John Doe
     company: Acme Inc.

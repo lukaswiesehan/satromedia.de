@@ -56,16 +56,57 @@
         </div>
       </div>
     </section>
-    <section id="references" class="container mx-auto mt-40">
-      <div class="w-10/12 mx-auto flex flex-row">
-        <div class="mr-4"><i class="fas fa-user-friends text-3xl text-dark-100"></i></div>
-        <div class="font-display">
-          <p class="text-xs text-dark-100 uppercase tracking-widest">Kundenstimmen -</p>
-          <h2 class="text-3xl">Über unsere Arbeit</h2>
+    <section id="references" class="mt-40">
+      <div class="container mx-auto">
+        <div class="w-10/12 mx-auto flex flex-row">
+          <div class="mr-4"><i class="fas fa-user-friends text-3xl text-dark-100"></i></div>
+          <div class="font-display">
+            <p class="text-xs text-dark-100 uppercase tracking-widest">Kundenstimmen -</p>
+            <h2 class="text-3xl">Über unsere Arbeit</h2>
+          </div>
         </div>
       </div>
-      <div class="flex flex-row">
-        
+      <div class="relative mt-8">
+        <div class="container mx-auto">
+          <div class="flex flex-row">
+            <div class="w-2/3 py-12 pr-24">
+              <div class="w-full flex flex-row">
+                <img v-bind:src="$page.landing.clients[0].logo" alt="Logo Kunde" class="w-2/5 my-2">
+              </div>
+              <div class="w-full flex flex-row-reverse">
+                <img v-bind:src="$page.landing.clients[1].logo" alt="Logo Kunde" class="w-2/5 my-2 xl:-mt-8">
+              </div>
+              <div class="w-full flex flex-row">
+                <img v-bind:src="$page.landing.clients[2].logo" alt="Logo Kunde" class="w-2/5 my-2">
+              </div>
+              <div class="w-full flex flex-row-reverse">
+                <img v-bind:src="$page.landing.clients[3].logo" alt="Logo Kunde" class="w-2/5 my-2 xl:-mt-8">
+              </div>
+            </div>
+            <div class="relative z-10 w-1/3 -mt-24">
+              <Window>
+                <div class="ml-2 mr-6 mb-8">
+                  <div v-for="(reference, i) in $page.landing.references" :key="i">
+                    <Bubble :light="false">
+                      <p class="text-black-300 font-bold">{{reference.name}}, {{reference.company}}</p>
+                      <p class="text-white">{{reference.reference_text}}</p>
+                    </Bubble>
+                  </div>
+                </div>
+              </Window>
+            </div>
+          </div>
+        </div>
+        <div class="absolute w-full h-full left-0 top-0 bg-light-900 bg-opacity-50"></div>
+      </div>
+    </section>
+    <section id="about" class="container mx-auto mt-40">
+      <div class="w-10/12 mx-auto flex flex-row">
+        <div class="mr-4"><i class="fas fa-users text-3xl text-dark-100"></i></div>
+        <div class="font-display">
+          <p class="text-xs text-dark-100 uppercase tracking-widest">Satro Media -</p>
+          <h2 class="text-3xl">Über die Agentur</h2>
+        </div>
       </div>
     </section>
   </Layout>
@@ -85,6 +126,9 @@
         title
         description
       }
+      clients {
+        logo
+      }
       references {
         name
         company
@@ -100,6 +144,7 @@
 <script>
   import Navbar from '../components/Navbar.vue'
   import Window from '../components/Window.vue'
+  import Bubble from '../components/Bubble.vue'
   export default {
     name: 'Index',
     metaInfo: {
@@ -107,7 +152,8 @@
     },
     components: {
       Navbar,
-      Window
+      Window,
+      Bubble
     },
     data() {
       return {

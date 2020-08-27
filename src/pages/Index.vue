@@ -1,33 +1,75 @@
 <template>
   <Layout>
+    <Navbar :showBackButton="false" />
+    <section id="header" class="container mx-auto">
+      <Window>
+        <img v-bind:src="$page.landing.header_media" alt="Satro Media Showreel">
+        <div class="flex items-center absolute left-0 top-0 w-full h-full bg-dark-900 bg-opacity-25">
+          <img src="../assets/img/satro_logo.png" alt="Satro Media Logo" class="w-2/3 mx-auto -mt-24">
+        </div>
+      </Window>
+    </section>
+  <section id="quote" class="container mx-auto pt-40">
+    <div class="w-10/12 mx-auto">
+      <p class="text-3xl font-display"><i class="fas fa-quote-right text-dark-100 pr-6"></i>{{$page.landing.cite}}</p>
+    </div>
+  </section>
+  <section id=intro class="mt-12 bg-light-500">
+    <div class="container mx-auto">
+      <div class="w-10/12 mx-auto grid grid-cols-2 gap-24">
+        <div class="grid grid-cols-2">
+          <Window class="">
+            <img v-bind:src="$page.landing.portraits[0].photo" alt="Satro Media Gründer">
+          </Window>
 
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
+        </div>
+        <div class="py-12">
+          <p class="text-black-500">{{$page.landing.intro}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   </Layout>
 </template>
 
-<script>
-export default {
-  metaInfo: {
-    title: 'Hello, world!'
+<page-query>
+  query {
+    landing(id: "4ca93ae2a3ed8c67e4accebd4623f499") {
+      id
+      header_media
+      cite
+      portraits { 
+        photo
+      }
+      intro
+      services {
+        title
+        description
+      }
+      references {
+        name
+        company
+        reference_text
+      }
+      about_header
+      about_description
+      contact_description 
+    }
   }
-}
-</script>
+</page-query>
 
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
-</style>
+<script>
+  import Navbar from '../components/Navbar.vue'
+  import Window from '../components/Window.vue'
+  export default {
+    name: 'Index',
+    metaInfo: {
+      title: 'Satro Media Consulting'
+    },
+    components: {
+      Navbar,
+      Window
+    }
+  }
+</script>

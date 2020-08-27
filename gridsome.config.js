@@ -10,10 +10,7 @@ module.exports = {
     remark: {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link',
-      plugins: [
-        // ...global plugins
-      ]
+      anchorClassName: 'icon icon-link'
     }
   },
 
@@ -21,13 +18,8 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'posts/**/*.md',
-        typeName: 'Post',
-        remark: {
-          plugins: [
-            // ...local plugins
-          ]
-        }
+        typeName: 'Landing',
+        path: 'content/Landing.md'
       }
     },
     {
@@ -38,17 +30,9 @@ module.exports = {
     },
     {
       use: "gridsome-plugin-tailwindcss",
-      /**
-      * These are the default options. You don't need to set any options to get
-      * going. Seriously, you don't need to declare tailwind.config.js.
-
       options: {
-        tailwindConfig: './tailwind.config.js',
-        presetEnvConfig: {},
-        shouldImport: true,
-        shouldTimeTravel: true
+        tailwindConfig: './tailwind.config.js'
       }
-      */
     },
   ]
 }

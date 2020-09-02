@@ -1,6 +1,8 @@
 <template>
   <Layout>
     <Navbar id="navbar" :showBackButton="false" />
+
+    <!-- HEADER -->
     <section id="header" class="container mx-auto">
       <Window>
         <img v-bind:src="$page.landing.header_media" alt="Satro Media Showreel">
@@ -9,15 +11,17 @@
         </div>
       </Window>
     </section>
-    <section id="quote" class="container mx-auto mt-40">
-      <div class="w-10/12 mx-auto">
-        <p class="text-3xl font-display"><i class="fas fa-quote-right text-dark-100 pr-6"></i>{{$page.landing.cite}}</p>
-      </div>
+
+    <!-- QUOTE -->
+    <section id="quote" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-40">
+      <p class="text-xl md:text-3xl font-display"><i class="fas fa-quote-right text-dark-100 pr-6"></i>{{$page.landing.cite}}</p>
     </section>
+
+    <!-- INTRO -->
     <section id=intro>
-      <div class="mt-12 bg-light-500">
-        <div class="container mx-auto">
-          <div class="w-10/12 mx-auto grid grid-cols-2">
+      <div class="mt-12 pb-32 md:pb-0 bg-light-500">
+        <div class="max-w-screen-lg mx-auto px-4 sm:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2">
             <div></div>
             <div class="py-12">
               <p class="text-black-500">{{$page.landing.intro}}</p>
@@ -25,13 +29,13 @@
           </div>
         </div>
       </div>
-      <div class="container mx-auto">
-        <div class="w-10/12 mx-auto grid grid-cols-2">
+      <div class="max-w-screen-lg mx-auto px-4 sm:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2">
           <div>
-            <Window class="relative z-10 w-1/2 -mt-32">
+            <Window class="relative z-10 w-1/2 sm:w-1/3 md:w-1/2 -mt-32">
               <img v-bind:src="$page.landing.portraits[0].photo" alt="Satro Media Gründer">
             </Window>
-            <Window class="relative z-20 w-1/2 ml-40 -mt-48">
+            <Window class="relative z-20 w-1/2 sm:w-1/3 md:w-1/2 ml-32 xs:ml-48 sm:ml-40 -mt-40 xs:-mt-56 sm:-mt-48">
               <img v-bind:src="$page.landing.portraits[1].photo" alt="Satro Media Gründer">
             </Window>
           </div>
@@ -42,6 +46,8 @@
         </div>
       </div>
     </section>
+
+    <!-- SERVICES -->
     <section id="services" class="container mx-auto mt-40">
       <div class="w-10/12 mx-auto grid grid-cols-3 gap-x-8 gap-y-12">
         <div v-for="(service, i) in $page.landing.services" :key="i" class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
@@ -56,6 +62,8 @@
         </div>
       </div>
     </section>
+
+    <!-- REFERENCES -->
     <section id="references" class="mt-40">
       <div class="container mx-auto">
         <div class="w-10/12 mx-auto flex flex-row">
@@ -100,15 +108,22 @@
         <div class="absolute w-full h-full left-0 top-0 bg-light-900 bg-opacity-50"></div>
       </div>
     </section>
-    <section id="about" class="container mx-auto mt-40">
-      <div class="w-10/12 mx-auto flex flex-row">
-        <div class="mr-4"><i class="fas fa-users text-3xl text-dark-100"></i></div>
-        <div class="font-display">
-          <p class="text-xs text-dark-100 uppercase tracking-widest">Satro Media -</p>
-          <h2 class="text-3xl">Über die Agentur</h2>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-screen-xl mx-auto px-4 sm:px-8 mt-40">
+      <Title :icon="'fa-users'" :heading="'Satro Media'" :title="'Über die Agentur'"></Title>
+      <div class="mt-8 lg:flex">
+        <div class="px-4 py-8 pb-32 md:px-8 md:py-12 md:pb-32 lg:w-1/2 md:pr-32 lg:pb-0 bg-white shadow-md rounded-lg">
+          <h3 class="font-display">{{$page.landing.about_header}}</h3>
+          <p class="pt-4">{{$page.landing.about_description}}</p>
+        </div>
+        <div class="mx-8 -mt-24 lg:mx-0 lg:my-8 lg:-ml-24 lg:w-4/5 relative rounded-lg overflow-hidden shadow-lg">
+          <img v-bind:src="$page.landing.about_image" alt="Satro Media Team" class="w-full h-full">
+          <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25"></div>
         </div>
       </div>
     </section>
+
   </Layout>
 </template>
 
@@ -136,6 +151,7 @@
       }
       about_header
       about_description
+      about_image
       contact_description 
     }
   }
@@ -145,6 +161,7 @@
   import Navbar from '../components/Navbar.vue'
   import Window from '../components/Window.vue'
   import Bubble from '../components/Bubble.vue'
+  import Title from '../components/Title.vue'
   export default {
     name: 'Index',
     metaInfo: {
@@ -153,7 +170,8 @@
     components: {
       Navbar,
       Window,
-      Bubble
+      Bubble,
+      Title
     },
     data() {
       return {

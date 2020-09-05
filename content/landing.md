@@ -28,6 +28,7 @@ clients:
   - logo: /uploads/client_2.png
   - logo: /uploads/client_3.png
   - logo: /uploads/client_4.png
+  - logo: /uploads/malbucht.png
 references:
   - name: John Doe
     company: Acme Inc.

@@ -1,5 +1,5 @@
 <template>
-  <footer class="max-w-screen-xl mx-auto px-4 sm:px-8 lg:py-16 mt-40 mb-16">
+  <footer class="max-w-screen-xl mx-auto px-4 sm:px-8 lg:py-16 mb-16 mt-16 md:mt-24 lg:mt-40">
     <div class="text-center font-body font-bold text-sm text-dark-100 uppercase tracking-widest">
       <a href="#" class="hover:text-dark-500"><i class="fas fa-chevron-up"></i> Zum Seitenanfang <i class="fas fa-chevron-up"></i></a>
     </div>

@@ -24,11 +24,12 @@ services:
   - title: Content Production
     description: Egal ob Imagefilm, Produktfotos oder Unterhaltung - wir setzen in Szene!
 clients:
-  - logo: /uploads/client_1.png
-  - logo: /uploads/client_2.png
-  - logo: /uploads/client_3.png
-  - logo: /uploads/client_4.png
+  - logo: /uploads/buah.png
+  - logo: /uploads/centerparks.png
+  - logo: /uploads/handelskammer.png
+  - logo: /uploads/hochschulsport.gif
   - logo: /uploads/malbucht.jpg
+  - logo: /uploads/oatsome.png
 references:
   - name: John Doe
     company: Acme Inc.

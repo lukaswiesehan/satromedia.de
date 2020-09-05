@@ -73,7 +73,7 @@
           <div class="md:flex">
             <div class="md:w-1/2 lg:w-2/3 py-8 md:py-12 md:pr-8 lg:pr-24 flex flex-wrap items-center">
               <div v-for="(client, i) in $page.landing.clients" :key="i" class="w-1/2 p-4 md:p-2 lg:px-4 lg:py-8" v-bind:class="{'w-1/3': i > 1}">
-                <img v-bind:src="client.logo" alt="Logo Client" class="w-full" style="filter: grayscale(100%); -webkit-filter: grayscale(100%);">
+                <img v-bind:src="client.logo" alt="Logo Client" class="w-full" style="filter: grayscale(100%) opacity(80%); -webkit-filter: grayscale(100%) opacity(80%);">
               </div>
             </div>
             <div class="relative z-10 max-w-xl mx-auto pb-12 lg:pb-0 md:w-1/2 lg:w-1/3 md:-mt-20">
@@ -93,7 +93,7 @@
         <div class="absolute w-full h-full left-0 top-0 bg-light-900 bg-opacity-50"></div>
       </div>
     </section>
-    {{$page.landing.clients.length}}
+    
     <!-- ABOUT -->
     <section id="about" class="max-w-screen-xl mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
       <Title :icon="'fa-users'" :heading="'Satro Media'" :title="'Über die Agentur'"></Title>

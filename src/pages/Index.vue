@@ -3,7 +3,7 @@
     <Navbar id="navbar" :showBackButton="false" />
 
     <!-- HEADER -->
-    <section id="header" class="container mx-auto">
+    <section id="header" class="max-w-screen-xl mx-auto px-4 sm:px-8">
       <Window>
         <img v-bind:src="$page.landing.header_media" alt="Satro Media Showreel">
         <div class="flex items-center absolute left-0 top-0 w-full h-full bg-dark-900 bg-opacity-25">
@@ -13,7 +13,7 @@
     </section>
 
     <!-- QUOTE -->
-    <section id="quote" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-40">
+    <section id="quote" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
       <p class="text-xl md:text-3xl font-display"><i class="fas fa-quote-right text-dark-100 pr-6"></i>{{$page.landing.cite}}</p>
     </section>
 
@@ -48,7 +48,7 @@
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="container mx-auto mt-40">
+    <section id="services" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
       <div class="w-10/12 mx-auto grid grid-cols-3 gap-x-8 gap-y-12">
         <div v-for="(service, i) in $page.landing.services" :key="i" class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
           <div class="p-6">
@@ -64,34 +64,56 @@
     </section>
 
     <!-- REFERENCES -->
-    <section id="references" class="mt-40">
-      <div class="container mx-auto">
-        <div class="w-10/12 mx-auto flex flex-row">
-          <div class="mr-4"><i class="fas fa-user-friends text-3xl text-dark-100"></i></div>
-          <div class="font-display">
-            <p class="text-xs text-dark-100 uppercase tracking-widest">Kundenstimmen -</p>
-            <h2 class="text-3xl">Über unsere Arbeit</h2>
-          </div>
-        </div>
+    <section id="references" class="mt-16 md:mt-24 lg:mt-40">
+      
+      <div class="max-w-screen-lg mx-auto px-4 sm:px-8">
+        <Title :icon="'fa-user-friends'" :heading="'Kundenstimmen'" :title="'Über unsere Arbeit'"></Title>
       </div>
+      
+        
       <div class="relative mt-8">
-        <div class="container mx-auto">
-          <div class="flex flex-row">
-            <div class="w-2/3 py-12 pr-24">
-              <div class="w-full flex flex-row">
-                <img v-bind:src="$page.landing.clients[0].logo" alt="Logo Kunde" class="w-2/5 my-2">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-8">
+          <div class="md:flex">
+            <div class="md:w-1/2 lg:w-2/3 py-8 md:py-12 md:pr-8 lg:pr-24 flex flex-wrap items-center">
+              <div class="w-1/2 p-4 lg:px-4 lg:py-8">
+                <img v-bind:src="$page.landing.clients[0].logo" alt="Logo Client" class="w-full">
               </div>
-              <div class="w-full flex flex-row-reverse">
-                <img v-bind:src="$page.landing.clients[1].logo" alt="Logo Kunde" class="w-2/5 my-2 xl:-mt-8">
+              <div class="w-1/2 p-4 lg:px-4 lg:py-8">
+                <img v-bind:src="$page.landing.clients[1].logo" alt="Logo Client" class="w-full">
               </div>
-              <div class="w-full flex flex-row">
-                <img v-bind:src="$page.landing.clients[2].logo" alt="Logo Kunde" class="w-2/5 my-2">
+              <div class="w-1/3 p-4 md:p-2 lg:px-4 lg:py-8">
+                <img v-bind:src="$page.landing.clients[2].logo" alt="Logo Client" class="w-full">
               </div>
-              <div class="w-full flex flex-row-reverse">
-                <img v-bind:src="$page.landing.clients[3].logo" alt="Logo Kunde" class="w-2/5 my-2 xl:-mt-8">
+              <div class="w-1/3 p-4 md:p-2 lg:px-4 lg:py-8">
+                <img v-bind:src="$page.landing.clients[3].logo" alt="Logo Client" class="w-full">
+              </div>
+              <div class="w-1/3 p-4 md:p-2 lg:px-4 lg:py-8">
+                <img v-bind:src="$page.landing.clients[0].logo" alt="Logo Client" class="w-full">
+              </div>
+              <div class="w-1/3 p-4 md:p-2 lg:px-4 lg:py-8">
+                <img v-bind:src="$page.landing.clients[2].logo" alt="Logo Client" class="w-full">
+              </div>
+              <div class="w-1/3 p-4 md:p-2 lg:px-4 lg:py-8">
+                <img v-bind:src="$page.landing.clients[3].logo" alt="Logo Client" class="w-full">
+              </div>
+              <div class="w-1/3 p-4 md:p-2 lg:px-4 lg:py-8">
+                <img v-bind:src="$page.landing.clients[0].logo" alt="Logo Client" class="w-full">
+              </div>
+              <div class="w-1/3 p-4 md:p-2 lg:px-4 lg:py-8">
+                <img v-bind:src="$page.landing.clients[2].logo" alt="Logo Client" class="w-full">
+              </div>
+              <div class="w-1/3 p-4 md:p-2 lg:px-4 lg:py-8">
+                <img v-bind:src="$page.landing.clients[0].logo" alt="Logo Client" class="w-full">
+              </div>
+              <div class="w-1/3 p-4 md:p-2 lg:px-4 lg:py-8">
+                <img v-bind:src="$page.landing.clients[3].logo" alt="Logo Client" class="w-full">
               </div>
             </div>
-            <div class="relative z-10 w-1/3 -mt-24">
+
+
+
+
+            <div class="relative z-10 max-w-xl mx-auto pb-12 lg:pb-0 md:w-1/2 lg:w-1/3 md:-mt-20">
               <Window>
                 <div class="ml-2 mr-6 mb-8">
                   <div v-for="(reference, i) in $page.landing.references" :key="i">
@@ -103,6 +125,11 @@
                 </div>
               </Window>
             </div>
+
+
+
+
+
           </div>
         </div>
         <div class="absolute w-full h-full left-0 top-0 bg-light-900 bg-opacity-50"></div>
@@ -110,7 +137,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="max-w-screen-xl mx-auto px-4 sm:px-8 mt-40">
+    <section id="about" class="max-w-screen-xl mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
       <Title :icon="'fa-users'" :heading="'Satro Media'" :title="'Über die Agentur'"></Title>
       <div class="mt-8 lg:flex">
         <div class="px-4 py-8 pb-32 md:px-8 md:py-12 md:pb-32 lg:w-1/2 md:pr-32 lg:pb-0 bg-white shadow-md rounded-lg">

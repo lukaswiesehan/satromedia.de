@@ -40,6 +40,10 @@ references:
     company: Acme GmbH
     reference_text: Sriracha organic snackwave, beard street art tilde meditation
       chartreuse craft beer poutine literally meggings coloring book pour-over.
+  - name: Peter
+    company: Acme Inc.
+    reference_text: Sriracha organic snackwave, beard street art tilde meditation
+      chartreuse craft beer poutine literally meggings coloring book pour-over.
 about_header: Digital Natives der Generation Z
 about_description: >-
   Gemeinsam sind wir stetig auf der Suche nach innovativen und nachhaltigen

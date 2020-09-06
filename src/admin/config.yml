@@ -35,6 +35,13 @@ collections:
             fields: 
               - {label: "Photo", name: "photo", widget: "image"}
           - {label: "Intro", name: "intro", widget: "text"}
+          - label: "Top Services"
+            name: "topServices"
+            widget: "list"
+            fields:
+              - {label: "Cover Picture", name: "cover", widget: "image"}
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Kurzbeschreibung", name: "description", widget: "text"}
           - label: "Services"
             name: "services"
             widget: "list"

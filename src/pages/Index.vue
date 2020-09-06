@@ -49,23 +49,51 @@
 
     <!-- SERVICES -->
     <section id="services" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
-      <div class="w-10/12 mx-auto grid grid-cols-3 gap-x-8 gap-y-12">
-        <div v-for="(service, i) in $page.landing.services" :key="i" class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+      <div class="grid grid-cols-2 gap-x-8 mb-12">
+
+
+        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+          <div class="">
+            <div class="relative rounded-lg overflow-hidden shadow-lg">
+              <img src="../assets/img/influencer_management.svg" v-bind:alt="$page.landing.services[0].title" class="mx-auto">
+              <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25"></div>
+            </div>
+          
+          </div>
+          <div class="mt-4 px-16 text-center">
+            <h3 class="font-display">{{$page.landing.services[0].title}}</h3>
+            <p class="my-4 text-sm">{{$page.landing.services[0].description}}</p>
+            <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest">Mehr dazu <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="grid grid-cols-3 gap-x-8">
+        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
           <div class="p-6">
-            <img v-bind:src="icons[i]" v-bind:alt="service.title" class="mx-auto">
+            <img src="../assets/img/digitale_konzepte.svg" v-bind:alt="$page.landing.services[2].title" class="mx-auto">
           </div>
           <div class="mt-4 text-center">
-            <h3 class="font-display">{{service.title}}</h3>
-            <p class="my-4 text-sm">{{service.description}}</p>
+            <h3 class="font-display">{{$page.landing.services[2].title}}</h3>
+            <p class="my-4 text-sm">{{$page.landing.services[2].description}}</p>
             <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest">Mehr dazu <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
       </div>
+
+
+
     </section>
+
+
+
+
 
     <!-- REFERENCES -->
     <section id="references" class="mt-16 md:mt-24 lg:mt-40">
-      <div class="max-w-screen-lg mx-auto px-4 sm:px-8">
+      <div class="max-w-screen-xl mx-auto px-4 sm:px-8">
         <Title :icon="'fa-user-friends'" :heading="'Kundenstimmen'" :title="'Über unsere Arbeit'"></Title>
       </div>
       <div class="relative mt-8">

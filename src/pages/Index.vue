@@ -49,47 +49,71 @@
 
     <!-- SERVICES -->
     <section id="services" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
-      <div class="grid grid-cols-2 gap-x-8 mb-12">
-
-
-        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
-          <div class="">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8">
+        <div class="bg-white rounded-lg shadow-md p-6 pt-0 flex flex-col justify-between mt-24 md:mt-36 lg:mt-48 mb-12">
+          <div class="-mt-24 md:-mt-36 lg:-mt-48 mb-6">
             <div class="relative rounded-lg overflow-hidden shadow-lg">
-              <img src="../assets/img/influencer_management.svg" v-bind:alt="$page.landing.services[0].title" class="mx-auto">
-              <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25"></div>
+              <img v-bind:src="$page.landing.topServices[0].cover" v-bind:alt="$page.landing.topServices[0].title" class="mx-auto">
+              <div class="flex items-center absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-50 p-12">
+                <img src="../assets/img/influencer_management.svg" v-bind:alt="$page.landing.topServices[0].title" class="mx-auto">
+              </div>
             </div>
-          
           </div>
-          <div class="mt-4 px-16 text-center">
+          <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-8 lg:px-16 text-center">
+            <h3 class="font-display">{{$page.landing.topServices[0].title}}</h3>
+            <p class="my-4 text-sm">{{$page.landing.topServices[0].description}}</p>
+            <a href="#" class="text-xs text-dark-100 hover:text-dark-500 uppercase font-bold tracking-widest">Mehr dazu <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 pt-0 flex flex-col justify-between mt-24 md:mt-36 lg:mt-48 mb-12">
+          <div class="-mt-24 md:-mt-36 lg:-mt-48 mb-6">
+            <div class="relative rounded-lg overflow-hidden shadow-lg">
+              <img v-bind:src="$page.landing.topServices[1].cover" v-bind:alt="$page.landing.topServices[1].title" class="mx-auto">
+              <div class="flex items-center absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-50 p-12">
+                <img src="../assets/img/content_production.svg" v-bind:alt="$page.landing.topServices[1].title" class="mx-auto">
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-8 lg:px-16 text-center">
+            <h3 class="font-display">{{$page.landing.topServices[1].title}}</h3>
+            <p class="my-4 text-sm">{{$page.landing.topServices[1].description}}</p>
+            <a href="#" class="text-xs text-dark-100 hover:text-dark-500 uppercase font-bold tracking-widest">Mehr dazu <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8">
+        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0">
+          <div class="p-6">
+            <img src="../assets/img/digitale_konzepte.svg" v-bind:alt="$page.landing.services[0].title" class="mx-auto">
+          </div>
+          <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-0 text-center">
             <h3 class="font-display">{{$page.landing.services[0].title}}</h3>
             <p class="my-4 text-sm">{{$page.landing.services[0].description}}</p>
             <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest">Mehr dazu <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
-
-
-
-      </div>
-      <div class="grid grid-cols-3 gap-x-8">
-        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0">
           <div class="p-6">
-            <img src="../assets/img/digitale_konzepte.svg" v-bind:alt="$page.landing.services[2].title" class="mx-auto">
+            <img src="../assets/img/webdesign.svg" v-bind:alt="$page.landing.services[1].title" class="mx-auto">
           </div>
-          <div class="mt-4 text-center">
+          <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-0 text-center">
+            <h3 class="font-display">{{$page.landing.services[1].title}}</h3>
+            <p class="my-4 text-sm">{{$page.landing.services[1].description}}</p>
+            <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest">Mehr dazu <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0">
+          <div class="p-6">
+            <img src="../assets/img/online_marketing.svg" v-bind:alt="$page.landing.services[2].title" class="mx-auto">
+          </div>
+          <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-0 text-center">
             <h3 class="font-display">{{$page.landing.services[2].title}}</h3>
             <p class="my-4 text-sm">{{$page.landing.services[2].description}}</p>
             <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest">Mehr dazu <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
       </div>
-
-
-
     </section>
-
-
-
-
 
     <!-- REFERENCES -->
     <section id="references" class="mt-16 md:mt-24 lg:mt-40">
@@ -150,6 +174,11 @@
         photo
       }
       intro
+      topServices {
+        cover
+        title
+        description
+      }
       services {
         title
         description

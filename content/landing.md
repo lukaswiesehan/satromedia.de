@@ -17,9 +17,6 @@ services:
       wo und vor allem wie.
   - title: Online Marketing
     description: Zielgruppenorientiertes Streuen Ihrer individuellen Botschaft.
-  - title: Media Consulting
-    description: Nutzen Sie ein Team aus digital Natives für einen modernen und
-      zielorientierten Auftritt!
   - title: Webdesign
     description: Ansprechende Grafiken und benutzerfreundliche Oberfläche - die
       ersten Sekunden sind entscheidend.

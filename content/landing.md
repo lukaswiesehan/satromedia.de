@@ -10,6 +10,8 @@ intro: Wir haben es uns zur Aufgabe gemacht, eine authentische und nachhaltige
 services:
   - title: Influencer Management
     description: "Wir bringen zusammen: authentische Influencer und passende Marken."
+  - title: Content Production
+    description: Egal ob Imagefilm, Produktfotos oder Unterhaltung - wir setzen in Szene!
   - title: Digitale Konzepte
     description: Ihre Botschaft in einer digitalen Kampagne. Wir zeigen Ihnen wann,
       wo und vor allem wie.
@@ -21,8 +23,6 @@ services:
   - title: Webdesign
     description: Ansprechende Grafiken und benutzerfreundliche Oberfläche - die
       ersten Sekunden sind entscheidend.
-  - title: Content Production
-    description: Egal ob Imagefilm, Produktfotos oder Unterhaltung - wir setzen in Szene!
 clients:
   - logo: /uploads/buah.png
   - logo: /uploads/centerparks.png

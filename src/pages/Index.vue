@@ -17,7 +17,10 @@
 
     <!-- QUOTE -->
     <section id="quote" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
-      <p class="text-xl md:text-3xl font-display"><i class="fas fa-quote-right text-dark-100 pr-6"></i>{{$page.landing.cite}}</p>
+      <div class="flex">
+        <div class="text-3xl"><i class="fas fa-quote-right text-dark-100 pr-6"></i></div>
+        <div><p class="text-lg md:text-3xl font-display">{{$page.landing.cite}}</p></div>
+      </div>
     </section>
 
     <!-- INTRO -->
@@ -57,7 +60,7 @@
           <div class="-mt-24 md:-mt-36 lg:-mt-48 mb-6">
             <div class="relative rounded-lg overflow-hidden shadow-lg">
               <img v-bind:src="$page.landing.topServices[0].cover" v-bind:alt="$page.landing.topServices[0].title" class="mx-auto">
-              <div class="flex items-center absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-50 p-12">
+              <div class="flex items-center absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-50 p-20 md:p-12">
                 <img src="../assets/img/influencer_management.svg" v-bind:alt="$page.landing.topServices[0].title" class="mx-auto">
               </div>
             </div>
@@ -72,7 +75,7 @@
           <div class="-mt-24 md:-mt-36 lg:-mt-48 mb-6">
             <div class="relative rounded-lg overflow-hidden shadow-lg">
               <img v-bind:src="$page.landing.topServices[1].cover" v-bind:alt="$page.landing.topServices[1].title" class="mx-auto">
-              <div class="flex items-center absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-50 p-12">
+              <div class="flex items-center absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-50 p-20 md:p-12">
                 <img src="../assets/img/content_production.svg" v-bind:alt="$page.landing.topServices[1].title" class="mx-auto">
               </div>
             </div>
@@ -86,7 +89,7 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8">
         <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0">
-          <div class="p-6">
+          <div class="px-20 py-4 md:px-12 md:py-8">
             <img src="../assets/img/digitale_konzepte.svg" v-bind:alt="$page.landing.services[0].title" class="mx-auto">
           </div>
           <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-0 text-center">
@@ -96,7 +99,7 @@
           </div>
         </div>
         <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0">
-          <div class="p-6">
+          <div class="px-20 py-4 md:px-12 md:py-8">
             <img src="../assets/img/webdesign.svg" v-bind:alt="$page.landing.services[1].title" class="mx-auto">
           </div>
           <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-0 text-center">
@@ -106,7 +109,7 @@
           </div>
         </div>
         <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0">
-          <div class="p-6">
+          <div class="px-20 py-4 md:px-12 md:py-8">
             <img src="../assets/img/online_marketing.svg" v-bind:alt="$page.landing.services[2].title" class="mx-auto">
           </div>
           <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-0 text-center">
@@ -184,7 +187,7 @@
         <div class="md:w-1/2">
           <Window>
             <div class="p-6">
-              <form name="contact" method="POST" v-on:submit.prevent="submitForm" data-netlify="true" data-netlify-honeypot="bot-field">
+              <form name="Kontaktanfragen" method="POST" v-on:submit.prevent="submitForm" data-netlify="true" data-netlify-honeypot="bot-field">
                 <label for="name" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihr Name</label>
                 <input type="text" name="name" v-model="form.data.name" v-on:blur="checkName" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.name, 'border-red-500': form.errors.name}" placeholder="John Doe">
                 <label for="company" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihr Unternehmen</label>
@@ -207,7 +210,7 @@
                   <button type="submit" class="flex-shrink-0 mt-6 md:mt-0 md:ml-10 bg-dark-100 text-white w-12 h-12 rounded-full text-xl focus:outline-none focus:shadow-outline active:bg-dark-300"><i class="fas fa-paper-plane"></i></button>
                 </div>
               </form>
-              <p v-if="form.success" class="text-sm font-bold text-green-500 mt-8">Ihre Anfrage wurde gesendet.</p>
+              <p v-if="form.success" class="text-sm font-bold text-black-100 mt-8"><i class="fas fa-check text-dark-100"></i> Ihre Anfrage wurde gesendet.</p>
             </div>
           </Window>
         </div>
@@ -296,11 +299,11 @@
         this.form.data.email = ''
         this.form.data.message = ''
         this.form.data.privacy = false
-        this.form.data.errors.name = false
-        this.form.data.errors.company = false
-        this.form.data.errors.email = false
-        this.form.data.errors.message = false
-        this.form.data.errors.privacy = false
+        this.form.errors.name = false
+        this.form.errors.company = false
+        this.form.errors.email = false
+        this.form.errors.message = false
+        this.form.errors.privacy = false
       },
       checkName() {
         this.form.errors.name = (this.form.data.name == '' || this.form.data.name.length < 3 || this.form.data.name.indexOf(' ') == -1)
@@ -324,23 +327,26 @@
           .join('&')
       },
       submitForm(e) {
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: this.encode({
-            'form-name': e.target.getAttribute('name'),
-            ...this.form.data
-          }),
-        })
-        .then(() => {
-          console.log(this.encode({
-            'form-name': e.target.getAttribute('name'),
-            ...this.form.data
-          }))
-          this.clearForm()
-          this.form.success = true
-        })
-        .catch(error => console.log(error))
+        this.checkName()
+        this.checkCompany()
+        this.checkEmail()
+        this.checkMessage()
+        this.checkPrivacy()
+        if(!(this.form.errors.name || this.form.errors.company || this.form.errors.email || this.form.errors.message || this.form.errors.privacy)) {
+          fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: this.encode({
+              'form-name': e.target.getAttribute('name'),
+              ...this.form.data
+            }),
+          })
+          .then(() => {
+            this.clearForm()
+            this.form.success = true
+          })
+          .catch(error => console.log(error))
+        }
       }
     }
   }

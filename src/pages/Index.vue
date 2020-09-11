@@ -338,7 +338,10 @@
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: this.encode({
               'form-name': e.target.getAttribute('name'),
-              ...this.form.data
+              'Name': this.form.data.name,
+              'Unternehmen': this.form.data.company,
+              'Email': this.form.data.email,
+              'Nachricht': this.form.data.message
             }),
           })
           .then(() => {

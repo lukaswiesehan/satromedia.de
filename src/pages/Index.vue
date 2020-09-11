@@ -220,7 +220,7 @@
   query {
     landing(id: "1") {
       id
-      
+      header_video
       header_thumbnail
       cite
       portraits { 

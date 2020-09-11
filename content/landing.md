@@ -1,5 +1,4 @@
----
-id: 1
+id: 2
 header_video: /uploads/showreel_cut.mp4
 header_thumbnail: /uploads/showreel_screenshot.png
 cite: Große Ideen brauchen große Meinungen
@@ -60,4 +59,3 @@ header_media: /uploads/showreel_screenshot.png
 contact_description: Lassen Sie uns Ihrer Marke mit einem ausgefeilten Konzept
   zu einem starken Image verhelfen, welches durch hervorragendes Marketing und
   professionelle Influencer an Ihre Zielgruppe herangetragen wird!
----

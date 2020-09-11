@@ -5,9 +5,12 @@
     <!-- HEADER -->
     <section id="header" class="max-w-screen-xl mx-auto px-4 sm:px-8">
       <Window>
-        <img v-bind:src="$page.landing.header_media" alt="Satro Media Showreel">
+        <video preload autoplay muted loop>
+          <source v-bind:src="$page.landing.header_video" type="video/mp4">
+          <img v-bind:src="$page.landing.header_thumbnail" alt="Satro Media Showreel">
+        </video>
         <div class="flex items-center absolute left-0 top-0 w-full h-full bg-dark-900 bg-opacity-25">
-          <img src="../assets/img/satro_logo.png" alt="Satro Media Logo" class="w-2/3 mx-auto -mt-24">
+          <img src="../assets/img/satro_logo.png" alt="Satro Media Logo" class="w-2/3 mx-auto -mt-8 sm:-mt-12 md:-mt-20 lg:-mt-24">
         </div>
       </Window>
     </section>
@@ -161,6 +164,52 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
+    <section id="contact" class="mt-16 md:mt-24 lg:mt-40">
+      <div class="md:pt-24">
+        <div class="max-w-screen-lg mx-auto px-4 sm:px-8 md:flex md:flex-row-reverse">
+          <div class="md:w-1/2 md:pl-16">
+            <Title :icon="'fa-address-card'" :heading="'Ihre Marke'" :title="'Ihre Anfrage'"></Title>
+          </div>
+        </div>
+        <div class="bg-light-500 mt-8">
+          <div class="max-w-screen-lg mx-auto px-4 sm:px-8 md:flex md:flex-row-reverse">
+            <div class="md:w-1/2 md:pl-16 py-12">
+              <p class="text-black-500">{{$page.landing.contact_description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-12 md:-mt-96">
+        <div class="md:w-1/2">
+          <Window>
+            <div class="p-6">
+              <label for="name" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihr Name</label>
+              <input type="text" v-model="form.name" id="name" v-on:blur="checkName" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.name, 'border-red-500': form.errors.name}" placeholder="John Doe">
+              <label for="company" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihr Unternehmen</label>
+              <input type="text" v-model="form.company" id="company" v-on:blur="checkCompany" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.company, 'border-red-500': form.errors.company}" placeholder="Acme Corporation">
+              <label for="email" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihre Email-Adresse</label>
+              <input type="email" v-model="form.email" id="email" v-on:blur="checkEmail" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.email, 'border-red-500': form.errors.email}" placeholder="john.doe@example.com">
+              <label for="message" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihre Anfrage</label>
+              <textarea name="message" v-model="form.message" id="message" v-on:blur="checkMessage" rows="7" placeholder="Mein Projekt..." class="bg-black-700 relative z-20 rounded-lg w-full py-2 px-4 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 mt-1" v-bind:class="{'border-2': form.errors.message, 'border-red-500': form.errors.message}" style="resize: none;"></textarea>
+              <svg v-if="form.errors.message" xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30" class="-mt-8 -ml-4">
+                <path fill="#F56565" fill-rule="evenodd" d="M15.6631996,0 C15.6631996,10.0805034 10.7875563,19.1652917 1.03626976,27.2543651 C-5.06981953,32.3196049 17.7244451,30.5947092 19.5560233,20.2538567 C20.7770755,13.359955 19.4794676,6.60866946 15.6631996,0 Z"/>
+              </svg>
+              <svg v-else xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30" class="-mt-8 -ml-4">
+                <path fill="#3C3C3C" fill-rule="evenodd" d="M15.6631996,0 C15.6631996,10.0805034 10.7875563,19.1652917 1.03626976,27.2543651 C-5.06981953,32.3196049 17.7244451,30.5947092 19.5560233,20.2538567 C20.7770755,13.359955 19.4794676,6.60866946 15.6631996,0 Z"/>
+              </svg>
+              <div class="mt-6 md:mt-10 md:flex md:items-center md:justify-between">
+                <div class="flex items-center">
+                  <input type="checkbox" v-model="form.privacy" id="privacy" v-on:blur="checkPrivacy" class="w-6 h-6 form-checkbox rounded-md text-dark-100 bg-black-900 border-2 border-black-300 focus:outline-none focus:shadow-outline focus:border-black-300" v-bind:class="{'border-red-500': form.errors.privacy, 'focus:border-red-500': form.errors.privacy}">
+                  <p class="text-black-300 text-sm ml-4">Ich habe die <a href="#" class="font-bold text-xs text-dark-100 uppercase tracking-widest focus:outline-none focus:underline">Datenschutzerklärung <i class="fas fa-chevron-right"></i></a> gelesen und stimme zu.</p>
+                </div>
+                <button class="flex-shrink-0 mt-6 md:mt-0 md:ml-10 bg-dark-100 text-white w-12 h-12 rounded-full text-xl focus:outline-none focus:shadow-outline active:bg-dark-300"><i class="fas fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </Window>
+        </div>
+      </div>
+    </section>
   </Layout>
 </template>
 
@@ -168,7 +217,8 @@
   query {
     landing(id: "4ca93ae2a3ed8c67e4accebd4623f499") {
       id
-      header_media
+      header_video
+      header_thumbnail
       cite
       portraits { 
         photo
@@ -217,15 +267,58 @@
     },
     data() {
       return {
-        icons: [
-          '../assets/img/influencer_management.svg',
-          '../assets/img/digitale_konzepte.svg',
-          '../assets/img/online_marketing.svg',
-          '../assets/img/media_consulting.svg',
-          '../assets/img/webdesign.svg',
-          '../assets/img/content_production.svg',
-        ]
+        form: {
+          name: '',
+          company: '',
+          email: '',
+          message: '',
+          privacy: false,
+          errors: {
+            name: false,
+            company: false,
+            email: false,
+            message: false,
+            privacy: false
+          }
+        }
+      }
+    },
+    methods: {
+      clearForm: function() {
+        this.form.name = ''
+        this.form.company = ''
+        this.form.email = ''
+        this.form.message = ''
+        this.form.privacy = false
+        this.form.errors.name = false
+        this.form.errors.company = false
+        this.form.errors.email = false
+        this.form.errors.message = false
+        this.form.errors.privacy = false
+      },
+      checkName: function() {
+        this.form.errors.name = (this.form.name == '' || this.form.name.length < 3 || this.form.name.indexOf(' ') == -1)
+      },
+      checkCompany: function() {
+        this.form.errors.company = (this.form.company == '' || this.form.company.length < 3)
+      },
+      checkEmail: function() {
+        var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        this.form.errors.email = !re.test(String(this.form.email).toLowerCase());
+      },
+      checkMessage: function() {
+        this.form.errors.message = (this.form.message == '')
+      },
+      checkPrivacy: function() {
+        this.form.errors.privacy = !this.form.privacy
+      },
+      submitForm: function() {
+
       }
     }
   }
 </script>
+
+<style scoped>
+
+</style>

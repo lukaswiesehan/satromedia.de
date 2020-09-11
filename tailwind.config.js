@@ -1,4 +1,7 @@
 module.exports = {
+  plugins: [
+    require('@tailwindcss/custom-forms'),
+  ],
   theme: {
     screens: {
       'xs': '480px',
@@ -28,8 +31,14 @@ module.exports = {
       },
       dark: {
         100: '#8CA0C3',
+        300: '#6477AA',
         500: '#46508c',
         900: '#282850'
+      },
+      red: {
+        100: '#FEB2B2',
+        500: '#F56565',
+        900: '#C53030'
       }
     },
     extend: {
@@ -38,7 +47,13 @@ module.exports = {
         '84': '21rem',
         '96': '24rem',
         '128': '32rem',
-      }
+      },
+      boxShadow: {
+        outline: '0 0 0 3px rgba(255, 255, 255, 0.2)'
+      },
     }
+  },
+  variants: {
+    backgroundColor: ['responsive', 'hover', 'focus', 'active'],
   }
 }

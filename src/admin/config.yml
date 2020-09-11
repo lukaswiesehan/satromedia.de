@@ -27,7 +27,8 @@ collections:
         name: "landing"
         file: "content/landing.md"
         fields:
-          - {label: "Header Media", name: "header_media", widget: "file"}
+          - {label: "Header Video", name: "header_video", widget: "file"}
+          - {label: "Header Thumbnail", name: "header_thumbnail", widget: "file"}
           - {label: "Zitat", name: "cite", widget: "string"}
           - label: "Portraits"
             name: "portraits"

@@ -21,6 +21,9 @@
         <p>
           <a href="#" class="hover:text-black-700">Datenschutz</a>
         </p>
+        <p>
+          <a href="/admin" class="hover:text-black-700">Login</a>
+        </p>
       </div>
     </div>
   </footer>

@@ -12,7 +12,7 @@ collections:
     files:
       - label: "Landing Page"
         name: "landing"
-        file: "content/landing.md"
+        file: "content/landing.yml"
         fields:
           - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
           - {label: "Header Video", name: "header_video", widget: "file"}

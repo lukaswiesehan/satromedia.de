@@ -3,10 +3,16 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 import '~/assets/fontawesome/css/all.min.css'
+import VueScrollTo from 'vue-scrollto'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+  Vue.use(VueScrollTo, {
+    duration: 800,
+    easing: "ease",
+    offset: -50
+})
   /*head.script.push({
     src: 'http://localhost:8098',
     body: false

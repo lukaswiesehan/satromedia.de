@@ -12,7 +12,8 @@
     "gridsome": "^0.7.0",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-plugin-tailwindcss": "^3.0.1",
-    "netlify-cms": "^2.10.55"
+    "netlify-cms": "^2.10.55",
+    "vue-scrollto": "^2.18.2"
   },
   "devDependencies": {
     "@tailwindcss/custom-forms": "^0.2.1"

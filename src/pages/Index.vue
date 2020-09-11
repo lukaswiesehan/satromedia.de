@@ -5,7 +5,7 @@
     <!-- HEADER -->
     <section id="header" class="max-w-screen-xl mx-auto px-4 sm:px-8">
       <Window>
-        <video preload autoplay muted loop>
+        <video width="100%" height="100%" muted playsinline autoplay preload loop>
           <source v-bind:src="$page.landing.header_video" type="video/mp4">
           <img v-bind:src="$page.landing.header_thumbnail" alt="Satro Media Showreel">
         </video>
@@ -65,7 +65,7 @@
           <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-8 lg:px-16 text-center">
             <h3 class="font-display">{{$page.landing.topServices[0].title}}</h3>
             <p class="my-4 text-sm">{{$page.landing.topServices[0].description}}</p>
-            <a href="#" class="text-xs text-dark-100 hover:text-dark-500 uppercase font-bold tracking-widest">Mehr dazu <i class="fas fa-chevron-right"></i></a>
+            <a href="#" class="text-xs text-dark-100 hover:text-dark-500 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
         <div class="bg-white rounded-lg shadow-md p-6 pt-0 flex flex-col justify-between mt-24 md:mt-36 lg:mt-48 mb-12">
@@ -80,7 +80,7 @@
           <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-8 lg:px-16 text-center">
             <h3 class="font-display">{{$page.landing.topServices[1].title}}</h3>
             <p class="my-4 text-sm">{{$page.landing.topServices[1].description}}</p>
-            <a href="#" class="text-xs text-dark-100 hover:text-dark-500 uppercase font-bold tracking-widest">Mehr dazu <i class="fas fa-chevron-right"></i></a>
+            <a href="#" class="text-xs text-dark-100 hover:text-dark-500 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
       </div>
@@ -92,7 +92,7 @@
           <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-0 text-center">
             <h3 class="font-display">{{$page.landing.services[0].title}}</h3>
             <p class="my-4 text-sm">{{$page.landing.services[0].description}}</p>
-            <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest">Mehr dazu <i class="fas fa-chevron-right"></i></a>
+            <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
         <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0">
@@ -102,7 +102,7 @@
           <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-0 text-center">
             <h3 class="font-display">{{$page.landing.services[1].title}}</h3>
             <p class="my-4 text-sm">{{$page.landing.services[1].description}}</p>
-            <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest">Mehr dazu <i class="fas fa-chevron-right"></i></a>
+            <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
         <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0">
@@ -112,7 +112,7 @@
           <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-0 text-center">
             <h3 class="font-display">{{$page.landing.services[2].title}}</h3>
             <p class="my-4 text-sm">{{$page.landing.services[2].description}}</p>
-            <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest">Mehr dazu <i class="fas fa-chevron-right"></i></a>
+            <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
       </div>

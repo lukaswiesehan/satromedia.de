@@ -12,9 +12,5 @@ export default function (Vue, { router, head, isClient }) {
     duration: 800,
     easing: "ease",
     offset: -50
-})
-  /*head.script.push({
-    src: 'http://localhost:8098',
-    body: false
-  })*/
+  })
 }

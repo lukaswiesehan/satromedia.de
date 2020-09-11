@@ -1,12 +1,12 @@
 backend:
   name: git-gateway
-
-media_folder: "static/uploads"
-public_folder: "uploads"
-
+media_folder: "/static/uploads"
+public_folder: "/uploads"
+locale: 'de'
 collections:
   - label: "Pages"
     name: "pages"
+    format: "yml"
     editor:
       preview: false
     files:

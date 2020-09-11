@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Navbar id="navbar" :showBackButton="false" />
-
+    
     <!-- HEADER -->
     <section id="header" class="max-w-screen-xl mx-auto px-4 sm:px-8">
       <Window>

@@ -7,10 +7,10 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.2",
     "gridsome": "^0.7.0",
     "gridsome-plugin-tailwindcss": "^3.0.1",
+    "js-yaml": "^3.14.0",
     "vue-scrollto": "^2.18.2"
   },
   "devDependencies": {

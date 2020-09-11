@@ -216,7 +216,7 @@
   </Layout>
 </template>
 
-<!--<page-query>
+<page-query>
   query {
     landing(id: "1") {
       id
@@ -250,7 +250,7 @@
       contact_description 
     }
   }
-</page-query>-->
+</page-query>
 
 <script>
   import Navbar from '../components/Navbar.vue'

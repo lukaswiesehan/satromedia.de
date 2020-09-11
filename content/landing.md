@@ -1,5 +1,6 @@
 ---
-header_media: /uploads/showreel_screenshot.png
+header_video: /uploads/showreel_cut.mp4
+header_thumbnail: /uploads/showreel_screenshot.png
 cite: Große Ideen brauchen große Meinungen
 portraits:
   - photo: /uploads/portrait_2.png
@@ -54,6 +55,7 @@ about_description: >-
 
   Unser Anspruch ist es, anders zu sein, aufzufallen, und trotzdem zu überzeugen. Dafür besteht unser Team aus jungen Creatorn und Designern, mit denen wir Ihre Kommunikation in der digitalen Welt einzigartig gestalten und verändern.
 about_image: /uploads/team.png
+header_media: /uploads/showreel_screenshot.png
 contact_description: Lassen Sie uns Ihrer Marke mit einem ausgefeilten Konzept
   zu einem starken Image verhelfen, welches durch hervorragendes Marketing und
   professionelle Influencer an Ihre Zielgruppe herangetragen wird!

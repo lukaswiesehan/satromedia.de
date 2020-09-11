@@ -184,13 +184,13 @@
         <div class="md:w-1/2">
           <Window>
             <div class="p-6">
-              <form name="contact" method="post" v-on:submit.prevent="submitForm()" data-netlify="true" data-netlify-honeypot="bot-field">
+              <form name="contact" method="POST" v-on:submit.prevent="submitForm" data-netlify="true" data-netlify-honeypot="bot-field">
                 <label for="name" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihr Name</label>
-                <input type="text" v-model="form.data.name" id="name" v-on:blur="checkName" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.name, 'border-red-500': form.errors.name}" placeholder="John Doe">
+                <input type="text" name="name" v-model="form.data.name" v-on:blur="checkName" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.name, 'border-red-500': form.errors.name}" placeholder="John Doe">
                 <label for="company" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihr Unternehmen</label>
-                <input type="text" v-model="form.data.company" id="company" v-on:blur="checkCompany" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.company, 'border-red-500': form.errors.company}" placeholder="Acme Corporation">
+                <input type="text" name="company" v-model="form.data.company" v-on:blur="checkCompany" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.company, 'border-red-500': form.errors.company}" placeholder="Acme Corporation">
                 <label for="email" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihre Email-Adresse</label>
-                <input type="email" v-model="form.data.email" id="email" v-on:blur="checkEmail" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.email, 'border-red-500': form.errors.email}" placeholder="john.doe@example.com">
+                <input type="email" name="email" v-model="form.data.email" v-on:blur="checkEmail" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.email, 'border-red-500': form.errors.email}" placeholder="john.doe@example.com">
                 <label for="message" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihre Anfrage</label>
                 <textarea name="message" v-model="form.data.message" id="message" v-on:blur="checkMessage" rows="7" placeholder="Mein Projekt..." class="bg-black-700 relative z-20 rounded-lg w-full py-2 px-4 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 mt-1" v-bind:class="{'border-2': form.errors.message, 'border-red-500': form.errors.message}" style="resize: none;"></textarea>
                 <svg v-if="form.errors.message" xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30" class="-mt-8 -ml-4">
@@ -201,7 +201,7 @@
                 </svg>
                 <div class="mt-6 md:mt-10 md:flex md:items-center md:justify-between">
                   <div class="flex items-center">
-                    <input type="checkbox" v-model="form.data.privacy" id="privacy" v-on:blur="checkPrivacy" class="w-6 h-6 form-checkbox rounded-md text-dark-100 bg-black-900 border-2 border-black-300 focus:outline-none focus:shadow-outline focus:border-black-300" v-bind:class="{'border-red-500': form.errors.privacy, 'focus:border-red-500': form.errors.privacy}">
+                    <input type="checkbox" name="privacy" v-model="form.data.privacy" v-on:blur="checkPrivacy" class="w-6 h-6 form-checkbox rounded-md text-dark-100 bg-black-900 border-2 border-black-300 focus:outline-none focus:shadow-outline focus:border-black-300" v-bind:class="{'border-red-500': form.errors.privacy, 'focus:border-red-500': form.errors.privacy}">
                     <p class="text-black-300 text-sm ml-4">Ich habe die <a href="#" class="font-bold text-xs text-dark-100 uppercase tracking-widest focus:outline-none focus:underline">Datenschutzerklärung <i class="fas fa-chevron-right"></i></a> gelesen und stimme zu.</p>
                   </div>
                   <button type="submit" class="flex-shrink-0 mt-6 md:mt-0 md:ml-10 bg-dark-100 text-white w-12 h-12 rounded-full text-xl focus:outline-none focus:shadow-outline active:bg-dark-300"><i class="fas fa-paper-plane"></i></button>
@@ -324,21 +324,23 @@
           .join('&')
       },
       submitForm(e) {
-        if(!form.errors.name && !form.errors.company && !form.errors.email && !form.errors.message && !form.erorrs.privacy) {
-          fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: this.encode({
-              'form-name': e.target.getAttribute('name'),
-              ...this.form.data
-            }),
-          })
-          .then(() => {
-            this.clearForm()
-            this.form.success = true
-          })
-          .catch(error => console.log(error))
-        }
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: this.encode({
+            'form-name': e.target.getAttribute('name'),
+            ...this.form.data
+          }),
+        })
+        .then(() => {
+          console.log(this.encode({
+            'form-name': e.target.getAttribute('name'),
+            ...this.form.data
+          }))
+          this.clearForm()
+          this.form.success = true
+        })
+        .catch(error => console.log(error))
       }
     }
   }

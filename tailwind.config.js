@@ -60,5 +60,11 @@ module.exports = {
   },
   variants: {
     backgroundColor: ['responsive', 'hover', 'focus', 'active'],
-  }
+  },
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
+  purge: [
+    './src/**/*.vue'
+  ],
 }

@@ -184,27 +184,30 @@
         <div class="md:w-1/2">
           <Window>
             <div class="p-6">
-              <label for="name" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihr Name</label>
-              <input type="text" v-model="form.name" id="name" v-on:blur="checkName" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.name, 'border-red-500': form.errors.name}" placeholder="John Doe">
-              <label for="company" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihr Unternehmen</label>
-              <input type="text" v-model="form.company" id="company" v-on:blur="checkCompany" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.company, 'border-red-500': form.errors.company}" placeholder="Acme Corporation">
-              <label for="email" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihre Email-Adresse</label>
-              <input type="email" v-model="form.email" id="email" v-on:blur="checkEmail" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.email, 'border-red-500': form.errors.email}" placeholder="john.doe@example.com">
-              <label for="message" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihre Anfrage</label>
-              <textarea name="message" v-model="form.message" id="message" v-on:blur="checkMessage" rows="7" placeholder="Mein Projekt..." class="bg-black-700 relative z-20 rounded-lg w-full py-2 px-4 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 mt-1" v-bind:class="{'border-2': form.errors.message, 'border-red-500': form.errors.message}" style="resize: none;"></textarea>
-              <svg v-if="form.errors.message" xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30" class="-mt-8 -ml-4">
-                <path fill="#F56565" fill-rule="evenodd" d="M15.6631996,0 C15.6631996,10.0805034 10.7875563,19.1652917 1.03626976,27.2543651 C-5.06981953,32.3196049 17.7244451,30.5947092 19.5560233,20.2538567 C20.7770755,13.359955 19.4794676,6.60866946 15.6631996,0 Z"/>
-              </svg>
-              <svg v-else xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30" class="-mt-8 -ml-4">
-                <path fill="#3C3C3C" fill-rule="evenodd" d="M15.6631996,0 C15.6631996,10.0805034 10.7875563,19.1652917 1.03626976,27.2543651 C-5.06981953,32.3196049 17.7244451,30.5947092 19.5560233,20.2538567 C20.7770755,13.359955 19.4794676,6.60866946 15.6631996,0 Z"/>
-              </svg>
-              <div class="mt-6 md:mt-10 md:flex md:items-center md:justify-between">
-                <div class="flex items-center">
-                  <input type="checkbox" v-model="form.privacy" id="privacy" v-on:blur="checkPrivacy" class="w-6 h-6 form-checkbox rounded-md text-dark-100 bg-black-900 border-2 border-black-300 focus:outline-none focus:shadow-outline focus:border-black-300" v-bind:class="{'border-red-500': form.errors.privacy, 'focus:border-red-500': form.errors.privacy}">
-                  <p class="text-black-300 text-sm ml-4">Ich habe die <a href="#" class="font-bold text-xs text-dark-100 uppercase tracking-widest focus:outline-none focus:underline">Datenschutzerklärung <i class="fas fa-chevron-right"></i></a> gelesen und stimme zu.</p>
+              <form name="contact" method="post" v-on:submit.prevent="submitForm()" data-netlify="true" data-netlify-honeypot="bot-field">
+                <label for="name" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihr Name</label>
+                <input type="text" v-model="form.data.name" id="name" v-on:blur="checkName" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.name, 'border-red-500': form.errors.name}" placeholder="John Doe">
+                <label for="company" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihr Unternehmen</label>
+                <input type="text" v-model="form.data.company" id="company" v-on:blur="checkCompany" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.company, 'border-red-500': form.errors.company}" placeholder="Acme Corporation">
+                <label for="email" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihre Email-Adresse</label>
+                <input type="email" v-model="form.data.email" id="email" v-on:blur="checkEmail" class="bg-black-700 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.email, 'border-red-500': form.errors.email}" placeholder="john.doe@example.com">
+                <label for="message" class="text-xs text-black-300 uppercase font-bold tracking-widest">Ihre Anfrage</label>
+                <textarea name="message" v-model="form.data.message" id="message" v-on:blur="checkMessage" rows="7" placeholder="Mein Projekt..." class="bg-black-700 relative z-20 rounded-lg w-full py-2 px-4 focus:outline-none focus:shadow-outline text-black-300 placeholder-black-500 mt-1" v-bind:class="{'border-2': form.errors.message, 'border-red-500': form.errors.message}" style="resize: none;"></textarea>
+                <svg v-if="form.errors.message" xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30" class="-mt-8 -ml-4">
+                  <path fill="#F56565" fill-rule="evenodd" d="M15.6631996,0 C15.6631996,10.0805034 10.7875563,19.1652917 1.03626976,27.2543651 C-5.06981953,32.3196049 17.7244451,30.5947092 19.5560233,20.2538567 C20.7770755,13.359955 19.4794676,6.60866946 15.6631996,0 Z"/>
+                </svg>
+                <svg v-else xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30" class="-mt-8 -ml-4">
+                  <path fill="#3C3C3C" fill-rule="evenodd" d="M15.6631996,0 C15.6631996,10.0805034 10.7875563,19.1652917 1.03626976,27.2543651 C-5.06981953,32.3196049 17.7244451,30.5947092 19.5560233,20.2538567 C20.7770755,13.359955 19.4794676,6.60866946 15.6631996,0 Z"/>
+                </svg>
+                <div class="mt-6 md:mt-10 md:flex md:items-center md:justify-between">
+                  <div class="flex items-center">
+                    <input type="checkbox" v-model="form.data.privacy" id="privacy" v-on:blur="checkPrivacy" class="w-6 h-6 form-checkbox rounded-md text-dark-100 bg-black-900 border-2 border-black-300 focus:outline-none focus:shadow-outline focus:border-black-300" v-bind:class="{'border-red-500': form.errors.privacy, 'focus:border-red-500': form.errors.privacy}">
+                    <p class="text-black-300 text-sm ml-4">Ich habe die <a href="#" class="font-bold text-xs text-dark-100 uppercase tracking-widest focus:outline-none focus:underline">Datenschutzerklärung <i class="fas fa-chevron-right"></i></a> gelesen und stimme zu.</p>
+                  </div>
+                  <button type="submit" class="flex-shrink-0 mt-6 md:mt-0 md:ml-10 bg-dark-100 text-white w-12 h-12 rounded-full text-xl focus:outline-none focus:shadow-outline active:bg-dark-300"><i class="fas fa-paper-plane"></i></button>
                 </div>
-                <button class="flex-shrink-0 mt-6 md:mt-0 md:ml-10 bg-dark-100 text-white w-12 h-12 rounded-full text-xl focus:outline-none focus:shadow-outline active:bg-dark-300"><i class="fas fa-paper-plane"></i></button>
-              </div>
+              </form>
+              <p v-if="form.success" class="text-sm font-bold text-green-500 mt-8">Ihre Anfrage wurde gesendet.</p>
             </div>
           </Window>
         </div>
@@ -268,52 +271,74 @@
     data() {
       return {
         form: {
-          name: '',
-          company: '',
-          email: '',
-          message: '',
-          privacy: false,
+          data: {
+            name: '',
+            company: '',
+            email: '',
+            message: '',
+            privacy: false
+          },
           errors: {
             name: false,
             company: false,
             email: false,
             message: false,
             privacy: false
-          }
+          },
+          success: false
         }
       }
     },
     methods: {
       clearForm: function() {
-        this.form.name = ''
-        this.form.company = ''
-        this.form.email = ''
-        this.form.message = ''
-        this.form.privacy = false
-        this.form.errors.name = false
-        this.form.errors.company = false
-        this.form.errors.email = false
-        this.form.errors.message = false
-        this.form.errors.privacy = false
+        this.form.data.name = ''
+        this.form.data.company = ''
+        this.form.data.email = ''
+        this.form.data.message = ''
+        this.form.data.privacy = false
+        this.form.data.errors.name = false
+        this.form.data.errors.company = false
+        this.form.data.errors.email = false
+        this.form.data.errors.message = false
+        this.form.data.errors.privacy = false
       },
-      checkName: function() {
-        this.form.errors.name = (this.form.name == '' || this.form.name.length < 3 || this.form.name.indexOf(' ') == -1)
+      checkName() {
+        this.form.errors.name = (this.form.data.name == '' || this.form.data.name.length < 3 || this.form.data.name.indexOf(' ') == -1)
       },
-      checkCompany: function() {
-        this.form.errors.company = (this.form.company == '' || this.form.company.length < 3)
+      checkCompany() {
+        this.form.errors.company = (this.form.data.company == '' || this.form.data.company.length < 3)
       },
-      checkEmail: function() {
+      checkEmail() {
         var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        this.form.errors.email = !re.test(String(this.form.email).toLowerCase());
+        this.form.errors.email = !re.test(String(this.form.data.email).toLowerCase());
       },
-      checkMessage: function() {
-        this.form.errors.message = (this.form.message == '')
+      checkMessage() {
+        this.form.errors.message = (this.form.data.message == '')
       },
-      checkPrivacy: function() {
-        this.form.errors.privacy = !this.form.privacy
+      checkPrivacy() {
+        this.form.errors.privacy = !this.form.data.privacy
       },
-      submitForm: function() {
-
+      encode(data) {
+        return Object.keys(data)
+          .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+          .join('&')
+      },
+      submitForm(e) {
+        if(!form.errors.name && !form.errors.company && !form.errors.email && !form.errors.message && !form.erorrs.privacy) {
+          fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: this.encode({
+              'form-name': e.target.getAttribute('name'),
+              ...this.form.data
+            }),
+          })
+          .then(() => {
+            this.clearForm()
+            this.form.success = true
+          })
+          .catch(error => console.log(error))
+        }
       }
     }
   }

@@ -1,16 +1,12 @@
 <template>
-  <div id="app">
+  <div id="app" class="overflow-hidden">
     <slot/>
-    <Footer/>
   </div>
 </template>
 
 <script>
-import Footer from '../components/Footer.vue'
 export default {
-  components: {
-      Footer
-    }
+
 }
 </script>
 

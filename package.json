@@ -9,6 +9,7 @@
   "dependencies": {
     "gridsome": "^0.7.0",
     "gridsome-plugin-tailwindcss": "^3.0.1",
+    "gsap": "^3.5.1",
     "js-yaml": "^3.14.0",
     "vue-scrollto": "^2.18.2"
   },

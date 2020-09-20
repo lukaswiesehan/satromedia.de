@@ -4,7 +4,7 @@
 
     <!-- HEADER -->
     <section id="header" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 -mt-20 xs:-mt-32 md:-mt-64">
-      <Window>
+      <Window id="header-window">
         <video width="100%" height="100%" muted playsinline autoplay preload loop>
           <source v-bind:src="$page.landing.header_video" type="video/mp4">
           <img v-bind:src="$page.landing.header_thumbnail" alt="Satro Media Showreel">
@@ -31,7 +31,7 @@
           <div class="relative md:flex">
             <div>
               <div class="relative w-64 h-56 md:h-64 lg:w-112 lg:h-96 md:-mb-12">
-                <Window class="absolute top-0 left-0 fade-in-up">
+                <Window id="portrait-1" class="absolute top-0 left-0 fade-in-up">
                   <img v-bind:src="$page.landing.portraits[0].photo" alt="Satro Media Gründer" class="object-cover w-32 h-40 lg:w-56 lg:h-64">
                   <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25 transition-all duration-500 ease-in-out opacity-0 hover:opacity-100 flex flex-col-reverse">
                     <div class="p-4 text-white">
@@ -40,7 +40,7 @@
                     </div>
                   </div>
                 </Window>
-                <Window class="absolute bottom-0 right-0">
+                <Window id="portrait-2" class="absolute bottom-0 right-0">
                   <img v-bind:src="$page.landing.portraits[1].photo" alt="Satro Media Gründer" class="object-cover w-32 h-40 lg:w-56 lg:h-64">
                   <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25 transition-all duration-500 ease-in-out opacity-0 hover:opacity-100 flex flex-col-reverse">
                     <div class="p-4 text-white">
@@ -66,7 +66,7 @@
     <!-- SERVICES -->
     <section id="services" class="max-w-screen-xl mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8">
-        <div class="bg-white rounded-lg shadow-md p-6 pt-0 flex flex-col justify-between mt-24 md:mt-36 lg:mt-48 mb-12 fade-in-up">
+        <div id="service-1" class="bg-white rounded-lg shadow-md p-6 pt-0 flex flex-col justify-between mt-24 md:mt-36 lg:mt-48 mb-12 fade-in-up">
           <div class="-mt-24 md:-mt-36 lg:-mt-48 mb-6">
             <div class="relative rounded-lg overflow-hidden shadow-lg">
               <img v-bind:src="$page.landing.topServices[0].cover" v-bind:alt="$page.landing.topServices[0].title" class="mx-auto">
@@ -81,7 +81,7 @@
             <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-6 pt-0 flex flex-col justify-between mt-24 md:mt-36 lg:mt-48 mb-12">
+        <div id="service-2" class="bg-white rounded-lg shadow-md p-6 pt-0 flex flex-col justify-between mt-24 md:mt-36 lg:mt-48 mb-12">
           <div class="-mt-24 md:-mt-36 lg:-mt-48 mb-6">
             <div class="relative rounded-lg overflow-hidden shadow-lg">
               <img v-bind:src="$page.landing.topServices[1].cover" v-bind:alt="$page.landing.topServices[1].title" class="mx-auto">
@@ -98,7 +98,7 @@
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8">
-        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0">
+        <div id="service-3" class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0">
           <div class="px-20 py-4 md:px-12 md:py-8">
             <img src="../assets/img/digitale_konzepte.svg" v-bind:alt="$page.landing.services[0].title" class="mx-auto">
           </div>
@@ -108,7 +108,7 @@
             <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0">
+        <div id="service-4" class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0">
           <div class="px-20 py-4 md:px-12 md:py-8">
             <img src="../assets/img/webdesign.svg" v-bind:alt="$page.landing.services[1].title" class="mx-auto">
           </div>
@@ -118,7 +118,7 @@
             <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0">
+        <div id="service-5" class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0">
           <div class="px-20 py-4 md:px-12 md:py-8">
             <img src="../assets/img/online_marketing.svg" v-bind:alt="$page.landing.services[2].title" class="mx-auto">
           </div>
@@ -145,7 +145,7 @@
               </div>
             </div>
             <div class="relative z-10 max-w-xl mx-auto pb-12 lg:pb-0 md:w-1/2 lg:w-1/3 md:-mt-20">
-              <Window>
+              <Window id="reference-window">
                 <div class="ml-2 mr-6 mb-8">
                   <div v-for="(reference, i) in $page.landing.references" :key="i">
                     <Bubble :light="false">
@@ -170,7 +170,7 @@
           <h3 class="font-display">{{$page.landing.about_header}}</h3>
           <p class="pt-4 text-black-500">{{$page.landing.about_description}}</p>
         </div>
-        <div class="mx-8 -mt-24 lg:mx-0 lg:my-8 lg:-ml-24 lg:w-4/5 relative rounded-lg overflow-hidden shadow-lg">
+        <div id="about-image" class="mx-8 -mt-24 lg:mx-0 lg:my-8 lg:-ml-24 lg:w-4/5 relative rounded-lg overflow-hidden shadow-lg">
           <img v-bind:src="$page.landing.about_image" alt="Satro Media Team" class="w-full h-full">
           <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25"></div>
         </div>
@@ -187,11 +187,11 @@
         </div>
         <div class="bg-gradient-to-br from-gray-600 to-gray-700 mt-8">
           <div class="max-w-screen-lg mx-auto px-4 sm:px-8 md:flex md:flex-row-reverse">
-            <div class="md:w-1/2 md:pl-16 py-16">
+            <div class="md:w-1/2 md:pl-16 py-12 md:py-16">
               <p class="text-gray-300 leading-loose">{{$page.landing.contact_description}}</p>
             </div>
             <div class="md:w-1/2 md:-mt-32">
-              <Window>
+              <Window id="contact-form">
                 <div class="p-6">
                   <form name="Kontaktanfragen" method="POST" v-on:submit.prevent="submitForm" data-netlify="true" data-netlify-honeypot="bot-field">
                     <label for="name" class="text-xs text-gray-300 uppercase font-bold tracking-widest">Ihr Name</label>
@@ -271,7 +271,8 @@
   import Title from '../components/Title.vue'
   import Footer from '../components/Footer.vue'
 
-  import { gsap } from 'gsap'
+  import gsap from 'gsap'
+  import ScrollTrigger from 'gsap/ScrollTrigger'
 
   export default {
     name: 'Index',
@@ -361,7 +362,32 @@
           })
           .catch(error => console.log(error))
         }
+      },
+      animations() {
+        //loading animation:
+        gsap.from('#navbar', {opacity:0, duration: 0.8})
+        gsap.from('#header-window', {opacity: 0, scale: 2, duration: 0.6})
+        gsap.from('#nav-item-2', {y: -200, duration: 0.6, delay: 0.4})
+        gsap.from('#nav-item-3', {y: -200, duration: 0.6, delay: 0.5})
+        gsap.from('#nav-item-4', {y: -200, duration: 0.6, delay: 0.6})
+        gsap.from('#nav-item-5', {y: -200, duration: 0.6, delay: 0.7})
+        //scroll reveal animation:
+        gsap.from('#service-1', {scrollTrigger: '#service-1', y: 100, opacity: 0, scale: 0.8, duration: 0.4})
+        gsap.from('#service-2', {scrollTrigger: '#service-2', y: 100, opacity: 0, scale: 0.8, duration: 0.4, delay: 0.1})
+        gsap.from('#service-3', {scrollTrigger: {trigger: '#service-3', start: 'top 85%'}, y: 100, opacity: 0, scale: 0.8, duration: 0.4})
+        gsap.from('#service-4', {scrollTrigger: {trigger: '#service-4', start: 'top 85%'}, y: 100, opacity: 0, scale: 0.8, duration: 0.4, delay: 0.1})
+        gsap.from('#service-5', {scrollTrigger: {trigger: '#service-5', start: 'top 85%'}, y: 100, opacity: 0, scale: 0.8, duration: 0.4, delay: 0.2})
+        gsap.from('#about-image', {scrollTrigger: {trigger: '#about-image', start: 'center bottom'}, x: 200, opacity: 0, scale: 0.9, duration: 0.8})
+        //parallax scrolling:
+        gsap.timeline({scrollTrigger: {trigger: '#portrait-1', scrub: true}}).fromTo('#portrait-1', {y: 50}, {y: -30})
+        gsap.timeline({scrollTrigger: {trigger: '#portrait-2', scrub: true}}).fromTo('#portrait-2', {y: 50}, {y: 0})
+        gsap.timeline({scrollTrigger: {trigger: '#reference-window', scrub: true}}).fromTo('#reference-window', {y: 50}, {y: -50})
+        gsap.timeline({scrollTrigger: {trigger: '#contact-form', scrub: true}}).fromTo('#contact-form', {y: 50}, {y: -50})
       }
+    },
+    mounted() { 
+      gsap.registerPlugin(ScrollTrigger)
+      this.animations()
     } 
   }
 </script>

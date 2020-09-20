@@ -72,7 +72,7 @@
               <div class="relative rounded-lg overflow-hidden shadow-lg">
                 <img v-bind:src="$page.landing.topServices[0].cover" v-bind:alt="$page.landing.topServices[0].title" class="mx-auto">
                 <div class="flex items-center absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-50 p-20 md:p-12">
-                  <svg width="170" height="170" class="mx-auto">
+                  <svg width="170" height="170" viewBox="0 0 170 170" class="mx-auto">
                     <g fill="none">
                         <g id="im-bg" fill="#E5F0F5" transform="translate(38 11)">
                           <polygon points="0 62.92 5.985 62.92 5.985 73.973 0 73.973"/>
@@ -114,12 +114,36 @@
           </div>
         </div>
         <div id="service-2" class="flex">
-          <div class="top-service bg-white rounded-lg shadow-md p-6 pt-0 flex flex-col justify-between mt-24 md:mt-36 lg:mt-48 mb-12 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+          <div v-on:mouseenter="hover_cp" class="top-service bg-white rounded-lg shadow-md p-6 pt-0 flex flex-col justify-between mt-24 md:mt-36 lg:mt-48 mb-12 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
             <div class="top-service-image -mt-24 md:-mt-36 lg:-mt-48 mb-6 transition-all duration-300 ease-in-out">
               <div class="relative rounded-lg overflow-hidden shadow-lg">
                 <img v-bind:src="$page.landing.topServices[1].cover" v-bind:alt="$page.landing.topServices[1].title" class="mx-auto">
                 <div class="flex items-center absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-50 p-20 md:p-12">
-                  <img src="../assets/img/content_production.svg" v-bind:alt="$page.landing.topServices[1].title" class="mx-auto">
+                  <svg width="170" height="170" viewBox="0 0 170 170" class="mx-auto">
+                    <g fill="none">
+                      <g id="cp-bg" fill="#E5F0F5">
+                        <polygon points="93.5 120.7 98.6 120.7 98.6 125.8 93.5 125.8"/>
+                        <polygon points="104.55 120.7 109.65 120.7 109.65 125.8 104.55 125.8"/>
+                        <polygon points="82.45 120.7 87.55 120.7 87.55 125.8 82.45 125.8"/>
+                        <path d="M156.290323,21.9354839 L82.2580645,21.9354839 L82.2580645,8.22580645 C82.2580645,3.7016129 78.5564516,0 74.0322581,0 L8.22580645,0 C3.7016129,0 0,3.7016129 0,8.22580645 L0,63.0645161 C0,67.5887097 3.7016129,71.2903226 8.22580645,71.2903226 L21.9354839,71.2903226 L21.9354839,123.387097 C21.9354839,130.961694 28.0705645,137.096774 35.6451613,137.096774 L70.5362903,137.096774 L66.4233871,153.548387 L54.8387097,153.548387 C50.3145161,153.548387 46.6129032,157.25 46.6129032,161.774194 L46.6129032,170 L145.322581,170 L145.322581,161.774194 C145.322581,157.25 141.620968,153.548387 137.096774,153.548387 L125.512097,153.548387 L121.399194,137.096774 L156.290323,137.096774 C163.864919,137.096774 170,130.961694 170,123.387097 L170,35.6451613 C170,28.0705645 163.864919,21.9354839 156.290323,21.9354839 Z M38.3870968,71.2903226 L74.0322581,71.2903226 C78.5564516,71.2903226 82.2580645,67.5887097 82.2580645,63.0645161 L82.2580645,38.3870968 L153.548387,38.3870968 L153.548387,109.677419 L38.3870968,109.677419 L38.3870968,71.2903226 Z M5.48387097,63.0645161 L5.48387097,8.22580645 C5.48387097,6.71774194 6.71774194,5.48387097 8.22580645,5.48387097 L74.0322581,5.48387097 C75.5403226,5.48387097 76.7741935,6.71774194 76.7741935,8.22580645 L76.7741935,63.0645161 C76.7741935,64.5725806 75.5403226,65.8064516 74.0322581,65.8064516 L8.22580645,65.8064516 C6.71774194,65.8064516 5.48387097,64.5725806 5.48387097,63.0645161 Z M139.83871,161.774194 L139.83871,164.516129 L52.0967742,164.516129 L52.0967742,161.774194 C52.0967742,160.266129 53.3306452,159.032258 54.8387097,159.032258 L137.096774,159.032258 C138.604839,159.032258 139.83871,160.266129 139.83871,161.774194 Z M119.891129,153.548387 L72.0443548,153.548387 L76.1572581,137.096774 L115.743952,137.096774 L119.891129,153.548387 Z M164.516129,123.387097 C164.516129,127.91129 160.814516,131.612903 156.290323,131.612903 L35.6451613,131.612903 C31.1209677,131.612903 27.4193548,127.91129 27.4193548,123.387097 L27.4193548,71.2903226 L32.9032258,71.2903226 L32.9032258,109.677419 C32.9032258,112.693548 35.3709677,115.16129 38.3870968,115.16129 L153.548387,115.16129 C156.564516,115.16129 159.032258,112.693548 159.032258,109.677419 L159.032258,38.3870968 C159.032258,35.3709677 156.564516,32.9032258 153.548387,32.9032258 L82.2580645,32.9032258 L82.2580645,27.4193548 L156.290323,27.4193548 C160.814516,27.4193548 164.516129,31.1209677 164.516129,35.6451613 L164.516129,123.387097 Z"/>
+                      </g>
+                      <g fill="#8CA0C3" transform="translate(11 9)">
+                        <path id="cp-bullhorn" d="M49.4313947,8.48599838 L49.4313947,-2.55795385e-13 L35.1855414,-2.55795385e-13 L13.2160326,8.21225649 L8.23856578,8.21225649 C3.7073546,8.21225649 -5.75539616e-13,11.9077719 -5.75539616e-13,16.424513 L-5.75539616e-13,27.3741883 C-5.75539616e-13,30.9328328 2.29993295,33.9439935 5.49237719,35.0731788 L5.49237719,54.7483766 C5.49237719,57.7595373 7.96394692,60.2232143 10.9847544,60.2232143 L16.4771316,60.2232143 C19.497939,60.2232143 21.9695088,57.7595373 21.9695088,54.7483766 L21.9695088,38.8371297 L35.1855414,43.7987013 L49.4313947,43.7987013 L49.4313947,35.3127029 C55.6789737,34.0466467 60.4161491,28.5033736 60.4161491,21.8993506 C60.4161491,15.2953277 55.6789737,9.75205459 49.4313947,8.48599838 Z M16.4771316,12.8316508 L32.9542631,6.6724584 L32.9542631,37.0920252 L16.4771316,30.9328328 L16.4771316,12.8316508 Z M5.49237719,16.424513 C5.49237719,14.9189326 6.72816206,13.6870942 8.23856578,13.6870942 L10.9847544,13.6870942 L10.9847544,30.1116071 L8.23856578,30.1116071 C6.72816206,30.1116071 5.49237719,28.8797687 5.49237719,27.3741883 L5.49237719,16.424513 Z M16.4771316,54.7483766 L10.9847544,54.7483766 L10.9847544,35.5864448 L13.2160326,35.5864448 L16.4771316,36.7840655 L16.4771316,54.7483766 Z M43.9390175,38.3238636 L38.4466403,38.3238636 L38.4466403,5.47483766 L43.9390175,5.47483766 L43.9390175,38.3238636 Z M49.4313947,29.5983411 L49.4313947,14.2003602 C52.6238389,15.3295455 54.9237719,18.3407062 54.9237719,21.8993506 C54.9237719,25.4579951 52.6238389,28.4691558 49.4313947,29.5983411 Z" transform="translate(76.584 34.777)"/>
+                        <path id="cp-slider" d="M13.8276398,6.39488462e-14 C10.2324534,6.39488462e-14 7.19037267,2.24953497 6.04959239,5.37202381 L9.59232693e-14,5.37202381 L9.59232693e-14,10.7440476 L6.04959239,10.7440476 C7.19037267,13.8665365 10.2324534,16.1160714 13.8276398,16.1160714 C17.4228261,16.1160714 20.4649068,13.8665365 21.6056871,10.7440476 L44.2484472,10.7440476 L44.2484472,5.37202381 L21.6056871,5.37202381 C20.4649068,2.24953497 17.4228261,6.39488462e-14 13.8276398,6.39488462e-14 Z M13.8276398,10.7440476 C12.3065994,10.7440476 11.0621118,9.53534226 11.0621118,8.05803571 C11.0621118,6.58072917 12.3065994,5.37202381 13.8276398,5.37202381 C15.3486801,5.37202381 16.5931677,6.58072917 16.5931677,8.05803571 C16.5931677,9.53534226 15.3486801,10.7440476 13.8276398,10.7440476 Z" transform="translate(33.186 78.036)"/>
+                        <path id="cp-playbutton" d="M-5.32907052e-15,-6.39488462e-14 L-5.32907052e-15,31.3839286 L31.484472,15.6745094 L-5.32907052e-15,-6.39488462e-14 Z M5.60346555,9.00673367 L18.9467179,15.6745094 L5.60346555,22.3422851 L5.60346555,9.00673367 Z" transform="translate(18.72)"/>
+                        <g id="cp-text" transform="translate(0 34.777)">
+                          <polygon points="0 0 5.106 0 5.106 5.089 0 5.089"/>
+                          <polygon points="11.062 0 60.416 0 60.416 5.089 11.062 5.089"/>
+                          <polygon points="0 11.027 60.416 11.027 60.416 16.116 0 16.116"/>
+                        </g>
+                        <g id="cp-dots" transform="translate(109.77 89.063)">
+                          <polygon points="0 0 5.106 0 5.106 5.089 0 5.089"/>
+                          <polygon points="10.211 0 15.317 0 15.317 5.089 10.211 5.089"/>
+                          <polygon points="22.124 0 27.23 0 27.23 5.089 22.124 5.089"/>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -329,20 +353,8 @@
     data() {
       return {
         form: {
-          data: {
-            name: '',
-            company: '',
-            email: '',
-            message: '',
-            privacy: false
-          },
-          errors: {
-            name: false,
-            company: false,
-            email: false,
-            message: false,
-            privacy: false
-          },
+          data: {name: '', company: '', email: '', message: '', privacy: false},
+          errors: {name: false, company: false, email: false, message: false, privacy: false},
           success: false
         }
       }
@@ -404,9 +416,13 @@
         }
       },
       hover_im() {
-        console.log("test")
         if(!this.tl_im.isActive()) {
           this.tl_im.play(0)
+        }
+      },
+      hover_cp() {
+        if(!this.tl_cp.isActive()) {
+          this.tl_cp.play(0)
         }
       },
       animations() {
@@ -429,10 +445,9 @@
         gsap.timeline({scrollTrigger: {trigger: '#portrait-2', scrub: true}}).fromTo('#portrait-2', {y: 50}, {y: 0})
         gsap.timeline({scrollTrigger: {trigger: '#reference-window', scrub: true}}).fromTo('#reference-window', {y: 50}, {y: -50})
         gsap.timeline({scrollTrigger: {trigger: '#contact-form', scrub: true}}).fromTo('#contact-form', {y: 50}, {y: -50})
-        //icon animations:
+        //influencer management icon animation:
         const tl_im_bubble_1 = gsap.timeline()
-        .to('#im-bg', {opacity: 0.5}, 'start-1')
-        .to('#im-bubble-1', 0.3, {x: 3, y: 90, scale: 1.1, delay: -0.3})
+        .to('#im-bubble-1', 0.3, {x: 3, y: 90, scale: 1.1})
         .to('#im-bubble-1', 0.2, {rotate: -10, transformOrigin: '50% 50%'})
         .to('#im-bubble-1', 1, {rotate: 0, ease: 'elastic', transformOrigin: '50% 50%'})
         .to('#im-bubble-1', 0.3, {x: 11.05, y: 84.971, scale: 1, transformOrigin: '0% 0%', delay: -0.3})
@@ -446,11 +461,36 @@
         .to('#im-bubble-3', 0.2, {rotate: -5, transformOrigin: '50% 50%'})
         .to('#im-bubble-3', 1, {rotate: 0, ease: 'elastic', transformOrigin: '50% 50%'})
         .to('#im-bubble-3', 0.3, {x: 90.95, y: 39.936, scale: 1, transformOrigin: '0% 0%', delay: -0.3})
-        .to('#im-bg', 0.3, {opacity: 1, delay: -0.3})
         this.tl_im = gsap.timeline({paused: true})
-        .add(tl_im_bubble_1, 0)
-        .add(tl_im_bubble_2, 0.3)
-        .add(tl_im_bubble_3, 0.2)
+        .to('#im-bg', {opacity: 0.5})
+        .add(tl_im_bubble_1, 0.2)
+        .add(tl_im_bubble_2, 0.5)
+        .add(tl_im_bubble_3, 0.4)
+        .to('#im-bg', 0.3, {opacity: 1, delay: -0.3})
+        //content production icon animation:
+        const tl_cp_playbutton = gsap.timeline()
+        .to('#cp-playbutton', 0.6, {scale: 1.2, transformOrigin: '50% 50%'})
+        .to('#cp-playbutton', 0.2, {scale: 1.0, transformOrigin: '50% 50%', ease: 'back'})
+        .to('#cp-playbutton', 0.4, {scale: 1.1, transformOrigin: '50% 50%', ease: 'back'})
+        .to('#cp-playbutton', 1, {scale: 1, transformOrigin: '50% 50%'})
+        const tl_cp_slider = gsap.timeline()
+        .to('#cp-slider', 0.3, {y: 68, scale: 1.05})
+        .to('#cp-slider', 0.9, {y: 78.036, scale: 1, ease: 'back'})
+        const tl_cp_bullhorn = gsap.timeline()
+        .to('#cp-bullhorn', 0.3, {y: 25, scale: 1.05})
+        .to('#cp-bullhorn', 0.9, {y: 34.777, scale: 1, ease: 'back'})
+        const tl_cp_dots = gsap.timeline()
+        .to('#cp-dots', 0.3, {y: 79, scale: 1.05})
+        .to('#cp-dots', 0.9, {y: 89.063, scale: 1, ease: 'back'})
+        this.tl_cp = gsap.timeline({paused: true})
+        .to('#cp-bg', {opacity: 0.5})
+        .to('#cp-text', {opacity: 0.5, delay: -0.5})
+        .add(tl_cp_playbutton, 0)
+        .add(tl_cp_slider, 0.8)
+        .add(tl_cp_bullhorn, 1)
+        .add(tl_cp_dots, 1.2)
+        .to('#cp-bg', 0.3, {opacity: 1, delay: -0.9})
+        .to('#cp-text', 0.3, {opacity: 1, delay: -0.9})
       }
     },
     mounted() { 

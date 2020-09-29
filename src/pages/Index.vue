@@ -523,7 +523,7 @@
         gsap.from('#service-3', {scrollTrigger: {trigger: '#service-3', start: 'top 85%'}, y: 100, opacity: 0, scale: 0.8, duration: 0.4})
         gsap.from('#service-4', {scrollTrigger: {trigger: '#service-4', start: 'top 85%'}, y: 100, opacity: 0, scale: 0.8, duration: 0.4, delay: 0.1})
         gsap.from('#service-5', {scrollTrigger: {trigger: '#service-5', start: 'top 85%'}, y: 100, opacity: 0, scale: 0.8, duration: 0.4, delay: 0.2})
-        gsap.from('#about-image', {scrollTrigger: {trigger: '#about-image', start: 'center bottom'}, x: 200, opacity: 0, scale: 0.9, duration: 0.6})
+        gsap.from('#about-image', {scrollTrigger: {trigger: '#about-image', start: 'top 85%'}, x: 200, opacity: 0, scale: 0.9, duration: 0.6})
         //parallax scrolling:
         gsap.timeline({scrollTrigger: {trigger: '#portrait-1', scrub: true}}).fromTo('#portrait-1', {y: 50}, {y: -30})
         gsap.timeline({scrollTrigger: {trigger: '#portrait-2', scrub: true}}).fromTo('#portrait-2', {y: 50}, {y: 0})

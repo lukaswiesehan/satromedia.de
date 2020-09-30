@@ -56,6 +56,9 @@ projects:
     media: /uploads/showcase_17.jpg
     title: Showcase 17
   - video: false
+    media: /uploads/showcase_5.gif
+    title: Showcase 5
+  - video: false
     media: /uploads/showcase_16.jpg
     title: Showcase 16
   - video: false
@@ -73,6 +76,3 @@ projects:
   - video: false
     media: /uploads/showcase_10.jpg
     title: Showcase 10
-  - video: false
-    media: /uploads/showcase_5.gif
-    title: Showcase 5

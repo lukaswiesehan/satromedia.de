@@ -25,12 +25,15 @@ featured_project:
   video: true
   media: /uploads/showcase_9.mp4
 projects:
-  - media: /uploads/showcase_1.gif
-    video: false
-    title: Showcase 1
+  - video: false
+    media: /uploads/showcase_6.gif
+    title: Showcase 6
   - video: false
     media: /uploads/showcase_12.jpg
     title: Showcase 12
+  - media: /uploads/showcase_1.gif
+    video: false
+    title: Showcase 1
   - video: false
     media: /uploads/showcase_13.jpg
     title: Showcase 13
@@ -61,9 +64,6 @@ projects:
   - video: false
     media: /uploads/showcase_16.jpg
     title: Showcase 16
-  - video: false
-    media: /uploads/showcase_6.gif
-    title: Showcase 6
   - video: false
     media: /uploads/showcase_14.jpg
     title: Showcase 14

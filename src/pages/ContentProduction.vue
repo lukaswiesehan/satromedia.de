@@ -4,11 +4,11 @@
 
     <!-- HEADER -->
     <section id="header" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 md:flex md:items-center -mt-16 xs:-mt-32 md:-mt-64">
-      <div id="header-box" class="flex-1 relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 w-11/12 md:w-1/2 max-w-lg">
+      <div id="header-box" class="relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 w-11/12 md:w-1/2 max-w-lg">
         <Title :icon="'fa-camera-retro'" :heading="'Unsere Services'" :title="'Content Production'"></Title>
         <p class="pt-4 sm:ml-12 text-black-500">{{$page.contentProduction.header.text}}</p>
       </div>
-      <div id="header-image" class="flex-1 relative z-0 rounded-lg overflow-hidden shadow-lg -mt-48 md:mt-0 md:-ml-48">
+      <div id="header-image" class="relative z-0 rounded-lg overflow-hidden shadow-lg -mt-48 md:mt-0 md:-ml-48">
         <img v-bind:src="$page.contentProduction.header.image" alt="Content Production" class="object-cover object-center w-full h-96 lg:h-112">
         <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25"></div>
       </div>

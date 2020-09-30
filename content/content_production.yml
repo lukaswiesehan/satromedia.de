@@ -1,0 +1,39 @@
+id: 3
+header:
+  image: /uploads/cover_content_production.jpg
+  text: I'm baby coloring book microdosing +1 copper mug activated charcoal. Tilde
+    swag palo santo disrupt seitan mlkshk yr locavore typewriter gochujang
+    skateboard raw denim quinoa etsy. Everyday carry gochujang listicle,
+    letterpress slow-carb literally before they sold out austin chicharrones.
+stats:
+  - figure: "34.127"
+    description: Minuten Videomaterial
+  - figure: "1.983"
+    description: Gigabyte Fotomaterial
+cta:
+  heading: Auf den ersten Eindruck kommt es an!
+  text: Four loko flexitarian small batch direct trade austin chillwave. Beard
+    direct trade unicorn, forage austin PBR&B fashion axe vegan. IPhone banh mi
+    YOLO kombucha kinfolk, succulents actually. Whatever taiyaki iceland,
+    vaporware actually chia man braid portland listicle cronut hella microdosing
+    tilde.
+featured_project:
+  title: Super geiles Projekt.
+  description: "Four loko flexitarian small batch direct trade austin chillwave.
+    Beard direct trade unicorn, forage austin PBR&B fashion axe vegan. IPhone
+    banh mi YOLO kombucha kinfolk, succulents actually. "
+  video: true
+  media: /uploads/showreel_cut.mp4
+projects:
+  - title: Projekt XY
+    media: /uploads/team.png
+    video: false
+  - title: Projekt XYZ
+    media: /uploads/cover_influencer_management.jpg
+    video: false
+  - title: Projekt YZ
+    media: /uploads/portrait_1.jpeg
+    video: false
+  - title: Noch ein Projekt
+    media: /uploads/portrait_2.png
+    video: false

@@ -34,3 +34,30 @@ projects:
   - video: false
     media: /uploads/showcase_13.jpg
     title: Showcase 13
+  - video: false
+    media: /uploads/showcase_15.jpg
+    title: Showcase 15
+  - video: false
+    media: /uploads/showcase_3.gif
+    title: Showcase 3
+  - video: false
+    media: /uploads/showcase_18.jpg
+    title: Showcase 18
+  - video: true
+    media: /uploads/showcase_8.mp4
+    title: Showcase 8
+  - video: false
+    media: /uploads/showcase_11.jpg
+    title: Showcase 11
+  - video: false
+    media: /uploads/showcase_7.gif
+    title: Showcase 7
+  - video: false
+    media: /uploads/showcase_17.jpg
+    title: Showcase 17
+  - video: false
+    media: /uploads/showcase_16.jpg
+    title: Showcase 16
+  - video: false
+    media: /uploads/showcase_6.gif
+    title: Showcase 6

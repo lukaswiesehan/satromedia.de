@@ -298,7 +298,7 @@
     <section id="about" class="max-w-screen-xl mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
       <Title :icon="'fa-users'" :heading="'Satro Media'" :title="'Über die Agentur'"></Title>
       <div class="mt-8 lg:flex">
-        <div class="px-4 py-8 pb-32 md:px-8 md:py-12 md:pb-32 lg:w-1/2 md:pr-32 lg:pb-0 bg-white shadow-md rounded-lg">
+        <div id="about-box" class="px-4 py-8 pb-32 md:px-8 md:py-12 md:pb-32 lg:w-1/2 md:pr-32 lg:pb-0 bg-white shadow-md rounded-lg">
           <h3 class="font-display">{{$page.landing.about_header}}</h3>
           <p class="pt-4 text-black-500">{{$page.landing.about_description}}</p>
         </div>
@@ -511,19 +511,20 @@
       animations() {
         //loading animation:
         gsap.from('#navbar', {opacity:0, duration: 0.8})
-        gsap.from('#header-window', {opacity: 0, scale: 2, duration: 0.6})
-        gsap.from('#nav-item-1', {y: -200, duration: 0.6, delay: 0.3})
-        gsap.from('#nav-item-2', {y: -200, duration: 0.6, delay: 0.4})
-        gsap.from('#nav-item-3', {y: -200, duration: 0.6, delay: 0.5})
-        gsap.from('#nav-item-4', {y: -200, duration: 0.6, delay: 0.6})
-        gsap.from('#nav-item-5', {y: -200, duration: 0.6, delay: 0.7})
+        gsap.from('#header-window', {y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        gsap.from('#nav-item-1', {y: -200, duration: 0.8, delay: 0.3})
+        gsap.from('#nav-item-2', {y: -200, duration: 0.8, delay: 0.4})
+        gsap.from('#nav-item-3', {y: -200, duration: 0.8, delay: 0.5})
+        gsap.from('#nav-item-4', {y: -200, duration: 0.8, delay: 0.6})
+        gsap.from('#nav-item-5', {y: -200, duration: 0.8, delay: 0.7})
         //scroll reveal animation:
-        gsap.from('#service-1', {scrollTrigger: '#service-1', y: 100, opacity: 0, scale: 0.8, duration: 0.4})
-        gsap.from('#service-2', {scrollTrigger: '#service-2', y: 100, opacity: 0, scale: 0.8, duration: 0.4, delay: 0.1})
-        gsap.from('#service-3', {scrollTrigger: {trigger: '#service-3', start: 'top 85%'}, y: 100, opacity: 0, scale: 0.8, duration: 0.4})
-        gsap.from('#service-4', {scrollTrigger: {trigger: '#service-4', start: 'top 85%'}, y: 100, opacity: 0, scale: 0.8, duration: 0.4, delay: 0.1})
-        gsap.from('#service-5', {scrollTrigger: {trigger: '#service-5', start: 'top 85%'}, y: 100, opacity: 0, scale: 0.8, duration: 0.4, delay: 0.2})
-        gsap.from('#about-image', {scrollTrigger: {trigger: '#about-image', start: 'top 85%'}, x: 200, opacity: 0, scale: 0.9, duration: 0.6})
+        gsap.from('#service-1', {scrollTrigger: '#service-1', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        gsap.from('#service-2', {scrollTrigger: '#service-2', y: 100, opacity: 0, scale: 0.95, duration: 1.6, delay: 0.1, ease: 'power3'})
+        gsap.from('#service-5', {scrollTrigger: '#service-5', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        gsap.from('#service-4', {scrollTrigger: '#service-4', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.1})
+        gsap.from('#service-3', {scrollTrigger: '#service-3', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.2})
+        gsap.from('#about-box', {scrollTrigger: '#about-box', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        gsap.from('#about-image', {scrollTrigger: '#about-image', y: 100, opacity: 0,  duration: 1.6, ease: 'power3', delay: 0.4})
         //parallax scrolling:
         gsap.timeline({scrollTrigger: {trigger: '#portrait-1', scrub: true}}).fromTo('#portrait-1', {y: 50}, {y: -30})
         gsap.timeline({scrollTrigger: {trigger: '#portrait-2', scrub: true}}).fromTo('#portrait-2', {y: 50}, {y: 0})

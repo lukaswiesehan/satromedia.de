@@ -1,5 +1,5 @@
 <template>
-  <footer v-if="dark" class="pb-16 pt-16 md:pt-24 lg:pt-40">
+  <footer v-if="dark" id="footer" class="pb-16 pt-16 md:pt-24 lg:pt-40">
     <div class="text-center font-body font-bold text-sm text-gray-500 uppercase tracking-widest">
       <a href="#" v-scroll-to="'#navbar'" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-y-1"><i class="fas fa-chevron-up"></i> Zum Seitenanfang <i class="fas fa-chevron-up"></i></a>
     </div>
@@ -35,7 +35,7 @@
       </div>
     </div>
   </footer>
-  <footer v-else class="pb-16 pt-16 md:pt-24 lg:pt-40">
+  <footer v-else id="footer" class="pb-16 pt-16 md:pt-24 lg:pt-40">
     <div class="text-center font-body font-bold text-sm text-dark-300 uppercase tracking-widest">
       <a href="#" v-scroll-to="'#navbar'" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-500 transform hover:-translate-y-1"><i class="fas fa-chevron-up"></i> Zum Seitenanfang <i class="fas fa-chevron-up"></i></a>
     </div>

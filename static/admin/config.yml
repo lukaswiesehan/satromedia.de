@@ -53,3 +53,42 @@ collections:
           - {label: "Agentur Beschreibung", name: "about_description", widget: "text"}
           - {label: "Agentur Foto", name: "about_image", widget: "image"}
           - {label: "Beschreibung Kontaktanfrage", name: "contact_description", widget: "text"}
+      - label: "Content Production"
+        name: "content_production"
+        file: "content/content_production.yml"
+        fields:
+          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields: 
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Text", name: "text", widget: "text"}
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields: 
+              - {label: "Zahl", name: "figure", widget: "string"}
+              - {label: "Beschreibung", name: "description", widget: "string"}
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
+          - label: "Featured Project"
+            name: "featured_project"
+            widget: "object"
+            fields:
+            - {label: "Titel", name: "title", widget: "string"}
+            - {label: "Beschreibung", name: "description", widget: "text"}
+            - {label: "Video", name: "video", widget: "boolean"}
+            - {label: "Foto/Video", name: "media", widget: "file"}
+          - label: "Projekte"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Video", name: "video", widget: "boolean"}
+              - {label: "Foto/Video", name: "media", widget: "file"}
+          

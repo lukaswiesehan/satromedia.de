@@ -1,5 +1,5 @@
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'SaTro Media Consulting',
   transformers: {
     remark: {
       externalLinksTarget: '_blank',

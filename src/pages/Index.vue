@@ -150,13 +150,13 @@
             <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-8 lg:px-16 text-center">
               <h3 class="font-display">{{$page.landing.topServices[1].title}}</h3>
               <p class="my-4 text-sm lg:text-base">{{$page.landing.topServices[1].description}}</p>
-              <a href="#" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></a>
+              <g-link to="/content-production/" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
             </div>
           </div>
         </div> 
       </div>
       <div class="max-w-screen-xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-3 gap-x-8">
-        <div id="service-3" class="flex">
+        <div id="service-3" class="flex w-full">
           <div v-on:mouseenter="hover_dk" class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
             <div class="px-20 py-4 md:px-12 md:py-8">
               <svg width="170" height="147" viewBox="0 0 170 147" class="mx-auto">

@@ -3,7 +3,7 @@
     <Navbar id="navbar" :showBackButton="false" :dark="true" />
 
     <!-- HEADER -->
-    <section id="header" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 -mt-20 xs:-mt-32 md:-mt-64">
+    <section id="header" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 -mt-16 xs:-mt-32 md:-mt-64">
       <Window id="header-window">
         <video width="100%" height="100%" muted playsinline autoplay preload loop>
           <source v-bind:src="$page.landing.header_video" type="video/mp4">
@@ -403,7 +403,7 @@
   import Title from '../components/Title.vue'
   import Footer from '../components/Footer.vue'
 
-  import {gsap, TimelineMax} from 'gsap'
+  import {gsap} from 'gsap'
   import ScrollTrigger from 'gsap/ScrollTrigger'
 
   export default {

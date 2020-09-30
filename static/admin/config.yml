@@ -68,7 +68,7 @@ collections:
             name: "stats"
             widget: "list"
             fields: 
-              - {label: "Zahl", name: "figure", widget: "string"}
+              - {label: "Zahl", name: "figure", widget: "number"}
               - {label: "Beschreibung", name: "description", widget: "string"}
           - label: "Call To Action"
             name: "cta"

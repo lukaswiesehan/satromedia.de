@@ -1,10 +1,10 @@
 <template>
   <Layout>
-    <Navbar id="navbar" :showBackButton="true" :dark="false" />
+    <Navbar id="navbar" :showBackButton="true" :dark="true" />
 
     <!-- HEADER -->
-    <section id="header" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 md:flex md:items-center">
-      <div class="flex-1 relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 w-10/12 md:w-1/2 max-w-lg">
+    <section id="header" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 md:flex md:items-center -mt-16 xs:-mt-32 md:-mt-64">
+      <div class="flex-1 relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 w-11/12 md:w-1/2 max-w-lg">
         <Title :icon="'fa-camera-retro'" :heading="'Unsere Services'" :title="'Content Production'"></Title>
         <p class="pt-4 sm:ml-12 text-black-500">{{$page.contentProduction.header.text}}</p>
       </div>
@@ -16,24 +16,24 @@
 
     <!-- STATS & CTA -->
     <section id="about" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
-      <div class="grid grid-cols-1 md:grid-cols-2 space-x-8">
-        <div>
+      <div class="grid grid-cols-1 md:grid-cols-2 md:space-x-8">
+        <div class="mx-auto md:mx-0">
           <div class="flex flex-row">
-            <div class="mr-8 text-dark-100 text-6xl"><i class="fas fa-film"></i></div>
+            <div class="mr-8 text-dark-100 text-5xl md:text-6xl"><i class="fas fa-film"></i></div>
             <div>
-              <p class="font-display text-6xl">{{$page.contentProduction.stats[0].figure}}</p>
-              <p class="text-sm uppercase font-bold tracking-widest text-dark-100">{{$page.contentProduction.stats[0].description}}</p>
+              <p id="stat-1" class="font-display text-5xl md:text-6xl">{{statFigure1}}</p>
+              <p class="text-xs md:text-sm uppercase font-bold tracking-widest text-dark-100">{{$page.contentProduction.stats[0].description}}</p>
             </div>
           </div>
           <div class="flex flex-row mt-12">
-            <div class="mr-8 text-dark-100 text-6xl"><i class="fas fa-sd-card"></i></div>
+            <div class="mr-8 text-dark-100 text-5xl md:text-6xl"><i class="fas fa-sd-card"></i></div>
             <div>
-              <p class="font-display text-6xl">{{$page.contentProduction.stats[1].figure}}</p>
-              <p class="text-sm uppercase font-bold tracking-widest text-dark-100">{{$page.contentProduction.stats[1].description}}</p>
+              <p id="stat-2" class="font-display text-5xl md:text-6xl">{{statFigure2}}</p>
+              <p class="text-xs md:text-sm uppercase font-bold tracking-widest text-dark-100">{{$page.contentProduction.stats[1].description}}</p>
             </div>
           </div>
         </div>
-        <div>
+        <div class="mt-16 md:mt-0">
           <h3 class="font-display">{{$page.contentProduction.cta.heading}}</h3>
           <p class="pt-4 text-black-500">{{$page.contentProduction.cta.text}}</p>
           <g-link to="/#contact" class="inline-block mt-12 bg-black-900 px-6 py-3 rounded-full text-white text-xs uppercase font-bold tracking-widest transition-all duration-300 ease-in-out transform hover:-translate-y-1 shadow-sm hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></g-link>
@@ -41,6 +41,40 @@
       </div>
     </section>
 
+    <!-- FEATURED PROJECT -->
+    <section id="featured" class="relative mt-20 md:mt-24 lg:mt-40">
+      <div class="max-w-screen-xl mx-auto px-4 sm:px-8">
+        <Title :icon="'fas fa-photo-video'" :heading="'Content Production'" :title="'Latest Work'"></Title>
+      </div>
+      <div class="relative mt-8 pb-48 sm:pb-64">
+        <div class="absolute z-0 w-full h-full top-0 left-0 bg-gradient-to-br from-light-900 to-dark-100 opacity-50"></div>
+        <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-8 pt-12">
+          <div class="sm:flex max-w-2xl mx-auto mb-16">
+            <div class="flex-shrink-0">
+              <h3 class="font-display">{{$page.contentProduction.featured_project.title}}</h3>
+            </div>
+            <div class="mt-4 sm:mt-0 sm:ml-12">
+              <p class="text-black-500">{{$page.contentProduction.featured_project.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-8 -mt-48 sm:-mt-64">
+          <Window>
+            <video v-if="$page.contentProduction.featured_project.video" width="100%" height="100%" muted playsinline autoplay preload loop>
+              <source v-bind:src="$page.contentProduction.featured_project.media" type="video/mp4">
+            </video>
+            <img v-else v-bind:src="$page.contentProduction.featured_project.media" alt="Latest Project">
+          </Window>
+        </div>
+    </section>
+
+    <!-- PROJECT SHOWCASE -->
+    <section>
+      
+    </section>
+
+    <!-- FOOTER -->
     <Footer :dark="false"/>
   </Layout>
 </template>
@@ -79,17 +113,51 @@
 <script>
   import Navbar from '../components/Navbar.vue'
   import Title from '../components/Title.vue'
+  import Window from '../components/Window.vue'
   import Footer from '../components/Footer.vue'
+
+  import {gsap, TweenLite} from 'gsap'
+  import ScrollTrigger from 'gsap/ScrollTrigger'
   
   export default {
-    name: 'Content Production',
+    name: 'ContentProduction',
     metaInfo: {
       title: 'Content Production'
     },
     components: {
       Navbar, 
       Title,
+      Window,
       Footer
-    }
+    },
+    data() {
+      return {
+        statFigure1: 0,
+        statFigure2: 0
+      }
+    },
+    methods: {
+      animations() {
+        //Stat upcount animation:
+        var counter1 = {var: 0}
+        TweenLite.to(counter1, 1.8, {
+          var: this.$page.contentProduction.stats[0].figure,
+          ease: 'power3',
+          scrollTrigger: '#stat-1',
+          onUpdate: () => {this.statFigure1 = Math.ceil(counter1.var).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+        })
+        var counter2 = {var: 0}
+        TweenLite.to(counter2, 1.6, {
+          var: this.$page.contentProduction.stats[1].figure,
+          ease: 'power3',
+          scrollTrigger: '#stat-2',
+          onUpdate: () => {this.statFigure2 = Math.ceil(counter2.var).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+        })
+      }
+    },
+    mounted() { 
+      gsap.registerPlugin(ScrollTrigger)
+      this.animations()
+    } 
   }
 </script>

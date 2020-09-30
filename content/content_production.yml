@@ -18,22 +18,19 @@ cta:
     vaporware actually chia man braid portland listicle cronut hella microdosing
     tilde.
 featured_project:
-  title: Super geiles Projekt.
+  title: Buah Produktvideo.
   description: "Four loko flexitarian small batch direct trade austin chillwave.
     Beard direct trade unicorn, forage austin PBR&B fashion axe vegan. IPhone
     banh mi YOLO kombucha kinfolk, succulents actually. "
   video: true
-  media: /uploads/showreel_cut.mp4
+  media: /uploads/showcase_9.mp4
 projects:
-  - title: Projekt XY
-    media: /uploads/team.png
+  - media: /uploads/showcase_1.gif
     video: false
-  - title: Projekt XYZ
-    media: /uploads/cover_influencer_management.jpg
-    video: false
-  - title: Projekt YZ
-    media: /uploads/portrait_1.jpeg
-    video: false
-  - title: Noch ein Projekt
-    media: /uploads/portrait_2.png
-    video: false
+    title: Showcase 1
+  - video: false
+    media: /uploads/showcase_12.jpg
+    title: Showcase 12
+  - video: false
+    media: /uploads/showcase_13.jpg
+    title: Showcase 13

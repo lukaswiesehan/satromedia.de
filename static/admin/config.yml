@@ -69,6 +69,7 @@ collections:
             widget: "list"
             fields: 
               - {label: "Zahl", name: "figure", widget: "number"}
+              - {label: "Einheit", name: "unit", widget: "string", required: false}
               - {label: "Beschreibung", name: "description", widget: "string"}
           - label: "Call To Action"
             name: "cta"
@@ -91,4 +92,50 @@ collections:
               - {label: "Titel", name: "title", widget: "string"}
               - {label: "Video", name: "video", widget: "boolean"}
               - {label: "Foto/Video", name: "media", widget: "file"}
+      - label: "Influencer Management"
+        name: "influencer_management"
+        file: "content/influencer_management.yml"
+        fields:
+          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields: 
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Text", name: "text", widget: "text"}
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields: 
+              - {label: "Zahl", name: "figure", widget: "number", value_type: "float"}
+              - {label: "Einheit", name: "unit", widget: "string", required: false}
+              - {label: "Beschreibung", name: "description", widget: "string"}
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields: 
+                  - {label: "Prozentsatz", name: "figure", widget: "number"}
+                  - {label: "Beschreibung", name: "description", widget: "string"}
+          - label: "Influencer"
+            name: "influencers"
+            widget: "list"
+            fields:
+              - {label: "Nutzername (ohne @)", name: "username", widget: "string"}
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Querformat", name: "landscape", widget: "boolean"}
+              - label: "Referenz"
+                name: "reference"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Unternehmen", name: "company", widget: "string"}
+                  - {label: "Referenz-Text", name: "text", widget: "text"}
+
           

@@ -10,44 +10,40 @@
           <img v-bind:src="$page.landing.header_thumbnail" alt="Satro Media Showreel">
         </video>
         <div class="flex items-center absolute left-0 top-0 w-full h-full bg-dark-900 bg-opacity-25">
-          <img src="../assets/img/satro_logo.png" alt="Satro Media Logo" class="w-2/3 mx-auto -mt-8 sm:-mt-12 md:-mt-20 lg:-mt-24">
+          <img id="satro-logo" src="../assets/img/satro_logo.png" alt="Satro Media Logo" class="w-2/3 mx-auto -mt-8 sm:-mt-12 md:-mt-20 lg:-mt-24">
         </div>
       </Window>
     </section>
 
-    <!-- QUOTE -->
-    <!--<section id="quote" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24">
-      <div class="flex">
-        <div class="text-3xl"><i class="fas fa-quote-right text-dark-100 pr-6"></i></div>
-        <div><p class="text-2xl md:text-3xl font-display">{{$page.landing.cite}}</p></div>
-      </div>
-    </section>-->
-
     <!-- INTRO -->
-    <section id="intro" class="max-w-screen-xl mx-auto px-4 sm:px-8 mt-24 lg:mt-48 grid grid-cols-1 md:grid-cols-2">
-      <div class="relative w-96 h-72 lg:w-112 lg:h-96 mx-auto md:mx-0"> 
-        <div class="absolute left-0 top-0 rounded-lg overflow-hidden shadow-lg">
-          <img v-bind:src="$page.landing.portraits[0].photo" alt="Satro Media Gründer" class="object-cover object-center w-48 h-56 lg:w-56 lg:h-72">
-          <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25"></div>
-          <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25 transition-all duration-500 ease-in-out opacity-0 hover:opacity-100 flex flex-col-reverse">
-            <div class="p-4 text-white">
-              <p class="font-bold">Henning Trogisch</p>
-              <a href="mailto:henning@satromedia.de" class="text-xs hover:text-light-900">henning@satromedia.de</a>
+    <section id="intro" class="max-w-screen-xl mx-auto px-8 mt-24 lg:mt-48 grid grid-cols-1 md:grid-cols-2">
+      <div class="relative w-64 h-48 md:w-96 md:h-72 lg:w-112 lg:h-96">
+        <div id="portrait-1" class="absolute left-0 top-0">
+          <div class="rounded-lg overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+            <img v-bind:src="$page.landing.portraits[0].photo" alt="Satro Media Gründer" class="object-cover object-center w-32 h-40 md:w-48 md:h-56 lg:w-56 lg:h-72">
+            <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25"></div>
+            <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25 transition-all duration-500 ease-in-out opacity-0 hover:opacity-100 flex flex-col-reverse">
+              <div class="p-4 text-white">
+                <p class="text-xs md:text-base font-bold">Henning Trogisch</p>
+                <a href="mailto:henning@satromedia.de" class="text-2xs md:text-xs hover:text-light-900">henning@satromedia.de</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="absolute left-0 bottom-0 ml-40 lg:ml-48 rounded-lg overflow-hidden shadow-lg">
-          <img v-bind:src="$page.landing.portraits[1].photo" alt="Satro Media Gründer" class="object-cover object-center w-48 h-56 lg:w-56 lg:h-72">
-          <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25"></div>
-          <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25 transition-all duration-500 ease-in-out opacity-0 hover:opacity-100 flex flex-col-reverse">
-            <div class="p-4 text-white">
-              <p class="font-bold">Mika Sannmann</p>
-              <a href="mailto:mika@satromedia.de" class="text-xs hover:text-light-900">mika@satromedia.de</a>
+        <div id="portrait-2" class="absolute left-0 bottom-0 ml-24 md:ml-40 lg:ml-48">
+          <div class="rounded-lg overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+            <img v-bind:src="$page.landing.portraits[1].photo" alt="Satro Media Gründer" class="object-cover object-center w-32 h-40 md:w-48 md:h-56 lg:w-56 lg:h-72">
+            <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25"></div>
+            <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25 transition-all duration-500 ease-in-out opacity-0 hover:opacity-100 flex flex-col-reverse">
+              <div class="p-4 text-white">
+                <p class="text-xs md:text-base font-bold">Mika Sannmann</p>
+                <a href="mailto:mika@satromedia.de" class="text-2xs md:text-xs hover:text-light-900">mika@satromedia.de</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="mt-12 ml-6 lg:ml-0 px-12 md:px-0">
+      <div class="mt-12 md:ml-6 lg:ml-0">
         <div class="flex">
           <div class="text-3xl"><i class="fas fa-quote-right text-dark-100 pr-6"></i></div>
           <div><p class="text-2xl font-display">{{$page.landing.cite}}</p></div>
@@ -59,45 +55,6 @@
         </div>
       </div>
     </section>
-
-    <!--<section id="intro" class="md:pb-12">
-      <div class="relative mt-12 pt-12">
-        <div class="absolute w-full h-full top-0 left-0 bg-gradient-to-br from-light-900 to-dark-100 opacity-50"></div>
-        <div class="max-w-screen-lg mx-auto px-4 sm:px-8">
-          <div class="relative md:flex">
-            <div>
-              <div class="relative w-64 h-56 md:h-64 lg:w-112 lg:h-96 md:-mb-12">
-                <Window id="portrait-1" class="absolute top-0 left-0 fade-in-up">
-                  <img v-bind:src="$page.landing.portraits[0].photo" alt="Satro Media Gründer" class="object-cover w-32 h-40 lg:w-56 lg:h-64">
-                  <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25 transition-all duration-500 ease-in-out opacity-0 hover:opacity-100 flex flex-col-reverse">
-                    <div class="p-4 text-white">
-                      <p class="font-bold">Henning Trogisch</p>
-                      <a href="mailto:henning@satromedia.de" class="text-xs hover:text-light-900">henning@satromedia.de</a>
-                    </div>
-                  </div>
-                </Window>
-                <Window id="portrait-2" class="absolute bottom-0 right-0">
-                  <img v-bind:src="$page.landing.portraits[1].photo" alt="Satro Media Gründer" class="object-cover w-32 h-40 lg:w-56 lg:h-64">
-                  <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25 transition-all duration-500 ease-in-out opacity-0 hover:opacity-100 flex flex-col-reverse">
-                    <div class="p-4 text-white">
-                      <p class="font-bold">Mika Sannmann</p>
-                      <a href="mailto:mika@satromedia.de" class="text-xs hover:text-light-900">mika@satromedia.de</a>
-                    </div>
-                  </div>
-                </Window>
-              </div>
-            </div>
-            <div class="py-12 md:pt-0 md:ml-16">
-              <p class="text-black-500">{{$page.landing.intro}}</p>
-              <div class="pt-8">
-                <p class="text-dark-300">Mika Sannmann & Henning Trogisch</p>
-                <p class="text-dark-300 italic">Gründer SaTro Media</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>-->
 
     <!-- SERVICES -->
     <section id="services" class="mt-24 lg:mt-48">
@@ -545,12 +502,13 @@
         //loading animation:
         gsap.from('#navbar', {opacity:0, duration: 0.8})
         gsap.from('#header-window', {y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        gsap.from('#satro-logo', {y: 100, opacity: 0, scale: 0.95, duration: 1.6, delay: 1.2, ease: 'power3'})
         gsap.from('#nav-item-1', {y: -200, duration: 0.8, delay: 0.3})
         gsap.from('#nav-item-2', {y: -200, duration: 0.8, delay: 0.4})
         gsap.from('#nav-item-3', {y: -200, duration: 0.8, delay: 0.5})
         gsap.from('#nav-item-4', {y: -200, duration: 0.8, delay: 0.6})
         gsap.from('#nav-item-5', {y: -200, duration: 0.8, delay: 0.7})
-        gsap.from('#intro', {y: 100, opacity: 0, duration: 1.6, delay: 0.2, ease: 'power3'})
+        gsap.from('#intro', {y: 100, opacity: 0, duration: 1.6, delay: 1.0, ease: 'power3'})
         //scroll reveal animation:
         gsap.from('#service-1', {scrollTrigger: '#service-1', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
         gsap.from('#service-2', {scrollTrigger: '#service-2', y: 100, opacity: 0, scale: 0.95, duration: 1.6, delay: 0.1, ease: 'power3'})

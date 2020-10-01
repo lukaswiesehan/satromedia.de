@@ -399,7 +399,7 @@
   export default {
     name: 'Index',
     metaInfo: {
-      title: 'Satro Media Consulting'
+      title: 'Digital-Agentur'
     },
     components: {
       Navbar,

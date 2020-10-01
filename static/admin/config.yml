@@ -130,13 +130,5 @@ collections:
               - {label: "Nutzername (ohne @)", name: "username", widget: "string"}
               - {label: "Foto", name: "image", widget: "image"}
               - {label: "Querformat", name: "landscape", widget: "boolean"}
-              - label: "Referenz"
-                name: "reference"
-                widget: "object"
-                required: false
-                fields:
-                  - {label: "Name", name: "name", widget: "string"}
-                  - {label: "Unternehmen", name: "company", widget: "string"}
-                  - {label: "Referenz-Text", name: "text", widget: "text"}
 
           

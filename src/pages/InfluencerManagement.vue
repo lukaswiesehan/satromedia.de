@@ -17,13 +17,9 @@
     </section>
 
     <!-- STATS -->
-    <section id="stats" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40 flex items-center justify-between">
-      <div class="text-center">
-        <p id="stat-1" class="font-display text-5xl md:text-6xl">{{statFigure1}}<span class="text-4xl md:text-5xl"> {{$page.influencerManagement.stats[0].unit}}</span></p>
-        <p class="text-xs md:text-sm uppercase font-bold tracking-widest text-dark-100">{{$page.influencerManagement.stats[0].description}}</p>
-      </div>
-      <div id="stats-icon">
-        <svg width="170" height="170" viewBox="0 0 170 170" class="mx-auto">
+    <section id="stats" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40 md:flex md:items-center md:justify-between">
+      <div id="stats-icon" class="w-40 sm:w-32 lg:w-40 mb-12 md:mb-0 md:order-2 mx-auto">
+        <svg viewBox="0 0 170 170" class="w-full mx-auto">
           <g fill="none">
             <g fill="#282850" transform="translate(38 11)">
               <polygon points="0 62.92 5.985 62.92 5.985 73.973 0 73.973"/>
@@ -55,9 +51,74 @@
           </g>
         </svg>
       </div>
-      <div class="text-center">
-        <p id="stat-1" class="font-display text-5xl md:text-6xl">{{statFigure2}}<span class="text-4xl md:text-5xl"> {{$page.influencerManagement.stats[1].unit}}</span></p>
+      <div class="text-center mb-12 md:mb-0 md:order-1">
+        <p id="stat-1" class="font-display text-5xl lg:text-6xl">{{statFigure1}}<span class="text-4xl lg:text-5xl"> {{$page.influencerManagement.stats[0].unit}}</span></p>
+        <p class="text-xs md:text-sm uppercase font-bold tracking-widest text-dark-100">{{$page.influencerManagement.stats[0].description}}</p>
+      </div>
+      <div class="text-center md:order-3">
+        <p id="stat-1" class="font-display text-5xl lg:text-6xl">{{statFigure2}}<span class="text-4xl lg:text-5xl"> {{$page.influencerManagement.stats[1].unit}}</span></p>
         <p class="text-xs md:text-sm uppercase font-bold tracking-widest text-dark-100">{{$page.influencerManagement.stats[1].description}}</p>
+      </div>
+    </section>
+
+    <!-- CTA & STATS -->
+    <section id="cta" class="relative mt-16 md:mt-24 lg:mt-48">
+      <div class="relative z-10 max-w-screen-lg mx-auto px-4 sm:px-8 py-12 md:py-24 grid grid-cols-1 md:grid-cols-2">
+        <div>
+          <h3 class="font-display">{{$page.influencerManagement.cta.heading}}</h3>
+          <p class="pt-4 text-black-500">{{$page.influencerManagement.cta.text}}</p>
+          <g-link to="/#contact" class="inline-block mt-12 bg-black-900 px-6 py-3 rounded-full text-white text-xs uppercase font-bold tracking-widest transition-all duration-300 ease-in-out transform hover:-translate-y-1 shadow-sm hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></g-link>
+        </div>
+        <div class="px-4 sm:px-0 mt-16 md:mt-12 ml-0 md:ml-16">
+          <div class="h-4 w-full rounded-full bg-light-500"></div>
+          <div id="cta-stat-1" class="h-2 rounded-full bg-dark-100 -mt-3 mx-1"></div>
+          <p class="text-black-500 mt-2 mb-8 ml-1"><span class="font-display text-black-900">{{$page.influencerManagement.cta.stats[0].figure}} %</span> {{$page.influencerManagement.cta.stats[0].description}}</p>
+          <div class="h-4 w-full rounded-full bg-light-500"></div>
+          <div id="cta-stat-2" class="h-2 rounded-full bg-dark-100 -mt-3 mx-1"></div>
+          <p class="text-black-500 mt-2 mb-8 ml-1"><span class="font-display text-black-900">{{$page.influencerManagement.cta.stats[1].figure}} %</span> {{$page.influencerManagement.cta.stats[1].description}}</p>
+          <div class="h-4 rounded-full bg-light-500"></div>
+          <div id="cta-stat-3" class="h-2 rounded-full bg-dark-100 -mt-3 mx-1"></div>
+          <p class="text-black-500 mt-2 mb-8 ml-1"><span class="font-display text-black-900">{{$page.influencerManagement.cta.stats[2].figure}} %</span> {{$page.influencerManagement.cta.stats[2].description}}</p>
+        </div>
+      </div>
+      <div class="absolute w-full h-full left-0 top-0 bg-gradient-to-br from-light-900 to-dark-100 opacity-50"></div>
+    </section>
+
+    <!-- INFLUENCERS -->
+    <section id="influencers" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
+      <Title :icon="'fa-user-friends'" :heading="'Influencer Management'" :title="'Unsere Partner'" class="md:mb-12 lg:mb-24"></Title>
+      <div class="text-center">
+        <div v-for="(influencer, i) in $page.influencerManagement.influencers" :key="i" class="mt-12 inline-block">
+          <Window class="w-11/12 xs:w-96 lg:w-128 mx-auto md:mx-0 relative z-10" v-bind:class="{'': influencer.landscape, 'md:ml-72 md:mt-32 lg:ml-112 lg:mt-64': !influencer.landscape}">
+            <div class="p-4 sm:p-6 pt-0">
+              <div class="w-full text-center text-lg sm:-mt-2"><a v-bind:href="influencer.profileLink" target="_blank" class="font-display text-light-900">{{influencer.username}}</a></div>
+              <div class="flex items-center justify-between mt-4">
+                <div>
+                  <img v-bind:src="influencer.profilePicture" alt="Avatar" class="object-cover object-center w-16 h-16 sm:w-24 sm:h-24 rounded-full">
+                </div>
+                <div class="flex">
+                  <div class="text-center mr-3 lg:mr-8">
+                    <p class="text-white font-display text-sm xs:text-base lg:text-2xl">{{influencer.timeline}}</p>
+                    <p class="text-light-900 lg:-mt-2 text-2xs xs:text-xs lg:text-base">Beiträge</p>
+                  </div>
+                  <div class="text-center mr-3 lg:mr-8">
+                    <p class="text-white font-display text-sm xs:text-base lg:text-2xl">{{influencer.followers}}</p>
+                    <p class="text-light-900 lg:-mt-2 text-2xs xs:text-xs lg:text-base">Abonnenten</p>
+                  </div>
+                  <div class="text-center">
+                    <p class="text-white font-display text-sm xs:text-base lg:text-2xl">{{influencer.follows}}</p>
+                    <p class="text-light-900 lg:-mt-2 text-2xs xs:text-xs lg:text-base">Abonniert</p>
+                  </div>
+                </div>
+              </div>
+              <div class="my-6 text-left">
+                <p class="font-bold text-white text-xs sm:text-sm lg:text-base">{{influencer.fullName}}</p>
+                <p class="text-white text-xs sm:text-sm lg:text-base" v-html="influencer.biography"></p>
+              </div>
+            </div>
+          </Window>
+          <img v-bind:src="influencer.image" alt="Influencer Featured Image" class="w-full rounded-lg shadow-lg" v-bind:class="{'-mt-32 md:max-w-xl md:ml-32 md:-mt-72 lg:ml-96 lg:-mt-128': influencer.landscape, '-mt-32 md:max-w-lg md:-mt-96 lg:-mt-112': !influencer.landscape}">
+        </div>
       </div>
     </section>
 
@@ -92,11 +153,6 @@
         username
         image
         landscape
-        reference {
-          name
-          company
-          text
-        }
       }
     }
   }
@@ -107,6 +163,7 @@
   import Title from '../components/Title.vue'
   import Window from '../components/Window.vue'
   import Footer from '../components/Footer.vue'
+  import axios from 'axios'
 
   import {gsap, TweenLite} from 'gsap'
   import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -125,7 +182,8 @@
     data() {
       return {
         statFigure1: 0,
-        statFigure2: 0
+        statFigure2: 0,
+        influencerProfiles: []
       }
     },
     methods: {
@@ -158,16 +216,39 @@
             }
           }
         })
+        //CTA stat diagram animation:
+        TweenLite.fromTo('#cta-stat-1', 2.0, {width: '0%'}, {scrollTrigger: '#cta-stat-1', width: this.$page.influencerManagement.cta.stats[0].figure + '%'})
+        TweenLite.fromTo('#cta-stat-2', 2.0, {width: '0%'}, {scrollTrigger: '#cta-stat-2', width: this.$page.influencerManagement.cta.stats[1].figure + '%', delay: 0.4})
+        TweenLite.fromTo('#cta-stat-3', 2.0, {width: '0%'}, {scrollTrigger: '#cta-stat-3', width: this.$page.influencerManagement.cta.stats[2].figure + '%', delay: 0.8})
         //Scroll reveal animations:
         gsap.from('#header-image', {scrollTrigger: '#header-image', y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
         gsap.from('#header-box', {scrollTrigger: '#header-box', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.2})
         gsap.from('#stats', {scrollTrigger: '#stats', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.4})
         gsap.from('#stats-icon', {scrollTrigger: '#stats-icon', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.4})
+        gsap.from('#cta', {scrollTrigger: '#cta', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        gsap.from('#influencers', {scrollTrigger: '#influencers', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
       }
     },
-    mounted() { 
+    async mounted() { 
       gsap.registerPlugin(ScrollTrigger)
       this.animations()
+      for(var influencer of this.$page.influencerManagement.influencers) {
+        try {
+          const request = await axios.get(
+            'https://www.instagram.com/' + influencer.username +'/?__a=1'
+          )
+          var userData = request.data.graphql.user
+          influencer.profileLink = 'https://instagram.com/' + influencer.username
+          influencer.fullName = userData.full_name,
+          influencer.biography = userData.biography.replace(/\n/g, '<br/>'),
+          influencer.profilePicture = userData.profile_pic_url,
+          influencer.timeline = userData.edge_owner_to_timeline_media.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
+          influencer.followers= userData.edge_followed_by.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
+          influencer.follows = userData.edge_follow.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+        } catch (error) {
+          console.log(error)
+        }
+      }
     } 
   }
 </script>

@@ -108,6 +108,7 @@ collections:
             widget: "list"
             fields: 
               - {label: "Zahl", name: "figure", widget: "number", value_type: "float"}
+              - {label: "Dezimal", name: "decimal", widget: "boolean"}
               - {label: "Einheit", name: "unit", widget: "string", required: false}
               - {label: "Beschreibung", name: "description", widget: "string"}
           - label: "Call To Action"

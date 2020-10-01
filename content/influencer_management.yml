@@ -7,8 +7,10 @@ header:
     letterpress slow-carb literally before they sold out austin chicharrones.
 stats:
   - figure: 972086
+    decimal: false
     description: Nutzer in unserer Reichweite
   - figure: 19.38
+    decimal: true
     unit: "%"
     description: Durchschnittliche Umsatzsteigerung
 cta:

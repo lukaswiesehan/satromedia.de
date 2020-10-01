@@ -25,4 +25,19 @@ cta:
       description: IPhone banh mi YOLO kombucha kinfolk.
     - figure: 89
       description: Beard direct trade unicorn.
-influencers: []
+influencers:
+  - username: alltags_liebe
+    image: /uploads/alltagsliebe.jpg
+    landscape: true
+    reference:
+      name: John Doe
+      company: Company
+      text: "Four loko flexitarian small batch direct trade austin chillwave. "
+  - username: zuckerfreileben
+    image: /uploads/zuckerfreileben.jpg
+    reference:
+      name: Jane Doe
+      company: Firma GmbH
+      text: Whatever taiyaki iceland, vaporware actually chia man braid portland
+        listicle cronut hella microdosing tilde.
+    landscape: false

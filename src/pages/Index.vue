@@ -4,7 +4,7 @@
 
     <!-- HEADER -->
     <section id="header" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 -mt-16 xs:-mt-32 md:-mt-64">
-      <Window id="header-window">
+      <Window id="header-window" style="opacity: 0">
         <video width="100%" height="100%" muted playsinline autoplay preload loop>
           <source v-bind:src="$page.landing.header_video" type="video/mp4">
           <img v-bind:src="$page.landing.header_thumbnail" alt="Satro Media Showreel">
@@ -507,8 +507,8 @@
       animations() {
         //loading animation:
         gsap.from('#navbar', {opacity:0, duration: 0.8})
-        gsap.from('#header-window', {y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#satro-logo', {y: 100, opacity: 0, scale: 0.95, duration: 1.6, delay: 1.2, ease: 'power3'})
+        gsap.fromTo('#header-window', {y: 100, opacity: 0, scale: 0.95}, {y: 0, opacity: 1, scale: 1, duration: 1.6, ease: 'power3'})
+        gsap.from('#satro-logo', {y: 100, opacity: 0, scale: 0.95, duration: 1.6, delay: 0.8, ease: 'power3'})
         gsap.from('#nav-item-1', {y: -200, duration: 0.8, delay: 0.3})
         gsap.from('#nav-item-2', {y: -200, duration: 0.8, delay: 0.4})
         gsap.from('#nav-item-3', {y: -200, duration: 0.8, delay: 0.5})

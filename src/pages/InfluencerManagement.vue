@@ -117,7 +117,7 @@
               </div>
             </div>
           </Window>
-          <img v-bind:src="influencer.image" alt="Influencer Featured Image" class="w-full rounded-lg shadow-lg" v-bind:class="{'-mt-12 md:max-w-xl md:ml-32 md:-mt-72 lg:ml-96 lg:-mt-128': influencer.landscape, '-mt-16 md:max-w-lg md:-mt-96 lg:-mt-112': !influencer.landscape}">
+          <img v-bind:src="influencer.image" alt="Influencer Featured Image" class="w-full rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105" v-bind:class="{'-mt-12 md:max-w-xl md:ml-32 md:-mt-72 lg:ml-96 lg:-mt-128': influencer.landscape, '-mt-16 md:max-w-lg md:-mt-96 lg:-mt-112': !influencer.landscape}">
         </div>
       </div>
     </section>

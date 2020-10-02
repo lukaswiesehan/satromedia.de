@@ -23,9 +23,12 @@
             <img v-bind:src="$page.landing.portraits[0].photo" alt="Satro Media Gründer" class="object-cover object-center w-32 h-40 md:w-48 md:h-56 lg:w-56 lg:h-72">
             <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25"></div>
             <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25 transition-all duration-500 ease-in-out opacity-0 hover:opacity-100 flex flex-col-reverse">
-              <div class="p-4 text-white">
-                <p class="text-xs md:text-base font-bold">Henning Trogisch</p>
-                <a href="mailto:henning@satromedia.de" class="text-2xs md:text-xs hover:text-light-900">henning@satromedia.de</a>
+              <div class="p-4">
+                <p class="font-bold text-white text-xs md:text-base">Henning Trogisch</p>
+                <p class="text-light-500 text-base md:text-lg">
+                  <a href="mailto:henning@satromedia.de" class="hover:text-light-900"><i class="fas fa-envelope"></i></a>
+                  <a href="https://de.linkedin.com/in/henning-trogisch-b738a8172" class="ml-2 hover:text-light-900"><i class="fab fa-linkedin"></i></a>
+                </p>
               </div>
             </div>
           </div>
@@ -35,9 +38,12 @@
             <img v-bind:src="$page.landing.portraits[1].photo" alt="Satro Media Gründer" class="object-cover object-center w-32 h-40 md:w-48 md:h-56 lg:w-56 lg:h-72">
             <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25"></div>
             <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25 transition-all duration-500 ease-in-out opacity-0 hover:opacity-100 flex flex-col-reverse">
-              <div class="p-4 text-white">
-                <p class="text-xs md:text-base font-bold">Mika Sannmann</p>
-                <a href="mailto:mika@satromedia.de" class="text-2xs md:text-xs hover:text-light-900">mika@satromedia.de</a>
+              <div class="p-4 text-white text-xs md:text-base">
+                <p class="font-bold text-white text-xs md:text-base">Mika Sannmann</p>
+                <p class="text-light-500 text-base md:text-lg">
+                  <a href="mailto:mika@satromedia.de" class="hover:text-light-900"><i class="fas fa-envelope"></i></a>
+                  <a href="https://de.linkedin.com/in/mika-sannmann-626743194" class="ml-2 hover:text-light-900"><i class="fab fa-linkedin"></i></a>
+                </p>
               </div>
             </div>
           </div>

@@ -31,6 +31,12 @@ influencers:
   - username: alltags_liebe
     image: /uploads/alltagsliebe.jpg
     landscape: true
+  - username: elli_hoop
+    landscape: false
+    image: /uploads/elli_hoop.jpg
+  - username: verruecktemamawelt
+    image: /uploads/verruecktemamawelt.jpg
+    landscape: true
   - username: zuckerfreileben
     image: /uploads/zuckerfreileben.jpg
     landscape: false

@@ -115,14 +115,14 @@ collections:
             fields:
               - {label: "Heading", name: "heading", widget: "string"}
               - {label: "Text", name: "text", widget: "text"}
-          - label: "Featured Project"
-            name: "featured_project"
-            widget: "object"
+          - label: "Featured Projects"
+            name: "featured_projects"
+            widget: "list"
             fields:
-            - {label: "Titel", name: "title", widget: "string"}
-            - {label: "Beschreibung", name: "description", widget: "text"}
-            - {label: "Video", name: "video", widget: "boolean"}
-            - {label: "Foto/Video", name: "media", widget: "file"}
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Beschreibung", name: "description", widget: "text"}
+              - {label: "Video", name: "video", widget: "boolean"}
+              - {label: "Foto/Video", name: "media", widget: "file"}
           - label: "Projekte"
             name: "projects"
             widget: "list"

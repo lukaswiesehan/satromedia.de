@@ -41,10 +41,11 @@
       </div>
     </section>
 
-    <!-- FEATURED PROJECT -->
+    <!-- PROJECTS -->
     <section id="projects" class="max-w-screen-xl mx-auto px-4 sm:px-8 mt-20 md:mt-24 lg:mt-40">
       <Title :icon="'fas fa-photo-video'" :heading="'Content Production'" :title="'Latest Work'"></Title>
-      <div id="featured-project" class="my-8 pb-8 md:flex border-light-500 border-b">
+      
+      <div id="featured-project-1" class="my-12 pb-12 md:flex border-light-500 border-b">
         <div class="flex-shrink-0 relative md:w-9/12 rounded-lg overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
           <video v-if="$page.contentProduction.featured_project.video" width="100%" height="100%" muted playsinline autoplay preload loop>
             <source v-bind:src="$page.contentProduction.featured_project.media" type="video/mp4">
@@ -57,9 +58,36 @@
           <p class="pt-4 text-black-500">{{$page.contentProduction.featured_project.description}}</p>
         </div>
       </div>
-      <masonry id="other-projects" :cols="{default: 3, 1024: 2, 640: 1}" :gutter="30">
+
+      <masonry id="other-projects-1" :cols="{default: 3, 1024: 2, 640: 1}" :gutter="30">
         <div v-for="(project, i) in $page.contentProduction.projects" :key="i">
-          <div class="relative rounded-lg overflow-hidden shadow-lg mb-4 sm:mb-12 transition-all duration-300 ease-in-out transform hover:scale-105">
+          <div v-if="i < ($page.contentProduction.projects.length / 2)" class="relative rounded-lg overflow-hidden shadow-lg mb-4 sm:mb-12 transition-all duration-300 ease-in-out transform hover:scale-105">
+            <video v-if="project.video" width="100%" height="100%" muted playsinline autoplay preload loop>
+              <source v-bind:src="project.media" type="video/mp4">
+            </video>
+            <img v-else v-bind:src="project.media" alt="Content Production Project">
+            <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25 transition-all duration-300 ease-in-out hover:bg-opacity-0"></div>
+          </div>
+        </div>
+      </masonry>
+
+      <div id="featured-project-2" class="mb-12 py-12 md:flex border-light-500 border-t border-b">
+        <div class="flex-shrink-0 relative md:w-9/12 rounded-lg overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+          <video v-if="$page.contentProduction.featured_project.video" width="100%" height="100%" muted playsinline autoplay preload loop>
+            <source v-bind:src="$page.contentProduction.featured_project.media" type="video/mp4">
+          </video>
+          <img v-else v-bind:src="$page.contentProduction.featured_project.media" alt="Latest Project">
+          <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25 transition-all duration-300 ease-in-out hover:bg-opacity-0"></div>
+        </div>
+        <div class="mt-8 md:ml-8 md:mt-0">
+          <h3 class="font-display">{{$page.contentProduction.featured_project.title}}</h3>
+          <p class="pt-4 text-black-500">{{$page.contentProduction.featured_project.description}}</p>
+        </div>
+      </div>
+
+      <masonry id="other-projects-2" :cols="{default: 3, 1024: 2, 640: 1}" :gutter="30">
+        <div v-for="(project, i) in $page.contentProduction.projects" :key="i">
+          <div v-if="i >= ($page.contentProduction.projects.length / 2)" class="relative rounded-lg overflow-hidden shadow-lg mb-4 sm:mb-12 transition-all duration-300 ease-in-out transform hover:scale-105">
             <video v-if="project.video" width="100%" height="100%" muted playsinline autoplay preload loop>
               <source v-bind:src="project.media" type="video/mp4">
             </video>

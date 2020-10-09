@@ -231,22 +231,27 @@
     async mounted() { 
       gsap.registerPlugin(ScrollTrigger)
       this.animations()
-      for(var influencer of this.$page.influencerManagement.influencers) {
-        try {
-          const request = await axios.get(
-            'https://www.instagram.com/' + influencer.username +'/?__a=1'
-          )
-          var userData = request.data.graphql.user
-          influencer.profileLink = 'https://instagram.com/' + influencer.username
-          influencer.fullName = userData.full_name,
-          influencer.biography = userData.biography.replace(/\n/g, '<br/>'),
-          influencer.profilePicture = userData.profile_pic_url,
-          influencer.timeline = userData.edge_owner_to_timeline_media.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
-          influencer.followers= userData.edge_followed_by.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
-          influencer.follows = userData.edge_follow.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
-        } catch (error) {
-          console.log(error)
+      try {
+        const requests = []
+        var responses = []
+        for(var influencer of this.$page.influencerManagement.influencers) {
+          requests.push(axios.get('https://www.instagram.com/' + influencer.username +'/?__a=1'))
         }
+        responses = await Promise.all(requests)
+      } catch(error) {
+        console.log(error)
+      }
+      var i = 0
+      for(const influencer of this.$page.influencerManagement.influencers) {
+        var userData = responses[i].data.graphql.user
+        influencer.profileLink = 'https://instagram.com/' + influencer.username
+        influencer.fullName = userData.full_name,
+        influencer.biography = userData.biography.replace(/\n/g, '<br/>'),
+        influencer.profilePicture = userData.profile_pic_url,
+        influencer.timeline = userData.edge_owner_to_timeline_media.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
+        influencer.followers= userData.edge_followed_by.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
+        influencer.follows = userData.edge_follow.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+        i++      
       }
     } 
   }

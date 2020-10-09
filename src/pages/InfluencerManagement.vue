@@ -124,45 +124,7 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- INFLUENCERS -->
-    <!--<section id="influencers" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
-      <Title :icon="'fa-user-friends'" :heading="'Influencer Management'" :title="'Unsere Partner'" class="md:mb-12 lg:mb-24"></Title>
-      <div class="text-center">
-        <div v-for="(influencer, i) in $page.influencerManagement.influencers" :key="i" class="mt-12 inline-block">
-          <Window class="w-11/12 xs:w-96 lg:w-128 mx-auto md:mx-0 relative z-10" v-bind:class="{'': influencer.landscape, 'md:ml-72 md:mt-32 lg:ml-112 lg:mt-64': !influencer.landscape}">
-            <div class="p-4 sm:p-6 pt-0">
-              <div class="w-full text-center text-lg sm:-mt-2"><a v-bind:href="influencer.profileLink" target="_blank" class="font-display text-light-900">{{influencer.username}}</a></div>
-              <div class="flex items-center justify-between mt-4">
-                <div>
-                  <img v-bind:src="influencer.profilePicture" alt="Avatar" class="object-cover object-center w-16 h-16 sm:w-24 sm:h-24 rounded-full">
-                </div>
-                <div class="flex">
-                  <div class="text-center mr-3 lg:mr-8">
-                    <p class="text-white font-display text-sm xs:text-base lg:text-2xl">{{influencer.timeline}}</p>
-                    <p class="text-light-900 lg:-mt-2 text-2xs xs:text-xs lg:text-base">Beiträge</p>
-                  </div>
-                  <div class="text-center mr-3 lg:mr-8">
-                    <p class="text-white font-display text-sm xs:text-base lg:text-2xl">{{influencer.followers}}</p>
-                    <p class="text-light-900 lg:-mt-2 text-2xs xs:text-xs lg:text-base">Abonnenten</p>
-                  </div>
-                  <div class="text-center">
-                    <p class="text-white font-display text-sm xs:text-base lg:text-2xl">{{influencer.follows}}</p>
-                    <p class="text-light-900 lg:-mt-2 text-2xs xs:text-xs lg:text-base">Abonniert</p>
-                  </div>
-                </div>
-              </div>
-              <div class="my-6 text-left">
-                <p class="font-bold text-white text-xs sm:text-sm lg:text-base">{{influencer.fullName}}</p>
-                <p class="text-white text-xs sm:text-sm lg:text-base" v-html="influencer.biography"></p>
-              </div>
-            </div>
-          </Window>
-          <img v-bind:src="influencer.image" alt="Influencer Featured Image" class="w-full rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105" v-bind:class="{'-mt-12 md:max-w-xl md:ml-32 md:-mt-72 lg:ml-96 lg:-mt-128': influencer.landscape, '-mt-16 md:max-w-lg md:-mt-96 lg:-mt-112': !influencer.landscape}">
-        </div>
-      </div>
-    </section>-->
+    </section> 
 
     <!-- FOOTER -->
     <Footer :dark="false"/>

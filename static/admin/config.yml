@@ -53,6 +53,44 @@ collections:
           - {label: "Agentur Beschreibung", name: "about_description", widget: "text"}
           - {label: "Agentur Foto", name: "about_image", widget: "image"}
           - {label: "Beschreibung Kontaktanfrage", name: "contact_description", widget: "text"}
+      - label: "Influencer Management"
+        name: "influencer_management"
+        file: "content/influencer_management.yml"
+        fields:
+          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields: 
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Text", name: "text", widget: "text"}
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields: 
+              - {label: "Zahl", name: "figure", widget: "number", value_type: "float"}
+              - {label: "Dezimal", name: "decimal", widget: "boolean"}
+              - {label: "Einheit", name: "unit", widget: "string", required: false}
+              - {label: "Beschreibung", name: "description", widget: "string"}
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields: 
+                  - {label: "Prozentsatz", name: "figure", widget: "number"}
+                  - {label: "Beschreibung", name: "description", widget: "string"}
+          - label: "Influencer"
+            name: "influencers"
+            widget: "list"
+            fields:
+              - {label: "Nutzername (ohne @)", name: "username", widget: "string"}
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Querformat", name: "landscape", widget: "boolean"}
       - label: "Content Production"
         name: "content_production"
         file: "content/content_production.yml"
@@ -92,43 +130,6 @@ collections:
               - {label: "Titel", name: "title", widget: "string"}
               - {label: "Video", name: "video", widget: "boolean"}
               - {label: "Foto/Video", name: "media", widget: "file"}
-      - label: "Influencer Management"
-        name: "influencer_management"
-        file: "content/influencer_management.yml"
-        fields:
-          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
-          - label: "Header"
-            name: "header"
-            widget: "object"
-            fields: 
-              - {label: "Foto", name: "image", widget: "image"}
-              - {label: "Text", name: "text", widget: "text"}
-          - label: "Stats"
-            name: "stats"
-            widget: "list"
-            fields: 
-              - {label: "Zahl", name: "figure", widget: "number", value_type: "float"}
-              - {label: "Dezimal", name: "decimal", widget: "boolean"}
-              - {label: "Einheit", name: "unit", widget: "string", required: false}
-              - {label: "Beschreibung", name: "description", widget: "string"}
-          - label: "Call To Action"
-            name: "cta"
-            widget: "object"
-            fields:
-              - {label: "Heading", name: "heading", widget: "string"}
-              - {label: "Text", name: "text", widget: "text"}
-              - label: "Stats"
-                name: "stats"
-                widget: "list"
-                fields: 
-                  - {label: "Prozentsatz", name: "figure", widget: "number"}
-                  - {label: "Beschreibung", name: "description", widget: "string"}
-          - label: "Influencer"
-            name: "influencers"
-            widget: "list"
-            fields:
-              - {label: "Nutzername (ohne @)", name: "username", widget: "string"}
-              - {label: "Foto", name: "image", widget: "image"}
-              - {label: "Querformat", name: "landscape", widget: "boolean"}
+      
 
           

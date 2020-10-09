@@ -24,13 +24,21 @@ featured_projects:
       banh mi YOLO kombucha kinfolk, succulents actually. "
     video: true
     media: /uploads/showcase_9.mp4
+  - title: Malbucht Video
+    video: true
+    media: /uploads/showcase_8.mp4
+    description: Four loko flexitarian small batch direct trade austin chillwave.
+      Beard direct trade unicorn, forage austin PBR&B fashion axe vegan. IPhone
+      banh mi YOLO kombucha kinfolk, succulents actually. Whatever taiyaki
+      iceland, vaporware actually chia man braid portland listicle cronut hella
+      microdosing tilde.
 projects:
-  - video: false
-    media: /uploads/showcase_6.gif
-    title: Showcase 6
   - video: false
     media: /uploads/showcase_12.jpg
     title: Showcase 12
+  - video: false
+    media: /uploads/showcase_6.gif
+    title: Showcase 6
   - media: /uploads/showcase_1.gif
     video: false
     title: Showcase 1
@@ -46,9 +54,6 @@ projects:
   - video: false
     media: /uploads/showcase_18.jpg
     title: Showcase 18
-  - video: true
-    media: /uploads/showcase_8.mp4
-    title: Showcase 8
   - video: false
     media: /uploads/showcase_11.jpg
     title: Showcase 11

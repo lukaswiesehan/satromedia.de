@@ -3,12 +3,12 @@
     <Navbar id="navbar" :showBackButton="true" :dark="true" />
 
     <!-- HEADER -->
-    <section id="header" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 md:flex md:items-center -mt-16 xs:-mt-32 md:-mt-64">
-      <div id="header-image" class="relative z-0 rounded-lg overflow-hidden shadow-lg">
+    <section id="header" class="max-w-screen-xl px-4 -mt-16 md:mx-auto sm:px-8 md:flex md:items-center xs:-mt-32 md:-mt-64">
+      <div id="header-image" class="relative z-0 overflow-hidden rounded-lg shadow-lg">
         <img v-bind:src="$page.digitalConcepts.header.image" alt="Digitale Konzepte" class="object-cover object-center w-full h-96 lg:h-112">
-        <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25"></div>
+        <div class="absolute top-0 left-0 w-full h-full bg-opacity-25 bg-dark-900"></div>
       </div>
-      <div id="header-box" class="flex-shrink-0 relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 w-11/12 md:w-1/2 max-w-lg md:-ml-48 -mt-24 md:mt-0">
+      <div id="header-box" class="relative z-10 flex-shrink-0 w-11/12 max-w-lg p-6 mx-auto -mt-24 bg-white rounded-lg shadow-md md:p-10 md:mx-0 md:w-1/2 md:-ml-48 md:mt-0">
         <Title :icon="'fa-clipboard'" :heading="'Unsere Services'" :title="'Digitale Konzepte'"></Title>
         <p class="pt-4 sm:ml-12 text-black-500">{{$page.digitalConcepts.header.text}}</p>
       </div>
@@ -16,52 +16,70 @@
 
     <!-- STATS & CTA -->
     <section id="stats" class="relative mt-16 md:mt-24 lg:mt-40">
-      <div class="relative z-10 max-w-screen-lg mx-auto px-4 sm:px-8 py-12 md:py-16 grid grid-cols-1 md:grid-cols-2 md:space-x-8">
+      <div class="relative z-10 grid max-w-screen-lg grid-cols-1 px-4 py-12 mx-auto sm:px-8 md:py-16 md:grid-cols-2 md:space-x-8">
         <div class="mx-auto md:mx-0 md:pr-16">
           <div class="flex flex-row">
-            <div class="mr-8 text-dark-100 text-5xl md:text-6xl"><i class="fas" v-bind:class="'fa-' + $page.digitalConcepts.stats[0].icon"></i></div>
+            <div class="mr-8 text-5xl text-dark-100 md:text-6xl"><i class="fas" v-bind:class="'fa-' + $page.digitalConcepts.stats[0].icon"></i></div>
             <div>
-              <p id="stat-1" class="font-display text-5xl md:text-6xl">{{statFigure1}}<span class="text-4xl lg:text-5xl"> {{$page.digitalConcepts.stats[0].unit}}</span></p>
-              <p class="text-xs md:text-sm uppercase font-bold tracking-widest text-dark-100">{{$page.digitalConcepts.stats[0].description}}</p>
+              <p id="stat-1" class="text-5xl font-display md:text-6xl">{{statFigure1}}<span class="text-4xl lg:text-5xl"> {{$page.digitalConcepts.stats[0].unit}}</span></p>
+              <p class="text-xs font-bold tracking-widest uppercase md:text-sm text-dark-100">{{$page.digitalConcepts.stats[0].description}}</p>
             </div>
           </div>
           <div class="flex flex-row mt-12">
-            <div class="mr-8 text-dark-100 text-5xl md:text-6xl"><i class="fas" v-bind:class="'fa-' + $page.digitalConcepts.stats[1].icon"></i></div>
+            <div class="mr-8 text-5xl text-dark-100 md:text-6xl"><i class="fas" v-bind:class="'fa-' + $page.digitalConcepts.stats[1].icon"></i></div>
             <div>
-              <p id="stat-2" class="font-display text-5xl md:text-6xl">{{statFigure2}}<span class="text-4xl lg:text-5xl"> {{$page.digitalConcepts.stats[1].unit}}</span></p>
-              <p class="text-xs md:text-sm uppercase font-bold tracking-widest text-dark-100">{{$page.digitalConcepts.stats[1].description}}</p>
+              <p id="stat-2" class="text-5xl font-display md:text-6xl">{{statFigure2}}<span class="text-4xl lg:text-5xl"> {{$page.digitalConcepts.stats[1].unit}}</span></p>
+              <p class="text-xs font-bold tracking-widest uppercase md:text-sm text-dark-100">{{$page.digitalConcepts.stats[1].description}}</p>
             </div>
           </div>
           <div class="flex flex-row mt-12">
-            <div class="mr-8 text-dark-100 text-5xl md:text-6xl"><i class="fas" v-bind:class="'fa-' + $page.digitalConcepts.stats[2].icon"></i></div>
+            <div class="mr-8 text-5xl text-dark-100 md:text-6xl"><i class="fas" v-bind:class="'fa-' + $page.digitalConcepts.stats[2].icon"></i></div>
             <div>
-              <p id="stat-3" class="font-display text-5xl md:text-6xl">{{statFigure3}}<span class="text-4xl lg:text-5xl"> {{$page.digitalConcepts.stats[2].unit}}</span></p>
-              <p class="text-xs md:text-sm uppercase font-bold tracking-widest text-dark-100">{{$page.digitalConcepts.stats[2].description}}</p>
+              <p id="stat-3" class="text-5xl font-display md:text-6xl">{{statFigure3}}<span class="text-4xl lg:text-5xl"> {{$page.digitalConcepts.stats[2].unit}}</span></p>
+              <p class="text-xs font-bold tracking-widest uppercase md:text-sm text-dark-100">{{$page.digitalConcepts.stats[2].description}}</p>
             </div>
           </div>
         </div>
         <div class="mt-16 md:mt-0">
           <h3 class="font-display">{{$page.digitalConcepts.cta.heading}}</h3>
           <p class="pt-4 text-black-500">{{$page.digitalConcepts.cta.text}}</p>
-          <g-link to="/#contact" class="inline-block mt-12 bg-black-900 px-6 py-3 rounded-full text-white text-xs uppercase font-bold tracking-widest transition-all duration-300 ease-in-out transform hover:-translate-y-1 shadow-sm hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></g-link>
+          <g-link to="/#contact" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></g-link>
         </div>
       </div>
-      <div class="absolute w-full h-full left-0 top-0 bg-gradient-to-br from-light-900 to-dark-100 opacity-50"></div>
+      <div class="absolute top-0 left-0 w-full h-full opacity-50 bg-gradient-to-br from-light-900 to-dark-100"></div>
+    </section>
+
+    <!-- QUOTES -->
+    <section id="quotes" class="grid max-w-screen-xl grid-cols-1 px-4 mt-16 md:mx-auto sm:px-8 md:mt-24 lg:mt-40 md:grid-cols-2">
+      <div id="quote-1" class="flex text-black-500 md:pr-8 lg:md:pr-16">
+        <div class="flex-shrink-0 text-3xl text-dark-100"><i class="pr-6 fas fa-quote-right"></i></div>
+        <div class="ml-4">
+          <p>{{$page.digitalConcepts.quotes[0].quote_text}}</p>
+          <p class="mt-4 text-dark-100">{{$page.digitalConcepts.quotes[0].quoted_person}}</p>
+        </div>
+      </div>
+      <div id="quote-2" class="flex mt-8 text-black-500 md:pl-8 lg:pl-16 md:mt-0">
+        <div class="flex-shrink-0 text-3xl text-dark-100"><i class="pr-6 fas fa-quote-right"></i></div>
+        <div class="ml-4">
+          <p>{{$page.digitalConcepts.quotes[1].quote_text}}</p>
+          <p class="mt-4 text-dark-100">{{$page.digitalConcepts.quotes[1].quoted_person}}</p>
+        </div>
+      </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="max-w-screen-lg md:mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
+    <section id="services" class="max-w-screen-lg px-4 mt-16 md:mx-auto sm:px-8 md:mt-24 lg:mt-40">
       <div class="grid grid-cols-1 md:grid-cols-2 md:space-x-8">
-        <div class="mt-16 md:mt-0 max-w-md">
+        <div class="max-w-md">
           <Title :icon="'fa-clipboard'" :heading="'Digitale Konzepte'" :title="'Full Service'"></Title>
           <p class="pt-4 text-black-500">{{$page.digitalConcepts.service.description}}</p>
-          <g-link to="/#contact" class="inline-block mt-12 bg-black-900 px-6 py-3 rounded-full text-white text-xs uppercase font-bold tracking-widest transition-all duration-300 ease-in-out transform hover:-translate-y-1 shadow-sm hover:shadow-md hover:text-light-900">Ihr Projekt starten <i class="fas fa-chevron-right"></i></g-link>
+          <g-link to="/#contact" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Ihr Projekt starten <i class="fas fa-chevron-right"></i></g-link>
         </div>
-        <div>
+        <div class="mt-16 md:mt-0">
           <Window>
             <div class="p-8">
               <div v-for="(service, i) in $page.digitalConcepts.service.services" :key="i" class="flex mb-8">
-                <div class="flex-shrink-0 w-6 h-6 border-2 border-gray-500 rounded-md"><i class="fas fa-check text-light-900 text-2xl -mt-1 ml-1" v-bind:id="'service-tick-' + i"></i></div>
+                <div class="flex-shrink-0 w-6 h-6 border-2 border-gray-500 rounded-md"><i class="ml-1 -mt-1 text-2xl fas fa-check text-light-900" v-bind:id="'service-tick-' + i"></i></div>
                 <div class="ml-8 text-white" v-bind:id="'service-description-' + i">
                   <p>{{service.short_description}}</p>
                 </div>
@@ -96,6 +114,10 @@
       cta {
         heading
         text
+      }
+      quotes {
+        quote_text
+        quoted_person
       }
       service {
         description
@@ -180,7 +202,10 @@
         gsap.from('#header-image', {scrollTrigger: '#header-image', y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
         gsap.from('#header-box', {scrollTrigger: '#header-box', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.2})
         gsap.from('#stats', {scrollTrigger: '#stats', y: 100, opacity: 0, duration: 1.6, ease: 'power3', delay: 0.4})
+        gsap.from('#quote-1', {scrollTrigger: '#quote-1', y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
+        gsap.from('#quote-2', {scrollTrigger: '#quote-2', y: 100, opacity: 0, duration: 1.6, ease: 'power3', delay: 0.2})
         gsap.from('#services', {scrollTrigger: '#services', y: 100, opacity: 0, duration: 1.6, ease: 'power3', delay: 0.4})
+
         for(var i = 0; i < this.$page.digitalConcepts.service.services.length; i++) {
           gsap.from('#service-tick-' + i, {scrollTrigger: '#service-tick-' + i, scale: 0, duration: 0.8, ease: 'back.out(3)', delay: 0 + i * 0.4})
           gsap.from('#service-description-' + i, {scrollTrigger: '#service-tick-' + i, x: 50, opacity: 0, duration: 1.4, ease: 'power3', delay: 0 + i * 0.4})

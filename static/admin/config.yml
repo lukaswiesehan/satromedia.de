@@ -106,7 +106,8 @@ collections:
             name: "stats"
             widget: "list"
             fields: 
-              - {label: "Zahl", name: "figure", widget: "number"}
+              - {label: "Zahl", name: "figure", widget: "number", value_type: "float"}
+              - {label: "Dezimal", name: "decimal", widget: "boolean"}
               - {label: "Einheit", name: "unit", widget: "string", required: false}
               - {label: "Beschreibung", name: "description", widget: "string"}
           - label: "Call To Action"
@@ -130,6 +131,40 @@ collections:
               - {label: "Titel", name: "title", widget: "string"}
               - {label: "Video", name: "video", widget: "boolean"}
               - {label: "Foto/Video", name: "media", widget: "file"}
-      
-
+      - label: "Digitale Konzepte"
+        name: "digital_concepts"
+        file: "content/digital_concepts.yml"
+        fields:
+          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields: 
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Text", name: "text", widget: "text"}
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields: 
+              - {label: "Icon", name: "icon", widget: "string"}
+              - {label: "Zahl", name: "figure", widget: "number", value_type: "float"}
+              - {label: "Dezimal", name: "decimal", widget: "boolean"}
+              - {label: "Einheit", name: "unit", widget: "string", required: false}
+              - {label: "Beschreibung", name: "description", widget: "string"}
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
+          - label: "Service"
+            name: "service"
+            widget: "object"
+            fields:
+              - {label: "Beschreibung", name: "description", widget: "text"}
+              - label: "Services"
+                name: "services"
+                widget: "list"
+                fields:
+                  - {label: "Kurzbeschreibung", name: "short_description", widget: "string"}
           

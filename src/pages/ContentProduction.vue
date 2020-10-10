@@ -168,14 +168,26 @@
           var: this.$page.contentProduction.stats[0].figure,
           ease: 'power3',
           scrollTrigger: '#stat-1',
-          onUpdate: () => {this.statFigure1 = Math.ceil(counter1.var).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+          onUpdate: () => {
+            if(this.$page.contentProduction.stats[0].decimal) {
+              this.statFigure1 = Math.round(counter1.var * 100) / 100
+            } else {
+              this.statFigure1 = Math.ceil(counter1.var).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+            }
+          }
         })
         var counter2 = {var: 0}
         TweenLite.to(counter2, 1.6, {
           var: this.$page.contentProduction.stats[1].figure,
           ease: 'power3',
           scrollTrigger: '#stat-2',
-          onUpdate: () => {this.statFigure2 = Math.ceil(counter2.var).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+          onUpdate: () => {
+            if(this.$page.contentProduction.stats[1].decimal) {
+              this.statFigure2 = Math.round(counter2.var * 100) / 100
+            } else {
+              this.statFigure2 = Math.ceil(counter2.var).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+            }
+          }
         })
         //Scroll reveal animations:
         gsap.from('#header-image', {scrollTrigger: '#header-image', y: 100, opacity: 0, duration: 1.6, ease: 'power3'})

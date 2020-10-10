@@ -7,8 +7,10 @@ header:
     letterpress slow-carb literally before they sold out austin chicharrones.
 stats:
   - figure: 34127
+    decimal: false
     description: Minuten Videomaterial
   - figure: 1983
+    decimal: false
     description: Gigabyte Fotomaterial
 cta:
   heading: Auf den ersten Eindruck kommt es an!

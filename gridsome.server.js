@@ -7,6 +7,8 @@ const contentProductionFile = fs.readFileSync('./content/content_production.yml'
 const contentProductionData = yaml.safeLoad(contentProductionFile)
 const influencerManagementFile = fs.readFileSync('./content/influencer_management.yml')
 const influencerManagementData = yaml.safeLoad(influencerManagementFile)
+const digitalConceptsFile = fs.readFileSync('./content/digital_concepts.yml', 'utf8')
+const digitalConceptsData = yaml.safeLoad(digitalConceptsFile)
 
 module.exports = function (api) {
   api.loadSource(async actions => {
@@ -22,6 +24,10 @@ module.exports = function (api) {
       typeName: 'InfluencerManagement'
     })
     influencer_management.addNode(influencerManagementData)
+    const digital_concepts = actions.addCollection({
+      typeName: 'DigitalConcepts'
+    })
+    digital_concepts.addNode(digitalConceptsData)
   })
 
   api.createPages(({ createPage }) => {

@@ -185,7 +185,7 @@
           <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-0 lg:px-6 text-center">
             <h3 class="font-display">{{$page.landing.services[0].title}}</h3>
             <p class="my-4 text-sm lg:text-base">{{$page.landing.services[0].description}}</p>
-            <g-link to="/" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
+            <g-link to="/digital-concepts/" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
           </div>
         </div>
         <div v-on:mouseenter="hover_wd" class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">

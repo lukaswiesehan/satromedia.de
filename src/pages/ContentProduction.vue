@@ -193,10 +193,10 @@
         gsap.from('#header-image', {scrollTrigger: '#header-image', y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
         gsap.from('#header-box', {scrollTrigger: '#header-box', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.2})
         gsap.from('#stats', {scrollTrigger: '#stats', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.4})
-        gsap.from('#featured-project-1', {scrollTrigger: '#featured-project', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#other-projects-1', {scrollTrigger: '#other-projects', y: 100, opacity: 0, scale: 0.975, duration: 1.6, ease: 'power3'})
-        gsap.from('#featured-project-2', {scrollTrigger: '#featured-project', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#other-projects-2', {scrollTrigger: '#other-projects', y: 100, opacity: 0, scale: 0.975, duration: 1.6, ease: 'power3'})
+        gsap.from('#featured-project-1', {scrollTrigger: '#featured-project-1', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        gsap.from('#other-projects-1', {scrollTrigger: '#other-projects-1', y: 100, opacity: 0, scale: 0.975, duration: 1.6, ease: 'power3'})
+        gsap.from('#featured-project-2', {scrollTrigger: '#featured-project-2', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        gsap.from('#other-projects-2', {scrollTrigger: '#other-projects-2', y: 100, opacity: 0, scale: 0.975, duration: 1.6, ease: 'power3'})
         gsap.from('#footer', {scrollTrigger: '#footer', opacity: 0, duration: 1.6, ease: 'power3'})
       }
     },

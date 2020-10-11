@@ -11,6 +11,8 @@ const digitalConceptsFile = fs.readFileSync('./content/digital_concepts.yml', 'u
 const digitalConceptsData = yaml.safeLoad(digitalConceptsFile)
 const onlineMarketingFile = fs.readFileSync('./content/online_marketing.yml', 'utf8')
 const onlineMarketingData = yaml.safeLoad(onlineMarketingFile)
+const webdesignFile = fs.readFileSync('./content/webdesign.yml', 'utf8')
+const webdesignData = yaml.safeLoad(webdesignFile)
 
 module.exports = function (api) {
   api.loadSource(async actions => {
@@ -34,6 +36,10 @@ module.exports = function (api) {
       typeName: 'OnlineMarketing'
     })
     online_marketing.addNode(onlineMarketingData)
+    const webdesign = actions.addCollection({
+      typeName: 'Webdesign'
+    })
+    webdesign.addNode(webdesignData)
   })
 
   api.createPages(({ createPage }) => {

@@ -225,7 +225,7 @@
           <div class="px-4 mt-4 text-center xs:px-16 sm:px-24 md:px-0 lg:px-6">
             <h3 class="font-display">{{$page.landing.services[1].title}}</h3>
             <p class="my-4 text-sm lg:text-base">{{$page.landing.services[1].description}}</p>
-            <g-link to="/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
+            <g-link to="/webdesign/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
           </div>
         </div>
         <div v-on:mouseenter="hover_om" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">

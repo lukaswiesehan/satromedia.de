@@ -189,17 +189,13 @@ collections:
             fields: 
               - {label: "Zeilen Code", name: "loc", widget: "number", value_type: "float"}
               - {label: "Gestaltete Pixel", name: "pixels", widget: "number", value_type: "float"}
-          - label: "Service"
-            name: "service"
-            widget: "object"
+          - label: "Services"
+            name: "services"
+            widget: "list"
             fields:
-              - label: "Services"
-                name: "services"
-                widget: "list"
-                fields:
-                  - {label: "Bezeichnung", name: "title", widget: "string"}
-                  - {label: "Beschreibung", name: "description", widget: "text"}
-                  - {label: "Foto/Illustration", name: "image", widget: "image"}
+              - {label: "Bezeichnung", name: "title", widget: "string"}
+              - {label: "Beschreibung", name: "description", widget: "text"}
+              - {label: "Foto/Illustration", name: "image", widget: "image"}
           - label: "Call To Action"
             name: "cta"
             widget: "object"

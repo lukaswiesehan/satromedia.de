@@ -62,7 +62,7 @@
         <div v-for="(ad, i) in $page.onlineMarketing.ads" :key="i" class="">
           <div v-if="i % 2 == 0" class="mt-16 md:-mt-24 lg:-mt-72 sm:flex" v-bind:id="'ad-' + i">
             <Window class="relative z-0 w-11/12 mx-auto sm:flex-shrink-0 xs:w-96 md:mx-0">
-              <img v-bind:src="ad.screenshot" alt="Content Production" class="object-cover object-center">
+              <img v-bind:src="ad.screenshot" alt="Screenshot" class="object-cover object-center">
               <div class="absolute top-0 left-0 w-full h-full transition-all duration-300 ease-in-out bg-opacity-25 bg-dark-900 hover:bg-opacity-0"></div>
             </Window>
             <div>
@@ -74,7 +74,7 @@
           </div>
           <div v-else class="mt-16 md:-mt-24 lg:-mt-72 sm:flex sm:flex-row-reverse">
             <Window class="relative z-0 w-11/12 mx-auto sm:flex-shrink-0 xs:w-96 md:mx-0">
-              <img v-bind:src="ad.screenshot" alt="Content Production" class="object-cover object-center">
+              <img v-bind:src="ad.screenshot" alt="Screenshot" class="object-cover object-center">
               <div class="absolute top-0 left-0 w-full h-full transition-all duration-300 ease-in-out bg-opacity-25 bg-dark-900 hover:bg-opacity-0"></div>
             </Window>
             <div>

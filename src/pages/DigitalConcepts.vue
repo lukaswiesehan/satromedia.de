@@ -85,7 +85,6 @@
                 </div>
               </div>
             </div>
-            
           </Window>
         </div>
       </div>
@@ -205,7 +204,6 @@
         gsap.from('#quote-1', {scrollTrigger: '#quote-1', y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
         gsap.from('#quote-2', {scrollTrigger: '#quote-2', y: 100, opacity: 0, duration: 1.6, ease: 'power3', delay: 0.2})
         gsap.from('#services', {scrollTrigger: '#services', y: 100, opacity: 0, duration: 1.6, ease: 'power3', delay: 0.4})
-
         for(var i = 0; i < this.$page.digitalConcepts.service.services.length; i++) {
           gsap.from('#service-tick-' + i, {scrollTrigger: '#service-tick-' + i, scale: 0, duration: 0.8, ease: 'back.out(3)', delay: 0 + i * 0.4})
           gsap.from('#service-description-' + i, {scrollTrigger: '#service-tick-' + i, x: 50, opacity: 0, duration: 1.4, ease: 'power3', delay: 0 + i * 0.4})

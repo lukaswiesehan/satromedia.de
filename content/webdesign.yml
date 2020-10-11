@@ -1,0 +1,52 @@
+id: 6
+header:
+  text: I'm baby coloring book microdosing +1 copper mug activated charcoal. Tilde
+    swag palo santo disrupt seitan mlkshk yr locavore typewriter gochujang
+    skateboard raw denim quinoa etsy. Everyday carry gochujang listicle,
+    letterpress slow-carb literally before they sold out austin chicharrones.
+stats:
+  loc: 89012
+  pixels: 178124600
+service:
+  services:
+    - title: Beratung & Konzeption
+      description: Sartorial tousled dreamcatcher blue bottle. Crucifix chicharrones
+        90's deep v actually. Chartreuse chambray food truck hoodie paleo 90's
+        bicycle rights affogato umami messenger bag fingerstache. Shabby chic
+        cardigan activated charcoal sustainable flexitarian PBR&B. Pok pok
+        health goth gochujang, normcore kickstarter asymmetrical hell of
+        meditation enamel pin af pabst jianbing. Pok pok health goth gochujang,
+        normcore kickstarter asymmetrical hell of meditation enamel pin af pabst
+        jianbing.
+      image: /uploads/header_digitalekonzepte.jpg
+    - title: Individuelles Design
+      description: Shabby chic cardigan activated charcoal sustainable flexitarian
+        PBR&B. Pok pok health goth gochujang, normcore kickstarter asymmetrical
+        hell of meditation enamel pin af pabst jianbing. Pok pok health goth
+        gochujang, normcore kickstarter asymmetrical hell of meditation enamel
+        pin af pabst jianbing. Sartorial tousled dreamcatcher blue bottle.
+        Crucifix chicharrones 90's deep v actually.
+      image: /uploads/webdesign_design.jpg
+    - title: Zeitgemäße Umsetzung
+      description: Pok pok health goth gochujang, normcore kickstarter asymmetrical
+        hell of meditation enamel pin af pabst jianbing. Shabby chic cardigan
+        activated charcoal sustainable flexitarian PBR&B. Pok pok health goth
+        gochujang, normcore kickstarter asymmetrical hell of meditation enamel
+        pin af pabst jianbing. Pok pok health goth gochujang, normcore
+        kickstarter asymmetrical hell of meditation enamel pin af pabst
+        jianbing.
+      image: /uploads/webdesign_coding.jpg
+    - title: Hosting & Service
+      description: "Tilde swag palo santo disrupt seitan mlkshk yr locavore typewriter
+        gochujang skateboard raw denim quinoa etsy.  Pok pok health goth
+        gochujang, normcore kickstarter asymmetrical hell of meditation enamel
+        pin af pabst jianbing. Tilde swag palo santo disrupt seitan mlkshk yr
+        locavore typewriter gochujang skateboard raw denim quinoa etsy. "
+      image: /uploads/header_marketing.jpg
+cta:
+  heading: Unser Service - abgestimmt auf Ihr Projekt
+  text: Four loko flexitarian small batch direct trade austin chillwave. Beard
+    direct trade unicorn, forage austin PBR&B fashion axe vegan. IPhone banh mi
+    YOLO kombucha kinfolk, succulents actually. Whatever taiyaki iceland,
+    vaporware actually chia man braid portland listicle cronut hella microdosing
+    tilde.

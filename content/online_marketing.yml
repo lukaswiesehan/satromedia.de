@@ -27,7 +27,7 @@ graph:
     - label: "2021"
     - label: "2022"
   datasets:
-    - name: Investition in Millionen US-$
+    - name: Investition in Mio. USD
       color: "#8CA0C3"
       data:
         - number: 512

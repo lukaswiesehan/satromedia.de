@@ -173,6 +173,47 @@ collections:
                 widget: "list"
                 fields:
                   - {label: "Kurzbeschreibung", name: "short_description", widget: "string"}
+      - label: "Webdesign"
+        name: "digital_concepts"
+        file: "content/digital_concepts.yml"
+        fields:
+          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields: 
+              - {label: "Text", name: "text", widget: "text"}
+          - label: "Stats"
+            name: "stats"
+            widget: "object"
+            fields: 
+              - {label: "Zeilen Code", name: "loc", widget: "number", value_type: "float"}
+              - {label: "Gestaltete Pixel", name: "pixels", widget: "number", value_type: "float"}
+          - label: "Service"
+            name: "service"
+            widget: "object"
+            fields:
+              - label: "Services"
+                name: "services"
+                widget: "list"
+                fields:
+                  - {label: "Bezeichnung", name: "title", widget: "string"}
+                  - {label: "Beschreibung", name: "description", widget: "text"}
+                  - {label: "Foto/Illustration", name: "image", widget: "image"}
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
+          - label: "Projekte"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Beschreibung", name: "description", widget: "text"}
+              - {label: "Screenshot Desktop", name: "screenshot_desktop", widget: "image"}
+              - {label: "Screenshot Mobile", name: "screenshot_mobile", widget: "image"}
       - label: "Online Marketing"
         name: "online_marketing"
         file: "content/online_marketing.yml"

@@ -174,8 +174,8 @@ collections:
                 fields:
                   - {label: "Kurzbeschreibung", name: "short_description", widget: "string"}
       - label: "Webdesign"
-        name: "digital_concepts"
-        file: "content/digital_concepts.yml"
+        name: "webdesign"
+        file: "content/webdesign.yml"
         fields:
           - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
           - label: "Header"

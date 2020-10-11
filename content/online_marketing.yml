@@ -1,0 +1,55 @@
+id: 5
+header:
+  image: /uploads/header_marketing.jpg
+  text: I'm baby coloring book microdosing +1 copper mug activated charcoal. Tilde
+    swag palo santo disrupt seitan mlkshk yr locavore typewriter gochujang
+    skateboard raw denim quinoa etsy. Everyday carry gochujang listicle,
+    letterpress slow-carb literally before they sold out austin chicharrones.
+graph:
+  description: Everyday carry gochujang listicle, letterpress slow-carb literally
+    before they sold out austin chicharrones.
+  title: Investitionen in Social-Media-Werbung
+  labels:
+    - label: "2007"
+    - label: "2008"
+    - label: "2009"
+    - label: "2010"
+    - label: "2011"
+    - label: "2012"
+    - label: "2013"
+    - label: "2014"
+    - label: "2015"
+    - label: "2016"
+    - label: "2017"
+    - label: "2018"
+    - label: "2019"
+    - label: "2020"
+    - label: "2021"
+    - label: "2022"
+  datasets:
+    - name: Investition in Millionen US-$
+      color: "#8CA0C3"
+      data:
+        - number: 512
+        - number: 1815
+        - number: 2523
+        - number: 3545
+        - number: 4556
+        - number: 6274
+        - number: 9055
+        - number: 13633
+        - number: 20869
+        - number: 31818
+        - number: 50217
+        - number: 70246
+        - number: 83392
+        - number: 96190
+        - number: 109270
+        - number: 123073
+cta:
+  heading: Wie Sie Ihre Zielgruppe am besten erreichen
+  text: Four loko flexitarian small batch direct trade austin chillwave. Beard
+    direct trade unicorn, forage austin PBR&B fashion axe vegan. IPhone banh mi
+    YOLO kombucha kinfolk, succulents actually. Whatever taiyaki iceland,
+    vaporware actually chia man braid portland listicle cronut hella microdosing
+    tilde.

@@ -173,4 +173,52 @@ collections:
                 widget: "list"
                 fields:
                   - {label: "Kurzbeschreibung", name: "short_description", widget: "string"}
+      - label: "Online Marketing"
+        name: "online_marketing"
+        file: "content/online_marketing.yml"
+        fields:
+          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields: 
+              - {label: "Foto", name: "image", widget: "image"}
+              - {label: "Text", name: "text", widget: "text"}
+          - label: "Diagramm"
+            name: "graph"
+            widget: "object"
+            fields:
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Beschreibung", name: "description", widget: "text"}
+              - {label: "Quelle (Link)", name: "source", widget: "string"}
+              - label: "Labels"
+                name: "labels"
+                widget: "list"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+              - label: "Datenreihen"
+                name: "datasets"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Farbe (HEX)", name: "color", widget: "string"}
+                  - label: "Datenpunkte"
+                    name: "data"
+                    widget: "list"
+                    fields:
+                      - {label: "Datenpunkt", name: "number", widget: "number", value_type: "float"}
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
+          - label: "Anzeigen"
+            name: "ads"
+            widget: "list"
+            fields:
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Beschreibung", name: "description", widget: "text"}
+              - {label: "Screenshot", name: "screenshot", widget: "image"}
+
           

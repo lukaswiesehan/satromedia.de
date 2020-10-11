@@ -18,11 +18,12 @@
 
     <!-- CHART -->
     <section id="chart" class="max-w-screen-xl px-4 mt-16 md:mx-auto sm:px-8 md:mt-24">
-      <LineChart v-if="showChart" :chartData="this.chartData" :options="this.chartOptions" class="h-64 pb-8 border-b border-light-500"/>
+      <LineChart v-if="showChart" :chartData="this.chartData" :options="this.chartOptions" class="h-48 pb-8 border-b sm:h-64 border-light-500"/>
       <div class="flex flex-row-reverse max-w-screen-lg mx-auto mt-8">
         <div class="max-w-sm">
           <h3 class="mt-2 font-display">{{$page.onlineMarketing.graph.title}}</h3>
-          <p class="pt-4 text-black-500">{{$page.onlineMarketing.graph.description}}</p>
+          <p class="pt-4 mb-2 text-black-500">{{$page.onlineMarketing.graph.description}}</p>
+          <a v-bind:href="$page.onlineMarketing.graph.source" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Quelle <i class="fas fa-external-link-alt"></i></a>
         </div>
         <div class="mr-8 text-5xl text-dark-100 md:text-6xl"><i class="fas fa-hand-holding-usd"></i></div>
       </div>
@@ -56,7 +57,35 @@
 
     <!-- FEATURED ADS -->
     <section id="ads" class="max-w-screen-xl px-4 mt-16 md:mx-auto sm:px-8 md:mt-24 lg:mt-40">
-      hi
+      <Title :icon="'fa-ad'" :heading="'Online Marketing'" :title="'Erfolgreiche Anzeigen'"/>
+      <div class="pt-12 -mt-16 md:mt-24 lg:mt-72">
+        <div v-for="(ad, i) in $page.onlineMarketing.ads" :key="i" class="">
+          <div v-if="i % 2 == 0" class="mt-16 md:-mt-24 lg:-mt-72 sm:flex" v-bind:id="'ad-' + i">
+            <Window class="relative z-0 w-11/12 mx-auto sm:flex-shrink-0 xs:w-96 md:mx-0">
+              <img v-bind:src="ad.screenshot" alt="Content Production" class="object-cover object-center">
+              <div class="absolute top-0 left-0 w-full h-full transition-all duration-300 ease-in-out bg-opacity-25 bg-dark-900 hover:bg-opacity-0"></div>
+            </Window>
+            <div>
+              <div class="relative z-10 max-w-md p-10 mx-auto -mt-12 bg-white rounded-lg shadow-md md:mx-0 md:mt-32 md:-ml-32">
+                <h3 class="font-display">{{ad.title}}</h3>
+                <p class="pt-4 text-black-500">{{ad.description}}</p>
+              </div>
+            </div>
+          </div>
+          <div v-else class="mt-16 md:-mt-24 lg:-mt-72 sm:flex sm:flex-row-reverse">
+            <Window class="relative z-0 w-11/12 mx-auto sm:flex-shrink-0 xs:w-96 md:mx-0">
+              <img v-bind:src="ad.screenshot" alt="Content Production" class="object-cover object-center">
+              <div class="absolute top-0 left-0 w-full h-full transition-all duration-300 ease-in-out bg-opacity-25 bg-dark-900 hover:bg-opacity-0"></div>
+            </Window>
+            <div>
+              <div class="relative z-10 max-w-md p-10 mx-auto -mt-12 bg-white rounded-lg shadow-md md:mx-0 md:mt-32 md:-mr-32">
+                <h3 class="font-display">{{ad.title}}</h3>
+                <p class="pt-4 text-black-500">{{ad.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- FOOTER -->
@@ -90,6 +119,11 @@
       cta {
         heading
         text
+      }
+      ads {
+        title
+        description
+        screenshot
       }
     }
   }

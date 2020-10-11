@@ -3,29 +3,29 @@
     <Navbar id="navbar" :showBackButton="false" :dark="true" />
 
     <!-- HEADER -->
-    <section id="header" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 -mt-16 xs:-mt-32 md:-mt-64">
+    <section id="header" class="max-w-screen-xl px-4 -mt-16 md:mx-auto sm:px-8 xs:-mt-32 md:-mt-64">
       <Window id="header-window" style="opacity: 0">
         <video width="100%" height="100%" muted playsinline autoplay preload loop>
           <source v-bind:src="$page.landing.header_video" type="video/mp4">
           <img v-bind:src="$page.landing.header_thumbnail" alt="Satro Media Showreel">
         </video>
-        <div class="flex items-center absolute left-0 top-0 w-full h-full bg-dark-900 bg-opacity-25">
+        <div class="absolute top-0 left-0 flex items-center w-full h-full bg-opacity-25 bg-dark-900">
           <img id="satro-logo" src="../assets/img/satro_logo.png" alt="Satro Media Logo" class="w-2/3 mx-auto -mt-8 sm:-mt-12 md:-mt-20 lg:-mt-24">
         </div>
       </Window>
     </section>
 
     <!-- INTRO -->
-    <section id="intro" class="max-w-screen-xl mx-auto px-8 mt-24 lg:mt-48 grid grid-cols-1 md:grid-cols-2">
+    <section id="intro" class="grid max-w-screen-xl grid-cols-1 px-8 mx-auto mt-24 lg:mt-48 md:grid-cols-2">
       <div class="relative w-64 h-48 md:w-96 md:h-72 lg:w-112 lg:h-96">
-        <div id="portrait-1" class="absolute left-0 top-0">
-          <div class="rounded-lg overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+        <div id="portrait-1" class="absolute top-0 left-0">
+          <div class="overflow-hidden transition-all duration-300 ease-in-out transform rounded-lg shadow-lg hover:scale-105">
             <img v-bind:src="$page.landing.portraits[0].photo" alt="Satro Media Gründer" class="object-cover object-center w-32 h-40 md:w-48 md:h-56 lg:w-56 lg:h-72">
-            <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25"></div>
-            <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25 transition-all duration-500 ease-in-out opacity-0 hover:opacity-100 flex flex-col-reverse">
+            <div class="absolute top-0 left-0 w-full h-full bg-opacity-25 bg-dark-900"></div>
+            <div class="absolute top-0 left-0 flex flex-col-reverse w-full h-full transition-all duration-500 ease-in-out bg-opacity-25 opacity-0 bg-dark-900 hover:opacity-100">
               <div class="p-4">
-                <p class="font-bold text-white text-xs md:text-base">Henning Trogisch</p>
-                <p class="text-light-500 text-base md:text-lg">
+                <p class="text-xs font-bold text-white md:text-base">Henning Trogisch</p>
+                <p class="text-base text-light-500 md:text-lg">
                   <a href="mailto:henning@satromedia.de" class="hover:text-light-900"><i class="fas fa-envelope"></i></a>
                   <a href="https://de.linkedin.com/in/henning-trogisch-b738a8172" class="ml-2 hover:text-light-900"><i class="fab fa-linkedin"></i></a>
                 </p>
@@ -33,14 +33,14 @@
             </div>
           </div>
         </div>
-        <div id="portrait-2" class="absolute left-0 bottom-0 ml-24 md:ml-40 lg:ml-48">
-          <div class="rounded-lg overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+        <div id="portrait-2" class="absolute bottom-0 left-0 ml-24 md:ml-40 lg:ml-48">
+          <div class="overflow-hidden transition-all duration-300 ease-in-out transform rounded-lg shadow-lg hover:scale-105">
             <img v-bind:src="$page.landing.portraits[1].photo" alt="Satro Media Gründer" class="object-cover object-center w-32 h-40 md:w-48 md:h-56 lg:w-56 lg:h-72">
-            <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25"></div>
-            <div class="absolute w-full h-full top-0 left-0 bg-dark-900 bg-opacity-25 transition-all duration-500 ease-in-out opacity-0 hover:opacity-100 flex flex-col-reverse">
-              <div class="p-4 text-white text-xs md:text-base">
-                <p class="font-bold text-white text-xs md:text-base">Mika Sannmann</p>
-                <p class="text-light-500 text-base md:text-lg">
+            <div class="absolute top-0 left-0 w-full h-full bg-opacity-25 bg-dark-900"></div>
+            <div class="absolute top-0 left-0 flex flex-col-reverse w-full h-full transition-all duration-500 ease-in-out bg-opacity-25 opacity-0 bg-dark-900 hover:opacity-100">
+              <div class="p-4 text-xs text-white md:text-base">
+                <p class="text-xs font-bold text-white md:text-base">Mika Sannmann</p>
+                <p class="text-base text-light-500 md:text-lg">
                   <a href="mailto:mika@satromedia.de" class="hover:text-light-900"><i class="fas fa-envelope"></i></a>
                   <a href="https://de.linkedin.com/in/mika-sannmann-626743194" class="ml-2 hover:text-light-900"><i class="fab fa-linkedin"></i></a>
                 </p>
@@ -51,29 +51,29 @@
       </div>
       <div class="mt-12 md:ml-6 lg:ml-0">
         <div class="flex">
-          <div class="text-3xl"><i class="fas fa-quote-right text-dark-100 pr-6"></i></div>
+          <div class="text-3xl"><i class="pr-6 fas fa-quote-right text-dark-100"></i></div>
           <div><p class="text-2xl font-display">{{$page.landing.cite}}</p></div>
         </div>
-        <p class="text-black-500 mt-8">{{$page.landing.intro}}</p>
+        <p class="mt-8 text-black-500">{{$page.landing.intro}}</p>
         <div class="mt-8">
           <p class="text-dark-300">Mika Sannmann & Henning Trogisch</p>
-          <p class="text-dark-300 italic">Gründer SaTro Media</p>
+          <p class="italic text-dark-300">Gründer SaTro Media</p>
         </div>
       </div>
     </section>
 
     <!-- SERVICES -->
     <section id="services" class="mt-24 lg:mt-48">
-      <div class="max-w-screen-lg mx-auto px-4 sm:px-8">
+      <div class="max-w-screen-lg px-4 mx-auto sm:px-8">
         <Title :icon="'fa-user-tie'" :heading="'Satro Media'" :title="'Unsere Services'"></Title>
       </div>
-      <div class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-8">
+      <div class="grid max-w-screen-lg grid-cols-1 px-4 mx-auto mt-12 sm:px-8 md:grid-cols-2 gap-x-8">
         <div id="service-1" class="flex">
-          <div v-on:mouseenter="hover_im" class="top-service bg-white rounded-lg shadow-md p-6 pt-0 flex flex-col justify-between mt-24 md:mt-36 lg:mt-48 mb-12 md:mb-16 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-            <div class="top-service-image -mt-24 md:-mt-36 lg:-mt-48 mb-6 transition-all duration-300 ease-in-out">
-              <div class="relative rounded-lg overflow-hidden shadow-lg">
+          <div v-on:mouseenter="hover_im" class="flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
+            <div class="mb-6 -mt-24 transition-all duration-300 ease-in-out top-service-image md:-mt-36 lg:-mt-48">
+              <div class="relative overflow-hidden rounded-lg shadow-lg">
                 <img v-bind:src="$page.landing.topServices[0].cover" v-bind:alt="$page.landing.topServices[0].title" class="mx-auto">
-                <div class="flex items-center absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-50 p-20 md:p-12">
+                <div class="absolute top-0 left-0 flex items-center w-full h-full p-20 bg-opacity-50 bg-dark-900 md:p-12">
                   <svg width="170" height="170" viewBox="0 0 170 170" class="mx-auto">
                     <g fill="none">
                         <g id="im-bg" fill="#E5F0F5" transform="translate(38 11)">
@@ -108,19 +108,19 @@
                 </div>
               </div>
             </div>
-            <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-8 lg:px-16 text-center">
+            <div class="px-4 mt-4 text-center xs:px-16 sm:px-24 md:px-8 lg:px-16">
               <h3 class="font-display">{{$page.landing.topServices[0].title}}</h3>
               <p class="my-4 text-sm lg:text-base">{{$page.landing.topServices[0].description}}</p>
-              <g-link to="/influencer-management/" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
+              <g-link to="/influencer-management/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
             </div>
           </div>
         </div>
         <div id="service-2" class="flex">
-          <div v-on:mouseenter="hover_cp" class="top-service bg-white rounded-lg shadow-md p-6 pt-0 flex flex-col justify-between mt-24 md:mt-36 lg:mt-48 mb-12 md:mb-16 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-            <div class="top-service-image -mt-24 md:-mt-36 lg:-mt-48 mb-6 transition-all duration-300 ease-in-out">
-              <div class="relative rounded-lg overflow-hidden shadow-lg">
+          <div v-on:mouseenter="hover_cp" class="flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
+            <div class="mb-6 -mt-24 transition-all duration-300 ease-in-out top-service-image md:-mt-36 lg:-mt-48">
+              <div class="relative overflow-hidden rounded-lg shadow-lg">
                 <img v-bind:src="$page.landing.topServices[1].cover" v-bind:alt="$page.landing.topServices[1].title" class="mx-auto">
-                <div class="flex items-center absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-50 p-20 md:p-12">
+                <div class="absolute top-0 left-0 flex items-center w-full h-full p-20 bg-opacity-50 bg-dark-900 md:p-12">
                   <svg width="170" height="170" viewBox="0 0 170 170" class="mx-auto">
                     <g fill="none">
                       <g id="cp-bg" fill="#E5F0F5">
@@ -149,16 +149,16 @@
                 </div>
               </div>
             </div>
-            <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-8 lg:px-16 text-center">
+            <div class="px-4 mt-4 text-center xs:px-16 sm:px-24 md:px-8 lg:px-16">
               <h3 class="font-display">{{$page.landing.topServices[1].title}}</h3>
               <p class="my-4 text-sm lg:text-base">{{$page.landing.topServices[1].description}}</p>
-              <g-link to="/content-production/" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
+              <g-link to="/content-production/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
             </div>
           </div>
         </div> 
       </div>
-      <div id="other-services" class="max-w-screen-lg mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-3 gap-x-8">
-        <div v-on:mouseenter="hover_dk" class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+      <div id="other-services" class="grid max-w-screen-lg grid-cols-1 px-4 mx-auto sm:px-8 md:grid-cols-3 gap-x-8">
+        <div v-on:mouseenter="hover_dk" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
           <div class="px-20 py-4 md:px-12 md:py-8">
             <svg viewBox="0 0 170 147" class="w-full mx-auto">
               <g fill="none" fill-rule="evenodd">
@@ -182,13 +182,13 @@
               </g>
             </svg>
           </div>
-          <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-0 lg:px-6 text-center">
+          <div class="px-4 mt-4 text-center xs:px-16 sm:px-24 md:px-0 lg:px-6">
             <h3 class="font-display">{{$page.landing.services[0].title}}</h3>
             <p class="my-4 text-sm lg:text-base">{{$page.landing.services[0].description}}</p>
-            <g-link to="/digital-concepts/" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
+            <g-link to="/digital-concepts/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
           </div>
         </div>
-        <div v-on:mouseenter="hover_wd" class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+        <div v-on:mouseenter="hover_wd" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
           <div class="px-20 py-4 md:px-12 md:py-8">
             <svg viewBox="0 0 170 170" class="w-full mx-auto">
               <g fill="none">
@@ -222,13 +222,13 @@
               </g>
             </svg>
           </div>
-          <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-0 lg:px-6 text-center">
+          <div class="px-4 mt-4 text-center xs:px-16 sm:px-24 md:px-0 lg:px-6">
             <h3 class="font-display">{{$page.landing.services[1].title}}</h3>
             <p class="my-4 text-sm lg:text-base">{{$page.landing.services[1].description}}</p>
-            <g-link to="/" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
+            <g-link to="/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
           </div>
         </div>
-        <div v-on:mouseenter="hover_om" class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between mb-12 md:mb-0 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+        <div v-on:mouseenter="hover_om" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
           <div class="px-20 py-4 md:px-12 md:py-8">
             <svg viewBox="0 0 171 159" class="w-full mx-auto">
               <g fill="none">
@@ -250,10 +250,10 @@
               </g>
             </svg>
           </div>
-          <div class="mt-4 px-4 xs:px-16 sm:px-24 md:px-0 lg:px-6 text-center">
+          <div class="px-4 mt-4 text-center xs:px-16 sm:px-24 md:px-0 lg:px-6">
             <h3 class="font-display">{{$page.landing.services[2].title}}</h3>
             <p class="my-4 text-sm lg:text-base">{{$page.landing.services[2].description}}</p>
-            <g-link to="/" class="text-xs text-dark-100 uppercase font-bold tracking-widest hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
+            <g-link to="/online-marketing/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
           </div>
         </div>
       </div>
@@ -261,23 +261,23 @@
 
     <!-- REFERENCES -->
     <section id="references" class="mt-16 md:mt-24 lg:mt-48">
-      <div class="max-w-screen-xl mx-auto px-4 sm:px-8">
+      <div class="max-w-screen-xl px-4 mx-auto sm:px-8">
         <Title :icon="'fa-user-friends'" :heading="'Kundenstimmen'" :title="'Über unsere Arbeit'"></Title>
       </div>
       <div class="relative mt-8">
-        <div class="max-w-screen-xl mx-auto px-4 sm:px-8">
+        <div class="max-w-screen-xl px-4 mx-auto sm:px-8">
           <div class="md:flex">
-            <div id="reference-logos" class="md:w-1/2 lg:w-2/3 py-8 md:py-12 md:pr-8 lg:pr-24 flex flex-wrap items-center">
+            <div id="reference-logos" class="flex flex-wrap items-center py-8 md:w-1/2 lg:w-2/3 md:py-12 md:pr-8 lg:pr-24">
               <div v-for="(client, i) in $page.landing.clients" :key="i" class="w-1/2 p-4 md:p-2 lg:px-4 lg:py-8" v-bind:class="{'w-1/3': i > 1}">
                 <img v-bind:src="client.logo" alt="Logo Client" class="w-full" style="filter: grayscale(100%) opacity(80%); -webkit-filter: grayscale(100%) opacity(80%);">
               </div>
             </div>
-            <div class="relative z-10 max-w-xl mx-auto pb-12 lg:pb-0 md:w-1/2 lg:w-1/3 md:-mt-20">
+            <div class="relative z-10 max-w-xl pb-12 mx-auto lg:pb-0 md:w-1/2 lg:w-1/3 md:-mt-20">
               <Window id="reference-window">
-                <div class="ml-2 mr-6 mb-8">
+                <div class="mb-8 ml-2 mr-6">
                   <div v-for="(reference, i) in $page.landing.references" :key="i">
                     <Bubble :light="false">
-                      <p class="text-gray-500 font-bold">{{reference.name}}, {{reference.company}}</p>
+                      <p class="font-bold text-gray-500">{{reference.name}}, {{reference.company}}</p>
                       <p class="text-gray-300">{{reference.reference_text}}</p>
                     </Bubble>
                   </div>
@@ -286,21 +286,21 @@
             </div>
           </div>
         </div>
-        <div class="absolute w-full h-full left-0 top-0 bg-gradient-to-br from-light-900 to-dark-100 opacity-50"></div>
+        <div class="absolute top-0 left-0 w-full h-full opacity-50 bg-gradient-to-br from-light-900 to-dark-100"></div>
       </div>
     </section>
     
     <!-- ABOUT -->
-    <section class="max-w-screen-xl md:mx-auto px-4 sm:px-8 mt-24 lg:mt-48">
+    <section class="max-w-screen-xl px-4 mt-24 md:mx-auto sm:px-8 lg:mt-48">
       <Title :icon="'fa-users'" :heading="'Satro Media'" :title="'Über die Agentur'"></Title>
-      <div id="about" class="md:flex md:items-center mt-8">
-        <div id="about-box" class="relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 w-11/12 md:w-1/2 max-w-lg">
+      <div id="about" class="mt-8 md:flex md:items-center">
+        <div id="about-box" class="relative z-10 w-11/12 max-w-lg p-6 mx-auto bg-white rounded-lg shadow-md md:p-10 md:mx-0 md:w-1/2">
           <h3 class="font-display">{{$page.landing.about_header}}</h3>
           <p class="pt-4 text-black-500">{{$page.landing.about_description}}</p>
         </div>
-        <div id="about-image" class="relative z-0 rounded-lg overflow-hidden shadow-lg -mt-16 md:mt-0 md:-ml-48">
+        <div id="about-image" class="relative z-0 -mt-16 overflow-hidden rounded-lg shadow-lg md:mt-0 md:-ml-48">
           <img v-bind:src="$page.landing.about_image" alt="Satro Media Team" class="object-cover object-center w-full h-96 lg:h-112">
-          <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25"></div>
+          <div class="absolute top-0 left-0 w-full h-full bg-opacity-25 bg-dark-900"></div>
         </div>
       </div>
     </section>
@@ -308,28 +308,28 @@
     <!-- CONTACT -->
     <section id="contact" class="mt-24 lg:mt-48">
       <div class="md:pt-24">
-        <div class="max-w-screen-lg mx-auto px-4 sm:px-8 md:flex md:flex-row-reverse">
+        <div class="max-w-screen-lg px-4 mx-auto sm:px-8 md:flex md:flex-row-reverse">
           <div class="md:w-1/2 md:pl-16">
             <Title :icon="'fa-address-card'" :heading="'Ihre Marke'" :title="'Ihre Anfrage'"></Title>
           </div>
         </div>
-        <div class="bg-gradient-to-br from-gray-600 to-gray-700 mt-8">
-          <div class="max-w-screen-lg mx-auto px-4 sm:px-8 md:flex md:flex-row-reverse">
-            <div class="md:w-1/2 md:pl-16 py-12 md:py-16">
-              <p class="text-gray-300 leading-loose">{{$page.landing.contact_description}}</p>
+        <div class="mt-8 bg-gradient-to-br from-gray-600 to-gray-700">
+          <div class="max-w-screen-lg px-4 mx-auto sm:px-8 md:flex md:flex-row-reverse">
+            <div class="py-12 md:w-1/2 md:pl-16 md:py-16">
+              <p class="leading-loose text-gray-300">{{$page.landing.contact_description}}</p>
             </div>
             <div class="md:w-1/2 md:-mt-32">
               <Window id="contact-form">
                 <div class="p-6">
                   <form name="Kontaktanfragen" method="POST" v-on:submit.prevent="submitForm" data-netlify="true" data-netlify-honeypot="bot-field">
-                    <label for="name" class="text-xs text-gray-300 uppercase font-bold tracking-widest">Ihr Name</label>
-                    <input type="text" name="name" v-model="form.data.name" v-on:blur="checkName" class="bg-gray-700 focus:outline-none focus:shadow-outline text-gray-300 placeholder-gray-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.name, 'border-red-500': form.errors.name}" placeholder="John Doe">
-                    <label for="company" class="text-xs text-gray-300 uppercase font-bold tracking-widest">Ihr Unternehmen</label>
-                    <input type="text" name="company" v-model="form.data.company" v-on:blur="checkCompany" class="bg-gray-700 focus:outline-none focus:shadow-outline text-gray-300 placeholder-gray-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.company, 'border-red-500': form.errors.company}" placeholder="Acme Corporation">
-                    <label for="email" class="text-xs text-gray-300 uppercase font-bold tracking-widest">Ihre Email-Adresse</label>
-                    <input type="email" name="email" v-model="form.data.email" v-on:blur="checkEmail" class="bg-gray-700 focus:outline-none focus:shadow-outline text-gray-300 placeholder-gray-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-1 mb-4" v-bind:class="{'border-2': form.errors.email, 'border-red-500': form.errors.email}" placeholder="john.doe@example.com">
-                    <label for="message" class="text-xs text-gray-300 uppercase font-bold tracking-widest">Ihre Anfrage</label>
-                    <textarea name="message" v-model="form.data.message" id="message" v-on:blur="checkMessage" rows="7" placeholder="Mein Projekt..." class="bg-gray-700 relative z-20 rounded-lg w-full py-2 px-4 focus:outline-none focus:shadow-outline text-gray-300 placeholder-gray-500 mt-1" v-bind:class="{'border-2': form.errors.message, 'border-red-500': form.errors.message}" style="resize: none;"></textarea>
+                    <label for="name" class="text-xs font-bold tracking-widest text-gray-300 uppercase">Ihr Name</label>
+                    <input type="text" name="name" v-model="form.data.name" v-on:blur="checkName" class="block w-full px-4 py-2 mt-1 mb-4 leading-normal text-gray-300 placeholder-gray-500 bg-gray-700 rounded-lg appearance-none focus:outline-none focus:shadow-outline" v-bind:class="{'border-2': form.errors.name, 'border-red-500': form.errors.name}" placeholder="John Doe">
+                    <label for="company" class="text-xs font-bold tracking-widest text-gray-300 uppercase">Ihr Unternehmen</label>
+                    <input type="text" name="company" v-model="form.data.company" v-on:blur="checkCompany" class="block w-full px-4 py-2 mt-1 mb-4 leading-normal text-gray-300 placeholder-gray-500 bg-gray-700 rounded-lg appearance-none focus:outline-none focus:shadow-outline" v-bind:class="{'border-2': form.errors.company, 'border-red-500': form.errors.company}" placeholder="Acme Corporation">
+                    <label for="email" class="text-xs font-bold tracking-widest text-gray-300 uppercase">Ihre Email-Adresse</label>
+                    <input type="email" name="email" v-model="form.data.email" v-on:blur="checkEmail" class="block w-full px-4 py-2 mt-1 mb-4 leading-normal text-gray-300 placeholder-gray-500 bg-gray-700 rounded-lg appearance-none focus:outline-none focus:shadow-outline" v-bind:class="{'border-2': form.errors.email, 'border-red-500': form.errors.email}" placeholder="john.doe@example.com">
+                    <label for="message" class="text-xs font-bold tracking-widest text-gray-300 uppercase">Ihre Anfrage</label>
+                    <textarea name="message" v-model="form.data.message" id="message" v-on:blur="checkMessage" rows="7" placeholder="Mein Projekt..." class="relative z-20 w-full px-4 py-2 mt-1 text-gray-300 placeholder-gray-500 bg-gray-700 rounded-lg focus:outline-none focus:shadow-outline" v-bind:class="{'border-2': form.errors.message, 'border-red-500': form.errors.message}" style="resize: none;"></textarea>
                     <svg v-if="form.errors.message" xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30" class="-mt-8 -ml-4">
                       <path fill="#F56565" fill-rule="evenodd" d="M15.6631996,0 C15.6631996,10.0805034 10.7875563,19.1652917 1.03626976,27.2543651 C-5.06981953,32.3196049 17.7244451,30.5947092 19.5560233,20.2538567 C20.7770755,13.359955 19.4794676,6.60866946 15.6631996,0 Z"/>
                     </svg>
@@ -338,13 +338,13 @@
                     </svg>
                     <div class="mt-6 md:mt-10 md:flex md:items-center md:justify-between">
                       <div class="flex items-center">
-                        <input type="checkbox" name="privacy" v-model="form.data.privacy" v-on:blur="checkPrivacy" class="w-6 h-6 form-checkbox rounded-md text-dark-100 bg-gray-900 border-2 border-gray-300 focus:outline-none focus:shadow-outline focus:border-gray-300 transition-all duration-300 ease-in-out transform hover:scale-110" v-bind:class="{'border-red-500': form.errors.privacy, 'focus:border-red-500': form.errors.privacy}">
-                        <p class="text-gray-300 text-sm ml-4">Ich habe die <a href="#" class="font-bold text-xs text-dark-100 uppercase tracking-widest focus:outline-none focus:underline">Datenschutzerklärung <i class="fas fa-chevron-right"></i></a> gelesen und stimme zu.</p>
+                        <input type="checkbox" name="privacy" v-model="form.data.privacy" v-on:blur="checkPrivacy" class="w-6 h-6 transition-all duration-300 ease-in-out transform bg-gray-900 border-2 border-gray-300 rounded-md form-checkbox text-dark-100 focus:outline-none focus:shadow-outline focus:border-gray-300 hover:scale-110" v-bind:class="{'border-red-500': form.errors.privacy, 'focus:border-red-500': form.errors.privacy}">
+                        <p class="ml-4 text-sm text-gray-300">Ich habe die <a href="#" class="text-xs font-bold tracking-widest uppercase text-dark-100 focus:outline-none focus:underline">Datenschutzerklärung <i class="fas fa-chevron-right"></i></a> gelesen und stimme zu.</p>
                       </div>
-                      <button type="submit" class="flex-shrink-0 mt-6 md:mt-0 md:ml-10 bg-dark-100 text-white w-12 h-12 rounded-full text-xl focus:outline-none focus:shadow-outline active:bg-dark-300 transition-all duration-300 ease-in-out transform hover:scale-110"><i class="fas fa-paper-plane"></i></button>
+                      <button type="submit" class="flex-shrink-0 w-12 h-12 mt-6 text-xl text-white transition-all duration-300 ease-in-out transform rounded-full md:mt-0 md:ml-10 bg-dark-100 focus:outline-none focus:shadow-outline active:bg-dark-300 hover:scale-110"><i class="fas fa-paper-plane"></i></button>
                     </div>
                   </form>
-                  <p v-if="form.success" class="text-sm font-bold text-black-100 mt-8"><i class="fas fa-check text-dark-100"></i> Ihre Anfrage wurde gesendet.</p>
+                  <p v-if="form.success" class="mt-8 text-sm font-bold text-black-100"><i class="fas fa-check text-dark-100"></i> Ihre Anfrage wurde gesendet.</p>
                 </div>
               </Window>
             </div>

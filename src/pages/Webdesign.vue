@@ -335,6 +335,7 @@
         for(var i = 0; i < this.$page.webdesign.projects.length; i++) {
           gsap.from('#project-' + i, {scrollTrigger: '#project-' + i, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
         }
+        gsap.from('#footer', {scrollTrigger: '#footer', opacity: 0, duration: 1.6, ease: 'power3'})
       }
     },
     async mounted() { 

@@ -86,11 +86,11 @@
 
     <!-- INFLUENCERS -->
     <section id="influencers" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
-      <Title :icon="'fa-user-friends'" :heading="'Influencer Management'" :title="'Unsere Partner'" class="md:mb-12"></Title>
+      <Title id="influencer-title" :icon="'fa-user-friends'" :heading="'Influencer Management'" :title="'Unsere Partner'" class="md:mb-12"></Title>
       <div class="text-center">
         <div v-for="(influencer, i) in $page.influencerManagement.influencers" :key="i" class="mt-12 md:mt-24 md:flex" v-bind:class="{'md:pt-16': influencer.landscape, 'md:pt-12': !influencer.landscape}">
           <div class="flex-shrink-0" v-bind:class="{'order-1': influencer.landscape, 'order-2': !influencer.landscape}">
-            <Window class="w-11/12 xs:w-96 lg:w-128 mx-auto md:mx-0 relative z-10">
+            <Window v-bind:id="'influencer-window-' + i" class="w-11/12 xs:w-96 lg:w-128 mx-auto md:mx-0 relative z-10">
             <div class="p-4 sm:p-6 pt-0">
                 <div class="w-full text-center text-lg sm:-mt-2"><a v-bind:href="influencer.profileLink" target="_blank" class="font-display text-light-900">{{influencer.username}}</a></div>
                 <div class="flex items-center justify-between mt-4">
@@ -119,7 +119,7 @@
               </div>
             </Window>
           </div>
-          <div v-bind:class="{'order-2 md:-ml-32 -mt-12 md:-mt-16': influencer.landscape, 'order-1 md:-mr-24 -mt-16 md:-mt-12': !influencer.landscape}">
+          <div v-bind:id="'influencer-image-' + i" v-bind:class="{'order-2 md:-ml-32 -mt-12 md:-mt-16': influencer.landscape, 'order-1 md:-mr-24 -mt-16 md:-mt-12': !influencer.landscape}">
             <img v-bind:src="influencer.image" alt="Influencer Featured Image" class="w-full sm:w-10/12 sm:mx-auto md:w-full md:mx-0 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
           </div>
         </div>
@@ -229,7 +229,12 @@
         gsap.from('#stats', {scrollTrigger: '#stats', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.4})
         gsap.from('#stats-icon', {scrollTrigger: '#stats-icon', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.4})
         gsap.from('#cta', {scrollTrigger: '#cta', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#influencers', {scrollTrigger: '#influencers', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        gsap.from('#influencer-title', {scrollTrigger: '#influencer-title', y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
+        for(var i = 0; i < this.$page.influencerManagement.influencers.length; i++) {
+          gsap.from('#influencer-window-' + i, {scrollTrigger: '#influencer-window-' + i, y: 100, duration: 1.6, ease: 'power3'})
+          gsap.from('#influencer-image-' + i, {scrollTrigger: '#influencer-image-' + i, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        }
+        gsap.from('#footer', {scrollTrigger: '#footer', opacity: 0, duration: 1.6, ease: 'power3'})
       }
     },
     async mounted() { 

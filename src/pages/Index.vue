@@ -20,14 +20,14 @@
       <div class="relative w-64 h-48 md:w-96 md:h-72 lg:w-112 lg:h-96">
         <div id="portrait-1" class="absolute top-0 left-0">
           <div class="overflow-hidden transition-all duration-300 ease-in-out transform rounded-lg shadow-lg hover:scale-105">
-            <img v-bind:src="$page.landing.portraits[0].photo" alt="Satro Media Gründer" class="object-cover object-center w-32 h-40 md:w-48 md:h-56 lg:w-56 lg:h-72">
+            <img v-bind:src="$page.landing.portraits[0].photo" alt="Satro Media Gründer" class="object-cover object-top w-32 h-40 md:w-48 md:h-56 lg:w-56 lg:h-72">
             <div class="absolute top-0 left-0 w-full h-full bg-opacity-25 bg-dark-900"></div>
             <div class="absolute top-0 left-0 flex flex-col-reverse w-full h-full transition-all duration-500 ease-in-out bg-opacity-25 opacity-0 bg-dark-900 hover:opacity-100">
               <div class="p-4">
                 <p class="text-xs font-bold text-white md:text-base">Mika Sannmann</p>
                 <p class="text-base text-light-500 md:text-lg">
                   <a href="mailto:mika@satromedia.de" class="hover:text-light-900"><i class="fas fa-envelope"></i></a>
-                  <a href="https://de.linkedin.com/in/mika-sannmann-626743194" class="ml-2 hover:text-light-900"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://de.linkedin.com/in/mika-sannmann-626743194" target="_blank" class="ml-2 hover:text-light-900"><i class="fab fa-linkedin"></i></a>
                 </p>
               </div>
             </div>
@@ -35,14 +35,14 @@
         </div>
         <div id="portrait-2" class="absolute bottom-0 left-0 ml-24 md:ml-40 lg:ml-48">
           <div class="overflow-hidden transition-all duration-300 ease-in-out transform rounded-lg shadow-lg hover:scale-105">
-            <img v-bind:src="$page.landing.portraits[1].photo" alt="Satro Media Gründer" class="object-cover object-center w-32 h-40 md:w-48 md:h-56 lg:w-56 lg:h-72">
+            <img v-bind:src="$page.landing.portraits[1].photo" alt="Satro Media Gründer" class="object-cover object-top w-32 h-40 md:w-48 md:h-56 lg:w-56 lg:h-72">
             <div class="absolute top-0 left-0 w-full h-full bg-opacity-25 bg-dark-900"></div>
             <div class="absolute top-0 left-0 flex flex-col-reverse w-full h-full transition-all duration-500 ease-in-out bg-opacity-25 opacity-0 bg-dark-900 hover:opacity-100">
               <div class="p-4 text-xs text-white md:text-base">
                 <p class="text-xs font-bold text-white md:text-base">Henning Trogisch</p>
                 <p class="text-base text-light-500 md:text-lg">
                   <a href="mailto:henning@satromedia.de" class="hover:text-light-900"><i class="fas fa-envelope"></i></a>
-                  <a href="https://de.linkedin.com/in/henning-trogisch-b738a8172" class="ml-2 hover:text-light-900"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://de.linkedin.com/in/henning-trogisch-b738a8172" target="_blank" class="ml-2 hover:text-light-900"><i class="fab fa-linkedin"></i></a>
                 </p>
               </div>
             </div>

@@ -228,7 +228,7 @@
               <div class="absolute top-0 left-0 w-full h-full transition-all duration-300 ease-in-out bg-opacity-25 bg-dark-900 hover:bg-opacity-0"></div>
             </div>
           </div>
-          <div class="relative z-10 max-w-xl p-6 mx-auto -mt-16 bg-white rounded-lg shadow-md md:-mt-40 lg:-mt-32 md:p-10">
+          <div class="relative z-10 max-w-xl p-6 mx-auto -mt-4 bg-white rounded-lg shadow-md md:-mt-40 lg:-mt-32 md:p-10">
             <h3 class="font-display">{{project.title}}</h3>
             <p class="pt-4 text-black-500">{{project.description}}</p>
           </div>
@@ -277,7 +277,7 @@
   import Window from '../components/Window.vue'
   import Footer from '../components/Footer.vue'
 
-  import {gsap, TweenLite} from 'gsap'
+  import {gsap, TweenLite} from 'gsap/all'
   import ScrollTrigger from 'gsap/ScrollTrigger'
   
   export default {

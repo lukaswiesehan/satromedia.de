@@ -136,7 +136,7 @@
   import Footer from '../components/Footer.vue'
   import LineChart from '../components/LineChart.vue'
 
-  import {gsap, TweenLite} from 'gsap'
+  import {gsap, TweenLite} from 'gsap/all'
   import ScrollTrigger from 'gsap/ScrollTrigger'
   
   export default {

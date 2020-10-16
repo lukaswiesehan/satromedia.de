@@ -169,7 +169,7 @@
   import Footer from '../components/Footer.vue'
   import axios from 'axios'
 
-  import {gsap, TweenLite} from 'gsap'
+  import {gsap, TweenLite} from 'gsap/all'
   import ScrollTrigger from 'gsap/ScrollTrigger'
   
   export default {

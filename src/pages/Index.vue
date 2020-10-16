@@ -399,7 +399,7 @@
   import Title from '../components/Title.vue'
   import Footer from '../components/Footer.vue'
 
-  import {gsap} from 'gsap'
+  import {gsap} from 'gsap/all'
   import ScrollTrigger from 'gsap/ScrollTrigger'
 
   export default {
@@ -519,8 +519,8 @@
         gsap.from('#service-1', {scrollTrigger: '#service-1', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
         gsap.from('#service-2', {scrollTrigger: '#service-2', y: 100, opacity: 0, scale: 0.95, duration: 1.6, delay: 0.1, ease: 'power3'})
         gsap.from('#other-services', {scrollTrigger: '#other-services', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#reference-logos', {scrollTrigger: 'reference-logos', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#about-box', {scrollTrigger: '#about-box', y: 100, scale: 0.95, duration: 1.6, delay: 0.2, ease: 'power3'})
+        gsap.from('#reference-logos', {scrollTrigger: '#reference-logos', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        gsap.from('#about-box', {scrollTrigger: '#about-box', y: 150, scale: 0.95, opacity: 0, duration: 1.6, delay: 0.2, ease: 'power3'})
         gsap.from('#about-image', {scrollTrigger: '#about-image', y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
         //parallax scrolling:
         gsap.timeline({scrollTrigger: {trigger: '#portrait-1', scrub: true}}).fromTo('#portrait-1', {y: 20}, {y: -50})

@@ -139,7 +139,7 @@
   import Window from '../components/Window.vue'
   import Footer from '../components/Footer.vue'
 
-  import {gsap, TweenLite} from 'gsap'
+  import {gsap, TweenLite} from 'gsap/all'
   import ScrollTrigger from 'gsap/ScrollTrigger'
   
   export default {

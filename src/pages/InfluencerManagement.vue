@@ -191,6 +191,9 @@
       }
     },
     methods: {
+      delay(ms) {
+          return new Promise(resolve => setTimeout(resolve, ms));
+      },
       animations() {
         //Stat upcount animation:
         var counter1 = {var: 0}
@@ -239,6 +242,7 @@
     },
     async mounted() { 
       gsap.registerPlugin(ScrollTrigger)
+      await this.delay(50)
       this.animations()
       try {
         const requests = []

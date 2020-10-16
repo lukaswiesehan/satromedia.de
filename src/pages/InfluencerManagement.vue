@@ -197,7 +197,7 @@
         TweenLite.to(counter1, 1.8, {
           var: this.$page.influencerManagement.stats[0].figure,
           ease: 'power3',
-          scrollTrigger: '#stat-1',
+          scrollTrigger: {trigger: '#stat-1', toggleActions: 'play none none reset'},
           onUpdate: () => {
             if(this.$page.influencerManagement.stats[0].decimal) {
               this.statFigure1 = Math.round(counter1.var * 100) / 100
@@ -210,7 +210,7 @@
         TweenLite.to(counter2, 1.6, {
           var: this.$page.influencerManagement.stats[1].figure,
           ease: 'power3',
-          scrollTrigger: '#stat-2',
+          scrollTrigger: {trigger: '#stat-2', toggleActions: 'play none none reset'},
           onUpdate: () => {
             if(this.$page.influencerManagement.stats[1].decimal) {
               this.statFigure2 = Math.round(counter2.var * 100) / 100
@@ -231,7 +231,7 @@
         gsap.from('#cta', {scrollTrigger: {trigger: '#cta', toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
         gsap.from('#influencer-title', {scrollTrigger: {trigger: '#influencer-title', toggleActions: 'play none none reset'}, y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
         for(var i = 0; i < this.$page.influencerManagement.influencers.length; i++) {
-          gsap.from('#influencer-window-' + i, {scrollTrigger: {trigger: '#influencer-window-' + i, toggleActions: 'play none none reset'}, y: 100, duration: 1.6, ease: 'power3'})
+          gsap.from('#influencer-window-' + i, {scrollTrigger: {trigger: '#influencer-window-' + i, toggleActions: 'play none none reset'}, y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
           gsap.from('#influencer-image-' + i, {scrollTrigger: {trigger: '#influencer-image-' + i, toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
         }
         gsap.from('#footer', {scrollTrigger: {trigger: '#footer', toggleActions: 'play none none reset'}, opacity: 0, duration: 1.6, ease: 'power3'})

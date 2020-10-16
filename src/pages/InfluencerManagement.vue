@@ -191,9 +191,6 @@
       }
     },
     methods: {
-      delay(ms) {
-          return new Promise(resolve => setTimeout(resolve, ms));
-      },
       animations() {
         //Stat upcount animation:
         var counter1 = {var: 0}
@@ -223,26 +220,25 @@
           }
         })
         //CTA stat diagram animation:
-        TweenLite.fromTo('#cta-stat-1', 2.0, {width: '0%'}, {scrollTrigger: '#cta-stat-1', width: this.$page.influencerManagement.cta.stats[0].figure + '%'})
-        TweenLite.fromTo('#cta-stat-2', 2.0, {width: '0%'}, {scrollTrigger: '#cta-stat-2', width: this.$page.influencerManagement.cta.stats[1].figure + '%', delay: 0.4})
-        TweenLite.fromTo('#cta-stat-3', 2.0, {width: '0%'}, {scrollTrigger: '#cta-stat-3', width: this.$page.influencerManagement.cta.stats[2].figure + '%', delay: 0.8})
+        TweenLite.fromTo('#cta-stat-1', 2.0, {width: '0%'}, {scrollTrigger: {trigger: '#cta-stat-1', toggleActions: 'play none none reset'}, width: this.$page.influencerManagement.cta.stats[0].figure + '%'})
+        TweenLite.fromTo('#cta-stat-2', 2.0, {width: '0%'}, {scrollTrigger: {trigger: '#cta-stat-2', toggleActions: 'play none none reset'}, width: this.$page.influencerManagement.cta.stats[1].figure + '%', delay: 0.4})
+        TweenLite.fromTo('#cta-stat-3', 2.0, {width: '0%'}, {scrollTrigger: {trigger: '#cta-stat-3', toggleActions: 'play none none reset'}, width: this.$page.influencerManagement.cta.stats[2].figure + '%', delay: 0.8})
         //Scroll reveal animations:
-        gsap.from('#header-image', {scrollTrigger: '#header-image', y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
-        gsap.from('#header-box', {scrollTrigger: '#header-box', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.2})
-        gsap.from('#stats', {scrollTrigger: '#stats', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.4})
-        gsap.from('#stats-icon', {scrollTrigger: '#stats-icon', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.4})
-        gsap.from('#cta', {scrollTrigger: '#cta', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#influencer-title', {scrollTrigger: '#influencer-title', y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
+        gsap.from('#header-image', {scrollTrigger: {trigger: '#header-image', toggleActions: 'play none none reset'}, y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
+        gsap.from('#header-box', {scrollTrigger: {trigger: '#header-box', toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.2})
+        gsap.from('#stats', {scrollTrigger: {trigger: '#stats', toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.4})
+        gsap.from('#stats-icon', {scrollTrigger: {trigger: '#stats-icon', toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.4})
+        gsap.from('#cta', {scrollTrigger: {trigger: '#cta', toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        gsap.from('#influencer-title', {scrollTrigger: {trigger: '#influencer-title', toggleActions: 'play none none reset'}, y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
         for(var i = 0; i < this.$page.influencerManagement.influencers.length; i++) {
-          gsap.from('#influencer-window-' + i, {scrollTrigger: '#influencer-window-' + i, y: 100, duration: 1.6, ease: 'power3'})
-          gsap.from('#influencer-image-' + i, {scrollTrigger: '#influencer-image-' + i, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+          gsap.from('#influencer-window-' + i, {scrollTrigger: {trigger: '#influencer-window-' + i, toggleActions: 'play none none reset'}, y: 100, duration: 1.6, ease: 'power3'})
+          gsap.from('#influencer-image-' + i, {scrollTrigger: {trigger: '#influencer-image-' + i, toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
         }
-        gsap.from('#footer', {scrollTrigger: '#footer', opacity: 0, duration: 1.6, ease: 'power3'})
+        gsap.from('#footer', {scrollTrigger: {trigger: '#footer', toggleActions: 'play none none reset'}, opacity: 0, duration: 1.6, ease: 'power3'})
       }
     },
     async mounted() { 
       gsap.registerPlugin(ScrollTrigger)
-      await this.delay(50)
       this.animations()
       try {
         const requests = []

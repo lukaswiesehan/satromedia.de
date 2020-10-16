@@ -35,7 +35,7 @@
         <div class="order-2 md:order-1">
           <h3 class="font-display">{{$page.onlineMarketing.cta.heading}}</h3>
           <p class="pt-4 text-black-500">{{$page.onlineMarketing.cta.text}}</p>
-          <a href="mailto:kontakt@satromedia.de" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></a>
+          <a href="mailto:kontakt@satromedia.de?subject=Anfrage%20Online-Marketing" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></a>
         </div>
         <div class="order-1 px-4 mb-12 md:mb-0 sm:px-0 md:ml-16 md:order-2">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 159" class="w-24 md:w-48 md:mx-auto">

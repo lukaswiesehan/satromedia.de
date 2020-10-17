@@ -5,9 +5,8 @@
     <!-- HEADER -->
     <section id="header" class="max-w-screen-xl px-4 -mt-16 md:mx-auto sm:px-8 xs:-mt-32 md:-mt-64">
       <Window id="header-window" style="opacity: 0">
-        <video width="100%" height="100%" muted playsinline autoplay preload loop>
+        <video width="100%" height="100%" muted playsinline autoplay preload loop v-bind:poster="$page.landing.header_thumbnail">
           <source v-bind:src="$page.landing.header_video" type="video/mp4">
-          <img v-bind:src="$page.landing.header_thumbnail" alt="Satro Media Showreel">
         </video>
         <div class="absolute top-0 left-0 flex items-center w-full h-full bg-opacity-25 bg-dark-900">
           <img id="satro-logo" src="../assets/img/satro_logo.png" alt="Satro Media Logo" class="w-2/3 mx-auto -mt-8 sm:-mt-12 md:-mt-20 lg:-mt-24">

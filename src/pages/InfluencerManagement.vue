@@ -238,8 +238,6 @@
     },
     async mounted() { 
       gsap.registerPlugin(ScrollTrigger)
-      await this.sleep(50)
-      this.animations()
       try {
         const requests = []
         var responses = []
@@ -262,6 +260,7 @@
         influencer.follows = userData.edge_follow.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
         i++      
       }
+      this.animations()
     } 
   }
 </script>

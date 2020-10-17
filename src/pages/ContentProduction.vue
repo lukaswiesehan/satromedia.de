@@ -200,7 +200,7 @@
     },
     async mounted() { 
       gsap.registerPlugin(ScrollTrigger)
-      await this.sleep(50)
+      await this.sleep(100)
       this.animations()
     } 
   }

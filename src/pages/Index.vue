@@ -65,10 +65,10 @@
     <!-- SERVICES -->
     <section id="services" class="mt-24 lg:mt-48">
       <div class="max-w-screen-lg px-4 mx-auto sm:px-8">
-        <Title :icon="'fa-user-tie'" :heading="'Satro Media'" :title="'Unsere Services'"></Title>
+        <Title class="scroll-reveal" :icon="'fa-user-tie'" :heading="'Satro Media'" :title="'Unsere Services'"></Title>
       </div>
       <div class="grid max-w-screen-lg grid-cols-1 px-4 mx-auto mt-12 sm:px-8 md:grid-cols-2 gap-x-8">
-        <div id="service-1" class="flex">
+        <div class="scroll-reveal flex">
           <div v-on:mouseenter="hover_im" class="flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
             <div class="mb-6 -mt-24 transition-all duration-300 ease-in-out top-service-image md:-mt-36 lg:-mt-48">
               <div class="relative overflow-hidden rounded-lg shadow-lg">
@@ -115,7 +115,7 @@
             </div>
           </div>
         </div>
-        <div id="service-2" class="flex">
+        <div class="scroll-reveal flex">
           <div v-on:mouseenter="hover_cp" class="flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
             <div class="mb-6 -mt-24 transition-all duration-300 ease-in-out top-service-image md:-mt-36 lg:-mt-48">
               <div class="relative overflow-hidden rounded-lg shadow-lg">
@@ -157,7 +157,7 @@
           </div>
         </div> 
       </div>
-      <div id="other-services" class="grid max-w-screen-lg grid-cols-1 px-4 mx-auto sm:px-8 md:grid-cols-3 gap-x-8">
+      <div class="scroll-reveal grid max-w-screen-lg grid-cols-1 px-4 mx-auto sm:px-8 md:grid-cols-3 gap-x-8">
         <div v-on:mouseenter="hover_dk" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
           <div class="px-20 py-4 md:px-12 md:py-8">
             <svg viewBox="0 0 170 147" class="w-full mx-auto">
@@ -262,12 +262,12 @@
     <!-- REFERENCES -->
     <section id="references" class="mt-16 md:mt-24 lg:mt-48">
       <div class="max-w-screen-xl px-4 mx-auto sm:px-8">
-        <Title :icon="'fa-user-friends'" :heading="'Kundenstimmen'" :title="'Über unsere Arbeit'"></Title>
+        <Title class="scroll-reveal" :icon="'fa-user-friends'" :heading="'Kundenstimmen'" :title="'Über unsere Arbeit'"></Title>
       </div>
       <div class="relative mt-8">
         <div class="max-w-screen-xl px-4 mx-auto sm:px-8">
           <div class="md:flex">
-            <div id="reference-logos" class="flex flex-wrap items-center py-8 md:w-1/2 lg:w-2/3 md:py-12 md:pr-8 lg:pr-24">
+            <div class="scroll-reveal flex flex-wrap items-center py-8 md:w-1/2 lg:w-2/3 md:py-12 md:pr-8 lg:pr-24">
               <div v-for="(client, i) in $page.landing.clients" :key="i" class="w-1/2 p-4 md:p-2 lg:px-4 lg:py-8" v-bind:class="{'w-1/3': i > 1}">
                 <img v-bind:src="client.logo" alt="Logo Client" class="w-full" style="filter: grayscale(100%) opacity(80%); -webkit-filter: grayscale(100%) opacity(80%);">
               </div>
@@ -292,13 +292,13 @@
     
     <!-- ABOUT -->
     <section class="max-w-screen-xl px-4 mt-24 md:mx-auto sm:px-8 lg:mt-48">
-      <Title :icon="'fa-users'" :heading="'Satro Media'" :title="'Über die Agentur'"></Title>
+      <Title class="scroll-reveal" :icon="'fa-users'" :heading="'Satro Media'" :title="'Über die Agentur'"></Title>
       <div id="about" class="mt-8 md:flex md:items-center">
-        <div id="about-box" class="relative z-10 w-11/12 max-w-lg p-6 mx-auto bg-white rounded-lg shadow-md md:p-10 md:mx-0 md:w-1/2">
+        <div class="scroll-reveal relative z-10 w-11/12 max-w-lg p-6 mx-auto bg-white rounded-lg shadow-md md:p-10 md:mx-0 md:w-1/2">
           <h3 class="font-display">{{$page.landing.about_header}}</h3>
           <p class="pt-4 text-black-500">{{$page.landing.about_description}}</p>
         </div>
-        <div id="about-image" class="relative z-0 -mt-16 overflow-hidden rounded-lg shadow-lg md:mt-0 md:-ml-48">
+        <div class="scroll-reveal relative z-0 -mt-16 overflow-hidden rounded-lg shadow-lg md:mt-0 md:-ml-48">
           <img v-bind:src="$page.landing.about_image" alt="Satro Media Team" class="object-cover object-center w-full h-96 lg:h-112">
           <div class="absolute top-0 left-0 w-full h-full bg-opacity-25 bg-dark-900"></div>
         </div>
@@ -310,12 +310,12 @@
       <div class="md:pt-24">
         <div class="max-w-screen-lg px-4 mx-auto sm:px-8 md:flex md:flex-row-reverse">
           <div class="md:w-1/2 md:pl-16">
-            <Title :icon="'fa-address-card'" :heading="'Ihre Marke'" :title="'Ihre Anfrage'"></Title>
+            <Title class="scroll-reveal" :icon="'fa-address-card'" :heading="'Ihre Marke'" :title="'Ihre Anfrage'"></Title>
           </div>
         </div>
         <div class="mt-8 bg-gradient-to-br from-gray-600 to-gray-700">
           <div class="max-w-screen-lg px-4 mx-auto sm:px-8 md:flex md:flex-row-reverse">
-            <div class="py-12 md:w-1/2 md:pl-16 md:py-16">
+            <div class="scroll-reveal py-12 md:w-1/2 md:pl-16 md:py-16">
               <p class="leading-loose text-gray-300">{{$page.landing.contact_description}}</p>
             </div>
             <div class="md:w-1/2 md:-mt-32">
@@ -424,6 +424,11 @@
       }
     },
     methods: {
+      sleep(ms) {
+        return new Promise(
+          resolve => setTimeout(resolve, ms)
+        );
+      },  
       clearForm: function() {
         this.form.data.name = ''
         this.form.data.company = ''
@@ -516,13 +521,10 @@
         gsap.from('#nav-item-5', {y: -200, duration: 0.8, delay: 0.7})
         gsap.from('#intro', {y: 100, opacity: 0, duration: 1.6, delay: 1.0, ease: 'power3'})
         //scroll reveal animation:
-        gsap.from('#service-1', {scrollTrigger: {trigger: '#service-1', toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#service-2', {scrollTrigger: {trigger: '#service-2', toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, delay: 0.1, ease: 'power3'})
-        gsap.from('#other-services', {scrollTrigger: {trigger: '#other-services', toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#reference-logos', {scrollTrigger: {trigger: '#reference-logos', toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#about-box', {scrollTrigger: {trigger: '#about-box', toggleActions: 'play none none reset'}, y: 150, scale: 0.95, opacity: 0, duration: 1.6, delay: 0.2, ease: 'power3'})
-        gsap.from('#about-image', {scrollTrigger: {trigger: '#about-image', toggleActions: 'play none none reset'}, y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
-        gsap.from('#footer', {scrollTrigger: '#footer', opacity: 0, duration: 1.6, ease: 'power3'})
+        const elements = gsap.utils.toArray('.scroll-reveal')
+        elements.forEach(element => {
+          gsap.from(element, {scrollTrigger: {trigger: element}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        })
         //parallax scrolling:
         gsap.timeline({scrollTrigger: {trigger: '#portrait-1', scrub: true}}).fromTo('#portrait-1', {y: 20}, {y: -50})
         gsap.timeline({scrollTrigger: {trigger: '#portrait-2', scrub: true}}).fromTo('#portrait-2', {y: 20}, {y: -10})
@@ -626,8 +628,9 @@
         .to('#om-bg', {opacity: 1, delay: -0.2})
       }
     },
-    mounted() { 
+    async mounted() { 
       gsap.registerPlugin(ScrollTrigger)
+      await this.sleep(50)
       this.animations()
     } 
   }

@@ -4,18 +4,18 @@
 
     <!-- HEADER -->
     <section id="header" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 md:flex md:items-center -mt-16 xs:-mt-32 md:-mt-64">
-      <div id="header-box" class="relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 w-11/12 md:w-1/2 max-w-lg">
+      <div class="scroll-reveal relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 w-11/12 md:w-1/2 max-w-lg">
         <Title :icon="'fa-camera-retro'" :heading="'Unsere Services'" :title="'Content Production'"></Title>
         <p class="pt-4 sm:ml-12 text-black-500">{{$page.contentProduction.header.text}}</p>
       </div>
-      <div id="header-image" class="relative z-0 rounded-lg overflow-hidden shadow-lg -mt-48 md:mt-0 md:-ml-48">
+      <div class="scroll-reveal relative z-0 rounded-lg overflow-hidden shadow-lg -mt-48 md:mt-0 md:-ml-48">
         <img v-bind:src="$page.contentProduction.header.image" alt="Content Production" class="object-cover object-center w-full h-96 lg:h-112">
         <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25"></div>
       </div>
     </section>
 
     <!-- STATS & CTA -->
-    <section id="stats" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
+    <section id="stats" class="scroll-reveal max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
       <div class="grid grid-cols-1 md:grid-cols-2 md:space-x-8">
         <div class="mx-auto md:mx-0">
           <div class="flex flex-row">
@@ -43,8 +43,8 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="max-w-screen-xl mx-auto px-4 sm:px-8 mt-20 md:mt-24 lg:mt-40">
-      <Title id="projects-title" :icon="'fas fa-photo-video'" :heading="'Content Production'" :title="'Latest Work'"></Title>
-      <div id="featured-project-1" class="my-12 pb-12 md:flex border-light-500 border-b">
+      <Title :icon="'fas fa-photo-video'" :heading="'Content Production'" :title="'Latest Work'" class="scroll-reveal"></Title>
+      <div class="scroll-reveal my-12 pb-12 md:flex border-light-500 border-b">
         <div class="flex-shrink-0 relative md:w-9/12 rounded-lg overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
           <video v-if="$page.contentProduction.featured_projects[0].video" width="100%" height="100%" muted playsinline autoplay preload loop>
             <source v-bind:src="$page.contentProduction.featured_projects[0].media" type="video/mp4">
@@ -57,8 +57,8 @@
           <p class="pt-4 text-black-500">{{$page.contentProduction.featured_projects[0].description}}</p>
         </div>
       </div>
-      <masonry id="other-projects-1" :cols="{default: 3, 1024: 2, 640: 1}" :gutter="30">
-        <div v-for="(project, i) in $page.contentProduction.projects" :key="i" v-bind:id="'project-' + i">
+      <masonry :cols="{default: 3, 1024: 2, 640: 1}" :gutter="30">
+        <div v-for="(project, i) in $page.contentProduction.projects" :key="i" class="scroll-reveal">
           <div v-if="i < ($page.contentProduction.projects.length / 2)" class="relative rounded-lg overflow-hidden shadow-lg mb-4 sm:mb-12 transition-all duration-300 ease-in-out transform hover:scale-105">
             <video v-if="project.video" width="100%" height="100%" muted playsinline autoplay preload loop>
               <source v-bind:src="project.media" type="video/mp4">
@@ -68,7 +68,7 @@
           </div>
         </div>
       </masonry>
-      <div id="featured-project-2" class="mb-12 py-12 md:flex border-light-500 border-t border-b">
+      <div class="scroll-reveal mb-12 py-12 md:flex border-light-500 border-t border-b">
         <div class="flex-shrink-0 relative md:w-9/12 rounded-lg overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
           <video v-if="$page.contentProduction.featured_projects[1].video" width="100%" height="100%" muted playsinline autoplay preload loop>
             <source v-bind:src="$page.contentProduction.featured_projects[1].media" type="video/mp4">
@@ -81,18 +81,15 @@
           <p class="pt-4 text-black-500">{{$page.contentProduction.featured_projects[1].description}}</p>
         </div>
       </div>
-      <masonry id="other-projects-2" :cols="{default: 3, 1024: 2, 640: 1}" :gutter="30">
-        <div v-for="(project, i) in $page.contentProduction.projects" :key="i">
-          <div v-bind:id="'project-' + i">
-            <div v-if="i >= ($page.contentProduction.projects.length / 2)" class="relative rounded-lg overflow-hidden shadow-lg mb-4 sm:mb-12 transition-all duration-300 ease-in-out transform hover:scale-105">
-              <video v-if="project.video" width="100%" height="100%" muted playsinline autoplay preload loop>
-                <source v-bind:src="project.media" type="video/mp4">
-              </video>
-              <img v-else v-bind:src="project.media" alt="Content Production Project">
-              <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25 transition-all duration-300 ease-in-out hover:bg-opacity-0"></div>
-            </div>
+      <masonry :cols="{default: 3, 1024: 2, 640: 1}" :gutter="30">
+        <div v-for="(project, i) in $page.contentProduction.projects" :key="i" class="scroll-reveal" >
+          <div v-if="i >= ($page.contentProduction.projects.length / 2)" class="relative rounded-lg overflow-hidden shadow-lg mb-4 sm:mb-12 transition-all duration-300 ease-in-out transform hover:scale-105">
+            <video v-if="project.video" width="100%" height="100%" muted playsinline autoplay preload loop>
+              <source v-bind:src="project.media" type="video/mp4">
+            </video>
+            <img v-else v-bind:src="project.media" alt="Content Production Project">
+            <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25 transition-all duration-300 ease-in-out hover:bg-opacity-0"></div>
           </div>
-          
         </div>
       </masonry>
     </section>
@@ -160,6 +157,11 @@
       }
     },
     methods: {
+      sleep(ms) {
+        return new Promise(
+          resolve => setTimeout(resolve, ms)
+        );
+      },  
       animations() {
         //Stat upcount animation:
         var counter1 = {var: 0}
@@ -189,19 +191,15 @@
           }
         })
         //Scroll reveal animations:
-        gsap.from('#header-image', {scrollTrigger: {trigger: '#header-image'}, y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
-        gsap.from('#header-box', {scrollTrigger: {trigger: '#header-box'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.2})
-        gsap.from('#stats', {scrollTrigger: {trigger: '#stats'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.4})
-        gsap.from('#projects-title', {scrollTrigger: {trigger: '#projects-title'}, y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
-        gsap.from('#featured-project-1', {scrollTrigger: {trigger: '#featured-project-1'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#other-projects-1', {scrollTrigger: {trigger: '#other-projects-1'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#featured-project-2', {scrollTrigger: {trigger: '#featured-project-2'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#other-projects-2', {scrollTrigger: {trigger: '#other-projects-2'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#footer', {scrollTrigger: '#footer', opacity: 0, duration: 1.6, ease: 'power3'})
+        const elements = gsap.utils.toArray('.scroll-reveal')
+        elements.forEach(element => {
+          gsap.from(element, {scrollTrigger: {trigger: element}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        })
       }
     },
-    mounted() { 
+    async mounted() { 
       gsap.registerPlugin(ScrollTrigger)
+      await this.sleep(50)
       this.animations()
     } 
   }

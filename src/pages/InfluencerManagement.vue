@@ -4,12 +4,12 @@
 
     <!-- HEADER -->
     <section id="header" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 -mt-16 xs:-mt-32 md:-mt-64">
-      <div id="header-image" class="relative w-full rounded-lg overflow-hidden shadow-lg">
+      <div class="scroll-reveal relative w-full rounded-lg overflow-hidden shadow-lg">
         <img v-bind:src="$page.influencerManagement.header.image" alt="Content Production" class="object-cover object-center w-full h-96 lg:h-112">
         <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25"></div>
       </div>
       <div class="flex flex-row-reverse">
-        <div id="header-box" class="relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 md:mr-24 -mt-32 md:-mt-48 w-11/12 max-w-lg">
+        <div class="scroll-reveal relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 md:mr-24 -mt-32 md:-mt-48 w-11/12 max-w-lg">
           <Title :icon="'fa-people-arrows'" :heading="'Unsere Services'" :title="'Influencer Management'"></Title>
           <p class="pt-4 sm:ml-12 text-black-500">{{$page.influencerManagement.header.text}}</p>
         </div>
@@ -17,8 +17,8 @@
     </section>
 
     <!-- STATS -->
-    <section id="stats" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40 md:flex md:items-center md:justify-between">
-      <div id="stats-icon" class="w-40 sm:w-32 lg:w-40 mb-12 md:mb-0 md:order-2 mx-auto">
+    <section id="stats" class="scroll-reveal max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40 md:flex md:items-center md:justify-between">
+      <div class="scroll-reveal w-40 sm:w-32 lg:w-40 mb-12 md:mb-0 md:order-2 mx-auto">
         <svg viewBox="0 0 170 170" class="w-full mx-auto">
           <g fill="none">
             <g fill="#282850" transform="translate(38 11)">
@@ -62,7 +62,7 @@
     </section>
 
     <!-- CTA & STATS -->
-    <section id="cta" class="relative mt-16 md:mt-24 lg:mt-48">
+    <section id="cta" class="scroll-reveal relative mt-16 md:mt-24 lg:mt-48">
       <div class="relative z-10 max-w-screen-lg mx-auto px-4 sm:px-8 py-12 md:py-24 grid grid-cols-1 md:grid-cols-2">
         <div>
           <h3 class="font-display">{{$page.influencerManagement.cta.heading}}</h3>
@@ -86,11 +86,11 @@
 
     <!-- INFLUENCERS -->
     <section id="influencers" class="max-w-screen-lg mx-auto px-4 sm:px-8 mt-16 md:mt-24 lg:mt-40">
-      <Title id="influencer-title" :icon="'fa-user-friends'" :heading="'Influencer Management'" :title="'Unsere Partner'" class="md:mb-12"></Title>
+      <Title :icon="'fa-user-friends'" :heading="'Influencer Management'" :title="'Unsere Partner'" class="scroll-reveal md:mb-12"></Title>
       <div class="text-center">
         <div v-for="(influencer, i) in $page.influencerManagement.influencers" :key="i" class="mt-12 md:mt-24 md:flex" v-bind:class="{'md:pt-16': influencer.landscape, 'md:pt-12': !influencer.landscape}">
           <div class="flex-shrink-0" v-bind:class="{'order-1': influencer.landscape, 'order-2': !influencer.landscape}">
-            <Window v-bind:id="'influencer-window-' + i" class="w-11/12 xs:w-96 lg:w-128 mx-auto md:mx-0 relative z-10">
+            <Window class="scroll-reveal w-11/12 xs:w-96 lg:w-128 mx-auto md:mx-0 relative z-10">
             <div class="p-4 sm:p-6 pt-0">
                 <div class="w-full text-center text-lg sm:-mt-2"><a v-bind:href="influencer.profileLink" target="_blank" class="font-display text-light-900">{{influencer.username}}</a></div>
                 <div class="flex items-center justify-between mt-4">
@@ -119,7 +119,7 @@
               </div>
             </Window>
           </div>
-          <div v-bind:id="'influencer-image-' + i" v-bind:class="{'order-2 md:-ml-32 -mt-12 md:-mt-16': influencer.landscape, 'order-1 md:-mr-24 -mt-16 md:-mt-12': !influencer.landscape}">
+          <div class="scroll-reveal" v-bind:class="{'order-2 md:-ml-32 -mt-12 md:-mt-16': influencer.landscape, 'order-1 md:-mr-24 -mt-16 md:-mt-12': !influencer.landscape}">
             <img v-bind:src="influencer.image" alt="Influencer Featured Image" class="w-full sm:w-10/12 sm:mx-auto md:w-full md:mx-0 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
           </div>
         </div>
@@ -191,13 +191,18 @@
       }
     },
     methods: {
+      sleep(ms) {
+        return new Promise(
+          resolve => setTimeout(resolve, ms)
+        );
+      },   
       animations() {
         //Stat upcount animation:
         var counter1 = {var: 0}
         TweenLite.to(counter1, 1.8, {
           var: this.$page.influencerManagement.stats[0].figure,
           ease: 'power3',
-          scrollTrigger: {trigger: '#stat-1', toggleActions: 'play none none reset'},
+          scrollTrigger: '#stat-1', 
           onUpdate: () => {
             if(this.$page.influencerManagement.stats[0].decimal) {
               this.statFigure1 = Math.round(counter1.var * 100) / 100
@@ -210,7 +215,7 @@
         TweenLite.to(counter2, 1.6, {
           var: this.$page.influencerManagement.stats[1].figure,
           ease: 'power3',
-          scrollTrigger: {trigger: '#stat-2', toggleActions: 'play none none reset'},
+          scrollTrigger: '#stat-2', 
           onUpdate: () => {
             if(this.$page.influencerManagement.stats[1].decimal) {
               this.statFigure2 = Math.round(counter2.var * 100) / 100
@@ -220,25 +225,19 @@
           }
         })
         //CTA stat diagram animation:
-        TweenLite.fromTo('#cta-stat-1', 2.0, {width: '0%'}, {scrollTrigger: {trigger: '#cta-stat-1', toggleActions: 'play none none reset'}, width: this.$page.influencerManagement.cta.stats[0].figure + '%'})
-        TweenLite.fromTo('#cta-stat-2', 2.0, {width: '0%'}, {scrollTrigger: {trigger: '#cta-stat-2', toggleActions: 'play none none reset'}, width: this.$page.influencerManagement.cta.stats[1].figure + '%', delay: 0.4})
-        TweenLite.fromTo('#cta-stat-3', 2.0, {width: '0%'}, {scrollTrigger: {trigger: '#cta-stat-3', toggleActions: 'play none none reset'}, width: this.$page.influencerManagement.cta.stats[2].figure + '%', delay: 0.8})
+        TweenLite.fromTo('#cta-stat-1', 2.0, {width: '0%'}, {scrollTrigger: '#cta-stat-1', width: this.$page.influencerManagement.cta.stats[0].figure + '%'})
+        TweenLite.fromTo('#cta-stat-2', 2.0, {width: '0%'}, {scrollTrigger: '#cta-stat-2', width: this.$page.influencerManagement.cta.stats[1].figure + '%', delay: 0.4})
+        TweenLite.fromTo('#cta-stat-3', 2.0, {width: '0%'}, {scrollTrigger: '#cta-stat-3', width: this.$page.influencerManagement.cta.stats[2].figure + '%', delay: 0.8})
         //Scroll reveal animations:
-        gsap.from('#header-image', {scrollTrigger: {trigger: '#header-image', toggleActions: 'play none none reset'}, y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
-        gsap.from('#header-box', {scrollTrigger: {trigger: '#header-box', toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.2})
-        gsap.from('#stats', {scrollTrigger: {trigger: '#stats', toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.4})
-        gsap.from('#stats-icon', {scrollTrigger: {trigger: '#stats-icon', toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.4})
-        gsap.from('#cta', {scrollTrigger: {trigger: '#cta', toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#influencer-title', {scrollTrigger: {trigger: '#influencer-title', toggleActions: 'play none none reset'}, y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
-        for(var i = 0; i < this.$page.influencerManagement.influencers.length; i++) {
-          gsap.from('#influencer-window-' + i, {scrollTrigger: {trigger: '#influencer-window-' + i, toggleActions: 'play none none reset'}, y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
-          gsap.from('#influencer-image-' + i, {scrollTrigger: {trigger: '#influencer-image-' + i, toggleActions: 'play none none reset'}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        }
-        gsap.from('#footer', {scrollTrigger: {trigger: '#footer', toggleActions: 'play none none reset'}, opacity: 0, duration: 1.6, ease: 'power3'})
+        const elements = gsap.utils.toArray('.scroll-reveal')
+        elements.forEach(element => {
+          gsap.from(element, {scrollTrigger: {trigger: element}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        })
       }
     },
     async mounted() { 
       gsap.registerPlugin(ScrollTrigger)
+      await this.sleep(50)
       this.animations()
       try {
         const requests = []

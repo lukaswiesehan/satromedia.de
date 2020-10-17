@@ -4,12 +4,12 @@
 
     <!-- HEADER -->
     <section id="header" class="max-w-screen-xl px-4 -mt-16 md:mx-auto sm:px-8 xs:-mt-32 md:-mt-64">
-      <div id="header-image" class="relative w-full overflow-hidden rounded-lg shadow-lg">
+      <div class="scroll-reveal relative w-full overflow-hidden rounded-lg shadow-lg">
         <img v-bind:src="$page.onlineMarketing.header.image" alt="Content Production" class="object-cover object-center w-full h-96 lg:h-112">
         <div class="absolute top-0 left-0 w-full h-full bg-opacity-25 bg-dark-900"></div>
       </div>
       <div class="flex flex-row-reverse">
-        <div id="header-box" class="relative z-10 w-11/12 max-w-lg p-6 mx-auto -mt-32 bg-white rounded-lg shadow-md md:p-10 md:mx-0 md:mr-24 md:-mt-48">
+        <div class="scroll-reveal relative z-10 w-11/12 max-w-lg p-6 mx-auto -mt-32 bg-white rounded-lg shadow-md md:p-10 md:mx-0 md:mr-24 md:-mt-48">
           <Title :icon="'fa-chart-line'" :heading="'Unsere Services'" :title="'Online Marketing'"/>
           <p class="pt-4 sm:ml-12 text-black-500">{{$page.onlineMarketing.header.text}}</p>
         </div>
@@ -17,9 +17,9 @@
     </section>
 
     <!-- CHART -->
-    <section id="chart" class="max-w-screen-xl px-4 mt-16 md:mx-auto sm:px-8 md:mt-24">
+    <section id="chart" class="scroll-reveal max-w-screen-xl px-4 mt-16 md:mx-auto sm:px-8 md:mt-24">
       <LineChart v-if="showChart" :chartData="this.chartData" :options="this.chartOptions" class="h-48 pb-8 border-b sm:h-64 border-light-500"/>
-      <div class="flex flex-row-reverse max-w-screen-lg mx-auto mt-8">
+      <div class="scroll-reveal flex flex-row-reverse max-w-screen-lg mx-auto mt-8">
         <div class="max-w-sm">
           <h3 class="mt-2 font-display">{{$page.onlineMarketing.graph.title}}</h3>
           <p class="pt-4 mb-2 text-black-500">{{$page.onlineMarketing.graph.description}}</p>
@@ -30,14 +30,14 @@
     </section>
 
     <!-- CTA -->
-    <section id="cta" class="relative mt-16 md:mt-24 lg:mt-40">
+    <section id="cta" class="scroll-reveal relative mt-16 md:mt-24 lg:mt-40">
       <div class="relative z-10 grid max-w-screen-lg grid-cols-1 px-4 py-12 mx-auto sm:px-8 md:py-24 md:grid-cols-2">
         <div class="order-2 md:order-1">
           <h3 class="font-display">{{$page.onlineMarketing.cta.heading}}</h3>
           <p class="pt-4 text-black-500">{{$page.onlineMarketing.cta.text}}</p>
           <a href="mailto:kontakt@satromedia.de?subject=Anfrage%20Online-Marketing" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></a>
         </div>
-        <div class="order-1 px-4 mb-12 md:mb-0 sm:px-0 md:ml-16 md:order-2">
+        <div class="scroll-reveal order-1 px-4 mb-12 md:mb-0 sm:px-0 md:ml-16 md:order-2">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 159" class="w-24 md:w-48 md:mx-auto">
             <g fill="none">
               <g fill="#282850">
@@ -57,28 +57,28 @@
 
     <!-- FEATURED ADS -->
     <section id="ads" class="max-w-screen-xl px-4 mt-16 md:mx-auto sm:px-8 md:mt-24 lg:mt-40">
-      <Title id="ads-title" :icon="'fa-ad'" :heading="'Online Marketing'" :title="'Erfolgreiche Anzeigen'"/>
+      <Title class="scroll-reveal" :icon="'fa-ad'" :heading="'Online Marketing'" :title="'Erfolgreiche Anzeigen'"/>
       <div class="pt-12 -mt-16 md:mt-24 lg:mt-72">
-        <div v-for="(ad, i) in $page.onlineMarketing.ads" :key="i" class="">
-          <div v-if="i % 2 == 0" class="mt-16 md:-mt-24 lg:-mt-72 md:flex" v-bind:id="'ad-' + i">
-            <Window v-bind:id="'ad-screenshot-' + i" class="relative z-0 w-11/12 mx-auto sm:flex-shrink-0 xs:w-96 md:mx-0">
+        <div v-for="(ad, i) in $page.onlineMarketing.ads" :key="i">
+          <div v-if="i % 2 == 0" class="mt-16 md:-mt-24 lg:-mt-72 md:flex">
+            <Window class="scroll-reveal relative z-0 w-11/12 mx-auto sm:flex-shrink-0 xs:w-96 md:mx-0">
               <img v-bind:src="ad.screenshot" alt="Screenshot" class="object-cover object-center">
               <div class="absolute top-0 left-0 w-full h-full transition-all duration-300 ease-in-out bg-opacity-25 bg-dark-900 hover:bg-opacity-0"></div>
             </Window>
             <div>
-              <div v-bind:id="'ad-description-' + i" class="relative z-10 max-w-md p-10 mx-auto -mt-12 bg-white rounded-lg shadow-md md:mx-0 md:mt-24 md:-ml-32">
+              <div class="scroll-reveal relative z-10 max-w-md p-10 mx-auto -mt-12 bg-white rounded-lg shadow-md md:mx-0 md:mt-24 md:-ml-32">
                 <h3 class="font-display">{{ad.title}}</h3>
                 <p class="pt-4 text-black-500">{{ad.description}}</p>
               </div>
             </div>
           </div>
           <div v-else class="mt-16 md:-mt-40 lg:-mt-128 md:flex md:flex-row-reverse">
-            <Window v-bind:id="'ad-screenshot-' + i" class="relative z-0 w-11/12 mx-auto md:flex-shrink-0 xs:w-96 md:mx-0">
+            <Window class="scroll-reveal elative z-0 w-11/12 mx-auto md:flex-shrink-0 xs:w-96 md:mx-0">
               <img v-bind:src="ad.screenshot" alt="Screenshot" class="object-cover object-center">
               <div class="absolute top-0 left-0 w-full h-full transition-all duration-300 ease-in-out bg-opacity-25 bg-dark-900 hover:bg-opacity-0"></div>
             </Window>
             <div>
-              <div v-bind:id="'ad-description-' + i" class="relative z-10 max-w-md p-10 mx-auto -mt-12 bg-white rounded-lg shadow-md md:mx-0 md:mt-64 md:-mr-32">
+              <div class="scroll-reveal relative z-10 max-w-md p-10 mx-auto -mt-12 bg-white rounded-lg shadow-md md:mx-0 md:mt-64 md:-mr-32">
                 <h3 class="font-display">{{ad.title}}</h3>
                 <p class="pt-4 text-black-500">{{ad.description}}</p>
               </div>
@@ -179,22 +179,22 @@
       }
     },
     methods: {
+      sleep(ms) {
+        return new Promise(
+          resolve => setTimeout(resolve, ms)
+        );
+      },  
       animations() {
         //Scroll reveal animations:
-        gsap.from('#header-image', {scrollTrigger: '#header-image', y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
-        gsap.from('#header-box', {scrollTrigger: '#header-box', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.2})
-        gsap.from('#chart', {scrollTrigger: '#chart', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#cta', {scrollTrigger: '#cta', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#ads-title', {scrollTrigger: '#ads-title', y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
-        for(var i = 0; i < this.$page.onlineMarketing.ads.length; i++) {
-          gsap.from('#ad-screenshot-' + i, {scrollTrigger: '#ad-screenshot-' + i, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-          gsap.from('#ad-description-' + i, {scrollTrigger: '#ad-description-' + i, y: 100, duration: 1.6, ease: 'power3'})
-        }
-        gsap.from('#footer', {scrollTrigger: '#footer', opacity: 0, duration: 1.6, ease: 'power3'})
+        const elements = gsap.utils.toArray('.scroll-reveal')
+        elements.forEach(element => {
+          gsap.from(element, {scrollTrigger: {trigger: element}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        })
       }
     },
     async mounted() { 
       gsap.registerPlugin(ScrollTrigger)
+      await this.sleep(50)
       this.animations()
       for(const label of this.$page.onlineMarketing.graph.labels) {
         this.chartData.labels.push(label.label)

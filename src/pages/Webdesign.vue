@@ -4,12 +4,12 @@
 
     <!-- HEADER & STATS -->
     <section id="header" class="max-w-screen-xl px-4 md:mx-auto sm:px-8"> 
-      <div id="header-box" class="relative z-10 max-w-lg p-6 bg-white rounded-lg shadow-md md:p-10">
+      <div class="scroll-reveal relative z-10 max-w-lg p-6 bg-white rounded-lg shadow-md md:p-10">
         <Title :icon="'fa-drafting-compass'" :heading="'Unsere Services'" :title="'Webdesign'"/>
         <p class="pt-4 sm:ml-12 text-black-500">{{$page.webdesign.header.text}}</p>
       </div>
       <div class="relative w-full h-48 mt-20 md:mt-0 sm:h-72 md:h-112 lg:h-112">
-        <div id="header-developer" class="absolute bottom-0 left-0 z-10 inline-block ml-2 text-center xs:ml-16 sm:ml-24 xl:ml-64">
+        <div class="scroll-reveal absolute bottom-0 left-0 z-10 inline-block ml-2 text-center xs:ml-16 sm:ml-24 xl:ml-64">
           <svg id="developer-illustration" viewBox="0 0 204 184" class="h-24 sm:h-32 md:h-40 lg:h-48">
             <g fill="none">
               <path fill="#2F2E41" d="M54.4952901,125.531792 L68.5435553,125.531792 L103.162496,112.087374 C103.162496,112.087374 127.74696,102.12855 125.740064,121.050319 C123.733168,139.972088 120.221102,165.367089 120.221102,165.367089 C120.221102,165.367089 109.183181,160.387676 103.162489,161.881499 C97.1417963,163.375322 101.155592,131.507079 101.155592,131.507079 C101.155592,131.507079 51.9866642,154.910321 47.4711498,151.922675 C42.9556355,148.935029 41.9521912,128.02149 41.9521912,128.02149 L54.4952901,125.531792 Z"/>
@@ -36,7 +36,7 @@
           <p id="stat-loc" class="hidden mt-8 text-4xl sm:block font-display lg:text-6xl">{{statLoc}}<span class="text-4xl lg:text-5xl"></span></p>
           <p class="hidden text-xs font-bold tracking-widest uppercase sm:block md:text-sm text-dark-100">Zeilen Code</p>
         </div>
-        <div id="header-designer" class="absolute bottom-0 right-0 inline-block -mr-8 text-center xs:mr-0">
+        <div class="scroll-reveal absolute bottom-0 right-0 inline-block -mr-8 text-center xs:mr-0">
           <svg id="designer-illustration" viewBox="0 0 746 493" class="h-64 sm:h-72 md:h-96 lg:h-128">
             <defs>
               <rect id="designer-b" width="536" height="342" x="0" y="0" rx="8"/>
@@ -159,19 +159,19 @@
           <p class="hidden text-xs font-bold tracking-widest uppercase sm:block md:text-sm text-dark-100">Gestaltete Pixel</p>
         </div>
       </div>
-      <div class="block mt-8 text-center sm:hidden">
+      <div class="scroll-reveal block mt-8 text-center sm:hidden">
         <p id="stat-loc" class="text-4xl font-display lg:text-6xl">{{statLoc}}<span class="text-4xl lg:text-5xl"></span></p>
         <p class="text-xs font-bold tracking-widest uppercase md:text-sm text-dark-100">Zeilen Code</p>
       </div>
-      <div class="block mt-8 text-center sm:hidden">
+      <div class="scroll-reveal block mt-8 text-center sm:hidden">
         <p id="stat-loc" class="text-4xl font-display lg:text-6xl">{{statPixels}}<span class="text-4xl lg:text-5xl"></span></p>
         <p class="text-xs font-bold tracking-widest uppercase md:text-sm text-dark-100">Gestaltete Pixel</p>
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="service" class="max-w-screen-lg px-4 mx-auto mt-16 sm:px-8 md:mt-24 lg:mt-40">
-      <Title :icon="'fa-clipboard-check'" :heading="'Webdesign'" :title="'Unser Service'" class="block mb-12 md:hidden"/>
+    <section id="service" class="scroll-reveal max-w-screen-lg px-4 mx-auto mt-16 sm:px-8 md:mt-24 lg:mt-40">
+      <Title :icon="'fa-clipboard-check'" :heading="'Webdesign'" :title="'Unser Service'" class="scroll-reveal block mb-12 md:hidden"/>
       <div class="md:flex">
         <div class="flex-shrink-0 px-4 md:px-0">
           <Window class="relative z-20 max-w-sm mx-auto md:mx-0">
@@ -205,7 +205,7 @@
     </section>
 
     <!-- CTA -->
-    <section id="cta" class="max-w-2xl px-4 mx-auto mt-16 text-center sm:px-8 md:mt-24">
+    <section id="cta" class="scroll-reveal max-w-2xl px-4 mx-auto mt-16 text-center sm:px-8 md:mt-24">
       <h3 class="font-display">{{$page.webdesign.cta.heading}}</h3>
       <p class="pt-4 text-black-500">{{$page.webdesign.cta.text}}</p>
       <a href="mailto:kontak@satromedia.de?subject=Anfrage%20Webdesign" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Ihr Projekt starten <i class="fas fa-chevron-right"></i></a>
@@ -214,10 +214,10 @@
     <!-- PROJECTS -->
     <section id="projects" class="mt-16 md:mt-24 lg:mt-32">
       <div class="max-w-screen-lg px-4 mx-auto sm:px-8">
-        <Title id="projects-title" :icon="'fa-desktop'" :heading="'Webdesign'" :title="'Latest Work'"/>
+        <Title class="scroll-reveal" :icon="'fa-desktop'" :heading="'Webdesign'" :title="'Latest Work'"/>
       </div>
       <div class="max-w-screen-xl px-4 mx-auto mt-12 sm:px-8">
-        <div v-for="(project, i) in $page.webdesign.projects" :key="i" v-bind:id="'project-' + i">
+        <div v-for="(project, i) in $page.webdesign.projects" :key="i" class="scroll-reveal">
           <Window class="relative w-11/12 max-w-screen-lg mx-auto md:mx-0">
             <img v-bind:src="project.screenshot_desktop" alt="Screenshot Desktop" class="w-full">
             <div class="absolute top-0 left-0 w-full h-full transition-all duration-300 ease-in-out bg-opacity-25 bg-dark-900 hover:bg-opacity-0"></div>
@@ -299,6 +299,11 @@
       }
     },
     methods: {
+      sleep(ms) {
+        return new Promise(
+          resolve => setTimeout(resolve, ms)
+        );
+      },  
       selectService(id) {
         for(var i = this.$page.webdesign.services.length - 1; i >= id + 1 ; i--) {
           gsap.to('#service-tick-' + i, {scale: 0, duration: 0.2, delay: 0.1 * (this.selectedService - i)})
@@ -326,20 +331,15 @@
           onUpdate: () => {this.statPixels = Math.ceil(counter2.var).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
         })
         //Scroll reveal animations:
-        gsap.from('#header-designer', {scrollTrigger: '#header-designer', y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
-        gsap.from('#header-developer', {scrollTrigger: '#header-developer', y: 100, opacity: 0, duration: 1.6, ease: 'power3', delay: 0.2})
-        gsap.from('#header-box', {scrollTrigger: '#header-box', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.3})
-        gsap.from('#service', {scrollTrigger: '#service', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3', delay: 0.4})
-        gsap.from('#cta', {scrollTrigger: '#cta', y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        gsap.from('#projects-title', {scrollTrigger: '#projects-title', y: 100, opacity: 0, duration: 1.6, ease: 'power3'})
-        for(var i = 0; i < this.$page.webdesign.projects.length; i++) {
-          gsap.from('#project-' + i, {scrollTrigger: '#project-' + i, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
-        }
-        gsap.from('#footer', {scrollTrigger: '#footer', opacity: 0, duration: 1.6, ease: 'power3'})
+        const elements = gsap.utils.toArray('.scroll-reveal')
+        elements.forEach(element => {
+          gsap.from(element, {scrollTrigger: {trigger: element}, y: 100, opacity: 0, scale: 0.95, duration: 1.6, ease: 'power3'})
+        })
       }
     },
     async mounted() { 
       gsap.registerPlugin(ScrollTrigger)
+      await this.sleep(50)
       this.animations()
       this.selectService(0)
     } 

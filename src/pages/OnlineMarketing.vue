@@ -185,6 +185,7 @@
         );
       },  
       animations() {
+        gsap.to('#app', {opacity: 1, duration: 0.2})
         //Scroll reveal animations:
         const elements = gsap.utils.toArray('.scroll-reveal')
         elements.forEach(element => {

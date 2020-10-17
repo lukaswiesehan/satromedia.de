@@ -58,4 +58,8 @@ export default {
     font-family: theme(fontFamily.body);
     color: theme(colors.black.900);
   }
+
+  #app {
+    opacity: 0;
+  }
 </style>

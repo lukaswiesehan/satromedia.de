@@ -162,6 +162,7 @@
         );
       },  
       animations() {
+        gsap.to('#app', {opacity: 1, duration: 0.2})
         //Stat upcount animation:
         var counter1 = {var: 0}
         TweenLite.to(counter1, 1.4, {

@@ -1,0 +1,15 @@
+---
+id: 6
+company: |-
+  **SaTro Media Consulting GbR**
+
+  Geschäftsführende Gesellschafter: \
+  Mika Sannmann und Henning Trogisch
+
+  Hassestraße 16\
+  21029 Hamburg
+contact: |-
+  Tel.: +49 123 / 456789\
+  E-Mail: [kontakt@satromedia.de](mailto:kontakt@satromedia.de)\
+  USt-IdNr.: DE327583960
+---

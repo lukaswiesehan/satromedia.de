@@ -13,6 +13,12 @@ const onlineMarketingFile = fs.readFileSync('./content/online_marketing.yml', 'u
 const onlineMarketingData = yaml.safeLoad(onlineMarketingFile)
 const webdesignFile = fs.readFileSync('./content/webdesign.yml', 'utf8')
 const webdesignData = yaml.safeLoad(webdesignFile)
+/*const impressumFile = fs.readFileSync('./content/impressum.yml', 'utf8')
+const impressumData = yaml.safeLoad(impressumFile)
+const datenschutzFile = fs.readFileSync('./content/datenschutz.yml', 'utf8')
+const datenschutzData = yaml.safeLoad(datenschutzFile)
+const cookiesFile = fs.readFileSync('./content/cookies.yml', 'utf8')
+const cookiesData = yaml.safeLoad(cookiesFile)*/
 
 module.exports = function (api) {
   api.loadSource(async actions => {
@@ -40,6 +46,18 @@ module.exports = function (api) {
       typeName: 'Webdesign'
     })
     webdesign.addNode(webdesignData)
+    /*const impressum = actions.addCollection({
+      typeName: 'Impressum'
+    })
+    impressum.addNode(impressumData)
+    const datenschutz = actions.addCollection({
+      typeName: 'Datenschutz'
+    })
+    datenschutz.addNode(datenschutzData)
+    const cookies = actions.addCollection({
+      typeName: 'Cookies'
+    })
+    cookies.addNode(cookiesData)*/
   })
 
   api.createPages(({ createPage }) => {

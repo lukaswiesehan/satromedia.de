@@ -3,16 +3,21 @@
     <Navbar id="navbar" :showBackButton="true" :dark="true" />
 
     <!-- HEADER -->
-    <section id="header" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 md:flex md:items-center -mt-16 xs:-mt-32 md:-mt-64">
+    <section id="content" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 md:flex md:items-center -mt-16 xs:-mt-32 md:-mt-64">
       <div class="scroll-reveal relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 w-11/12 md:w-1/2 max-w-lg">
         <Title :icon="'fa-balance-scale'" :heading="'Satro Media'" :title="'Impressum'"></Title>
-      </div>
-    </section>
-
-    <section class="max-w-screen-xl mx-auto px-4 sm:px-8">
-      <div class="scroll-reveal relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 w-11/12 md:w-full">
-        <h3 class="font-display">Bla bla bla</h3>
-        <p class="pt-4 text-black-500">Four loko flexitarian small batch direct trade austin chillwave. Beard direct trade unicorn, forage austin PBR&B fashion axe vegan. IPhone banh mi YOLO kombucha kinfolk, succulents actually. Whatever taiyaki iceland, vaporware actually chia man braid portland listicle cronut hella microdosing tilde.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 mt-16">
+          <div>
+            <h3 class="font-display">Diensteanbieter</h3>
+            <vue-markdown>{{$page.impressum.company}}</vue-markdown>
+            <p class="pt-4 text-black-500">{{$page.impressum.company}}</p>
+          </div>
+          <div>
+            <h3 class="font-display"></h3>
+            <p class="pt-4 text-black-500"></p>
+          </div>
+        </div>
+        
       </div>
     </section>
 
@@ -23,31 +28,9 @@
 
 <page-query>
   query {
-    contentProduction(id: "3") {
+    impressum(id: "6") {
       id
-      header {
-        image
-        text
-      }
-      stats {
-        figure
-        description
-      }
-      cta {
-        heading
-        text
-      }
-      featured_projects {
-        title
-        description
-        video
-        media
-      }
-      projects {
-        title
-        video
-        media
-      }
+      company
     }
   }
 </page-query>

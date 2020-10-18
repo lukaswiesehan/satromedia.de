@@ -257,5 +257,31 @@ collections:
               - {label: "Titel", name: "title", widget: "string"}
               - {label: "Beschreibung", name: "description", widget: "text"}
               - {label: "Screenshot", name: "screenshot", widget: "image"}
+  - label: "Rechtliches"
+    name: "rechtlich"
+    format: "yml"
+    editor:
+      preview: false
+    files:
+      - label: "Impressum"
+        name: "impressum"
+        file: "content/impressum.yml"
+        fields:
+          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
+          - {label: "Unternehmen & Anschrift", name: "company", widget: "markdown"}
+          - {label: "Kontaktmöglichkeiten", name: "contact", widget: "markdown"}
+          - {label: "Text", name: "content", widget: "markdown", required: false}
+      - label: "Datenschutz"
+        name: "datenschutz"
+        file: "content/datenschutz.yml"
+        fields:
+          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
+          - {label: "Text", name: "content", widget: "markdown", required: false}
+      - label: "Cookies"
+        name: "cookies"
+        file: "content/cookies.yml"
+        fields:
+          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
+          - {label: "Text", name: "content", widget: "markdown", required: false}
 
           

@@ -10,6 +10,16 @@ module.exports = {
 
   plugins: [
     {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/impressum.md',
+        typeName: 'Impressum',
+        remark: {
+          plugins: []
+        }
+      }
+    },
+    {
       use: "gridsome-plugin-tailwindcss",
       options: {
         tailwindConfig: './tailwind.config.js'

@@ -9,7 +9,6 @@
         <div class="grid grid-cols-1 md:grid-cols-2 mt-16">
           <div>
             <h3 class="font-display">Diensteanbieter</h3>
-            <vue-markdown>{{$page.impressum.company}}</vue-markdown>
             <p class="pt-4 text-black-500">{{$page.impressum.company}}</p>
           </div>
           <div>
@@ -45,21 +44,15 @@
   import ScrollTrigger from 'gsap/ScrollTrigger'
   
   export default {
-    name: 'ContentProduction',
+    name: 'Impressum',
     metaInfo: {
-      title: 'Content Production'
+      title: 'Impressum'
     },
     components: {
       Navbar, 
       Title,
       Window,
       Footer
-    },
-    data() {
-      return {
-        statFigure1: 0,
-        statFigure2: 0
-      }
     },
     methods: {
       sleep(ms) {
@@ -69,33 +62,6 @@
       },  
       animations() {
         gsap.to('#app', {opacity: 1, duration: 0.2})
-        //Stat upcount animation:
-        var counter1 = {var: 0}
-        TweenLite.to(counter1, 1.8, {
-          var: this.$page.contentProduction.stats[0].figure,
-          ease: 'power3',
-          scrollTrigger: '#stat-1',
-          onUpdate: () => {
-            if(this.$page.contentProduction.stats[0].decimal) {
-              this.statFigure1 = Math.round(counter1.var * 100) / 100
-            } else {
-              this.statFigure1 = Math.ceil(counter1.var).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
-            }
-          }
-        })
-        var counter2 = {var: 0}
-        TweenLite.to(counter2, 1.6, {
-          var: this.$page.contentProduction.stats[1].figure,
-          ease: 'power3',
-          scrollTrigger: '#stat-2',
-          onUpdate: () => {
-            if(this.$page.contentProduction.stats[1].decimal) {
-              this.statFigure2 = Math.round(counter2.var * 100) / 100
-            } else {
-              this.statFigure2 = Math.ceil(counter2.var).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
-            }
-          }
-        })
         //Scroll reveal animations:
         const elements = gsap.utils.toArray('.scroll-reveal')
         elements.forEach(element => {

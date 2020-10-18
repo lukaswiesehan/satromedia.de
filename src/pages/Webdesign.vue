@@ -171,41 +171,67 @@
 
     <!-- SERVICES -->
     <section id="service" class="scroll-reveal max-w-screen-lg px-4 mx-auto mt-16 sm:px-8 md:mt-24 lg:mt-40">
-      <Title :icon="'fa-clipboard-check'" :heading="'Webdesign'" :title="'Unser Service'" class="scroll-reveal block mb-12 md:hidden"/>
-      <div class="md:flex">
-        <div class="flex-shrink-0 px-4 md:px-0">
-          <Window class="relative z-20 max-w-sm mx-auto md:mx-0">
-            <div class="p-4 pb-8 xs:pb-12 xs:p-8">
-              <div v-for="(service, i) in $page.webdesign.services" :key="i">
-                <div class="flex">
-                  <div class="flex-shrink-0 w-6 h-6 border-2 border-gray-500 rounded-md"><i class="ml-1 -mt-1 text-2xl service-tick fas fa-check text-light-900" v-bind:id="'service-tick-' + i"></i></div>
-                  <div class="ml-8 font-bold text-gray-500">
-                    <p v-on:click="selectService(i)" class="transition-all duration-300 ease-in-out transform cursor-pointer hover:-translate-y-1 hover:text-gray-300" v-bind:class="{'text-light-900': selectedService == i}">{{service.title}} <i class="fas fa-chevron-right"></i></p>
+      <div class="hidden md:block">
+        <div class="md:flex">
+          <div class="flex-shrink-0 px-4 md:px-0">
+            <Window class="relative z-20 max-w-sm">
+              <div class="p-4 pb-8 xs:pb-12 xs:p-8">
+                <div v-for="(service, i) in $page.webdesign.services" :key="i">
+                  <div class="flex">
+                    <div class="flex-shrink-0 w-6 h-6 border-2 border-gray-500 rounded-md"><i class="ml-1 -mt-1 text-2xl service-tick fas fa-check text-light-900" v-bind:id="'service-tick-' + i"></i></div>
+                    <div class="ml-8 font-bold text-gray-500">
+                      <p v-on:click="selectService(i)" class="transition-all duration-300 ease-in-out transform cursor-pointer hover:-translate-y-1 hover:text-gray-300" v-bind:class="{'text-light-900': selectedService == i}">{{service.title}} <i class="fas fa-chevron-right"></i></p>
+                    </div>
                   </div>
+                  <div v-if="i < ($page.webdesign.services.length - 1)" class="h-8 my-2 ml-3 border-l-2 border-gray-500"></div>
                 </div>
-                <div v-if="i < ($page.webdesign.services.length - 1)" class="h-8 my-2 ml-3 border-l-2 border-gray-500"></div>
               </div>
+            </Window>
+          </div>
+          <div>
+            <Title :icon="'fa-clipboard-check'" :heading="'Webdesign'" :title="'Unser Service'" class="hidden mb-12 ml-16 md:flex"/>
+            <div class="relative z-10 p-8 pt-24 -mt-16 bg-white rounded-lg shadow-md lg:p-10 md:pl-32 lg:pl-40 lg:pb-12 md:-ml-24 md:mt-0 md:pt-8">
+              <h3 class="font-display">{{$page.webdesign.services[selectedService].title}}</h3>
+              <p class="pt-4 text-black-500">{{$page.webdesign.services[selectedService].description}}</p>
             </div>
-          </Window>
+          </div>
+        </div>
+        <div id="service-image" class="relative w-10/12 mx-auto overflow-hidden rounded-lg shadow-lg -mt-24">
+          <img v-bind:src="$page.webdesign.services[selectedService].image" v-bind:alt="$page.webdesign.services[selectedService].title" class="object-cover object-center w-full">
+          <div class="absolute top-0 left-0 w-full h-full bg-opacity-25 bg-dark-900"></div>
+        </div>
+      </div>
+      <div class="md:hidden">
+        <Title :icon="'fa-clipboard-check'" :heading="'Webdesign'" :title="'Unser Service'" class="scroll-reveal block mb-12"/>
+        <Window class="relative z-20 max-w-sm mx-auto">
+          <div class="p-4 pb-8 xs:pb-12 xs:p-8">
+            <div v-for="(service, i) in $page.webdesign.services" :key="i">
+              <div class="flex">
+                <div class="flex-shrink-0 w-6 h-6 border-2 border-gray-500 rounded-md"><i class="ml-1 -mt-1 text-2xl service-tick fas fa-check text-light-900" v-bind:id="'service-tick-' + i"></i></div>
+                <div class="ml-8 font-bold text-gray-500">
+                  <p v-on:click="selectService(i)" class="transition-all duration-300 ease-in-out transform cursor-pointer hover:-translate-y-1 hover:text-gray-300" v-bind:class="{'text-light-900': selectedService == i}">{{service.title}} <i class="fas fa-chevron-right"></i></p>
+                </div>
+              </div>
+              <div v-if="i < ($page.webdesign.services.length - 1)" class="h-8 my-2 ml-3 border-l-2 border-gray-500"></div>
+            </div>
+          </div>
+        </Window>
+        <div id="service-image" class="z-10 relative w-10/12 mx-auto overflow-hidden rounded-lg shadow-lg -mt-8">
+          <img v-bind:src="$page.webdesign.services[selectedService].image" v-bind:alt="$page.webdesign.services[selectedService].title" class="object-cover object-center w-full">
+          <div class="absolute top-0 left-0 w-full h-full bg-opacity-25 bg-dark-900"></div>
         </div>
         <div>
           <Title :icon="'fa-clipboard-check'" :heading="'Webdesign'" :title="'Unser Service'" class="hidden mb-12 ml-16 md:flex"/>
-          <div class="relative z-10 p-8 pt-24 -mt-16 bg-white rounded-lg shadow-md lg:p-10 md:pl-32 lg:pl-40 lg:pb-12 md:-ml-24 md:mt-0 md:pt-8">
+          <div class="relative p-8 pt-24 -mt-16 bg-white rounded-lg shadow-md lg:p-10 md:pl-32 lg:pl-40 lg:pb-12 md:-ml-24 md:mt-0 md:pt-8">
             <h3 class="font-display">{{$page.webdesign.services[selectedService].title}}</h3>
             <p class="pt-4 text-black-500">{{$page.webdesign.services[selectedService].description}}</p>
           </div>
         </div>
       </div>
-      <div class="w-full pb-12 -mt-4 overflow-hidden md:-mt-24">
-        <div id="service-image" class="relative w-10/12 mx-auto overflow-hidden rounded-lg shadow-lg">
-          <img v-bind:src="$page.webdesign.services[selectedService].image" v-bind:alt="$page.webdesign.services[selectedService].title" class="object-cover object-center w-full">
-          <div class="absolute top-0 left-0 w-full h-full bg-opacity-25 bg-dark-900"></div>
-        </div>
-      </div>
     </section>
 
     <!-- CTA -->
-    <section id="cta" class="scroll-reveal max-w-2xl px-4 mx-auto mt-8 text-center sm:px-8 md:mt-24">
+    <section id="cta" class="scroll-reveal max-w-2xl px-4 mx-auto mt-16 text-center sm:px-8 md:mt-24">
       <h3 class="font-display">{{$page.webdesign.cta.heading}}</h3>
       <p class="pt-4 text-black-500">{{$page.webdesign.cta.text}}</p>
       <a href="mailto:kontak@satromedia.de?subject=Anfrage%20Webdesign" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Ihr Projekt starten <i class="fas fa-chevron-right"></i></a>
@@ -312,7 +338,7 @@
           gsap.to('#service-tick-' + i, {scale: 1, duration: 0.8, ease: 'back.out(3)', delay: 0.1 * (i - this.selectedService - 1)})
         }
         this.selectedService = id
-        gsap.from('#service-image', {translateY: -100, duration: 1.6, ease: 'power3'})
+        gsap.fromTo('#service-image', {translateY: -100, opacity: 0}, {translateY: 0, opacity: 1, duration: 1.6, ease: 'power3'})
       },  
       animations() {
         gsap.to('#app', {opacity: 1, duration: 0.2})

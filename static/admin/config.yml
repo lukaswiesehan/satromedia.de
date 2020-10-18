@@ -277,11 +277,5 @@ collections:
         fields:
           - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
           - {label: "Text", name: "content", widget: "markdown", required: false}
-      - label: "Cookies"
-        name: "cookies"
-        file: "content/cookies.yml"
-        fields:
-          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
-          - {label: "Text", name: "content", widget: "markdown", required: false}
 
           

@@ -4,13 +4,9 @@
 
     <!-- CONTENT -->
     <section id="content" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 -mt-16 xs:-mt-32 md:-mt-64">
-      <Title class="scroll-reveal text-light-900" :icon="'fa-balance-scale'" :heading="'Satro Media'" :title="'Impressum'"></Title>
+      <Title class="scroll-reveal text-light-900" :icon="'fa-lock'" :heading="'Satro Media'" :title="'Datenschutz'"></Title>
       <div class="scroll-reveal mt-8 bg-white rounded-lg shadow-md p-6 md:p-10">
-        <h3 class="font-display text-lg">Diensteanbieter</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2">
-          <div class="pt-4 text-black-500" v-html="$page.impressum.company"></div>
-          <div class="pt-4 text-black-500" v-html="$page.impressum.contact"></div>
-        </div>
+        <div class="text-black-500" v-html="$page.datenschutz.content"></div>
       </div>
     </section>
 
@@ -21,10 +17,9 @@
 
 <page-query>
   query {
-    impressum(id: "6") {
+    datenschutz(id: "7") {
       id
-      company
-      contact
+      content
     }
   }
 </page-query>
@@ -39,9 +34,9 @@
   import ScrollTrigger from 'gsap/ScrollTrigger'
   
   export default {
-    name: 'Impressum',
+    name: 'Datenschutz',
     metaInfo: {
-      title: 'Impressum'
+      title: 'Datenschutz'
     },
     components: {
       Navbar, 

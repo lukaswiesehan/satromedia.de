@@ -29,7 +29,6 @@
           <div class="text-gray-300 text-sm mt-2">
             <p><g-link to="/impressum" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1">Impressum</g-link><i class="fas fa-balance-scale text-base text-gray-500 ml-3"></i></p>
             <p><g-link to="/datenschutz" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1">Datenschutz</g-link><i class="fas fa-lock text-base text-gray-500 ml-3"></i></p>
-            <p><g-link to="/cookies" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1">Cookies</g-link><i class="fas fa-cookie-bite text-base text-gray-500 ml-3"></i></p>
           </div>
         </div>
       </div>
@@ -65,7 +64,6 @@
           <div class="text-dark-100 text-sm mt-2">
             <p><g-link to="/impressum" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1">Impressum</g-link><i class="fas fa-balance-scale text-base text-dark-300 ml-3"></i></p>
             <p><g-link to="/datenschutz" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1">Datenschutz</g-link><i class="fas fa-lock text-base text-dark-300 ml-3"></i></p>
-            <p><g-link to="/cookies" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1">Cookies</g-link><i class="fas fa-cookie-bite text-base text-dark-300 ml-3"></i></p>
           </div>
         </div>
       </div>

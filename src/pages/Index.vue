@@ -370,10 +370,12 @@
                         <input type="checkbox" name="privacy" v-model="form.data.privacy" v-on:blur="checkPrivacy" class="w-6 h-6 transition-all duration-300 ease-in-out transform bg-gray-900 border-2 border-gray-300 rounded-md form-checkbox text-dark-100 focus:outline-none focus:shadow-outline focus:border-gray-300 hover:scale-110" v-bind:class="{'border-red-500': form.errors.privacy, 'focus:border-red-500': form.errors.privacy}">
                         <p class="ml-4 text-sm text-gray-300">Ich habe die <a href="#" class="text-xs font-bold tracking-widest uppercase text-dark-100 focus:outline-none focus:underline">Datenschutzerklärung <i class="fas fa-chevron-right"></i></a> gelesen und stimme zu.</p>
                       </div>
-                      <button type="submit" class="flex-shrink-0 w-12 h-12 mt-6 text-xl text-white transition-all duration-300 ease-in-out transform rounded-full md:mt-0 md:ml-10 bg-dark-100 focus:outline-none focus:shadow-outline active:bg-dark-300 hover:scale-110"><i class="fas fa-paper-plane"></i></button>
+                      <div class="flex flex-row-reverse md:block">
+                        <button type="submit" class="flex-shrink-0 w-12 h-12 mt-6 text-xl text-white transition-all duration-300 ease-in-out transform rounded-full md:mt-0 md:ml-10 bg-dark-100 focus:outline-none focus:shadow-outline active:bg-dark-300 hover:scale-110"><i class="fas fa-paper-plane"></i></button>
+                      </div>
                     </div>
+                    <p v-if="form.success" class="mt-8 text-sm font-bold text-black-100"><i class="fas fa-check text-dark-100"></i> Ihre Anfrage wurde gesendet.</p>
                   </form>
-                  <p v-if="form.success" class="mt-8 text-sm font-bold text-black-100"><i class="fas fa-check text-dark-100"></i> Ihre Anfrage wurde gesendet.</p>
                 </div>
               </Window>
             </div>

@@ -338,7 +338,7 @@
           gsap.to('#service-tick-' + i, {scale: 1, duration: 0.8, ease: 'back.out(3)', delay: 0.1 * (i - this.selectedService - 1)})
         }
         this.selectedService = id
-        gsap.fromTo('#service-image', {translateY: -100, opacity: 0}, {translateY: 0, opacity: 1, duration: 1.6, ease: 'power3'})
+        gsap.fromTo('#service-image', {translateY: -100, opacity: 0}, {translateY: 0, opacity: 1, duration: 2.0, ease: 'power3'})
       },  
       animations() {
         gsap.to('#app', {opacity: 1, duration: 0.2})

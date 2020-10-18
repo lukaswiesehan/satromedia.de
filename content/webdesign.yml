@@ -6,52 +6,50 @@ header:
     stechen Sie in Ihrem Marktumfeld heraus und sorgen mit einem professionellen
     Auftritt dafür, dass dieser erste Eindruck positiv geprägt ist.
 stats:
-  loc: 89012
-  pixels: 178124600
+  loc: 126013
+  pixels: 278124600
 services:
   - title: Beratung & Konzeption
-    description: Sartorial tousled dreamcatcher blue bottle. Crucifix chicharrones
-      90's deep v actually. Chartreuse chambray food truck hoodie paleo 90's
-      bicycle rights affogato umami messenger bag fingerstache. Shabby chic
-      cardigan activated charcoal sustainable flexitarian PBR&B. Pok pok health
-      goth gochujang, normcore kickstarter asymmetrical hell of meditation
-      enamel pin af pabst jianbing. Pok pok health goth gochujang, normcore
-      kickstarter asymmetrical hell of meditation enamel pin af pabst jianbing.
+    description: In einer Flut von Möglichkeiten ist es heutzutage nicht leicht, das
+      beste Konzept für Ihren Web-Auftritt zu finden. Je nach Anwendung kann es
+      grundlegend unterschiedliche Technologien geben, die sich am Besten für
+      Ihr Projekt eignen. Unter Berücksichtigung Ihrer Ziele und Ihres Budget
+      beantworten wir Ihnen die Fragen nach Design, Theme, Programmierung,
+      Content Management, Hosting und allem, was dazu gehört.
     image: /uploads/header_digitalekonzepte.jpg
   - title: Individuelles Design
-    description: Shabby chic cardigan activated charcoal sustainable flexitarian
-      PBR&B. Pok pok health goth gochujang, normcore kickstarter asymmetrical
-      hell of meditation enamel pin af pabst jianbing. Pok pok health goth
-      gochujang, normcore kickstarter asymmetrical hell of meditation enamel pin
-      af pabst jianbing. Sartorial tousled dreamcatcher blue bottle. Crucifix
-      chicharrones 90's deep v actually.
+    description: Mit Blick auf die Finanzen fällt die Wahl häufig auf Design-Themes,
+      die ein individuelles Ergebnis versprechen. Dabei muss ein
+      maßgeschneidertes Design nicht teuer sein - zumal es nicht abhängig von
+      bestimmten Content Management Systemen ist. Wir finden mit Ihnen die
+      optimale Lösung für Ihr Projekt und setzen diese mit besonderer Liebe
+      für's Detail um.
     image: /uploads/webdesign_design.jpg
   - title: Zeitgemäße Umsetzung
-    description: Pok pok health goth gochujang, normcore kickstarter asymmetrical
-      hell of meditation enamel pin af pabst jianbing. Shabby chic cardigan
-      activated charcoal sustainable flexitarian PBR&B. Pok pok health goth
-      gochujang, normcore kickstarter asymmetrical hell of meditation enamel pin
-      af pabst jianbing. Pok pok health goth gochujang, normcore kickstarter
-      asymmetrical hell of meditation enamel pin af pabst jianbing.
+    description: Die technische Umsetzung Ihres Projekts erfolgt bei uns in enger
+      Abstimmung an Ihre Bedürfnisse. So wird z.B. nicht immer ein Content
+      Management System wie Wordpress benötigt. So kann Ihre Website unter
+      Umständen sogar ohne dedizierten Server auskommen. Bei der technischen
+      Umsetzung liegt unser Fokus ganz klar auf Geschwindigkeit, Sicherheit und
+      Nutzerfreundlichkeit.
     image: /uploads/webdesign_coding.jpg
   - title: Hosting & Service
-    description: "Tilde swag palo santo disrupt seitan mlkshk yr locavore typewriter
-      gochujang skateboard raw denim quinoa etsy.  Pok pok health goth
-      gochujang, normcore kickstarter asymmetrical hell of meditation enamel pin
-      af pabst jianbing. Tilde swag palo santo disrupt seitan mlkshk yr locavore
-      typewriter gochujang skateboard raw denim quinoa etsy. "
+    description: Damit Sie sich vollkommen auf Ihre Business konzentrieren können,
+      übernehmen wir bei Bedarf auch das Hosting und die Wartung Ihrer Website.
+      So haben Sie den Kopf frei für Ihre Kunden und müssen sich nicht mit
+      Server-Updates oder Software-Versionen herumschlagen. Gerne übernehmen wir
+      zusätzlich die Aktualisierung der Inhalte Ihrer Website.
     image: /uploads/header_marketing.jpg
 cta:
   heading: Unser Service - abgestimmt auf Ihr Projekt
-  text: Four loko flexitarian small batch direct trade austin chillwave. Beard
-    direct trade unicorn, forage austin PBR&B fashion axe vegan. IPhone banh mi
-    YOLO kombucha kinfolk, succulents actually. Whatever taiyaki iceland,
-    vaporware actually chia man braid portland listicle cronut hella microdosing
-    tilde.
+  text: "Wir bieten alles aus einer Hand - allerdings ohne Ihnen alles verkaufen
+    zu wollen. Im Dialog mit Ihnen finden wir die optimale Lösung für Ihr
+    Business, sodass wir auch bei straffem Budget oder vorgegebenem Design der
+    richtige Ansprechpartner für Ihre Website sind. "
 projects:
   - title: Bergungs- und Abschleppdienst Steffen
-    description: Plaid listicle gentrify, chia trust fund celiac shabby chic
-      coloring book migas kitsch mumblecore poutine meh irony. Celiac bushwick
-      leggings, mixtape vape brooklyn DIY franzen offal helvetica.
+    description: Für ein Abschleppunternehmen in Niedersachsen haben wir einen
+      einfachen Internetauftritt erarbeitet. Im Vordergrund dieser Arbeit
+      standen Suchmaschinenoptimierung und modernes Design bei knappem Budget.
     screenshot_desktop: /uploads/screenshot_steffen_desktop.jpg
     screenshot_mobile: /uploads/screenshot_steffen_mobile.jpg

@@ -72,7 +72,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   h3, h4, h5 {
     font-weight: bold;
   }

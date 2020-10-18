@@ -1,5 +1,7 @@
 const fs = require('fs')
 const yaml = require('js-yaml')
+const showdown = require('showdown')
+const converter = new showdown.Converter()
 
 const landingFile = fs.readFileSync('./content/landing.yml', 'utf8')
 const landingData = yaml.safeLoad(landingFile)
@@ -49,6 +51,8 @@ module.exports = function (api) {
     const impressum = actions.addCollection({
       typeName: 'Impressum'
     })
+    impressumData.company = converter.makeHtml(impressumData.company)
+    impressumData.contact = converter.makeHtml(impressumData.contact)
     impressum.addNode(impressumData)
     /*const datenschutz = actions.addCollection({
       typeName: 'Datenschutz'

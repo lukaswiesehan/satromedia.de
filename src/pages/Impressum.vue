@@ -5,7 +5,7 @@
     <!-- CONTENT -->
     <section id="content" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 -mt-16 xs:-mt-32 md:-mt-64">
       <Title class="scroll-reveal text-light-900" :icon="'fa-balance-scale'" :heading="'Satro Media'" :title="'Impressum'"></Title>
-      <div class="scroll-reveal mt-8 bg-white rounded-lg shadow-md p-6 md:p-10">
+      <div class="scroll-reveal content mt-8 bg-white rounded-lg shadow-md p-6 md:p-10">
         <h3 class="font-display text-lg">Diensteanbieter</h3>
         <div class="grid grid-cols-1 md:grid-cols-2">
           <div class="pt-4 text-black-500" v-html="$page.impressum.company"></div>
@@ -72,22 +72,22 @@
   }
 </script>
 
-<style scoped>
-  h3, h4, h5 {
+<style>
+  .content h3, .content h4, .content h5 {
     font-weight: bold;
   }
-  h3, h4, h5, p {
+  .content h3, .content h4, .content h5, .content p {
     margin-bottom: 1rem;
   }
-  h3 {
+  .content h3 {
     font-size: 1.5rem;
     color: theme(colors.black.900);
     font-family: 'Montserrat';
   }
-  h4 {
+  .content h4 {
     font-size: 1.25rem;
   }
-  h5 {
+  .content h5 {
     font-size: 1rem;
   }
 </style>

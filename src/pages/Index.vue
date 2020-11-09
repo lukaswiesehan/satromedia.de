@@ -71,8 +71,8 @@
       </div>
       <div class="grid max-w-screen-lg grid-cols-1 px-4 mx-auto mt-12 sm:px-8 md:grid-cols-2 gap-x-8">
         <div class="scroll-reveal flex">
-          <g-link to="/influencer-management/" id="service-im" class="flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
-            <div v-on:mouseenter="hover_im" class="mb-6 -mt-24 transition-all duration-300 ease-in-out top-service-image md:-mt-36 lg:-mt-48">
+          <div id="service-im" v-on:mouseenter="hover_im" v-on:click="click_im" class="cursor-pointer flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
+            <div class="mb-6 -mt-24 transition-all duration-300 ease-in-out top-service-image md:-mt-36 lg:-mt-48">
               <div class="relative overflow-hidden rounded-lg shadow-lg">
                 <img v-bind:src="$page.landing.topServices[0].cover" v-bind:alt="$page.landing.topServices[0].title" class="mx-auto">
                 <div class="absolute top-0 left-0 flex items-center w-full h-full p-20 bg-opacity-50 bg-dark-900 md:p-12">
@@ -115,11 +115,11 @@
               <p class="my-4 text-sm lg:text-base">{{$page.landing.topServices[0].description}}</p>
               <g-link to="/influencer-management/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
             </div>
-          </g-link>
+          </div>
         </div>
         <div class="scroll-reveal flex">
-          <g-link to="/content-production/" id="service-cp" class="flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
-            <div v-on:mouseenter="hover_cp" class="mb-6 -mt-24 transition-all duration-300 ease-in-out top-service-image md:-mt-36 lg:-mt-48">
+          <div id="service-cp" v-on:mouseenter="hover_cp" v-on:click="click_cp" class="cursor-pointer flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
+            <div class="mb-6 -mt-24 transition-all duration-300 ease-in-out top-service-image md:-mt-36 lg:-mt-48">
               <div class="relative overflow-hidden rounded-lg shadow-lg">
                 <img v-bind:src="$page.landing.topServices[1].cover" v-bind:alt="$page.landing.topServices[1].title" class="mx-auto">
                 <div class="absolute top-0 left-0 flex items-center w-full h-full p-20 bg-opacity-50 bg-dark-900 md:p-12">
@@ -156,12 +156,12 @@
               <p class="my-4 text-sm lg:text-base">{{$page.landing.topServices[1].description}}</p>
               <g-link to="/content-production/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
             </div>
-          </g-link>
+          </div>
         </div> 
       </div>
       <div class="scroll-reveal grid max-w-screen-lg grid-cols-1 px-4 mx-auto sm:px-8 md:grid-cols-3 gap-x-8">
-        <g-link to="/digital-concepts/" id="service-dk" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
-          <div v-on:mouseenter="hover_dk" class="px-20 py-4 md:px-12 md:py-8">
+        <div id="service-dk" v-on:mouseenter="hover_dk" v-on:click="click_dk" class="cursor-pointer flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
+          <div class="px-20 py-4 md:px-12 md:py-8">
             <svg viewBox="0 0 170 147" class="w-full mx-auto">
               <g fill="none" fill-rule="evenodd">
                 <g id="dk-bg" fill="#282850" fill-rule="nonzero">
@@ -189,9 +189,9 @@
             <p class="my-4 text-sm lg:text-base">{{$page.landing.services[0].description}}</p>
             <g-link to="/digital-concepts/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
           </div>
-        </g-link>
-        <g-link to="/webdesign/" id="service-wd" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
-          <div v-on:mouseenter="hover_wd" class="px-20 py-4 md:px-12 md:py-8">
+        </div>
+        <div id="service-wd" v-on:mouseenter="hover_wd" v-on:click="click_wd" class="cursor-pointer flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
+          <div class="px-20 py-4 md:px-12 md:py-8">
             <svg viewBox="0 0 170 170" class="w-full mx-auto">
               <g fill="none">
                 <g id="wd-bg" fill="#282850">
@@ -229,9 +229,9 @@
             <p class="my-4 text-sm lg:text-base">{{$page.landing.services[1].description}}</p>
             <g-link to="/webdesign/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
           </div>
-        </g-link>
-        <g-link to="/online-marketing/" id="service-om" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
-          <div v-on:mouseenter="hover_om" class="px-20 py-4 md:px-12 md:py-8">
+        </div>
+        <div id="service-om" v-on:mouseenter="hover_om" v-on:click="click_om" class="cursor-pointer flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
+          <div class="px-20 py-4 md:px-12 md:py-8">
             <svg viewBox="0 0 171 159" class="w-full mx-auto">
               <g fill="none">
                 <g id="om-bg" fill="#282850">
@@ -257,7 +257,7 @@
             <p class="my-4 text-sm lg:text-base">{{$page.landing.services[2].description}}</p>
             <g-link to="/online-marketing/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
           </div>
-        </g-link>
+        </div>
       </div>
     </section>
 
@@ -488,6 +488,21 @@
           })
           .catch(error => console.log(error))
         }
+      },
+      click_im() {
+        this.$router.push('/influencer-management/')
+      },
+      click_cp() {
+        this.$router.push('/content-production/')
+      },
+      click_dk() {
+        this.$router.push('/digital-concepts/')
+      },
+      click_wd() {
+        this.$router.push('/webdesign/')
+      },
+      click_om() {
+        this.$router.push('/online-marketing/')
       },
       hover_im() {
         if(!this.tl_im.isActive()) {

@@ -26,12 +26,15 @@ services:
   - title: Online Marketing
     description: Zielgruppenorientiertes Streuen Ihrer individuellen Botschaft.
 clients:
+  - logo: /uploads/budni.jpg
   - logo: /uploads/buah.jpg
   - logo: /uploads/centerparks.jpg
   - logo: /uploads/hochschulsport.jpg
   - logo: /uploads/malbucht.jpg
   - logo: /uploads/handelskammer.jpg
   - logo: /uploads/oatsome.jpg
+  - logo: /uploads/armedangels.jpg
+  - logo: /uploads/maxi_cosi.jpg
 references:
   - name: John Doe
     company: Acme Inc.

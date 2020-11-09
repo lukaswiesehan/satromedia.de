@@ -71,7 +71,7 @@
       </div>
       <div class="grid max-w-screen-lg grid-cols-1 px-4 mx-auto mt-12 sm:px-8 md:grid-cols-2 gap-x-8">
         <div class="scroll-reveal flex">
-          <a href="/influencer-management/" id="service-im" v-on:mouseenter="hover_im" class="flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
+          <a href="/influencer-management/" id="service-im" v-on:mouseenter="hover_im" class="flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
             <div class="mb-6 -mt-24 transition-all duration-300 ease-in-out top-service-image md:-mt-36 lg:-mt-48">
               <div class="relative overflow-hidden rounded-lg shadow-lg">
                 <img v-bind:src="$page.landing.topServices[0].cover" v-bind:alt="$page.landing.topServices[0].title" class="mx-auto">
@@ -118,7 +118,7 @@
           </a>
         </div>
         <div class="scroll-reveal flex">
-          <a href="/content-production/" id="service-cp" v-on:mouseenter="hover_cp" class="flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
+          <a href="/content-production/" id="service-cp" v-on:mouseenter="hover_cp" class="flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
             <div class="mb-6 -mt-24 transition-all duration-300 ease-in-out top-service-image md:-mt-36 lg:-mt-48">
               <div class="relative overflow-hidden rounded-lg shadow-lg">
                 <img v-bind:src="$page.landing.topServices[1].cover" v-bind:alt="$page.landing.topServices[1].title" class="mx-auto">
@@ -160,7 +160,7 @@
         </div> 
       </div>
       <div class="scroll-reveal grid max-w-screen-lg grid-cols-1 px-4 mx-auto sm:px-8 md:grid-cols-3 gap-x-8">
-        <a href="/digital-concepts/" id="service-dk" v-on:mouseenter="hover_dk" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
+        <a href="/digital-concepts/" id="service-dk" v-on:mouseenter="hover_dk" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
           <div class="px-20 py-4 md:px-12 md:py-8">
             <svg viewBox="0 0 170 147" class="w-full mx-auto">
               <g fill="none" fill-rule="evenodd">
@@ -190,7 +190,7 @@
             <g-link to="/digital-concepts/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
           </div>
         </a>
-        <a href="/webdesign/" id="service-wd" v-on:mouseenter="hover_wd" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
+        <a href="/webdesign/" id="service-wd" v-on:mouseenter="hover_wd" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
           <div class="px-20 py-4 md:px-12 md:py-8">
             <svg viewBox="0 0 170 170" class="w-full mx-auto">
               <g fill="none">
@@ -230,7 +230,7 @@
             <g-link to="/webdesign/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
           </div>
         </a>
-        <a href="/online-marketing/" id="service-om" v-on:mouseenter="hover_om" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
+        <a href="/online-marketing/" id="service-om" v-on:mouseenter="hover_om" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-2xl shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
           <div class="px-20 py-4 md:px-12 md:py-8">
             <svg viewBox="0 0 171 159" class="w-full mx-auto">
               <g fill="none">
@@ -270,7 +270,7 @@
         <div class="max-w-screen-xl px-4 mx-auto sm:px-8">
           <div class="md:flex">
             <div class="scroll-reveal flex flex-wrap items-center py-8 md:w-1/2 lg:w-2/3 md:py-12 md:pr-8 lg:pr-24">
-              <div v-for="(client, i) in $page.landing.clients" :key="i" class="w-1/2 p-4 md:p-2 lg:px-4 lg:py-8" v-bind:class="{'w-1/3': i > 1}">
+              <div v-for="(client, i) in $page.landing.clients" :key="i" class="w-1/3 p-4 md:p-2 lg:px-4 lg:py-8">
                 <img v-bind:src="client.logo" alt="Logo Client" class="w-full" style="filter: grayscale(100%) opacity(80%); -webkit-filter: grayscale(100%) opacity(80%);">
               </div>
             </div>
@@ -296,7 +296,7 @@
     <section id="about" class="max-w-screen-xl px-4 mt-24 md:mx-auto sm:px-8 lg:mt-48">
       <Title class="scroll-reveal" :icon="'fa-users'" :heading="'Satro Media'" :title="'Über die Agentur'"></Title>
       <div class="mt-8 md:flex md:items-center">
-        <div class="scroll-reveal relative z-10 w-11/12 max-w-lg p-6 mx-auto bg-white rounded-lg shadow-md md:p-10 md:mx-0 md:w-1/2">
+        <div class="scroll-reveal relative z-10 w-11/12 max-w-lg p-6 mx-auto bg-white rounded-2xl shadow-md md:p-10 md:mx-0 md:w-1/2">
           <h3 class="font-display">{{$page.landing.about_header}}</h3>
           <p class="pt-4 text-black-500">{{$page.landing.about_description}}</p>
         </div>

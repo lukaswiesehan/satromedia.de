@@ -5,8 +5,11 @@
     <!-- HEADER -->
     <section id="header" class="max-w-screen-xl px-4 -mt-16 md:mx-auto sm:px-8 xs:-mt-32 md:-mt-64">
       <Window id="header-window" style="opacity: 0">
-        <video width="100%" height="100%" muted playsinline autoplay preload loop v-bind:poster="$page.landing.header_thumbnail">
+        <video class="hidden sm:block" width="100%" height="100%" muted playsinline autoplay preload loop v-bind:poster="$page.landing.header_thumbnail">
           <source v-bind:src="$page.landing.header_video" type="video/mp4">
+        </video>
+        <video class="block sm:hidden" width="100%" height="100%" muted playsinline autoplay preload loop v-bind:poster="$page.landing.header_thumbnail">
+          <source v-bind:src="$page.landing.header_video_mobile" type="video/mp4">
         </video>
         <div class="absolute top-0 left-0 flex items-center w-full h-full bg-opacity-25 bg-dark-900">
           <img id="satro-logo" src="../assets/img/satro_logo.png" alt="Satro Media Logo" class="w-2/3 mx-auto -mt-8 sm:-mt-12 md:-mt-20 lg:-mt-24">
@@ -17,36 +20,6 @@
     <!-- INTRO -->
     <section id="intro" class="grid max-w-screen-xl grid-cols-1 px-8 mx-auto mt-24 lg:mt-48 md:grid-cols-2">
       <div class="relative w-96 h-48 sm:h-56 md:w-112 md:h-72 lg:w-128 lg:h-96">
-        <!--<div id="portrait-1" class="absolute top-0 left-0">
-          <div class="overflow-hidden transition-all duration-300 ease-in-out transform rounded-lg shadow-lg hover:scale-105">
-            <img v-bind:src="$page.landing.portraits[0].photo" alt="Satro Media Gründer" class="object-cover object-top w-32 h-40 md:w-48 md:h-56 lg:w-56 lg:h-72">
-            <div class="absolute top-0 left-0 w-full h-full bg-opacity-25 bg-dark-900"></div>
-            <div class="absolute top-0 left-0 flex flex-col-reverse w-full h-full transition-all duration-500 ease-in-out bg-opacity-25 opacity-0 bg-dark-900 hover:opacity-100">
-              <div class="p-4">
-                <p class="text-xs font-bold text-white md:text-base">Mika Sannmann</p>
-                <p class="text-base text-light-500 md:text-lg">
-                  <a href="mailto:mika@satromedia.de" class="hover:text-light-900"><i class="fas fa-envelope"></i></a>
-                  <a href="https://de.linkedin.com/in/mika-sannmann-626743194" target="_blank" class="ml-2 hover:text-light-900"><i class="fab fa-linkedin"></i></a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="portrait-2" class="absolute bottom-0 left-0 ml-24 md:ml-40 lg:ml-48">
-          <div class="overflow-hidden transition-all duration-300 ease-in-out transform rounded-lg shadow-lg hover:scale-105">
-            <img v-bind:src="$page.landing.portraits[1].photo" alt="Satro Media Gründer" class="object-cover object-top w-32 h-40 md:w-48 md:h-56 lg:w-56 lg:h-72">
-            <div class="absolute top-0 left-0 w-full h-full bg-opacity-25 bg-dark-900"></div>
-            <div class="absolute top-0 left-0 flex flex-col-reverse w-full h-full transition-all duration-500 ease-in-out bg-opacity-25 opacity-0 bg-dark-900 hover:opacity-100">
-              <div class="p-4 text-xs text-white md:text-base">
-                <p class="text-xs font-bold text-white md:text-base">Henning Trogisch</p>
-                <p class="text-base text-light-500 md:text-lg">
-                  <a href="mailto:henning@satromedia.de" class="hover:text-light-900"><i class="fas fa-envelope"></i></a>
-                  <a href="https://de.linkedin.com/in/henning-trogisch-b738a8172" target="_blank" class="ml-2 hover:text-light-900"><i class="fab fa-linkedin"></i></a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>-->
         <div id="portrait-1" class="absolute top-0 left-0">
           <Window>
             <img v-bind:src="$page.landing.portraits[0].photo" alt="Satro Media Gründer" class="object-cover object-top w-32 h-40 md:w-48 md:h-56 lg:w-56 lg:h-72">
@@ -98,7 +71,7 @@
       </div>
       <div class="grid max-w-screen-lg grid-cols-1 px-4 mx-auto mt-12 sm:px-8 md:grid-cols-2 gap-x-8">
         <div class="scroll-reveal flex">
-          <div v-on:mouseenter="hover_im" class="flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
+          <a href="/influencer-management/" id="service-im" v-on:mouseenter="hover_im" class="flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
             <div class="mb-6 -mt-24 transition-all duration-300 ease-in-out top-service-image md:-mt-36 lg:-mt-48">
               <div class="relative overflow-hidden rounded-lg shadow-lg">
                 <img v-bind:src="$page.landing.topServices[0].cover" v-bind:alt="$page.landing.topServices[0].title" class="mx-auto">
@@ -142,10 +115,10 @@
               <p class="my-4 text-sm lg:text-base">{{$page.landing.topServices[0].description}}</p>
               <g-link to="/influencer-management/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
             </div>
-          </div>
+          </a>
         </div>
         <div class="scroll-reveal flex">
-          <div v-on:mouseenter="hover_cp" class="flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
+          <a href="/content-production/" id="service-cp" v-on:mouseenter="hover_cp" class="flex flex-col justify-between p-6 pt-0 mt-24 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md top-service md:mt-36 lg:mt-48 md:mb-16 hover:scale-105 hover:shadow-lg">
             <div class="mb-6 -mt-24 transition-all duration-300 ease-in-out top-service-image md:-mt-36 lg:-mt-48">
               <div class="relative overflow-hidden rounded-lg shadow-lg">
                 <img v-bind:src="$page.landing.topServices[1].cover" v-bind:alt="$page.landing.topServices[1].title" class="mx-auto">
@@ -183,11 +156,11 @@
               <p class="my-4 text-sm lg:text-base">{{$page.landing.topServices[1].description}}</p>
               <g-link to="/content-production/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
             </div>
-          </div>
+          </a>
         </div> 
       </div>
       <div class="scroll-reveal grid max-w-screen-lg grid-cols-1 px-4 mx-auto sm:px-8 md:grid-cols-3 gap-x-8">
-        <div v-on:mouseenter="hover_dk" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
+        <a href="/digital-concepts/" id="service-dk" v-on:mouseenter="hover_dk" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
           <div class="px-20 py-4 md:px-12 md:py-8">
             <svg viewBox="0 0 170 147" class="w-full mx-auto">
               <g fill="none" fill-rule="evenodd">
@@ -211,13 +184,13 @@
               </g>
             </svg>
           </div>
-          <div class="px-4 mt-4 text-center xs:px-16 sm:px-24 md:px-0 lg:px-6">
+          <div class="px-4 mt-4 text-center xs:px-16 sm:px-24 md:px-0">
             <h3 class="font-display">{{$page.landing.services[0].title}}</h3>
             <p class="my-4 text-sm lg:text-base">{{$page.landing.services[0].description}}</p>
             <g-link to="/digital-concepts/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
           </div>
-        </div>
-        <div v-on:mouseenter="hover_wd" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
+        </a>
+        <a href="/webdesign/" id="service-wd" v-on:mouseenter="hover_wd" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
           <div class="px-20 py-4 md:px-12 md:py-8">
             <svg viewBox="0 0 170 170" class="w-full mx-auto">
               <g fill="none">
@@ -251,13 +224,13 @@
               </g>
             </svg>
           </div>
-          <div class="px-4 mt-4 text-center xs:px-16 sm:px-24 md:px-0 lg:px-6">
+          <div class="px-4 mt-4 text-center xs:px-16 sm:px-24 md:px-0">
             <h3 class="font-display">{{$page.landing.services[1].title}}</h3>
             <p class="my-4 text-sm lg:text-base">{{$page.landing.services[1].description}}</p>
             <g-link to="/webdesign/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
           </div>
-        </div>
-        <div v-on:mouseenter="hover_om" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
+        </a>
+        <a href="/online-marketing/" id="service-om" v-on:mouseenter="hover_om" class="flex flex-col justify-between p-6 mb-12 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-md md:mb-0 hover:scale-105 hover:shadow-lg">
           <div class="px-20 py-4 md:px-12 md:py-8">
             <svg viewBox="0 0 171 159" class="w-full mx-auto">
               <g fill="none">
@@ -279,12 +252,12 @@
               </g>
             </svg>
           </div>
-          <div class="px-4 mt-4 text-center xs:px-16 sm:px-24 md:px-0 lg:px-6">
+          <div class="px-4 mt-4 text-center xs:px-16 sm:px-24 md:px-0">
             <h3 class="font-display">{{$page.landing.services[2].title}}</h3>
             <p class="my-4 text-sm lg:text-base">{{$page.landing.services[2].description}}</p>
             <g-link to="/online-marketing/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
           </div>
-        </div>
+        </a>
       </div>
     </section>
 
@@ -320,9 +293,9 @@
     </section>
     
     <!-- ABOUT -->
-    <section class="max-w-screen-xl px-4 mt-24 md:mx-auto sm:px-8 lg:mt-48">
+    <section id="about" class="max-w-screen-xl px-4 mt-24 md:mx-auto sm:px-8 lg:mt-48">
       <Title class="scroll-reveal" :icon="'fa-users'" :heading="'Satro Media'" :title="'Über die Agentur'"></Title>
-      <div id="about" class="mt-8 md:flex md:items-center">
+      <div class="mt-8 md:flex md:items-center">
         <div class="scroll-reveal relative z-10 w-11/12 max-w-lg p-6 mx-auto bg-white rounded-lg shadow-md md:p-10 md:mx-0 md:w-1/2">
           <h3 class="font-display">{{$page.landing.about_header}}</h3>
           <p class="pt-4 text-black-500">{{$page.landing.about_description}}</p>
@@ -392,6 +365,7 @@
     landing(id: "1") {
       id
       header_video
+      header_video_mobile
       header_thumbnail
       cite
       portraits { 
@@ -658,6 +632,12 @@
         .add(tl_om_mouse, 0.2)
         .add(tl_om_ad, 2.0)
         .to('#om-bg', {opacity: 1, delay: -0.2})
+        //service animation scroll triggers:
+        ScrollTrigger.create({trigger: '#service-im', onEnter: this.hover_im})
+        ScrollTrigger.create({trigger: '#service-cp', onEnter: this.hover_cp})
+        ScrollTrigger.create({trigger: '#service-dk', onEnter: this.hover_dk})
+        ScrollTrigger.create({trigger: '#service-wd', onEnter: this.hover_wd})
+        ScrollTrigger.create({trigger: '#service-om', onEnter: this.hover_om})
       }
     },
     async mounted() { 

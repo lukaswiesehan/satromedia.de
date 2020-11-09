@@ -16,6 +16,7 @@ collections:
         fields:
           - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
           - {label: "Header Video", name: "header_video", widget: "file"}
+          - {label: "Header Video Mobile", name: "header_video_mobile", widget: "file"}
           - {label: "Header Thumbnail", name: "header_thumbnail", widget: "file"}
           - {label: "Zitat", name: "cite", widget: "string"}
           - label: "Portraits"

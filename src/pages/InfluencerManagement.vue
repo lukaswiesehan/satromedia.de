@@ -10,7 +10,7 @@
       </div>
       <div class="flex flex-row-reverse">
         <div class="scroll-reveal relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 md:mr-24 -mt-32 md:-mt-48 w-11/12 max-w-lg">
-          <Title :icon="'fa-people-arrows'" :heading="'Unsere Services'" :title="'Influencer Management'"></Title>
+          <Title :icon="'fa-people-arrows'" :heading="'Unsere Services'" :title="'Influencer Management & Marketing'"></Title>
           <p class="pt-4 sm:ml-12 text-black-500">{{$page.influencerManagement.header.text}}</p>
         </div>
       </div>
@@ -89,14 +89,14 @@
       <Title :icon="'fa-user-friends'" :heading="'Influencer Management'" :title="'Unsere Partner'" class="scroll-reveal md:mb-12"></Title>
       <div class="text-center">
         <div v-for="(influencer, i) in $page.influencerManagement.influencers" :key="i" class="mt-12 md:mt-24 md:flex" v-bind:class="{'md:pt-16': influencer.landscape, 'md:pt-12': !influencer.landscape}">
-          <div class="flex-shrink-0" v-bind:class="{'order-1': influencer.landscape, 'order-2': !influencer.landscape}">
-            <Window class="scroll-reveal w-11/12 xs:w-96 lg:w-128 mx-auto md:mx-0 relative z-10">
-            <div class="p-4 sm:p-6 pt-0">
+          <div class="scroll-reveal relative z-10 flex-shrink-0" v-bind:class="{'order-1': influencer.landscape, 'order-2': !influencer.landscape}">
+            <Window class="w-11/12 xs:w-96 lg:w-128 mx-auto md:mx-0">
+              <div class="p-4 sm:p-6 pt-0">
                 <div class="w-full text-center text-lg sm:-mt-2"><a v-bind:href="influencer.profileLink" target="_blank" class="font-display text-light-900">{{influencer.username}}</a></div>
                 <div class="flex items-center justify-between mt-4">
-                  <div>
+                  <a v-bind:href="influencer.profileLink" target="_blank">
                     <img v-bind:src="influencer.profilePicture" alt="Avatar" class="object-cover object-center w-16 h-16 sm:w-24 sm:h-24 rounded-full">
-                  </div>
+                  </a>
                   <div class="flex">
                     <div class="text-center mr-3 lg:mr-8">
                       <p class="text-white font-display text-sm xs:text-base lg:text-2xl">{{influencer.timeline}}</p>
@@ -118,6 +118,9 @@
                 </div>
               </div>
             </Window>
+            <div class="-mt-6 relative z-20">
+              <a v-bind:href="'mailto:kontakt@satromedia.de?subject=Anfrage%20Influencer%20@' + influencer.username" class="inline-block bg-light-900 px-6 py-3 rounded-full text-black-900 text-xs uppercase font-bold tracking-widest transition-all duration-300 ease-in-out transform hover:-translate-y-1 shadow-sm hover:shadow-md hover:text-black-700">Kooperation anfragen <i class="fas fa-chevron-right"></i></a>
+            </div>
           </div>
           <div class="scroll-reveal" v-bind:class="{'order-2 md:-ml-32 -mt-12 md:-mt-16': influencer.landscape, 'order-1 md:-mr-24 -mt-16 md:-mt-12': !influencer.landscape}">
             <img v-bind:src="influencer.image" alt="Influencer Featured Image" class="w-full sm:w-10/12 sm:mx-auto md:w-full md:mx-0 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">

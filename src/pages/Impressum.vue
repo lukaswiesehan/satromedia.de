@@ -15,6 +15,12 @@
           </div>
         </div>
       </div>
+      <div class="scroll-reveal content mt-8 bg-white rounded-lg shadow-md p-6 md:p-10">
+        <h3 class="font-display text-lg">Bildnachweise</h3>
+        <ul class="text-black-500 ml-6">
+          <li v-for="(service, i) in $page.onlineMarketing.services" :key="i" style="list-style-type:disc;" class="mb-2">Icon Online Marketing / {{service.title}}: <a v-bind:href="service.icon_author" class="underline">flaticon.com</a></li>
+        </ul>
+      </div>
     </section>
 
     <!-- FOOTER -->

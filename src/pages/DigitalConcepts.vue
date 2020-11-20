@@ -43,7 +43,7 @@
         <div class="mt-16 md:mt-0">
           <h3 class="font-display">{{$page.digitalConcepts.cta.heading}}</h3>
           <p class="pt-4 text-black-500">{{$page.digitalConcepts.cta.text}}</p>
-          <a href="mailto:kontakt@satromedia.de?subject=Anfrage%20Digitale%20Konzepte" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></a>
+          <a href="javascript:mailto('nbjmup;lpoubluAtbuspnfejb/ef', 'Anfrage Digitale Konzepte')" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></a>
         </div>
       </div>
       <div class="absolute top-0 left-0 w-full h-full opacity-50 bg-gradient-to-br from-light-900 to-dark-100"></div>
@@ -73,7 +73,7 @@
         <div class="scroll-reveal max-w-md">
           <Title :icon="'fa-clipboard'" :heading="'Digitale Konzepte'" :title="'Full Service'"></Title>
           <p class="pt-4 text-black-500">{{$page.digitalConcepts.service.description}}</p>
-          <a href="mailto:kontakt@satromedia.de?subject=Anfrage%20Digitale%20Konzepte" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Ihr Projekt starten <i class="fas fa-chevron-right"></i></a>
+          <a href="javascript:mailto('nbjmup;lpoubluAtbuspnfejb/ef', 'Anfrage Digitale Konzepte')" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Ihr Projekt starten <i class="fas fa-chevron-right"></i></a>
         </div>
         <div class="mt-16 md:mt-0">
           <Window>

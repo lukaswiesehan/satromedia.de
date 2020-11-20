@@ -28,7 +28,7 @@
               <div class="p-4">
                 <p class="text-xs font-bold text-white md:text-base">Mika Sannmann</p>
                 <p class="text-base text-light-500 md:text-lg">
-                  <a href="mailto:mika@satromedia.de" class="hover:text-light-900"><i class="fas fa-envelope"></i></a>
+                  <a href="javascript:mailto('nbjmup;njlbAtbuspnfejb/ef', '')" class="hover:text-light-900"><i class="fas fa-envelope"></i></a>
                   <a href="https://de.linkedin.com/in/mika-sannmann-626743194" target="_blank" class="ml-2 hover:text-light-900"><i class="fab fa-linkedin"></i></a>
                 </p>
               </div>
@@ -43,7 +43,7 @@
               <div class="p-4 text-xs text-white md:text-base">
                 <p class="text-xs font-bold text-white md:text-base">Henning Trogisch</p>
                 <p class="text-base text-light-500 md:text-lg">
-                  <a href="mailto:henning@satromedia.de" class="hover:text-light-900"><i class="fas fa-envelope"></i></a>
+                  <a href="javascript:mailto('nbjmup;ifoojohAtbuspnfejb/ef', '')" class="hover:text-light-900"><i class="fas fa-envelope"></i></a>
                   <a href="https://de.linkedin.com/in/henning-trogisch-b738a8172" target="_blank" class="ml-2 hover:text-light-900"><i class="fab fa-linkedin"></i></a>
                 </p>
               </div>

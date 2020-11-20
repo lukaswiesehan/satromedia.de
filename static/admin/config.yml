@@ -271,8 +271,8 @@ collections:
         fields:
           - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
           - {label: "Unternehmen & Anschrift", name: "company", widget: "markdown"}
-          - {label: "Kontaktmöglichkeiten", name: "contact", widget: "markdown"}
-          - {label: "Text", name: "content", widget: "markdown", required: false}
+          - {label: "Telefon", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
       - label: "Datenschutz"
         name: "datenschutz"
         file: "content/datenschutz.yml"

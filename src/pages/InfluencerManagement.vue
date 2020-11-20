@@ -67,7 +67,7 @@
         <div>
           <h3 class="font-display">{{$page.influencerManagement.cta.heading}}</h3>
           <p class="pt-4 text-black-500">{{$page.influencerManagement.cta.text}}</p>
-          <a href="mailto:kontakt@satromedia.de?subject=Anfrage%20Influencer%20Management" class="inline-block mt-12 bg-black-900 px-6 py-3 rounded-full text-white text-xs uppercase font-bold tracking-widest transition-all duration-300 ease-in-out transform hover:-translate-y-1 shadow-sm hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></a>
+          <a href="javascript:mailto('nbjmup;lpoubluAtbuspnfejb/ef', 'Anfrage Influencer Management')" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></a>
         </div>
         <div class="px-4 sm:px-0 mt-16 md:mt-12 ml-0 md:ml-16">
           <div class="h-4 w-full rounded-full bg-light-500"></div>
@@ -119,7 +119,7 @@
               </div>
             </Window>
             <div class="-mt-6 relative z-20">
-              <a v-bind:href="'mailto:kontakt@satromedia.de?subject=Anfrage%20Influencer%20@' + influencer.username" class="inline-block bg-light-900 px-6 py-3 rounded-full text-black-900 text-xs uppercase font-bold tracking-widest transition-all duration-300 ease-in-out transform hover:-translate-y-1 shadow-sm hover:shadow-md hover:text-black-700">Kooperation anfragen <i class="fas fa-chevron-right"></i></a>
+              <a v-bind:href="influencer.contactLink" class="inline-block bg-light-900 px-6 py-3 rounded-full text-black-900 text-xs uppercase font-bold tracking-widest transition-all duration-300 ease-in-out transform hover:-translate-y-1 shadow-sm hover:shadow-md hover:text-black-700">Kooperation anfragen <i class="fas fa-chevron-right"></i></a>
             </div>
           </div>
           <div class="scroll-reveal" v-bind:class="{'order-2 md:-ml-32 -mt-12 md:-mt-16': influencer.landscape, 'order-1 md:-mr-24 -mt-16 md:-mt-12': !influencer.landscape}">
@@ -261,6 +261,7 @@
         influencer.timeline = userData.edge_owner_to_timeline_media.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
         influencer.followers= userData.edge_followed_by.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
         influencer.follows = userData.edge_follow.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+        influencer.contactLink = "javascript:mailto('nbjmup;lpoubluAtbuspnfejb/ef', 'Anfrage Influencer @" + influencer.username + "')"
         i++      
       }
       this.animations()

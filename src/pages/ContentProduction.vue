@@ -36,7 +36,7 @@
         <div class="mt-16 md:mt-0">
           <h3 class="font-display">{{$page.contentProduction.cta.heading}}</h3>
           <p class="pt-4 text-black-500">{{$page.contentProduction.cta.text}}</p>
-          <a href="mailto:kontakt@satromedia.de?subject=Anfrage%20Content%20Production" class="inline-block mt-12 bg-black-900 px-6 py-3 rounded-full text-white text-xs uppercase font-bold tracking-widest transition-all duration-300 ease-in-out transform hover:-translate-y-1 shadow-sm hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></a>
+          <a href="javascript:mailto('nbjmup;lpoubluAtbuspnfejb/ef', 'Anfrage Content Production')" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></a>
         </div>
       </div>
     </section>

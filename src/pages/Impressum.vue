@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <h1 class="hidden">Impressum</h1>
     <Navbar id="navbar" :showBackButton="true" :dark="true" />
 
     <!-- CONTENT -->

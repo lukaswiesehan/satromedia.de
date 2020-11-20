@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <h1 class="hidden">Satro Media Consulting</h1>
     <Navbar id="navbar" :showBackButton="false" :dark="true" />
 
     <!-- HEADER -->

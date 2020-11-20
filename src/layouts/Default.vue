@@ -5,9 +5,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style>
@@ -61,5 +59,7 @@ export default {
 
   #app {
     opacity: 0;
+    hyphens: auto;
+    -webkit-hyphens: auto;
   }
 </style>

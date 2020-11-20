@@ -26,6 +26,13 @@
       company
       contact
     }
+    onlineMarketing(id: "5") {
+      id
+      services {
+        title
+        icon_author
+      }
+    }
   }
 </page-query>
 

@@ -3,6 +3,23 @@
   <head>
     ${head}
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script type="text/javascript">
+      function decryptMailto(s) {
+          var n = 0
+          var r = ""
+          for(var i = 0; i < s.length; i++) {
+              n = s.charCodeAt(i)
+              if(n >= 8364) {
+                n = 128
+              }
+              r += String.fromCharCode(n - 1)
+          }
+          return r
+      }
+      function mailto(key, subject) {
+        location.href = decryptMailto(key) + '?subject=' + subject.replaceAll(' ', '%20')
+      }
+    </script>
   </head>
   <body ${bodyAttrs}>
     ${app}

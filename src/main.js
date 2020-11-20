@@ -7,6 +7,7 @@ import VueScrollTo from 'vue-scrollto'
 import VueMasonry from 'vue-masonry-css'
 
 export default function (Vue, { router, head, isClient }) {
+  head.htmlAttrs = { lang: 'de' }
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.use(VueScrollTo, {

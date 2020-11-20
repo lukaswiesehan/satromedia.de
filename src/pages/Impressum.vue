@@ -9,7 +9,10 @@
         <h3 class="font-display text-lg">Diensteanbieter</h3>
         <div class="grid grid-cols-1 md:grid-cols-2">
           <div class="pt-4 text-black-500" v-html="$page.impressum.company"></div>
-          <div class="pt-4 text-black-500" v-html="$page.impressum.contact"></div>
+          <div class="pt-4 text-black-500">
+            <p><i class="fas fa-phone mr-2"></i> {{$page.impressum.phone}}</p>
+            <p><i class="fas fa-envelope mr-2"></i> <a href="javascript:mailto('nbjmup;lpoubluAtbuspnfejb/ef', '')"><Email :email="$page.impressum.email"></Email></a></p>
+          </div>
         </div>
       </div>
     </section>
@@ -24,7 +27,8 @@
     impressum(id: "6") {
       id
       company
-      contact
+      phone
+      email
     }
     onlineMarketing(id: "5") {
       id
@@ -41,6 +45,7 @@
   import Title from '../components/Title.vue'
   import Window from '../components/Window.vue'
   import Footer from '../components/Footer.vue'
+  import Email from '../components/Email.vue'
 
   import {gsap, TweenLite} from 'gsap/all'
   import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -54,7 +59,8 @@
       Navbar, 
       Title,
       Window,
-      Footer
+      Footer,
+      Email
     },
     methods: {
       sleep(ms) {

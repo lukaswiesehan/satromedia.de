@@ -1,5 +1,6 @@
 module.exports = {
   siteName: 'SaTro Media Consulting',
+  icon: './src/favicon.svg',
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
@@ -7,7 +8,6 @@ module.exports = {
       anchorClassName: 'icon icon-link'
     }
   },
-
   plugins: [
     {
       use: "gridsome-plugin-tailwindcss",

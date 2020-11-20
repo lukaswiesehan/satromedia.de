@@ -8,6 +8,8 @@ import VueMasonry from 'vue-masonry-css'
 
 export default function (Vue, { router, head, isClient }) {
   head.htmlAttrs = { lang: 'de' }
+  head.meta.push({key: 'description', name: 'description', content: 'Full Service Influencer-Management und Online-Marketing Agentur aus Hamburg.'})
+  head.meta.push({name: 'keywords', content: 'Social,Media,Influencer,Management,Online,Marketing,Webdesign,Content,Production'}),
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.use(VueScrollTo, {

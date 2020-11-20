@@ -64,3 +64,39 @@ ads:
     description: Four loko flexitarian small batch direct trade austin chillwave.
       Beard direct trade unicorn, forage austin PBR&B fashion axe vegan.
     screenshot: /uploads/anzeige_1.jpg
+services:
+  - title: Online Strategie
+    description: Auf Basis Ihrer Unternehmensphilosophie erstellen wir einen
+      Fahrplan. Mit klaren Zielen und stets in enger Abstimmung arbeiten wir für
+      Ihren Erfolg.
+    icon_author: https://www.flaticon.com/de/autoren/wanicon
+    icon: /uploads/online_strategie.svg
+  - title: Suchmaschinenmarketing (SEA)
+    description: Mit einer professionellen Bestandsanalyse verbunden mit einem
+      strategischen Konzept kümmern wir uns um die optimale Umsetzung bei
+      Google, Bing und Co. für Sie.
+    icon_author: https://www.flaticon.com/de/autoren/freepik
+    icon: /uploads/sea.svg
+  - title: Suchmaschinenoptimierung (SEO)
+    description: Wir bieten eine tiefe Keywordanalyse und professionelle Artikel.
+      Dadurch erhalten Sie nachhaltig mehr Traffic, durch besseres Ranking in
+      den Suchmaschinen.
+    icon_author: https://www.flaticon.com/de/autoren/smashicons
+    icon: /uploads/seo.svg
+  - title: Social Ads
+    description: Wir konzipieren mit Ihnen die Anzeigen für Ihre Kampagne in
+      relevanten Social Networks und kümmern uns für Sie um die erfolgreiche
+      Ausspielung.
+    icon_author: https://www.flaticon.com/de/autoren/freepik
+    icon: /uploads/social_ads.svg
+  - title: Display & Video Ads
+    description: Erhalten Sie professionelle Videos und Anzeigen, mit der Sie Ihre
+      Markenbekanntheit digital massiv steigern können.
+    icon_author: https://www.flaticon.com/de/autoren/freepik
+    icon: /uploads/display_ads.svg
+  - title: UX/UI Optimierung
+    description: Wir bieten eine Expertenanalyse und Optimierung der Nutzererfahrung
+      auf Ihrer Seite. Denn das ist ein starker Hebel, um Ihre Umsätze über alle
+      Trafficquellen hinweg zu steigern.
+    icon_author: https://www.flaticon.com/de/autoren/freepik
+    icon: /uploads/uiux.svg

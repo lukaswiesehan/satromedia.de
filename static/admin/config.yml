@@ -251,13 +251,14 @@ collections:
             fields:
               - {label: "Heading", name: "heading", widget: "string"}
               - {label: "Text", name: "text", widget: "text"}
-          - label: "Anzeigen"
-            name: "ads"
+          - label: "Services"
+            name: "services"
             widget: "list"
             fields:
               - {label: "Titel", name: "title", widget: "string"}
               - {label: "Beschreibung", name: "description", widget: "text"}
-              - {label: "Screenshot", name: "screenshot", widget: "image"}
+              - {label: "Icon", name: "icon", widget: "image"}
+              - {label: "Icon-Autor-Link", name: "icon_author", widget: "string"}
   - label: "Rechtliches"
     name: "rechtlich"
     format: "yml"
@@ -278,5 +279,3 @@ collections:
         fields:
           - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
           - {label: "Text", name: "content", widget: "markdown", required: false}
-
-          

@@ -1,10 +1,11 @@
 id: 3
 header:
   image: /uploads/cover_content_production.jpg
-  text: I'm baby coloring book microdosing +1 copper mug activated charcoal. Tilde
-    swag palo santo disrupt seitan mlkshk yr locavore typewriter gochujang
-    skateboard raw denim quinoa etsy. Everyday carry gochujang listicle,
-    letterpress slow-carb literally before they sold out austin chicharrones.
+  text: "Digitale Kommunikation ohne ansprechende Bilder und Videos ist heutzutage
+    undenkbar. Für die zielorientierte Visualisierung arbeiten wir Hand in Hand
+    mit unserem Team, bestehend aus ausgebildeten Fotografen, sowie
+    freischaffenden Videografen. Diese verstehen nicht nur zu 100% ihr Handwerk,
+    sondern stecken auch 110% Kreativität und Leidenschaft in Ihre Projekte. "
 stats:
   - figure: 34127
     decimal: false
@@ -13,27 +14,33 @@ stats:
     decimal: false
     description: Gigabyte Fotomaterial
 cta:
-  heading: Auf den ersten Eindruck kommt es an!
-  text: Four loko flexitarian small batch direct trade austin chillwave. Beard
-    direct trade unicorn, forage austin PBR&B fashion axe vegan. IPhone banh mi
-    YOLO kombucha kinfolk, succulents actually. Whatever taiyaki iceland,
-    vaporware actually chia man braid portland listicle cronut hella microdosing
-    tilde.
+  heading: "Bilder sagen mehr als 1000 Worte "
+  text: >-
+    Wir übernehmen von der Planung, Betreuung, bis hin zur Umsetzung und
+    Auslieferung die gesamte Produktion, damit für Sie am Ende das perfekte
+    Produkt entsteht. Schritt für Schritt erarbeiten wir mit Ihnen gemeinsam
+    Skripte und Konzepte, die auf Ihre persönlichen Bedürfnisse und Ziele
+    angepasst sind.
+
+
+    Aus Ihrem Projekt soll am Ende Unser Projekt werden - denn nur gemeinsam erreicht man Großes.  
 featured_projects:
-  - title: Buah Produktvideo.
-    description: "Four loko flexitarian small batch direct trade austin chillwave.
-      Beard direct trade unicorn, forage austin PBR&B fashion axe vegan. IPhone
-      banh mi YOLO kombucha kinfolk, succulents actually. "
+  - title: "Buah Fruits Unboxing Teaser "
+    description: "Man nehme ein Produkt - eine Idee - einen Kameramann und
+      investiert ein paar Stunden seiner Zeit. Heraus kommt ein 30sec. Teaser,
+      perfekt für das Format - Social Media. Ein kleiner Einblick in die
+      zahlreichen Umsetzungsmöglichkeiten. "
     video: true
     media: /uploads/showcase_9.mp4
   - title: Malbucht Video
     video: true
     media: /uploads/showcase_8.mp4
-    description: Four loko flexitarian small batch direct trade austin chillwave.
-      Beard direct trade unicorn, forage austin PBR&B fashion axe vegan. IPhone
-      banh mi YOLO kombucha kinfolk, succulents actually. Whatever taiyaki
-      iceland, vaporware actually chia man braid portland listicle cronut hella
-      microdosing tilde.
+    description: >-
+      Bei uns entstehen keine monotonen Werbevideos - bei uns entstehen
+      einzigartige Meisterwerke. 
+
+
+      Wir schaffen es für jeden Kunden die perfekte Kombination aus Setting, Musik und Kameradynamik zu finden, um sie dann im Schnitt zu finalisieren. Ihre Wünsche stehen bei uns im Fokus. 
 projects:
   - video: false
     media: /uploads/showcase_12.jpg

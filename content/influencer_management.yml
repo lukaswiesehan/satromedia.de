@@ -1,12 +1,13 @@
 id: 2
 header:
   image: /uploads/cover_influencer_management.jpg
-  text: I'm baby coloring book microdosing +1 copper mug activated charcoal. Tilde
-    swag palo santo disrupt seitan mlkshk yr locavore typewriter gochujang
-    skateboard raw denim quinoa etsy. Everyday carry gochujang listicle,
-    letterpress slow-carb literally before they sold out austin chicharrones.
+  text: "Wir arbeiten eng mit unserem umfangreichen Netzwerk aus Creatorn und
+    Meinungsbildnern zusammen und unterstützen diese in der Ausarbeitung und
+    Umsetzung professioneller Kampagnen. Dabei bieten wir den Marken und
+    Unternehmen nicht nur starke Partner im Brandbuilding, sondern zeigen auch
+    wie man den Erfolg langfristig gewährleistet und vor allem messbar macht.  "
 stats:
-  - figure: 972086
+  - figure: 752086
     decimal: false
     description: Nutzer in unserer Reichweite
   - figure: 19.38
@@ -14,19 +15,22 @@ stats:
     unit: "%"
     description: Durchschnittliche Umsatzsteigerung
 cta:
-  heading: Warum Sie Influencer brauchen
-  text: Four loko flexitarian small batch direct trade austin chillwave. Beard
-    direct trade unicorn, forage austin PBR&B fashion axe vegan. IPhone banh mi
-    YOLO kombucha kinfolk, succulents actually. Whatever taiyaki iceland,
-    vaporware actually chia man braid portland listicle cronut hella microdosing
-    tilde.
+  heading: "Viele machen’s - nur wenige wissen, wie es richtig geht "
+  text: >-
+    Neben der Authentizität unserer Creator setzen wir bei SaTro auf Effizienz.
+    Das bedeutet: Mehr Reichweite, weniger Streuverluste, mehr Zuverlässigkeit,
+    Sicherung der Qualität und der Messbarkeit.  
+
+
+    Ob Awareness- oder Performance-Ziele (ROAS, ROI, KPI), wir machen messbar.  
   stats:
-    - figure: 74
-      description: Vaporware actually chia man braid portland.
-    - figure: 96
-      description: IPhone banh mi YOLO kombucha kinfolk.
-    - figure: 89
-      description: Beard direct trade unicorn.
+    - figure: 50
+      description: Steigerung des Marktvolumens im Influencer Marketing DACH von 2017
+        bis 2020
+    - figure: 32
+      description: Influencer Einfluss auf direkte Kaufentscheidung
+    - figure: 65
+      description: Verbesserung der Kommunikation mit der Zielgruppe
 influencers:
   - username: alltags_liebe
     image: /uploads/alltagsliebe.jpg

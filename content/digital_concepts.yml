@@ -1,46 +1,49 @@
 id: 4
 header:
   image: /uploads/header_digitalekonzepte.jpg
-  text: I'm baby coloring book microdosing +1 copper mug activated charcoal. Tilde
-    swag palo santo disrupt seitan mlkshk yr locavore typewriter gochujang
-    skateboard raw denim quinoa etsy. Everyday carry gochujang listicle,
-    letterpress slow-carb literally before they sold out austin chicharrones.
+  text: >
+    Wir unterstützen Sie beim Ausarbeiten einer digitalen Strategie und zeigen
+    Ihren wie Sie Ihren Onlineauftritt perfektionieren. Spätestens das Jahr 2020
+    hat uns gelehrt, dass eine einheitliche und zielorientierte Online-Präsenz
+    wichtiger denn je ist. Wir begleiten Sie dabei mit digitalen und
+    Stakeholder-orientierten Maßnahmen, um strategische und operative
+    Wettbewerbsvorteile zu generieren. 
 stats:
   - icon: file-alt
     figure: 3124
     decimal: false
     description: Seiten Marketing-Konzeption
   - icon: chart-line
-    figure: 19.38
-    decimal: true
-    description: Durchschnittliche Umsatzsteigerung
-    unit: "%"
-  - icon: bullhorn
-    figure: 19281
+    figure: 1420
     decimal: false
-    description: Gewonnene Kunden
+    description: "Virtual Calls "
+    unit: ""
+  - icon: bullhorn
+    figure: 4863
+    decimal: false
+    description: "Getrunkene Espressi "
 cta:
-  heading: Worauf es in Ihrer Kampagne ankommt
-  text: Four loko flexitarian small batch direct trade austin chillwave. Beard
-    direct trade unicorn, forage austin PBR&B fashion axe vegan. IPhone banh mi
-    YOLO kombucha kinfolk, succulents actually. Whatever taiyaki iceland,
-    vaporware actually chia man braid portland listicle cronut hella microdosing
-    tilde.
+  heading: Worauf es bei Ihrer Brand Identity
+  text: "Neben der Entwicklung und Ausrichtung der Strategie kommt es auf die
+    zielgerichtete Streuung ihrer Botschaft an. Doch was ist Ihre Botschaft, Ihr
+    USP und Ihre Story? Diese Fragen wollen wir uns gemeinsam stellen und
+    beantworten, um eine Geschichte zu erzählen, die das Ziel verfolgt, Ihre
+    Marke emotional aufzuladen "
 quotes:
-  - quote_text: Four loko flexitarian small batch direct trade austin chillwave.
-      Beard direct trade unicorn, forage austin PBR&B fashion axe vegan.
-    quoted_person: John "Johnny" Doe
-  - quote_text: I'm baby coloring book microdosing +1 copper mug activated charcoal.
-      Tilde swag palo santo disrupt seitan mlkshk yr locavore typewriter
-      gochujang skateboard raw denim quinoa etsy.
-    quoted_person: Jane Doe
+  - quote_text: Deine Marke ist, was andere Leute über Dich sagen, wenn Du nicht im
+      Raum bist.
+    quoted_person: "Jeff Bezos, CEO & Founder Amazon "
+  - quote_text: If you focus on producing a great experience for anyone, that’s how
+      you get big
+    quoted_person: "Kevin Systrom, Co-Founder & former CEO Instagram "
 service:
-  description: Four loko flexitarian small batch direct trade austin chillwave.
-    Beard direct trade unicorn, forage austin PBR&B fashion axe vegan. IPhone
-    banh mi YOLO kombucha kinfolk, succulents actually. Whatever taiyaki
-    iceland, vaporware actually chia man braid portland.
+  description: "Unser Ziel ist es mit Ihnen eine Strategie zu konzeptionieren, die
+    den Ansprüchen eines erfolgreichen Markenauftritts gerecht wird. Dabei legen
+    wir einen besonderen Fokus auf die gesamtheitliche Betrachtung des
+    unternehmerischen Umfelds. Ausgehend von einer umfangreichen Marktanalyse
+    leiten wir im Workflow alle konzeptionellen Aspekte ab. "
   services:
-    - short_description: Konzipierung Ihrer Kampagne
-    - short_description: Auswahl der richtigen Influencer
-    - short_description: Lorem ipsum
-    - short_description: Dolor sit amet und so weiter
+    - short_description: "Interne & externe Unternehmensanalyse  "
+    - short_description: Zielgruppenorientiertere Strategieableitung 
+    - short_description: "Konsistente Kommunikationsstrategie "
+    - short_description: Operationalisierung

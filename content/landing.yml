@@ -12,19 +12,19 @@ intro: Wir haben es uns zur Aufgabe gemacht, eine authentische und nachhaltige
 topServices:
   - cover: /uploads/cover_influencer_management.jpg
     title: Influencer Management & Marketing
-    description: "Wir bringen zusammen: authentische Influencer und passende Marken."
+    description: "Wir bringen zusammen: authentische Influencer und passende Marken"
   - cover: /uploads/cover_content_production.jpg
     title: Content Production
-    description: Egal ob Imagefilm, Produktfotos oder Unterhaltung - wir setzen in Szene!
+    description: Egal ob Imagefilm, Produktfotos oder Social Media - wir setzen in Szene
 services:
   - title: Digitale Konzepte
-    description: Ihre Botschaft in einer digitalen Kampagne. Wir zeigen Ihnen wann,
+    description: Ihre Botschaft in einer digitalen Strategie. Wir zeigen Ihnen wann,
       wo und vor allem wie.
   - title: Webdesign
-    description: Ansprechende Grafiken und benutzerfreundliche Oberfläche - die
-      ersten Sekunden sind entscheidend.
+    description: Modernes Layout und benutzerfreundliche Oberfläche - die ersten
+      Sekunden sind entscheidend.
   - title: Online Marketing
-    description: Zielgruppenorientiertes Streuen Ihrer individuellen Botschaft.
+    description: "Zielgruppenorientiertes Streuen Ihrer individuellen Werbung "
 clients:
   - logo: /uploads/budni.jpg
   - logo: /uploads/buah.jpg
@@ -49,13 +49,15 @@ references:
   - name: John & Jane Doe
     company: Acme GmbH
     reference_text: Whatever authentic semiotics, fam mixtape tbh try-hard bespoke.
-about_header: Digital Natives der Generation Z
-about_description: Gemeinsam sind wir stetig auf der Suche nach innovativen und
-  nachhaltigen Veränderungen. Unser Anspruch ist es, anders zu sein,
-  aufzufallen, und trotzdem zu überzeugen. Dafür besteht unser Team aus jungen
-  Creatorn und Designern, mit denen wir Ihre Kommunikation in der digitalen Welt
-  einzigartig gestalten und verändern.
+about_header: "Workspace for digital Experts & Talents "
+about_description: >-
+  Gemeinsam sind wir bei SaTro stetig auf der Suche nach innovativen und
+  nachhaltigen Veränderungen. Wir bieten verschiedene Perspektiven und
+  Blickwinkel, um zu wissen was ihre Zielgruppe will. Unser Anspruch ist es,
+  anders zu sein, aufzufallen und zu überzeugen.  
+
+  Deshalb besteht unser Team aus jungen Creatorn & Designern sowie erfahrenden Marketeers mit denen wir Ihre Kommunikation in der digitalen Welt einzigartig gestalten und verändern.  
 about_image: /uploads/team.jpg
-contact_description: Lassen Sie uns Ihrer Marke mit einem ausgefeilten Konzept
-  zu einem starken Image verhelfen, welches durch hervorragendes Marketing und
-  professionelle Influencer an Ihre Zielgruppe herangetragen wird!
+contact_description: "Ob grundlegende Strategie, moderne Website, einprägsamer
+  Imagefilm, oder passende Creator die Ihre Message an Ihre Zielgruppe bringen.
+  Wir freuen uns auf Ihre Anfrage, um Sie auf Ihrem Weg zu begleiten. "

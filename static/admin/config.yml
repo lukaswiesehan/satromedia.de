@@ -24,7 +24,13 @@ collections:
             widget: "list"
             fields:
               - {label: "Photo", name: "photo", widget: "image"}
-          - {label: "Intro", name: "intro", widget: "text"}
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - {label: "Text", name: "text", widget: "markdown"}
+              - {label: "Namen", name: "names", widget: "string"}
+              - {label: "Rollen", name: "roles", widget: "string"}
           - label: "Top Services"
             name: "topServices"
             widget: "list"

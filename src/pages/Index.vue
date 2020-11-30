@@ -289,11 +289,11 @@
       <Title class="scroll-reveal" :icon="'fa-users'" :heading="'Satro Media'" :title="'Über die Agentur'"></Title>
       <div class="mt-8 md:flex md:items-center">
         <div class="scroll-reveal relative z-10 w-11/12 max-w-lg p-6 mx-auto bg-white rounded-2xl shadow-md md:p-10 md:mx-0 md:w-1/2">
-          <h3 class="font-display">{{$page.landing.about_header}}</h3>
-          <p class="pt-4 text-black-500">{{$page.landing.about_description}}</p>
+          <h3 class="font-display">{{$page.landing.about.header}}</h3>
+          <p class="pt-4 text-black-500">{{$page.landing.about.description}}</p>
         </div>
         <div class="scroll-reveal relative z-0 -mt-16 overflow-hidden rounded-lg shadow-lg md:mt-0 md:-ml-48">
-          <img v-bind:src="$page.landing.about_image" alt="Satro Media Team" class="object-cover object-center w-full h-96 lg:h-112">
+          <img v-bind:src="$page.landing.about.image" alt="Satro Media Team" class="object-cover object-center w-full h-96 lg:h-112">
           <div class="absolute top-0 left-0 w-full h-full bg-opacity-25 bg-dark-900"></div>
         </div>
       </div>
@@ -385,9 +385,11 @@
         company
         reference_text
       }
-      about_header
-      about_description
-      about_image
+      about {
+        header
+        description
+        image
+      }
       contact_description 
     }
   }

@@ -26,6 +26,7 @@ module.exports = function (api) {
       typeName: 'Landing'
     })
     landingData.intro.text = converter.makeHtml(landingData.intro.text)
+    landingData.about.description = converter.makeHtml(landingData.about.description)
     landing.addNode(landingData)
     const content_production = actions.addCollection({
       typeName: 'ContentProduction'

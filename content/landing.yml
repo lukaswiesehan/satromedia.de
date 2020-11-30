@@ -60,15 +60,14 @@ references:
   - name: John & Jane Doe
     company: Acme GmbH
     reference_text: Whatever authentic semiotics, fam mixtape tbh try-hard bespoke.
-about_header: "Workspace for digital Experts & Talents "
-about_description: >-
-  Gemeinsam sind wir bei SaTro stetig auf der Suche nach innovativen und
-  nachhaltigen Veränderungen. Wir bieten verschiedene Perspektiven und
-  Blickwinkel, um zu wissen was ihre Zielgruppe will. Unser Anspruch ist es,
-  anders zu sein, aufzufallen und zu überzeugen.  
-
-  Deshalb besteht unser Team aus jungen Creatorn & Designern sowie erfahrenden Marketeers mit denen wir Ihre Kommunikation in der digitalen Welt einzigartig gestalten und verändern.  
-about_image: /uploads/team.jpg
+about:
+  header: "Workspace for digital Experts & Talents "
+  description: >-
+    Gemeinsam sind wir bei SaTro stetig auf der Suche nach innovativen und
+    nachhaltigen Veränderungen. Wir bieten verschiedene Perspektiven und
+    Blickwinkel, um zu wissen was ihre Zielgruppe will. Unser Anspruch ist es,
+    anders zu sein, aufzufallen und zu überzeugen. Deshalb besteht unser Team aus jungen Creatorn & Designern sowie erfahrenden Marketeers mit denen wir Ihre Kommunikation in der digitalen Welt einzigartig gestalten und verändern.  
+  image: /uploads/team.jpg
 contact_description: "Ob grundlegende Strategie, moderne Website, einprägsamer
   Imagefilm, oder passende Creator die Ihre Message an Ihre Zielgruppe bringen.
   Wir freuen uns auf Ihre Anfrage, um Sie auf Ihrem Weg zu begleiten. "

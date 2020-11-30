@@ -56,9 +56,13 @@ collections:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Unternehmen", name: "company", widget: "string"}
               - {label: "Referenztext", name: "reference_text", widget: "text"}
-          - {label: "Agentur Header", name: "about_header", widget: "string"}
-          - {label: "Agentur Beschreibung", name: "about_description", widget: "text"}
-          - {label: "Agentur Foto", name: "about_image", widget: "image"}
+          - label: "Agentur"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Header", name: "header", widget: "string"}
+              - {label: "Beschreibung", name: "description", widget: "markdown"}
+              - {label: "Foto", name: "image", widget: "image"}
           - {label: "Beschreibung Kontaktanfrage", name: "contact_description", widget: "text"}
       - label: "Influencer Management"
         name: "influencer_management"

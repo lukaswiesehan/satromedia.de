@@ -30,16 +30,16 @@ topServices:
   - cover: /uploads/cover_influencer_management.jpg
     title: Influencer Management & Marketing
     description: "Wir bringen zusammen: authentische Influencer und passende Marken"
-  - cover: /uploads/cover_content_production.jpg
-    title: Content Production
-    description: Egal ob Imagefilm, Produktfotos oder Social Media - wir setzen in Szene
+  - cover: /uploads/webdesign_coding.jpg
+    title: Webdesign
+    description: Modernes Layout und benutzerfreundliche Oberfläche - die ersten
+      Sekunden sind entscheidend.
 services:
   - title: Digitale Konzepte
     description: Ihre Botschaft in einer digitalen Strategie. Wir zeigen Ihnen wann,
       wo und vor allem wie.
-  - title: Webdesign
-    description: Modernes Layout und benutzerfreundliche Oberfläche - die ersten
-      Sekunden sind entscheidend.
+  - title: Content Production
+    description: Egal ob Imagefilm, Produktfotos oder Social Media - wir setzen in Szene.
   - title: Online Marketing
     description: "Zielgruppenorientiertes Streuen Ihrer individuellen Werbung "
 clients:

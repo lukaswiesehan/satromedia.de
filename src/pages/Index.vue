@@ -6,14 +6,23 @@
     <!-- HEADER -->
     <section id="header" class="max-w-screen-xl px-4 -mt-16 md:mx-auto sm:px-8 xs:-mt-32 md:-mt-64">
       <Window id="header-window" style="opacity: 0">
-        <video class="hidden sm:block" width="100%" height="100%" muted playsinline autoplay preload loop v-bind:poster="$page.landing.header_thumbnail">
+        <video id="header-video" class="hidden sm:block" width="100%" height="100%" v-bind:muted="muteHeaderVideo" playsinline autoplay preload loop v-bind:poster="$page.landing.header_thumbnail">
           <source v-bind:src="$page.landing.header_video" type="video/mp4">
         </video>
-        <video class="block sm:hidden" width="100%" height="100%" muted playsinline autoplay preload loop v-bind:poster="$page.landing.header_thumbnail">
+        <video id="header-video" class="block sm:hidden" width="100%" height="100%" v-bind:muted="muteHeaderVideo" playsinline autoplay preload loop v-bind:poster="$page.landing.header_thumbnail">
           <source v-bind:src="$page.landing.header_video_mobile" type="video/mp4">
         </video>
         <div class="absolute top-0 left-0 flex items-center w-full h-full bg-opacity-25 bg-dark-900">
           <img id="satro-logo" src="../assets/img/satro_logo.png" alt="Satro Media Logo" class="w-2/3 mx-auto -mt-8 sm:-mt-12 md:-mt-20 lg:-mt-24">
+        </div>
+        <div class="absolute z-10 top-0 right-0 p-4 pr-6 text-light-900 text-2xl flex align-baseline">
+          <div v-on:click="muteHeaderVideo = !muteHeaderVideo" class="cursor-pointer">
+            <i v-if="muteHeaderVideo" class="fas fa-volume-mute"></i>
+            <i v-else class="fas fa-volume-up"></i>
+          </div>
+          <div v-on:click="restartHeaderVideo" class="ml-4 pt-1 text-xl cursor-pointer">
+            <i class="fas fa-undo-alt"></i>
+          </div>
         </div>
       </Window>
     </section>
@@ -263,7 +272,7 @@
           <div class="md:flex">
             <div class="scroll-reveal flex flex-wrap items-center py-8 md:w-1/2 lg:w-2/3 md:py-12 md:pr-8 lg:pr-24">
               <div v-for="(client, i) in $page.landing.clients" :key="i" class="w-1/3 p-4 md:p-2 lg:px-4 lg:py-8">
-                <img v-bind:src="client.logo" alt="Logo Client" class="w-full" style="filter: grayscale(100%) opacity(80%); -webkit-filter: grayscale(100%) opacity(80%);">
+                <img v-bind:src="client.logo" alt="Logo Client" class="w-full transition-all duration-300 ease-in-out reference-logo">
               </div>
             </div>
             <div class="relative z-10 max-w-xl pb-12 mx-auto lg:pb-0 md:w-1/2 lg:w-1/3 md:-mt-20">
@@ -280,7 +289,7 @@
             </div>
           </div>
         </div>
-        <div class="absolute top-0 left-0 w-full h-full opacity-50 bg-gradient-to-br from-light-900 to-dark-100"></div>
+        <div class="absolute top-0 left-0 w-full h-full opacity-50 bg-gradient-to-br from-light-900 to-dark-100" style="pointer-events: none;"></div>
       </div>
     </section>
     
@@ -290,7 +299,7 @@
       <div class="mt-8 md:flex md:items-center">
         <div class="scroll-reveal relative z-10 w-11/12 max-w-lg p-6 mx-auto bg-white rounded-2xl shadow-md md:p-10 md:mx-0 md:w-1/2">
           <h3 class="font-display">{{$page.landing.about.header}}</h3>
-          <p class="pt-4 text-black-500">{{$page.landing.about.description}}</p>
+          <p class="pt-4 text-black-500 html-content" v-html="$page.landing.about.description"></p>
         </div>
         <div class="scroll-reveal relative z-0 -mt-16 overflow-hidden rounded-lg shadow-lg md:mt-0 md:-ml-48">
           <img v-bind:src="$page.landing.about.image" alt="Satro Media Team" class="object-cover object-center w-full h-96 lg:h-112">
@@ -419,6 +428,7 @@
     },
     data() {
       return {
+        muteHeaderVideo: true,
         form: {
           data: {name: '', company: '', email: '', message: '', privacy: false},
           errors: {name: false, company: false, email: false, message: false, privacy: false},
@@ -486,6 +496,9 @@
           })
           .catch(error => console.log(error))
         }
+      },
+      restartHeaderVideo() {
+        document.getElementById("header-video").load();
       },
       click_im() {
         this.$router.push('/influencer-management/')
@@ -667,5 +680,15 @@
   }
   .html-content p {
     margin-bottom: 1rem;
+  }
+  .reference-logo {
+    filter: grayscale(100%) opacity(80%);
+    -ms-filter: grayscale(100%) opacity(80%);
+    -webkit-filter: grayscale(100%) opacity(80%);
+  } 
+  .reference-logo:hover {
+    filter: grayscale(0%) opacity(100%); 
+    -ms-filter: grayscale(0%) opacity(100%);
+    -webkit-filter: grayscale(0%) opacity(100%);
   }
 </style>

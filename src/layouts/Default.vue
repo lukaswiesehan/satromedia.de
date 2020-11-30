@@ -57,9 +57,15 @@ export default {}
     color: theme(colors.black.900);
   }
 
+  @media (max-width: 768px) { 
+    #app {
+      hyphens: auto;
+      -ms-hyphens: auto;
+      -webkit-hyphens: auto;
+    }
+  }
+
   #app {
     opacity: 0;
-    hyphens: auto;
-    -webkit-hyphens: auto;
   }
 </style>

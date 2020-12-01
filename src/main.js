@@ -10,6 +10,15 @@ export default function (Vue, { router, head, isClient }) {
   head.htmlAttrs = { lang: 'de' }
   head.meta.push({key: 'description', name: 'description', content: 'Full Service Influencer-Management und Online-Marketing Agentur aus Hamburg.'})
   head.meta.push({name: 'keywords', content: 'Social,Media,Influencer,Management,Online,Marketing,Webdesign,Content,Production'}),
+  head.meta.push({property: 'og:title', content: 'SaTro Media Consulting'})
+  head.meta.push({property: 'og:type', content: 'website'})
+  head.meta.push({property: 'og:description', content: 'Full Service Influencer-Management und Online-Marketing Agentur aus Hamburg.'})
+  head.meta.push({property: 'og:url', content: 'https://satromedia.de/'})
+  head.meta.push({property: 'og:image', content: 'https://satromedia.de/uploads/team.jpg'})
+  head.meta.push({name: 'twitter:card', content: 'summary'})
+  head.meta.push({name: 'twitter:title', content: 'SaTro Media Consulting'})
+  head.meta.push({name: 'twitter:description', content: 'Full Service Influencer-Management und Online-Marketing Agentur aus Hamburg.'})
+  head.meta.push({name: 'twitter:image', content: 'https://satromedia.de/uploads/team.jpg'})
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.use(VueScrollTo, {

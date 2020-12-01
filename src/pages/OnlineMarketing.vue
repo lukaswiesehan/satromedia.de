@@ -24,7 +24,7 @@
         <div class="max-w-sm">
           <h3 class="mt-2 font-display">{{$page.onlineMarketing.graph.title}}</h3>
           <p class="pt-4 mb-2 text-black-500">{{$page.onlineMarketing.graph.description}}</p>
-          <a v-bind:href="$page.onlineMarketing.graph.source" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Quelle <i class="fas fa-external-link-alt"></i></a>
+          <a v-bind:href="$page.onlineMarketing.graph.source" target="_blank" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Quelle <i class="fas fa-external-link-alt"></i></a>
         </div>
         <div class="mr-8 text-5xl text-dark-100 md:text-6xl"><i class="fas fa-hand-holding-usd"></i></div>
       </div>

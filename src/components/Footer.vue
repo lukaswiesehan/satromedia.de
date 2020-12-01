@@ -21,14 +21,14 @@
           <p class="text-gray-500 text-xs font-bold uppercase tracking-widest">Social</p>
           <div class="text-gray-300 text-sm mt-2">
             <p><a href="https://www.instagram.com/satromedia" target="_blank" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1">Instagram</a><i class="fab fa-instagram text-base text-gray-500 ml-3"></i></p>
-            <p><a href="https://www.linkedin.com/company/satro-media-consulting" target="_blank" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1">LinkedIn</a><i class="fab fa-linkedin text-base text-gray-500 ml-3"></i></p>
+            <p><a href="https://www.linkedin.com/company/satro-media-consulting" target="_blank" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1 mt-2">LinkedIn</a><i class="fab fa-linkedin text-base text-gray-500 ml-3"></i></p>
           </div>
         </div>
         <div class="text-center md:text-right mt-6 md:mt-0">
           <p class="text-gray-500 text-xs font-bold uppercase tracking-widest">Rechtliches</p>
           <div class="text-gray-300 text-sm mt-2">
             <p><g-link to="/impressum" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1">Impressum</g-link><i class="fas fa-balance-scale text-base text-gray-500 ml-3"></i></p>
-            <p><g-link to="/datenschutz" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1">Datenschutz</g-link><i class="fas fa-lock text-base text-gray-500 ml-3"></i></p>
+            <p><g-link to="/datenschutz" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1 mt-2">Datenschutz</g-link><i class="fas fa-lock text-base text-gray-500 ml-3"></i></p>
           </div>
         </div>
       </div>
@@ -56,14 +56,14 @@
           <p class="text-dark-300 text-xs font-bold uppercase tracking-widest">Social</p>
           <div class="text-dark-100 text-sm mt-2">
             <p><a href="https://www.instagram.com/satromedia/" target="_blank" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1">Instagram</a><i class="fab fa-instagram text-base text-dark-300 ml-3"></i></p>
-            <p><a href="https://www.linkedin.com/company/satro-media-consulting" target="_blank" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1">LinkedIn</a><i class="fab fa-linkedin text-base text-dark-300 ml-3"></i></p>
+            <p><a href="https://www.linkedin.com/company/satro-media-consulting" target="_blank" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1 mt-2">LinkedIn</a><i class="fab fa-linkedin text-base text-dark-300 ml-3"></i></p>
           </div>
         </div>
         <div class="text-center md:text-right mt-6 md:mt-0">
           <p class="text-dark-300 text-xs font-bold uppercase tracking-widest">Rechtliches</p>
           <div class="text-dark-100 text-sm mt-2">
             <p><g-link to="/impressum" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1">Impressum</g-link><i class="fas fa-balance-scale text-base text-dark-300 ml-3"></i></p>
-            <p><g-link to="/datenschutz" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1">Datenschutz</g-link><i class="fas fa-lock text-base text-dark-300 ml-3"></i></p>
+            <p><g-link to="/datenschutz" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1 mt-2">Datenschutz</g-link><i class="fas fa-lock text-base text-dark-300 ml-3"></i></p>
           </div>
         </div>
       </div>

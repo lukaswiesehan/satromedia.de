@@ -9,7 +9,7 @@
         <video id="header-video" class="hidden sm:block" width="100%" height="100%" v-bind:muted="muteHeaderVideo" playsinline autoplay preload loop v-bind:poster="$page.landing.header_thumbnail">
           <source v-bind:src="$page.landing.header_video" type="video/mp4">
         </video>
-        <video id="header-video" class="block sm:hidden" width="100%" height="100%" v-bind:muted="muteHeaderVideo" playsinline autoplay preload loop v-bind:poster="$page.landing.header_thumbnail">
+        <video id="header-video-mobile" class="block sm:hidden" width="100%" height="100%" v-bind:muted="muteHeaderVideo" playsinline autoplay preload loop v-bind:poster="$page.landing.header_thumbnail">
           <source v-bind:src="$page.landing.header_video_mobile" type="video/mp4">
         </video>
         <div class="absolute top-0 left-0 flex items-center w-full h-full bg-opacity-25 bg-dark-900">
@@ -523,6 +523,7 @@
       },
       restartHeaderVideo() {
         document.getElementById("header-video").load();
+        document.getElementById("header-video-mobile").load();
       },
       firstParagraph(html) {
         return html.substring(0, html.indexOf('<p>', 3) - 1)

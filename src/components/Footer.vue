@@ -7,7 +7,7 @@
       <div class="grid grid-cols-1 md:grid-cols-4 mt-8 leading-6">
         <div>
           <p class="text-center md:text-left text-white text-xs font-bold uppercase tracking-widest">&copy; Satro {{footerYear}}</p>
-          <img src="../assets/img/satro_signet_white.png" alt="Satro Logo" class="h-6 mt-3 mx-auto md:mx-0">
+          <a href="/#navbar"><img src="../assets/img/satro_signet_white.png" alt="Satro Logo" class="h-6 mt-3 mx-auto md:mx-0"></a>
         </div>
         <div class="text-center md:text-right mt-6 md:mt-0">
           <p class="text-gray-500 text-xs font-bold uppercase tracking-widest">Satro</p>
@@ -20,15 +20,15 @@
         <div class="text-center md:text-right mt-6 md:mt-0">
           <p class="text-gray-500 text-xs font-bold uppercase tracking-widest">Social</p>
           <div class="text-gray-300 text-sm mt-2">
-            <p><a href="https://www.instagram.com/satromedia" target="_blank" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1">Instagram</a><i class="fab fa-instagram text-base text-gray-500 ml-3"></i></p>
-            <p><a href="https://www.linkedin.com/company/satro-media-consulting" target="_blank" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1 mt-2">LinkedIn</a><i class="fab fa-linkedin text-base text-gray-500 ml-3"></i></p>
+            <p><a href="https://www.instagram.com/satromedia" target="_blank" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1">Instagram<i class="fab fa-instagram text-base text-gray-500 ml-3"></i></a></p>
+            <p><a href="https://www.linkedin.com/company/satro-media-consulting" target="_blank" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1 mt-2">LinkedIn<i class="fab fa-linkedin text-base text-gray-500 ml-3"></i></a></p>
           </div>
         </div>
         <div class="text-center md:text-right mt-6 md:mt-0">
           <p class="text-gray-500 text-xs font-bold uppercase tracking-widest">Rechtliches</p>
           <div class="text-gray-300 text-sm mt-2">
-            <p><g-link to="/impressum" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1">Impressum</g-link><i class="fas fa-balance-scale text-base text-gray-500 ml-3"></i></p>
-            <p><g-link to="/datenschutz" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1 mt-2">Datenschutz</g-link><i class="fas fa-lock text-base text-gray-500 ml-3"></i></p>
+            <p><g-link to="/impressum" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1">Impressum<i class="fas fa-balance-scale text-base text-gray-500 ml-3"></i></g-link></p>
+            <p><g-link to="/datenschutz" class="inline-block transition-all duration-300 ease-in-out hover:text-white transform hover:-translate-x-1 mt-2">Datenschutz<i class="fas fa-lock text-base text-gray-500 ml-3"></i></g-link></p>
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@
       <div class="grid grid-cols-1 md:grid-cols-4 mt-8 leading-6">
         <div>
           <p class="text-center md:text-left text-dark-900 text-xs font-bold uppercase tracking-widest">&copy; Satro {{footerYear}}</p>
-          <img src="../assets/img/satro_signet_dark.png" alt="Satro Logo" class="h-6 mt-3 mx-auto md:mx-0">
+          <a href="/#navbar"><img src="../assets/img/satro_signet_dark.png" alt="Satro Logo" class="h-6 mt-3 mx-auto md:mx-0"></a>
         </div>
         <div class="text-center md:text-right mt-6 md:mt-0">
           <p class="text-dark-300 text-xs font-bold uppercase tracking-widest">Satro</p>
@@ -55,15 +55,15 @@
         <div class="text-center md:text-right mt-6 md:mt-0">
           <p class="text-dark-300 text-xs font-bold uppercase tracking-widest">Social</p>
           <div class="text-dark-100 text-sm mt-2">
-            <p><a href="https://www.instagram.com/satromedia/" target="_blank" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1">Instagram</a><i class="fab fa-instagram text-base text-dark-300 ml-3"></i></p>
-            <p><a href="https://www.linkedin.com/company/satro-media-consulting" target="_blank" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1 mt-2">LinkedIn</a><i class="fab fa-linkedin text-base text-dark-300 ml-3"></i></p>
+            <p><a href="https://www.instagram.com/satromedia/" target="_blank" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1">Instagram<i class="fab fa-instagram text-base text-dark-300 ml-3"></i></a></p>
+            <p><a href="https://www.linkedin.com/company/satro-media-consulting" target="_blank" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1 mt-2">LinkedIn<i class="fab fa-linkedin text-base text-dark-300 ml-3"></i></a></p>
           </div>
         </div>
         <div class="text-center md:text-right mt-6 md:mt-0">
           <p class="text-dark-300 text-xs font-bold uppercase tracking-widest">Rechtliches</p>
           <div class="text-dark-100 text-sm mt-2">
-            <p><g-link to="/impressum" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1">Impressum</g-link><i class="fas fa-balance-scale text-base text-dark-300 ml-3"></i></p>
-            <p><g-link to="/datenschutz" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1 mt-2">Datenschutz</g-link><i class="fas fa-lock text-base text-dark-300 ml-3"></i></p>
+            <p><g-link to="/impressum" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1">Impressum<i class="fas fa-balance-scale text-base text-dark-300 ml-3"></i></g-link></p>
+            <p><g-link to="/datenschutz" class="inline-block transition-all duration-300 ease-in-out hover:text-dark-300 transform hover:-translate-x-1 mt-2">Datenschutz<i class="fas fa-lock text-base text-dark-300 ml-3"></i></g-link></p>
           </div>
         </div>
       </div>

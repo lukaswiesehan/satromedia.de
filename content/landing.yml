@@ -46,6 +46,8 @@ clients:
   - logo: /uploads/selecta.jpg
   - logo: /uploads/armedangels.jpg
   - logo: /uploads/maxi_cosi.jpg
+  - logo: /uploads/etepetete.jpg
+  - logo: /uploads/nucompany.jpg
 references:
   - name: John Doe
     company: Acme Inc.

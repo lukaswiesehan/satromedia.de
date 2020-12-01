@@ -13,12 +13,12 @@ stats:
     figure: 3124
     decimal: false
     description: Seiten Marketing-Konzeption
-  - icon: chart-line
+  - icon: headset
     figure: 1420
     decimal: false
     description: "Virtual Calls "
     unit: ""
-  - icon: bullhorn
+  - icon: coffee
     figure: 4863
     decimal: false
     description: "Getrunkene Espressi "

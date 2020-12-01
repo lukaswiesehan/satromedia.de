@@ -48,6 +48,9 @@ projects:
   - video: false
     media: /uploads/showcase_6.gif
     title: Showcase 6
+  - title: Showcase 20
+    media: /uploads/showcase_20.gif
+    video: false
   - media: /uploads/showcase_1.gif
     video: false
     title: Showcase 1

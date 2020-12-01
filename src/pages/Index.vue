@@ -690,5 +690,6 @@
     filter: grayscale(0%) opacity(100%); 
     -ms-filter: grayscale(0%) opacity(100%);
     -webkit-filter: grayscale(0%) opacity(100%);
+    transform: scale(1.1);
   }
 </style>

@@ -22,15 +22,17 @@ cta:
     Sicherung der Qualität und der Messbarkeit.  
 
 
-    Ob Awareness- oder Performance-Ziele (ROAS, ROI, KPI), wir machen messbar.  
+    Ob Awareness- oder Performance-Ziele (ROAS, ROI, KPI), wir machen messbar.
   stats:
     - figure: 50
-      description: Steigerung des Marktvolumens im Influencer Marketing DACH von 2017
+      description:
+        Steigerung des Marktvolumens im Influencer Marketing DACH von 2017
         bis 2020
     - figure: 32
       description: Influencer Einfluss auf direkte Kaufentscheidung
     - figure: 65
       description: Verbesserung der Kommunikation mit der Zielgruppe
+  stats_source: https://www.bvdw.org/fileadmin/user_upload/BVDW_Umfrage_Influencer_Marketing__112018.pdf
 influencers:
   - username: alltags_liebe
     image: /uploads/alltagsliebe.jpg

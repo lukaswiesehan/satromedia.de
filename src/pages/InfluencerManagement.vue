@@ -80,6 +80,7 @@
           <div class="h-4 rounded-full bg-light-500"></div>
           <div id="cta-stat-3" class="h-2 rounded-full bg-dark-100 -mt-3 mx-1"></div>
           <p class="text-black-500 mt-2 mb-8 ml-1"><span class="font-display text-black-900">{{$page.influencerManagement.cta.stats[2].figure}} %</span> {{$page.influencerManagement.cta.stats[2].description}}</p>
+          <a class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Quelle <i class="fas fa-external-link-alt"></i></a>
         </div>
       </div>
       <div class="absolute w-full h-full left-0 top-0 bg-gradient-to-br from-light-900 to-dark-100 opacity-50"></div>

@@ -2,7 +2,7 @@ backend:
   name: git-gateway
 media_folder: "/static/uploads"
 public_folder: "/uploads"
-locale: 'de'
+locale: "de"
 collections:
   - label: "Pages"
     name: "pages"
@@ -14,261 +14,364 @@ collections:
         name: "landing"
         file: "content/landing.yml"
         fields:
-          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
-          - {label: "Header Video", name: "header_video", widget: "file"}
-          - {label: "Header Video Mobile", name: "header_video_mobile", widget: "file"}
-          - {label: "Header Thumbnail", name: "header_thumbnail", widget: "file"}
-          - {label: "Zitat", name: "cite", widget: "string"}
+          - { label: "ID (Nicht ändern!)", name: "id", widget: "number" }
+          - { label: "Header Video", name: "header_video", widget: "file" }
+          - {
+              label: "Header Video Mobile",
+              name: "header_video_mobile",
+              widget: "file",
+            }
+          - {
+              label: "Header Thumbnail",
+              name: "header_thumbnail",
+              widget: "file",
+            }
+          - { label: "Zitat", name: "cite", widget: "string" }
           - label: "Portraits"
             name: "portraits"
             widget: "list"
             fields:
-              - {label: "Photo", name: "photo", widget: "image"}
+              - { label: "Photo", name: "photo", widget: "image" }
           - label: "Intro"
             name: "intro"
             widget: "object"
             fields:
-              - {label: "Text", name: "text", widget: "markdown"}
-              - {label: "Namen", name: "names", widget: "string"}
-              - {label: "Rollen", name: "roles", widget: "string"}
+              - { label: "Text", name: "text", widget: "markdown" }
+              - { label: "Namen", name: "names", widget: "string" }
+              - { label: "Rollen", name: "roles", widget: "string" }
           - label: "Top Services"
             name: "topServices"
             widget: "list"
             fields:
-              - {label: "Cover Picture", name: "cover", widget: "image"}
-              - {label: "Titel", name: "title", widget: "string"}
-              - {label: "Kurzbeschreibung", name: "description", widget: "text"}
+              - { label: "Cover Picture", name: "cover", widget: "image" }
+              - { label: "Titel", name: "title", widget: "string" }
+              - {
+                  label: "Kurzbeschreibung",
+                  name: "description",
+                  widget: "text",
+                }
           - label: "Services"
             name: "services"
             widget: "list"
             fields:
-              - {label: "Titel", name: "title", widget: "string"}
-              - {label: "Kurzbeschreibung", name: "description", widget: "text"}
+              - { label: "Titel", name: "title", widget: "string" }
+              - {
+                  label: "Kurzbeschreibung",
+                  name: "description",
+                  widget: "text",
+                }
           - label: "Clients"
             name: "clients"
             widget: "list"
             fields:
-              - {label: "Logo", name: "logo", widget: "image"}
+              - { label: "Logo", name: "logo", widget: "image" }
           - label: "Referenzen"
             name: "references"
             widget: "list"
             fields:
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Unternehmen", name: "company", widget: "string"}
-              - {label: "Referenztext", name: "reference_text", widget: "text"}
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Unternehmen", name: "company", widget: "string" }
+              - {
+                  label: "Referenztext",
+                  name: "reference_text",
+                  widget: "text",
+                }
           - label: "Agentur"
             name: "about"
             widget: "object"
             fields:
-              - {label: "Header", name: "header", widget: "string"}
-              - {label: "Beschreibung", name: "description", widget: "markdown"}
-              - {label: "Foto", name: "image", widget: "image"}
-          - {label: "Beschreibung Kontaktanfrage", name: "contact_description", widget: "text"}
+              - { label: "Header", name: "header", widget: "string" }
+              - {
+                  label: "Beschreibung",
+                  name: "description",
+                  widget: "markdown",
+                }
+              - { label: "Foto", name: "image", widget: "image" }
+          - {
+              label: "Beschreibung Kontaktanfrage",
+              name: "contact_description",
+              widget: "text",
+            }
       - label: "Influencer Management"
         name: "influencer_management"
         file: "content/influencer_management.yml"
         fields:
-          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
+          - { label: "ID (Nicht ändern!)", name: "id", widget: "number" }
           - label: "Header"
             name: "header"
             widget: "object"
-            fields: 
-              - {label: "Foto", name: "image", widget: "image"}
-              - {label: "Text", name: "text", widget: "text"}
+            fields:
+              - { label: "Foto", name: "image", widget: "image" }
+              - { label: "Text", name: "text", widget: "text" }
           - label: "Stats"
             name: "stats"
             widget: "list"
-            fields: 
-              - {label: "Zahl", name: "figure", widget: "number", value_type: "float"}
-              - {label: "Dezimal", name: "decimal", widget: "boolean"}
-              - {label: "Einheit", name: "unit", widget: "string", required: false}
-              - {label: "Beschreibung", name: "description", widget: "string"}
+            fields:
+              - {
+                  label: "Zahl",
+                  name: "figure",
+                  widget: "number",
+                  value_type: "float",
+                }
+              - { label: "Dezimal", name: "decimal", widget: "boolean" }
+              - {
+                  label: "Einheit",
+                  name: "unit",
+                  widget: "string",
+                  required: false,
+                }
+              - { label: "Beschreibung", name: "description", widget: "string" }
+          - {
+              label: "Stats Quelle",
+              name: "stats_source",
+              widget: "string",
+              required: false,
+            }
           - label: "Call To Action"
             name: "cta"
             widget: "object"
             fields:
-              - {label: "Heading", name: "heading", widget: "string"}
-              - {label: "Text", name: "text", widget: "text"}
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
               - label: "Stats"
                 name: "stats"
                 widget: "list"
-                fields: 
-                  - {label: "Prozentsatz", name: "figure", widget: "number"}
-                  - {label: "Beschreibung", name: "description", widget: "string"}
+                fields:
+                  - { label: "Prozentsatz", name: "figure", widget: "number" }
+                  - {
+                      label: "Beschreibung",
+                      name: "description",
+                      widget: "string",
+                    }
           - label: "Influencer"
             name: "influencers"
             widget: "list"
             fields:
-              - {label: "Nutzername (ohne @)", name: "username", widget: "string"}
-              - {label: "Foto", name: "image", widget: "image"}
-              - {label: "Querformat", name: "landscape", widget: "boolean"}
+              - {
+                  label: "Nutzername (ohne @)",
+                  name: "username",
+                  widget: "string",
+                }
+              - { label: "Foto", name: "image", widget: "image" }
+              - { label: "Querformat", name: "landscape", widget: "boolean" }
       - label: "Content Production"
         name: "content_production"
         file: "content/content_production.yml"
         fields:
-          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
+          - { label: "ID (Nicht ändern!)", name: "id", widget: "number" }
           - label: "Header"
             name: "header"
             widget: "object"
-            fields: 
-              - {label: "Foto", name: "image", widget: "image"}
-              - {label: "Text", name: "text", widget: "text"}
+            fields:
+              - { label: "Foto", name: "image", widget: "image" }
+              - { label: "Text", name: "text", widget: "text" }
           - label: "Stats"
             name: "stats"
             widget: "list"
-            fields: 
-              - {label: "Zahl", name: "figure", widget: "number", value_type: "float"}
-              - {label: "Dezimal", name: "decimal", widget: "boolean"}
-              - {label: "Einheit", name: "unit", widget: "string", required: false}
-              - {label: "Beschreibung", name: "description", widget: "string"}
+            fields:
+              - {
+                  label: "Zahl",
+                  name: "figure",
+                  widget: "number",
+                  value_type: "float",
+                }
+              - { label: "Dezimal", name: "decimal", widget: "boolean" }
+              - {
+                  label: "Einheit",
+                  name: "unit",
+                  widget: "string",
+                  required: false,
+                }
+              - { label: "Beschreibung", name: "description", widget: "string" }
           - label: "Call To Action"
             name: "cta"
             widget: "object"
             fields:
-              - {label: "Heading", name: "heading", widget: "string"}
-              - {label: "Text", name: "text", widget: "text"}
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
           - label: "Featured Projects"
             name: "featured_projects"
             widget: "list"
             fields:
-              - {label: "Titel", name: "title", widget: "string"}
-              - {label: "Beschreibung", name: "description", widget: "text"}
-              - {label: "Video", name: "video", widget: "boolean"}
-              - {label: "Foto/Video", name: "media", widget: "file"}
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Beschreibung", name: "description", widget: "text" }
+              - { label: "Video", name: "video", widget: "boolean" }
+              - { label: "Foto/Video", name: "media", widget: "file" }
           - label: "Projekte"
             name: "projects"
             widget: "list"
             fields:
-              - {label: "Titel", name: "title", widget: "string"}
-              - {label: "Video", name: "video", widget: "boolean"}
-              - {label: "Foto/Video", name: "media", widget: "file"}
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Video", name: "video", widget: "boolean" }
+              - { label: "Foto/Video", name: "media", widget: "file" }
       - label: "Digitale Konzepte"
         name: "digital_concepts"
         file: "content/digital_concepts.yml"
         fields:
-          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
+          - { label: "ID (Nicht ändern!)", name: "id", widget: "number" }
           - label: "Header"
             name: "header"
             widget: "object"
-            fields: 
-              - {label: "Foto", name: "image", widget: "image"}
-              - {label: "Text", name: "text", widget: "text"}
+            fields:
+              - { label: "Foto", name: "image", widget: "image" }
+              - { label: "Text", name: "text", widget: "text" }
           - label: "Stats"
             name: "stats"
             widget: "list"
-            fields: 
-              - {label: "Icon", name: "icon", widget: "string"}
-              - {label: "Zahl", name: "figure", widget: "number", value_type: "float"}
-              - {label: "Dezimal", name: "decimal", widget: "boolean"}
-              - {label: "Einheit", name: "unit", widget: "string", required: false}
-              - {label: "Beschreibung", name: "description", widget: "string"}
+            fields:
+              - { label: "Icon", name: "icon", widget: "string" }
+              - {
+                  label: "Zahl",
+                  name: "figure",
+                  widget: "number",
+                  value_type: "float",
+                }
+              - { label: "Dezimal", name: "decimal", widget: "boolean" }
+              - {
+                  label: "Einheit",
+                  name: "unit",
+                  widget: "string",
+                  required: false,
+                }
+              - { label: "Beschreibung", name: "description", widget: "string" }
           - label: "Call To Action"
             name: "cta"
             widget: "object"
             fields:
-              - {label: "Heading", name: "heading", widget: "string"}
-              - {label: "Text", name: "text", widget: "text"}
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
           - label: "Zitate"
             name: "quotes"
             widget: "list"
             fields:
-              - {label: "Zitat", name: "quote_text", widget: "text"}
-              - {label: "Zitierte/r", name: "quoted_person", widget: "string"}
+              - { label: "Zitat", name: "quote_text", widget: "text" }
+              - { label: "Zitierte/r", name: "quoted_person", widget: "string" }
           - label: "Service"
             name: "service"
             widget: "object"
             fields:
-              - {label: "Beschreibung", name: "description", widget: "text"}
+              - { label: "Beschreibung", name: "description", widget: "text" }
               - label: "Services"
                 name: "services"
                 widget: "list"
                 fields:
-                  - {label: "Kurzbeschreibung", name: "short_description", widget: "string"}
+                  - {
+                      label: "Kurzbeschreibung",
+                      name: "short_description",
+                      widget: "string",
+                    }
       - label: "Webdesign"
         name: "webdesign"
         file: "content/webdesign.yml"
         fields:
-          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
+          - { label: "ID (Nicht ändern!)", name: "id", widget: "number" }
           - label: "Header"
             name: "header"
             widget: "object"
-            fields: 
-              - {label: "Text", name: "text", widget: "text"}
+            fields:
+              - { label: "Text", name: "text", widget: "text" }
           - label: "Stats"
             name: "stats"
             widget: "object"
-            fields: 
-              - {label: "Zeilen Code", name: "loc", widget: "number", value_type: "float"}
-              - {label: "Gestaltete Pixel", name: "pixels", widget: "number", value_type: "float"}
+            fields:
+              - {
+                  label: "Zeilen Code",
+                  name: "loc",
+                  widget: "number",
+                  value_type: "float",
+                }
+              - {
+                  label: "Gestaltete Pixel",
+                  name: "pixels",
+                  widget: "number",
+                  value_type: "float",
+                }
           - label: "Services"
             name: "services"
             widget: "list"
             fields:
-              - {label: "Bezeichnung", name: "title", widget: "string"}
-              - {label: "Beschreibung", name: "description", widget: "text"}
-              - {label: "Foto/Illustration", name: "image", widget: "image"}
+              - { label: "Bezeichnung", name: "title", widget: "string" }
+              - { label: "Beschreibung", name: "description", widget: "text" }
+              - { label: "Foto/Illustration", name: "image", widget: "image" }
           - label: "Call To Action"
             name: "cta"
             widget: "object"
             fields:
-              - {label: "Heading", name: "heading", widget: "string"}
-              - {label: "Text", name: "text", widget: "text"}
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
           - label: "Projekte"
             name: "projects"
             widget: "list"
             fields:
-              - {label: "Titel", name: "title", widget: "string"}
-              - {label: "Beschreibung", name: "description", widget: "text"}
-              - {label: "Screenshot Desktop", name: "screenshot_desktop", widget: "image"}
-              - {label: "Screenshot Mobile", name: "screenshot_mobile", widget: "image"}
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Beschreibung", name: "description", widget: "text" }
+              - {
+                  label: "Screenshot Desktop",
+                  name: "screenshot_desktop",
+                  widget: "image",
+                }
+              - {
+                  label: "Screenshot Mobile",
+                  name: "screenshot_mobile",
+                  widget: "image",
+                }
       - label: "Online Marketing"
         name: "online_marketing"
         file: "content/online_marketing.yml"
         fields:
-          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
+          - { label: "ID (Nicht ändern!)", name: "id", widget: "number" }
           - label: "Header"
             name: "header"
             widget: "object"
-            fields: 
-              - {label: "Foto", name: "image", widget: "image"}
-              - {label: "Text", name: "text", widget: "text"}
+            fields:
+              - { label: "Foto", name: "image", widget: "image" }
+              - { label: "Text", name: "text", widget: "text" }
           - label: "Diagramm"
             name: "graph"
             widget: "object"
             fields:
-              - {label: "Titel", name: "title", widget: "string"}
-              - {label: "Beschreibung", name: "description", widget: "text"}
-              - {label: "Quelle (Link)", name: "source", widget: "string"}
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Beschreibung", name: "description", widget: "text" }
+              - { label: "Quelle (Link)", name: "source", widget: "string" }
               - label: "Labels"
                 name: "labels"
                 widget: "list"
                 fields:
-                  - {label: "Label", name: "label", widget: "string"}
+                  - { label: "Label", name: "label", widget: "string" }
               - label: "Datenreihen"
                 name: "datasets"
                 widget: "list"
                 fields:
-                  - {label: "Name", name: "name", widget: "string"}
-                  - {label: "Farbe (HEX)", name: "color", widget: "string"}
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Farbe (HEX)", name: "color", widget: "string" }
                   - label: "Datenpunkte"
                     name: "data"
                     widget: "list"
                     fields:
-                      - {label: "Datenpunkt", name: "number", widget: "number", value_type: "float"}
+                      - {
+                          label: "Datenpunkt",
+                          name: "number",
+                          widget: "number",
+                          value_type: "float",
+                        }
           - label: "Call To Action"
             name: "cta"
             widget: "object"
             fields:
-              - {label: "Heading", name: "heading", widget: "string"}
-              - {label: "Text", name: "text", widget: "text"}
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
           - label: "Services"
             name: "services"
             widget: "list"
             fields:
-              - {label: "Titel", name: "title", widget: "string"}
-              - {label: "Beschreibung", name: "description", widget: "text"}
-              - {label: "Icon", name: "icon", widget: "image"}
-              - {label: "Icon-Autor-Link", name: "icon_author", widget: "string"}
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Beschreibung", name: "description", widget: "text" }
+              - { label: "Icon", name: "icon", widget: "image" }
+              - {
+                  label: "Icon-Autor-Link",
+                  name: "icon_author",
+                  widget: "string",
+                }
   - label: "Rechtliches"
     name: "rechtlich"
     format: "yml"
@@ -279,13 +382,22 @@ collections:
         name: "impressum"
         file: "content/impressum.yml"
         fields:
-          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
-          - {label: "Unternehmen & Anschrift", name: "company", widget: "markdown"}
-          - {label: "Telefon", name: "phone", widget: "string"}
-          - {label: "Email", name: "email", widget: "string"}
+          - { label: "ID (Nicht ändern!)", name: "id", widget: "number" }
+          - {
+              label: "Unternehmen & Anschrift",
+              name: "company",
+              widget: "markdown",
+            }
+          - { label: "Telefon", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
       - label: "Datenschutz"
         name: "datenschutz"
         file: "content/datenschutz.yml"
         fields:
-          - {label: "ID (Nicht ändern!)", name: "id", widget: "number"}
-          - {label: "Text", name: "content", widget: "markdown", required: false}
+          - { label: "ID (Nicht ändern!)", name: "id", widget: "number" }
+          - {
+              label: "Text",
+              name: "content",
+              widget: "markdown",
+              required: false,
+            }

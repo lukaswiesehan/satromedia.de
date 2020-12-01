@@ -15,12 +15,12 @@
         <div class="absolute top-0 left-0 flex items-center w-full h-full bg-opacity-25 bg-dark-900">
           <img id="satro-logo" src="../assets/img/satro_logo.png" alt="Satro Media Logo" class="w-2/3 mx-auto -mt-8 sm:-mt-12 md:-mt-20 lg:-mt-24">
         </div>
-        <div class="absolute z-10 top-0 right-0 p-4 pr-6 text-light-900 text-2xl flex align-baseline">
+        <div class="absolute z-10 top-0 right-0 p-2 md:p-4 md:pr-6 text-light-900 md:text-2xl flex align-baseline">
           <div v-on:click="muteHeaderVideo = !muteHeaderVideo" class="cursor-pointer">
             <i v-if="muteHeaderVideo" class="fas fa-volume-mute"></i>
             <i v-else class="fas fa-volume-up"></i>
           </div>
-          <div v-on:click="restartHeaderVideo" class="ml-4 pt-1 text-xl cursor-pointer">
+          <div v-on:click="restartHeaderVideo" class="ml-2 md:ml-4 md:pt-1 md:text-xl cursor-pointer">
             <i class="fas fa-undo-alt"></i>
           </div>
         </div>
@@ -66,11 +66,25 @@
           <div class="text-3xl"><i class="pr-6 fas fa-quote-right text-dark-100"></i></div>
           <div><p class="text-2xl font-display">{{$page.landing.cite}}</p></div>
         </div>
-        <div class="html-content mt-8 text-black-500" v-html="$page.landing.intro.text"></div>
-        <div class="mt-8">
-          <p class="text-dark-300">{{$page.landing.intro.names}}</p>
-          <p class="italic text-dark-300">{{$page.landing.intro.roles}}</p>
+
+        <div class="block lg:hidden">
+          <div class="html-content mt-8 text-black-500" v-html="expandIntro ? $page.landing.intro.text : firstParagraph($page.landing.intro.text)"></div>
+          <p v-if="!expandIntro" class="text-black-500 font-bold cursor-pointer" v-on:click="expandIntro = !expandIntro">Mehr <i class="fas fa-chevron-down"></i></p>
+          <p v-else class="text-black-500 font-bold cursor-pointer" v-on:click="expandIntro = !expandIntro">Weniger <i class="fas fa-chevron-up"></i></p>
+          <div class="mt-8">
+            <p class="text-dark-300">{{$page.landing.intro.names}}</p>
+            <p class="italic text-dark-300">{{$page.landing.intro.roles}}</p>
+          </div>
         </div>
+
+        <div class="hidden lg:block">
+          <div class="html-content mt-8 text-black-500" v-html="$page.landing.intro.text"></div>
+          <div class="mt-8">
+            <p class="text-dark-300">{{$page.landing.intro.names}}</p>
+            <p class="italic text-dark-300">{{$page.landing.intro.roles}}</p>
+          </div>
+        </div>
+        
       </div>
     </section>
 
@@ -429,6 +443,7 @@
     data() {
       return {
         muteHeaderVideo: true,
+        expandIntro: false,
         form: {
           data: {name: '', company: '', email: '', message: '', privacy: false},
           errors: {name: false, company: false, email: false, message: false, privacy: false},
@@ -499,6 +514,9 @@
       },
       restartHeaderVideo() {
         document.getElementById("header-video").load();
+      },
+      firstParagraph(html) {
+        return html.substring(0, html.indexOf('<p>', 3) - 1)
       },
       click_im() {
         this.$router.push('/influencer-management/')

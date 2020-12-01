@@ -52,12 +52,12 @@
           </video>
           <img v-else v-bind:src="$page.contentProduction.featured_projects[0].media" alt="Latest Project">
           <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25 transition-all duration-300 ease-in-out hover:bg-opacity-0"></div>
-          <div class="absolute z-10 top-0 right-0 p-4 pr-6 text-light-900 text-2xl flex align-baseline">
+          <div class="absolute z-10 top-0 right-0 p-2 md:p-4 md:pr-6 text-light-900 md:text-2xl flex align-baseline">
             <div v-on:click="muteFeaturedVideo1 = !muteFeaturedVideo1" class="cursor-pointer">
               <i v-if="muteFeaturedVideo1" class="fas fa-volume-mute"></i>
               <i v-else class="fas fa-volume-up"></i>
             </div>
-            <div v-on:click="restartFeaturedVideo1" class="ml-4 pt-1 text-xl cursor-pointer">
+            <div v-on:click="restartFeaturedVideo1" class="ml-2 md:ml-4 md:pt-1 md:text-xl cursor-pointer">
               <i class="fas fa-undo-alt"></i>
             </div>
           </div>
@@ -85,12 +85,12 @@
           </video>
           <img v-else v-bind:src="$page.contentProduction.featured_projects[1].media" alt="Latest Project">
           <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25 transition-all duration-300 ease-in-out hover:bg-opacity-0"></div>
-          <div class="absolute z-10 top-0 right-0 p-4 pr-6 text-light-900 text-2xl flex align-baseline">
+          <div class="absolute z-10 top-0 right-0 p-2 md:p-4 md:pr-6 text-light-900 md:text-2xl flex align-baseline">
             <div v-on:click="muteFeaturedVideo2 = !muteFeaturedVideo2" class="cursor-pointer">
               <i v-if="muteFeaturedVideo2" class="fas fa-volume-mute"></i>
               <i v-else class="fas fa-volume-up"></i>
             </div>
-            <div v-on:click="restartFeaturedVideo2" class="ml-4 pt-1 text-xl cursor-pointer">
+            <div v-on:click="restartFeaturedVideo2" class="ml-2 md:ml-4 md:pt-1 md:text-xl cursor-pointer">
               <i class="fas fa-undo-alt"></i>
             </div>
           </div>

@@ -19,7 +19,7 @@
 
     <!-- CHART -->
     <section id="chart" class="scroll-reveal max-w-screen-xl px-4 mt-16 md:mx-auto sm:px-8 md:mt-24">
-      <LineChart v-if="showChart" :chartData="this.chartData" :options="this.chartOptions" class="h-48 pb-8 border-b sm:h-64 border-light-500"/>
+      <LineChart v-if="showChart" :chartData="this.chartData" :options="this.chartOptions" class="h-48 pb-8 border-b sm:h-72 border-light-500"/>
       <div class="scroll-reveal flex flex-row-reverse max-w-screen-lg mx-auto mt-8">
         <div class="max-w-sm">
           <h3 class="mt-2 font-display">{{$page.onlineMarketing.graph.title}}</h3>
@@ -34,19 +34,16 @@
     <section id="services" class="max-w-screen-xl px-4 mt-16 md:mx-auto sm:px-8 md:mt-24 lg:mt-40">
       <Title class="scroll-reveal" :icon="'fa-ad'" :heading="'Online Marketing'" :title="'Unsere Services'"/>
       <div class="flex flex-wrap mt-4">
-        <div v-for="(service, i) in $page.onlineMarketing.services" :key="i" class="scroll-reveal w-full sm:w-1/2 px-4 py-6 sm:py-8">
-          <div>
-            <div class="relative z-10 bg-light-500 p-4 w-24 h-24 rounded-lg shadow-md ml-6 md:ml-10">
+        <div v-for="(service, i) in $page.onlineMarketing.services" :key="i" class="flex scroll-reveal w-full sm:w-1/2 px-4 py-6 sm:py-8">
+          <div class="flex-1 bg-white rounded-lg shadow-md p-6 md:p-10 mt-6">
+            <div class="relative z-10 bg-light-500 p-4 w-24 h-24 rounded-lg shadow-md -mt-16 mb-8">
               <img v-bind:src="service.icon" v-bind:alt="service.title" class="w-full opacity-50">
             </div>
-            <div class="bg-white rounded-lg shadow-md p-6 md:p-10 pt-12 md:pt-24 -mt-8 md:-mt-16">
-              <h3 class="font-display">{{service.title}}</h3>
-              <p class="pt-4 text-black-500">{{service.description}}</p>
-            </div>
+            <h3 class="font-display">{{service.title}}</h3>
+            <p class="pt-4 text-black-500">{{service.description}}</p>
           </div>
         </div>
       </div>
-      
     </section>
 
     <!-- CTA -->
@@ -130,7 +127,7 @@
           legend: {display: false},
           maintainAspectRatio: false,
           scales: {
-            xAxes: [{gridLines: {display: false}, ticks: {fontFamily: "'Open Sans'", fontStyle: 'bold', padding: 10}}],
+            xAxes: [{gridLines: {display: false}, ticks: {fontFamily: "'Open Sans'", fontStyle: 'bold', padding: 10, maxTicksLimit: 5}}],
             yAxes: [{gridLines: {display: false}, ticks: {display: false}}]
           },
           tooltips: {

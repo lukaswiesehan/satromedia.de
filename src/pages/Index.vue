@@ -17,11 +17,13 @@
         </div>
         <div class="absolute z-10 top-0 right-0 p-2 md:p-4 md:pr-6 text-light-900 md:text-2xl flex align-baseline">
           <div v-on:click="muteHeaderVideo = !muteHeaderVideo" class="cursor-pointer">
-            <i v-if="muteHeaderVideo" class="fas fa-volume-mute"></i>
-            <i v-else class="fas fa-volume-up"></i>
+            <p>
+              <i v-if="muteHeaderVideo" class="fas fa-volume-mute"></i>
+              <i v-else class="fas fa-volume-up"></i>
+            </p>
           </div>
           <div v-on:click="restartHeaderVideo" class="ml-2 md:ml-4 md:pt-1 md:text-xl cursor-pointer">
-            <i class="fas fa-undo-alt"></i>
+            <p><i class="fas fa-undo-alt"></i></p>
           </div>
         </div>
       </Window>

@@ -17,13 +17,11 @@
         </div>
         <div class="absolute z-10 top-0 right-0 p-2 md:p-4 md:pr-6 text-light-900 md:text-2xl flex align-baseline">
           <div v-on:click="muteHeaderVideo = !muteHeaderVideo" class="cursor-pointer">
-            <p>
-              <i v-if="muteHeaderVideo" class="fas fa-volume-mute"></i>
-              <i v-else class="fas fa-volume-up"></i>
-            </p>
+            <i v-if="muteHeaderVideo" class="fas fa-volume-mute"></i>
+            <i v-else class="fas fa-volume-up"></i>
           </div>
           <div v-on:click="restartHeaderVideo" class="ml-2 md:ml-4 md:pt-1 md:text-xl cursor-pointer">
-            <p><i class="fas fa-undo-alt"></i></p>
+            <i class="fas fa-undo-alt"></i>
           </div>
         </div>
       </Window>
@@ -324,7 +322,7 @@
       <div class="mt-8 md:flex md:items-center">
         <div class="scroll-reveal relative z-10 w-11/12 max-w-lg p-6 mx-auto bg-white rounded-2xl shadow-md md:p-10 md:mx-0 md:w-1/2">
           <h3 class="font-display">{{$page.landing.about.header}}</h3>
-          <p class="pt-4 text-black-500 html-content" v-html="$page.landing.about.description"></p>
+          <div class="pt-4 text-black-500 html-content" v-html="$page.landing.about.description"></div>
         </div>
         <div class="scroll-reveal relative z-0 -mt-16 overflow-hidden rounded-lg shadow-lg md:mt-0 md:-ml-48">
           <img v-bind:src="$page.landing.about.image" alt="Satro Media Team" class="object-cover object-center w-full h-96 lg:h-112">

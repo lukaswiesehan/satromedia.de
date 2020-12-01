@@ -47,11 +47,20 @@
       <Title :icon="'fas fa-photo-video'" :heading="'Content Production'" :title="'Latest Work'" class="scroll-reveal"></Title>
       <div class="scroll-reveal my-12 pb-12 md:flex border-light-500 border-b">
         <div class="flex-shrink-0 relative md:w-9/12 rounded-lg overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
-          <video v-if="$page.contentProduction.featured_projects[0].video" width="100%" height="100%" muted playsinline autoplay preload loop>
+          <video id="featured-video-1" v-if="$page.contentProduction.featured_projects[0].video" width="100%" height="100%" v-bind:muted="muteFeaturedVideo1" playsinline autoplay preload loop>
             <source v-bind:src="$page.contentProduction.featured_projects[0].media" type="video/mp4">
           </video>
           <img v-else v-bind:src="$page.contentProduction.featured_projects[0].media" alt="Latest Project">
           <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25 transition-all duration-300 ease-in-out hover:bg-opacity-0"></div>
+          <div class="absolute z-10 top-0 right-0 p-4 pr-6 text-light-900 text-2xl flex align-baseline">
+            <div v-on:click="muteFeaturedVideo1 = !muteFeaturedVideo1" class="cursor-pointer">
+              <i v-if="muteFeaturedVideo1" class="fas fa-volume-mute"></i>
+              <i v-else class="fas fa-volume-up"></i>
+            </div>
+            <div v-on:click="restartFeaturedVideo1" class="ml-4 pt-1 text-xl cursor-pointer">
+              <i class="fas fa-undo-alt"></i>
+            </div>
+          </div>
         </div>
         <div class="mt-8 md:ml-8 md:mt-0">
           <h3 class="font-display">{{$page.contentProduction.featured_projects[0].title}}</h3>
@@ -71,11 +80,20 @@
       </masonry>
       <div class="scroll-reveal mb-12 py-12 md:flex border-light-500 border-t border-b">
         <div class="flex-shrink-0 relative md:w-9/12 rounded-lg overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
-          <video v-if="$page.contentProduction.featured_projects[1].video" width="100%" height="100%" muted playsinline autoplay preload loop>
+          <video id="featured-video-2" v-if="$page.contentProduction.featured_projects[1].video" width="100%" height="100%" v-bind:muted="muteFeaturedVideo2" playsinline autoplay preload loop>
             <source v-bind:src="$page.contentProduction.featured_projects[1].media" type="video/mp4">
           </video>
           <img v-else v-bind:src="$page.contentProduction.featured_projects[1].media" alt="Latest Project">
           <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25 transition-all duration-300 ease-in-out hover:bg-opacity-0"></div>
+          <div class="absolute z-10 top-0 right-0 p-4 pr-6 text-light-900 text-2xl flex align-baseline">
+            <div v-on:click="muteFeaturedVideo2 = !muteFeaturedVideo2" class="cursor-pointer">
+              <i v-if="muteFeaturedVideo2" class="fas fa-volume-mute"></i>
+              <i v-else class="fas fa-volume-up"></i>
+            </div>
+            <div v-on:click="restartFeaturedVideo2" class="ml-4 pt-1 text-xl cursor-pointer">
+              <i class="fas fa-undo-alt"></i>
+            </div>
+          </div>
         </div>
         <div class="mt-8 md:ml-8 md:mt-0">
           <h3 class="font-display">{{$page.contentProduction.featured_projects[1].title}}</h3>
@@ -154,7 +172,9 @@
     data() {
       return {
         statFigure1: 0,
-        statFigure2: 0
+        statFigure2: 0,
+        muteFeaturedVideo1: true,
+        muteFeaturedVideo2: true
       }
     },
     methods: {
@@ -162,7 +182,13 @@
         return new Promise(
           resolve => setTimeout(resolve, ms)
         );
-      },  
+      },
+      restartFeaturedVideo1() {
+        document.getElementById("featured-video-1").load()
+      },
+      restartFeaturedVideo2() {
+        document.getElementById("featured-video-2").load()
+      },
       animations() {
         gsap.to('#app', {opacity: 1, duration: 0.2})
         //Stat upcount animation:

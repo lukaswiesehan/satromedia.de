@@ -244,8 +244,6 @@
             <div class="px-4 mt-8 text-center xs:px-16 sm:px-24 md:px-0">
               <h3 class="font-display">{{$page.landing.services[1].title}}</h3>
               <p class="my-4 text-sm lg:text-base">{{$page.landing.services[1].description}}</p>
-            </div>
-            <div class="text-center">
               <g-link to="/webdesign/" class="text-xs font-bold tracking-widest uppercase text-dark-100 hover:text-dark-300">Mehr dazu <i class="fas fa-chevron-right"></i></g-link>
             </div>
           </div>

@@ -102,7 +102,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Foto", name: "image", widget: "image" }
-              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Text", name: "text", widget: "markdown" }
           - label: "Stats"
             name: "stats"
             widget: "list"
@@ -132,7 +132,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Text", name: "text", widget: "markdown" }
               - label: "Stats"
                 name: "stats"
                 widget: "list"
@@ -164,7 +164,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Foto", name: "image", widget: "image" }
-              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Text", name: "text", widget: "markdown" }
           - label: "Stats"
             name: "stats"
             widget: "list"
@@ -188,7 +188,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Text", name: "text", widget: "markdown" }
           - label: "Featured Projects"
             name: "featured_projects"
             widget: "list"
@@ -214,7 +214,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Foto", name: "image", widget: "image" }
-              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Text", name: "text", widget: "markdown" }
           - label: "Stats"
             name: "stats"
             widget: "list"
@@ -239,7 +239,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Text", name: "text", widget: "markdown" }
           - label: "Zitate"
             name: "quotes"
             widget: "list"
@@ -250,7 +250,11 @@ collections:
             name: "service"
             widget: "object"
             fields:
-              - { label: "Beschreibung", name: "description", widget: "text" }
+              - {
+                  label: "Beschreibung",
+                  name: "description",
+                  widget: "markdown",
+                }
               - label: "Services"
                 name: "services"
                 widget: "list"
@@ -269,7 +273,7 @@ collections:
             name: "header"
             widget: "object"
             fields:
-              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Text", name: "text", widget: "markdown" }
           - label: "Stats"
             name: "stats"
             widget: "object"
@@ -325,7 +329,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Foto", name: "image", widget: "image" }
-              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Text", name: "text", widget: "markdown" }
           - label: "Diagramm"
             name: "graph"
             widget: "object"
@@ -359,7 +363,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Text", name: "text", widget: "markdown" }
           - label: "Services"
             name: "services"
             widget: "list"

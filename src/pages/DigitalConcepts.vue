@@ -11,7 +11,7 @@
       </div>
       <div class="scroll-reveal relative z-10 flex-shrink-0 w-11/12 max-w-lg p-6 mx-auto -mt-24 bg-white rounded-lg shadow-md md:p-10 md:mx-0 md:w-1/2 md:-ml-48 md:mt-0">
         <Title :icon="'fa-clipboard'" :heading="'Unsere Services'" :title="'Digitale Konzepte'"></Title>
-        <p class="pt-4 sm:ml-12 text-black-500">{{$page.digitalConcepts.header.text}}</p>
+        <div class="pt-4 sm:ml-12 text-black-500 html-content" v-html="$page.digitalConcepts.header.text"></div>
       </div>
     </section>
 
@@ -43,7 +43,7 @@
         </div>
         <div class="mt-16 md:mt-0">
           <h3 class="font-display">{{$page.digitalConcepts.cta.heading}}</h3>
-          <p class="pt-4 text-black-500">{{$page.digitalConcepts.cta.text}}</p>
+          <div class="pt-4 text-black-500 html-content" v-html="$page.digitalConcepts.cta.text"></div>
           <a href="javascript:mailto('nbjmup;lpoubluAtbuspnfejb/ef', 'Anfrage Digitale Konzepte')" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></a>
         </div>
       </div>
@@ -73,7 +73,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 md:space-x-8">
         <div class="scroll-reveal max-w-md">
           <Title :icon="'fa-clipboard'" :heading="'Digitale Konzepte'" :title="'Full Service'"></Title>
-          <p class="pt-4 text-black-500">{{$page.digitalConcepts.service.description}}</p>
+          <div class="pt-4 text-black-500 html-content" v-html="$page.digitalConcepts.service.description"></div>
           <a href="javascript:mailto('nbjmup;lpoubluAtbuspnfejb/ef', 'Anfrage Digitale Konzepte')" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Ihr Projekt starten <i class="fas fa-chevron-right"></i></a>
         </div>
         <div class="mt-16 md:mt-0">
@@ -222,3 +222,9 @@
     } 
   }
 </script>
+
+<style>
+  .html-content p {
+    margin-bottom: 1rem;
+  }
+</style>

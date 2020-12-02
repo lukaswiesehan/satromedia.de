@@ -4,21 +4,21 @@ const showdown = require('showdown')
 const converter = new showdown.Converter()
 
 const landingFile = fs.readFileSync('./content/landing.yml', 'utf8')
-const landingData = yaml.safeLoad(landingFile)
+var landingData = yaml.safeLoad(landingFile)
 const contentProductionFile = fs.readFileSync('./content/content_production.yml', 'utf8')
-const contentProductionData = yaml.safeLoad(contentProductionFile)
+var contentProductionData = yaml.safeLoad(contentProductionFile)
 const influencerManagementFile = fs.readFileSync('./content/influencer_management.yml')
-const influencerManagementData = yaml.safeLoad(influencerManagementFile)
+var influencerManagementData = yaml.safeLoad(influencerManagementFile)
 const digitalConceptsFile = fs.readFileSync('./content/digital_concepts.yml', 'utf8')
-const digitalConceptsData = yaml.safeLoad(digitalConceptsFile)
+var digitalConceptsData = yaml.safeLoad(digitalConceptsFile)
 const onlineMarketingFile = fs.readFileSync('./content/online_marketing.yml', 'utf8')
-const onlineMarketingData = yaml.safeLoad(onlineMarketingFile)
+var onlineMarketingData = yaml.safeLoad(onlineMarketingFile)
 const webdesignFile = fs.readFileSync('./content/webdesign.yml', 'utf8')
-const webdesignData = yaml.safeLoad(webdesignFile)
+var webdesignData = yaml.safeLoad(webdesignFile)
 const impressumFile = fs.readFileSync('./content/impressum.yml', 'utf8')
-const impressumData = yaml.safeLoad(impressumFile)
+var impressumData = yaml.safeLoad(impressumFile)
 const datenschutzFile = fs.readFileSync('./content/datenschutz.yml', 'utf8')
-const datenschutzData = yaml.safeLoad(datenschutzFile)
+var datenschutzData = yaml.safeLoad(datenschutzFile)
 
 module.exports = function (api) {
   api.loadSource(async actions => {
@@ -31,22 +31,32 @@ module.exports = function (api) {
     const content_production = actions.addCollection({
       typeName: 'ContentProduction'
     })
+    contentProductionData.header.text = converter.makeHtml(contentProductionData.header.text)
+    contentProductionData.cta.text = converter.makeHtml(contentProductionData.cta.text)
     content_production.addNode(contentProductionData)
     const influencer_management = actions.addCollection({
       typeName: 'InfluencerManagement'
     })
+    influencerManagementData.header.text = converter.makeHtml(influencerManagementData.header.text)
+    influencerManagementData.cta.text = converter.makeHtml(influencerManagementData.cta.text)
     influencer_management.addNode(influencerManagementData)
     const digital_concepts = actions.addCollection({
       typeName: 'DigitalConcepts'
     })
+    digitalConceptsData.header.text = converter.makeHtml(digitalConceptsData.header.text)
+    digitalConceptsData.cta.text = converter.makeHtml(digitalConceptsData.cta.text)
+    digitalConceptsData.service.description = converter.makeHtml(digitalConceptsData.service.description)
     digital_concepts.addNode(digitalConceptsData)
     const online_marketing = actions.addCollection({
       typeName: 'OnlineMarketing'
     })
+    onlineMarketingData.header.text = converter.makeHtml(onlineMarketingData.header.text)
+    onlineMarketingData.cta.text = converter.makeHtml(onlineMarketingData.cta.text)
     online_marketing.addNode(onlineMarketingData)
     const webdesign = actions.addCollection({
       typeName: 'Webdesign'
     })
+    webdesignData.header.text = converter.makeHtml(webdesignData.header.text)
     webdesign.addNode(webdesignData)
     const impressum = actions.addCollection({
       typeName: 'Impressum'
@@ -62,6 +72,6 @@ module.exports = function (api) {
   })
 
   api.createPages(({ createPage }) => {
-
+    
   })
 }

@@ -7,7 +7,7 @@
     <section id="header" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 md:flex md:items-center -mt-16 xs:-mt-32 md:-mt-64">
       <div class="scroll-reveal relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 w-11/12 md:w-1/2 max-w-lg">
         <Title :icon="'fa-camera-retro'" :heading="'Unsere Services'" :title="'Content Production'"></Title>
-        <p class="pt-4 sm:ml-12 text-black-500">{{$page.contentProduction.header.text}}</p>
+        <div class="pt-4 sm:ml-12 text-black-500 html-content" v-html="$page.contentProduction.header.text"></div>
       </div>
       <div class="scroll-reveal relative z-0 rounded-lg overflow-hidden shadow-lg -mt-48 md:mt-0 md:-ml-48">
         <img v-bind:src="$page.contentProduction.header.image" alt="Content Production" class="object-cover object-center w-full h-96 lg:h-112">
@@ -36,7 +36,7 @@
         </div>
         <div class="mt-16 md:mt-0">
           <h3 class="font-display">{{$page.contentProduction.cta.heading}}</h3>
-          <p class="pt-4 text-black-500">{{$page.contentProduction.cta.text}}</p>
+          <div class="pt-4 text-black-500 html-content" v-html="$page.contentProduction.cta.text"></div>
           <a href="javascript:mailto('nbjmup;lpoubluAtbuspnfejb/ef', 'Anfrage Content Production')" class="inline-block px-6 py-3 mt-12 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300 ease-in-out transform rounded-full shadow-sm bg-black-900 hover:-translate-y-1 hover:shadow-md hover:text-light-900">Gespräch vereinbaren <i class="fas fa-chevron-right"></i></a>
         </div>
       </div>
@@ -232,3 +232,9 @@
     } 
   }
 </script>
+
+<style>
+  .html-content p {
+    margin-bottom: 1rem;
+  }
+</style>

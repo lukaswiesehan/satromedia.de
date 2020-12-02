@@ -7,7 +7,7 @@
     <section id="header" class="max-w-screen-xl px-4 md:mx-auto sm:px-8"> 
       <div class="scroll-reveal relative z-10 max-w-lg p-6 bg-white rounded-lg shadow-md md:p-10">
         <Title :icon="'fa-drafting-compass'" :heading="'Unsere Services'" :title="'Webdesign'"/>
-        <p class="pt-4 sm:ml-12 text-black-500">{{$page.webdesign.header.text}}</p>
+        <div class="pt-4 sm:ml-12 text-black-500 html-content" v-html="$page.webdesign.header.text"></div>
       </div>
       <div class="relative w-full h-48 mt-20 md:mt-0 sm:h-72 md:h-112 lg:h-112">
         <div class="scroll-reveal absolute bottom-0 left-0 z-10 inline-block ml-2 text-center xs:ml-16 sm:ml-24 xl:ml-64">
@@ -373,3 +373,9 @@
     } 
   }
 </script>
+
+<style>
+  .html-content p {
+    margin-bottom: 1rem;
+  }
+</style>

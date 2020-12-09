@@ -15,7 +15,7 @@ stats:
     unit: "%"
     description: Durchschnittliche Umsatzsteigerung
 cta:
-  heading: "Viele machen’s - nur wenige wissen, wie es richtig geht "
+  heading: Viele machen’s - wir machen's richtig
   text: >-
     Neben der Authentizität unserer Creator setzen wir bei SaTro auf Effizienz.
     Das bedeutet: Mehr Reichweite, weniger Streuverluste, mehr Zuverlässigkeit,
@@ -25,8 +25,7 @@ cta:
     Ob Awareness- oder Performance-Ziele (ROAS, ROI, KPI), wir machen messbar.
   stats:
     - figure: 50
-      description:
-        Steigerung des Marktvolumens im Influencer Marketing DACH von 2017
+      description: Steigerung des Marktvolumens im Influencer Marketing DACH von 2017
         bis 2020
     - figure: 32
       description: Influencer Einfluss auf direkte Kaufentscheidung

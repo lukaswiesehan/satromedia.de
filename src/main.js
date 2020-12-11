@@ -6,8 +6,11 @@ import '~/assets/fontawesome/css/all.min.css'
 import VueScrollTo from 'vue-scrollto'
 import VueMasonry from 'vue-masonry-css'
 
+import OpenSansV17LatinRegular from '~/assets/fonts/open-sans-v17-latin-regular.woff2'
+
 export default function (Vue, { router, head, isClient }) {
   head.htmlAttrs = { lang: 'de' }
+  head.link.push({rel: 'preload', href: OpenSansV17LatinRegular, as: 'font'})
   head.meta.push({key: 'description', name: 'description', content: 'Full Service Influencer-Management und Online-Marketing Agentur aus Hamburg.'})
   head.meta.push({name: 'keywords', content: 'Social,Media,Influencer,Management,Online,Marketing,Webdesign,Content,Production'}),
   head.meta.push({property: 'og:title', content: 'SaTro Media Consulting'})

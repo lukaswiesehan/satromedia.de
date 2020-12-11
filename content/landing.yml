@@ -50,8 +50,13 @@ clients:
   - logo: /uploads/etepetete.jpg
   - logo: /uploads/nucompany.jpg
 references:
+  - name: Victoria
+    company: "@alltags_liebe "
+    reference_text: Super Rundum-Betreuung für jeden Influencer, der sowohl ein
+      professionelles Management mit innovativen Kooperationspartnern, als auch
+      strategische Unterstützung im Brand-Building sucht.
   - name: Jessica Krauter
-    company: "CEO, Buah Fruits "
+    company: CEO, Buah Fruits
     reference_text: Als Start-Up brauchen wir eine junge, digitale und agile
       Influencer Marketing Agentur, um bei der Masse an Influencern die richtige
       Performance für unser Branding zu finden. Mit SaTro haben wir eine
@@ -66,11 +71,6 @@ references:
       junges Unternehmen mit großen Ambitionen. Und so war es dann auch: sie
       kamen, hörten zu, setzten um und lieferten ab! Und das alles innerhalb
       kürzester Zeit - perfekt!!"
-  - name: Victoria
-    company: "@alltags_liebe "
-    reference_text: Super Rundum-Betreuung für jeden Influencer, der sowohl ein
-      professionelles Management mit innovativen Kooperationspartnern, als auch
-      strategische Unterstützung im Brand-Building sucht.
 about:
   header: "Workspace for digital Experts & Talents "
   description: >-

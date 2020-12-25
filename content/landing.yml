@@ -38,8 +38,8 @@ services:
     description: "Zielgruppenorientiertes Streuen Ihrer individuellen Werbung "
 clients:
   - logo: /uploads/budni.jpg
+  - logo: /uploads/philips.jpg
   - logo: /uploads/buah.jpg
-  - logo: /uploads/centerparks.jpg
   - logo: /uploads/gu.jpg
   - logo: /uploads/hochschulsport.jpg
   - logo: /uploads/malbucht.jpg

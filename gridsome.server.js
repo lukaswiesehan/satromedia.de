@@ -40,29 +40,39 @@ module.exports = function (api) {
     })
     influencerManagementData.header.text = converter.makeHtml(influencerManagementData.header.text)
     influencerManagementData.cta.text = converter.makeHtml(influencerManagementData.cta.text)
+    
     try {
       const requests = []
       var responses = []
       for(var influencer of influencerManagementData.influencers) {
+        influencer.profileLink = 'https://instagram.com/'
+        influencer.fullName = 'Full Name'
+        influencer.biography = 'Biography'
+        influencer.profilePicture = ''
+        influencer.timeline = '00'
+        influencer.followers= '00'
+        influencer.follows = '00'
+        influencer.contactLink = "javascript:mailto('nbjmup;lpoubluAtbuspnfejb/ef', 'Anfrage Influencer @" + influencer.username + "')"
         requests.push(axios.get('https://www.instagram.com/' + influencer.username +'/?__a=1'))
       }
       responses = await Promise.all(requests)
+      var i = 0
+      for(const influencer of influencerManagementData.influencers) {
+        var userData = responses[i].data.graphql.user
+        influencer.profileLink = 'https://instagram.com/' + influencer.username
+        influencer.fullName = userData.full_name
+        influencer.biography = userData.biography.replace(/\n/g, '<br/>')
+        influencer.profilePicture = userData.profile_pic_url
+        influencer.timeline = userData.edge_owner_to_timeline_media.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+        influencer.followers= userData.edge_followed_by.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+        influencer.follows = userData.edge_follow.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+        influencer.contactLink = "javascript:mailto('nbjmup;lpoubluAtbuspnfejb/ef', 'Anfrage Influencer @" + influencer.username + "')"
+        i++      
+      }
     } catch(error) {
       console.log(error)
     }
-    var i = 0
-    for(const influencer of influencerManagementData.influencers) {
-      var userData = responses[i].data.graphql.user
-      influencer.profileLink = 'https://instagram.com/' + influencer.username
-      influencer.fullName = userData.full_name,
-      influencer.biography = userData.biography.replace(/\n/g, '<br/>'),
-      influencer.profilePicture = userData.profile_pic_url,
-      influencer.timeline = userData.edge_owner_to_timeline_media.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
-      influencer.followers= userData.edge_followed_by.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
-      influencer.follows = userData.edge_follow.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
-      influencer.contactLink = "javascript:mailto('nbjmup;lpoubluAtbuspnfejb/ef', 'Anfrage Influencer @" + influencer.username + "')"
-      i++      
-    }
+    
     influencer_management.addNode(influencerManagementData)
     const digital_concepts = actions.addCollection({
       typeName: 'DigitalConcepts'

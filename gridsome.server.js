@@ -40,12 +40,12 @@ module.exports = function (api) {
     })
     influencerManagementData.header.text = converter.makeHtml(influencerManagementData.header.text)
     influencerManagementData.cta.text = converter.makeHtml(influencerManagementData.cta.text)
-    
+    /*
     try {
       const requests = []
       var responses = []
       for(var influencer of influencerManagementData.influencers) {
-        influencer.profileLink = 'https://instagram.com/'
+        influencer.profileLink = 'https://instagram.com/' + influencer.username
         influencer.fullName = 'Full Name'
         influencer.biography = 'Biography'
         influencer.profilePicture = ''
@@ -72,7 +72,18 @@ module.exports = function (api) {
     } catch(error) {
       console.log(error)
     }
-    
+    */
+    for(const influencer of influencerManagementData.influencers) {
+      influencer.profileLink = 'https://instagram.com/' + influencer.username
+      influencer.fullName = influencer.full_name
+      influencer.biography = influencer.biography.replace(/\n/g, '<br/>')
+      influencer.profilePicture = influencer.profile_pic_url
+      influencer.timeline = influencer.timeline.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+      influencer.followers= influencer.followers.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+      influencer.follows = influencer.follows.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+      influencer.contactLink = "javascript:mailto('nbjmup;lpoubluAtbuspnfejb/ef', 'Anfrage Influencer @" + influencer.username + "')"    
+    }
+
     influencer_management.addNode(influencerManagementData)
     const digital_concepts = actions.addCollection({
       typeName: 'DigitalConcepts'

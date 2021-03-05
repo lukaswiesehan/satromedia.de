@@ -147,13 +147,15 @@ collections:
             name: "influencers"
             widget: "list"
             fields:
-              - {
-                  label: "Nutzername (ohne @)",
-                  name: "username",
-                  widget: "string",
-                }
-              - { label: "Foto", name: "image", widget: "image" }
-              - { label: "Querformat", name: "landscape", widget: "boolean" }
+              - {label: "Nutzername (ohne @)", name: "username", widget: "string"}
+              - {label: "Foto", name: "image", widget: "image" }
+              - {label: "Querformat", name: "landscape", widget: "boolean"}
+              - {label: "Anzeigename", name: "full_name", widget: "string"}
+              - {label: "Biografie", name: "biography", widget: "text"}
+              - {label: "Profilbild-URL", name: "profile_pic_url", widget: "string"}
+              - {label: "Anzahl Beiträge", name: "timeline", widget: "number"}
+              - {label: "Follower", name: "followers", widget: "number"}
+              - {label: "Folgt", name: "follows", widget: "number"}
       - label: "Content Production"
         name: "content_production"
         file: "content/content_production.yml"

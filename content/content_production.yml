@@ -93,3 +93,6 @@ projects:
   - video: false
     media: /uploads/showcase_10.jpg
     title: Showcase 10
+  - title: Showcase 21
+    video: false
+    media: /uploads/showcase_21.jpg

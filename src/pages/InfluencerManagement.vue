@@ -1,17 +1,17 @@
 <template>
   <Layout>
-    <h1 class="hidden">Influencer Management</h1>
+    <h1 class="hidden">Influencer-Marketing & Management</h1>
     <Navbar id="navbar" :showBackButton="true" :dark="true" />
 
     <!-- HEADER -->
     <section id="header" class="max-w-screen-xl md:mx-auto px-4 sm:px-8 -mt-16 xs:-mt-32 md:-mt-64">
       <div class="scroll-reveal relative w-full rounded-lg overflow-hidden shadow-lg">
-        <img v-bind:src="$page.influencerManagement.header.image" alt="Content Production" class="object-cover object-center w-full h-96 lg:h-112">
+        <img v-bind:src="$page.influencerManagement.header.image" alt="Influencer Management" class="object-cover object-center w-full h-96 lg:h-112">
         <div class="absolute w-full h-full left-0 top-0 bg-dark-900 bg-opacity-25"></div>
       </div>
       <div class="flex flex-row-reverse">
         <div class="scroll-reveal relative z-10 bg-white rounded-lg shadow-md p-6 md:p-10 mx-auto md:mx-0 md:mr-24 -mt-32 md:-mt-48 w-11/12 max-w-lg">
-          <Title :icon="'fa-people-arrows'" :heading="'Unsere Services'" :title="'Influencer Management & Marketing'"></Title>
+          <Title :icon="'fa-people-arrows'" :heading="'Unsere Services'" :title="'Influencer-Marketing & Management'"></Title>
           <div class="pt-4 sm:ml-12 text-black-500 html-content" v-html="$page.influencerManagement.header.text"></div>
         </div>
       </div>

@@ -33,48 +33,64 @@ cta:
       description: Verbesserung der Kommunikation mit der Zielgruppe
   stats_source: https://www.bvdw.org/fileadmin/user_upload/BVDW_Umfrage_Influencer_Marketing__112018.pdf
 influencers:
-  - username: alltags_liebe
-    image: /uploads/alltagsliebe.jpg
-    landscape: true
-    full_name: "Victoria 🍃 Frau und Mama"
-    biography: "🌿 Deine beste Freundin\n🌿 Mission: Wohlfühlen 🥰\n🌿 Gönn dir!\n🌿 Haussanierung 20/21\n🌿 @zuckerfreileben seit 2017\n#sextalksunday #modelmittwoch"
-    profile_pic_url: "https://instagram.fham2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/155276212_3833708960051836_4919874148030393114_n.jpg?tp=1&_nc_ht=instagram.fham2-1.fna.fbcdn.net&_nc_ohc=P4_7osmG_C8AX-eCMkp&oh=b06b9b6baefac313ff6fcfe3aaf355d4&oe=606B190D"
-    timeline: 675
-    followers: 104558
+  - timeline: 675
     follows: 709
-  - username: maria.estella
-    landscape: false
-    image: /uploads/maria_estella.jpg
-    full_name: "Maria König"
-    biography: "✖️Sängerin✖️wifey @koenigsklasse__ ✖️🐶@second_chance_for_dogs ✖️MomToBe💙✖️künstl. Befruchtung👶🏼Häuslebauer \nImpressum: @estella_impressum"
-    profile_pic_url: "https://instagram.fham2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/106212208_2597241447190914_5680907566304372777_n.jpg?tp=1&_nc_ht=instagram.fham2-1.fna.fbcdn.net&_nc_ohc=245x9QdRDR4AX8SNKUS&oh=14cbf21ad54e1174ec12d9e498a03661&oe=606A12F6"
-    timeline: 452
-    followers: 133599
+    profile_pic_url: https://instagram.fham2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/155276212_3833708960051836_4919874148030393114_n.jpg?tp=1&_nc_ht=instagram.fham2-1.fna.fbcdn.net&_nc_ohc=P4_7osmG_C8AX-eCMkp&oh=b06b9b6baefac313ff6fcfe3aaf355d4&oe=606B190D
+    biography: |-
+      🌿 Deine beste Freundin
+      🌿 Mission: Wohlfühlen 🥰
+      🌿 Gönn dir!
+      🌿 Haussanierung 20/21
+      🌿 @zuckerfreileben seit 2017
+      #sextalksunday #modelmittwoch
+    followers: 104558
+    username: alltags_liebe
+    image: /uploads/alltagsliebe.jpg
+    full_name: Victoria 🍃 Frau und Mama
+    landscape: true
+  - timeline: 452
     follows: 483
-  - username: verruecktemamawelt
-    image: /uploads/verruecktemamawelt.jpg
-    landscape: true
-    full_name: "FamilyDailySoap  Ves und Co"
-    biography: "Eine lustige herzliche chaotische Familie wo immer was los ist 5+1\n#pubertiere #nachzügler #chaosqueen #grossfamilie #kochqueen #realtalk #reallife"
-    profile_pic_url: "https://instagram.fham2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/121604895_114028710355614_8419688168907610893_n.jpg?tp=1&_nc_ht=instagram.fham2-1.fna.fbcdn.net&_nc_ohc=cyphwIdOXjwAX-j4BLi&oh=219020ee3828565a027281db7dc7a42c&oe=606BA2F5"
-    timeline: 619
-    followers: 201255
-    follows: 482
-  - username: zuckerfreileben
-    image: /uploads/zuckerfreileben.jpg
+    profile_pic_url: https://instagram.fham2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/106212208_2597241447190914_5680907566304372777_n.jpg?tp=1&_nc_ht=instagram.fham2-1.fna.fbcdn.net&_nc_ohc=245x9QdRDR4AX8SNKUS&oh=14cbf21ad54e1174ec12d9e498a03661&oe=606A12F6
+    biography: >-
+      ✖️Sängerin✖️wifey @koenigsklasse__ ✖️🐶@second_chance_for_dogs
+      ✖️MomToBe💙✖️künstl. Befruchtung👶🏼Häuslebauer 
+
+      Impressum: @estella_impressum
+    followers: 133599
+    username: maria.estella
+    image: /uploads/maria_estella.jpg
+    full_name: Maria König
     landscape: false
-    full_name: "Dattel-Vicky 🌿 Zuckerfrei"
-    biography: "🌿 Mein Weg ohne Industriezucker\n🌿 Datteln for President \n🌿 Tu es für dich und deine Gesundheit"
-    profile_pic_url: "https://instagram.fham2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/72118761_499056337608279_3328047184166780928_n.jpg?tp=1&_nc_ht=instagram.fham2-1.fna.fbcdn.net&_nc_ohc=-ZYuYgTrJfYAX_BtbhO&oh=46b00d867852a19460ec283da8e291f1&oe=606B5EC3"
-    timeline: 97
-    followers: 44277
-    follows: 162
-  - username: nastiinkaaa_
-    image: /uploads/nastiinkaaa_.jpg
+  - timeline: 146
+    follows: 663
+    profile_pic_url: https://instagram.fham2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/142124202_2694436254199708_1394157446048618819_n.jpg?tp=1&_nc_ht=instagram.fham2-1.fna.fbcdn.net&_nc_ohc=bu3dp6HFSVgAX_ahk27&ccb=7-4&oh=54cdb80eb7a26f56fbfc8e0c72a96590&oe=60809928&_nc_sid=7bff83
+    biography: FLORISTMEISTER / INTERIEUR / ENTERTAINMENT
+    followers: 141937
+    username: _kevin_haupt_
+    image: /uploads/kevinhaupt.jpg
+    full_name: KEVIN HAUPT
     landscape: true
-    full_name: "anastasia"
-    biography: "Schön, dass du hier bist 🌿\nIch mag Kekse, Kaffee und gutes Essen ☕️\nMom ²"
-    profile_pic_url: "https://instagram.fham2-1.fna.fbcdn.net/v/t51.2885-19/s320x320/139656623_2814807935439968_6376029896554439238_n.jpg?tp=1&_nc_ht=instagram.fham2-1.fna.fbcdn.net&_nc_ohc=hmVJABgk9gAAX-I61QQ&oh=8155ff65a0091a2548878226973a8617&oe=606CDD5A"
-    timeline: 959
-    followers: 90423
+  - timeline: 97
+    follows: 162
+    profile_pic_url: https://instagram.fham2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/72118761_499056337608279_3328047184166780928_n.jpg?tp=1&_nc_ht=instagram.fham2-1.fna.fbcdn.net&_nc_ohc=-ZYuYgTrJfYAX_BtbhO&oh=46b00d867852a19460ec283da8e291f1&oe=606B5EC3
+    biography: |-
+      🌿 Mein Weg ohne Industriezucker
+      🌿 Datteln for President 
+      🌿 Tu es für dich und deine Gesundheit
+    followers: 44277
+    username: zuckerfreileben
+    image: /uploads/zuckerfreileben.jpg
+    full_name: Dattel-Vicky 🌿 Zuckerfrei
+    landscape: false
+  - timeline: 959
     follows: 784
+    profile_pic_url: https://instagram.fham2-1.fna.fbcdn.net/v/t51.2885-19/s320x320/139656623_2814807935439968_6376029896554439238_n.jpg?tp=1&_nc_ht=instagram.fham2-1.fna.fbcdn.net&_nc_ohc=hmVJABgk9gAAX-I61QQ&oh=8155ff65a0091a2548878226973a8617&oe=606CDD5A
+    biography: |-
+      Schön, dass du hier bist 🌿
+      Ich mag Kekse, Kaffee und gutes Essen ☕️
+      Mom ²
+    followers: 90423
+    username: nastiinkaaa_
+    image: /uploads/nastiinkaaa_.jpg
+    full_name: anastasia
+    landscape: true

@@ -189,7 +189,7 @@
   export default {
     name: 'InfluencerManagement',
     metaInfo: {
-      title: 'Influencer Management'
+      title: 'Influencer-Marketing & Management'
     },
     components: {
       Navbar, 

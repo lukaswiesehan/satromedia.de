@@ -12,7 +12,7 @@
         <div class="text-center md:text-right mt-6 md:mt-0">
           <p class="text-gray-500 text-xs font-bold uppercase tracking-widest">Satro</p>
           <div class="text-gray-300 text-sm mt-2">
-            <p class="font-bold">Satro Media Consulting GbR</p>
+            <p class="font-bold">Satro Media Consulting GmbH</p>
             <p>Hassestraße 16</p>
             <p>21029 Hamburg</p>
           </div>
